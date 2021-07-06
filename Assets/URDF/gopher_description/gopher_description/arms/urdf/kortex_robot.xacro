@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <xacro:macro name="load_robot" params="arm gripper dof vision sim prefix parent">
+        
+        <!-- Files to include -->
+        <xacro:include filename="$(find kortex_description)/arms/${arm}/${dof}dof/urdf/${arm}_macro.xacro" />
+        <xacro:include filename="$(find kortex_description)/grippers/${gripper}/urdf/${gripper}_macro.xacro" />
+
+        <!-- Connect to Torso -->
+        <joint name="${prefix}shoulder_to_arm_root" type="fixed">
+            <child link="${prefix}base_link" />
+            <parent link="${parent}" />
+            <origin xyz="0 0 0" rpy="0 0 0" />    
+        </joint> 
+        
+        <!-- Load the arm -->
+        <xacro:load_arm parent="" dof="${dof}" vision="${vision}" prefix="${prefix}">
+            <origin xyz="0 0 0" rpy="0 0 0"/> 
+        </xacro:load_arm>
+
+        <!-- Load the gripper -->
+        <xacro:load_gripper parent="${prefix}${last_arm_link}"  prefix="${prefix}"/> 
+
+    </xacro:macro>
+</robot>
