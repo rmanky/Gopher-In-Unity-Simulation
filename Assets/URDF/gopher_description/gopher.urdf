@@ -154,12 +154,6 @@
     <parent link="gopher/chassis_link"/>
     <child link="gopher/base_camera_link"/>
   </joint>
-  <link name="gopher/base_camera_optical_frame"/>
-  <joint name="gopher/base_camera_optical_joint" type="fixed">
-    <origin rpy="1.5707963267966 0 1.5707963267966" xyz="0 0 0"/>
-    <parent link="gopher/base_camera_link"/>
-    <child link="gopher/base_camera_optical_frame"/>
-  </joint>
   <link name="gopher/torso">
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0.4"/>
@@ -235,7 +229,7 @@
   <joint name="gopher/left_shoulder_to_torso_joint" type="fixed">
     <child link="gopher/left_shoulder_link"/>
     <parent link="gopher/torso"/>
-    <origin rpy="-1.57 0 0" xyz="0 0 0.7"/>
+    <origin rpy="-1.57 3.14 0" xyz="0 0 0.7"/>
     <axis xyz="0 0 1"/>
   </joint>
   <link name="gopher/main_cam_support">
@@ -362,58 +356,6 @@
       <inertia ixx="0.003881243" ixy="0.0" ixz="0.0" iyy="0.000498940" iyz="0.0" izz="0.003879257"/>
     </inertial>
   </link>
-  <!-- camera depth joints and links -->
-  <joint name="gopher/main_cam_depth_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0 0 0"/>
-    <parent link="gopher/main_cam_link"/>
-    <child link="gopher/main_cam_depth_frame"/>
-  </joint>
-  <link name="gopher/main_cam_depth_frame"/>
-  <joint name="gopher/main_cam_depth_optical_joint" type="fixed">
-    <origin rpy="-1.57079632679 0 -1.57079632679" xyz="0 0 0"/>
-    <parent link="gopher/main_cam_depth_frame"/>
-    <child link="gopher/main_cam_depth_optical_frame"/>
-  </joint>
-  <link name="gopher/main_cam_depth_optical_frame"/>
-  <!-- camera left IR joints and links -->
-  <joint name="gopher/main_cam_left_ir_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0 0.0 0"/>
-    <parent link="gopher/main_cam_depth_frame"/>
-    <child link="gopher/main_cam_left_ir_frame"/>
-  </joint>
-  <link name="gopher/main_cam_left_ir_frame"/>
-  <joint name="gopher/main_cam_left_ir_optical_joint" type="fixed">
-    <origin rpy="-1.57079632679 0 -1.57079632679" xyz="0 0 0"/>
-    <parent link="gopher/main_cam_left_ir_frame"/>
-    <child link="gopher/main_cam_left_ir_optical_frame"/>
-  </joint>
-  <link name="gopher/main_cam_left_ir_optical_frame"/>
-  <!-- camera right IR joints and links -->
-  <joint name="gopher/main_cam_right_ir_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0 -0.05 0"/>
-    <parent link="gopher/main_cam_depth_frame"/>
-    <child link="gopher/main_cam_right_ir_frame"/>
-  </joint>
-  <link name="gopher/main_cam_right_ir_frame"/>
-  <joint name="gopher/main_cam_right_ir_optical_joint" type="fixed">
-    <origin rpy="-1.57079632679 0 -1.57079632679" xyz="0 0 0"/>
-    <parent link="gopher/main_cam_right_ir_frame"/>
-    <child link="gopher/main_cam_right_ir_optical_frame"/>
-  </joint>
-  <link name="gopher/main_cam_right_ir_optical_frame"/>
-  <!-- camera color joints and links -->
-  <joint name="gopher/main_cam_color_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0 0.015 0"/>
-    <parent link="gopher/main_cam_depth_frame"/>
-    <child link="gopher/main_cam_color_frame"/>
-  </joint>
-  <link name="gopher/main_cam_color_frame"/>
-  <joint name="gopher/main_cam_color_optical_joint" type="fixed">
-    <origin rpy="-1.57079632679 0 -1.57079632679" xyz="0 0 0"/>
-    <parent link="gopher/main_cam_color_frame"/>
-    <child link="gopher/main_cam_color_optical_frame"/>
-  </joint>
-  <link name="gopher/main_cam_color_optical_frame"/>
   <!-- Connect to Torso -->
   <joint name="gopher/right_arm_shoulder_to_arm_root" type="fixed">
     <child link="gopher/right_arm_base_link"/>
@@ -657,18 +599,6 @@
     <origin rpy="3.14159265358979 3.14159265358979 0" xyz="0 0.05639 -0.00305"/>
     <parent link="gopher/right_arm_end_effector_link"/>
     <child link="gopher/right_arm_camera_link"/>
-  </joint>
-  <link name="gopher/right_arm_camera_depth_frame"/>
-  <joint name="gopher/right_arm_depth_module" type="fixed">
-    <origin rpy="3.14159265358979 3.14159265358979 0" xyz="0.0275 0.066 -0.00305"/>
-    <parent link="gopher/right_arm_end_effector_link"/>
-    <child link="gopher/right_arm_camera_depth_frame"/>
-  </joint>
-  <link name="gopher/right_arm_camera_color_frame"/>
-  <joint name="gopher/right_arm_color_module" type="fixed">
-    <origin rpy="3.14159265358979 3.14159265358979 0" xyz="0 0.05639 -0.00305"/>
-    <parent link="gopher/right_arm_end_effector_link"/>
-    <child link="gopher/right_arm_camera_color_frame"/>
   </joint>
   <!-- Tool frame used by the arm -->
   <link name="gopher/right_arm_tool_frame"/>
@@ -1058,58 +988,6 @@
       <inertia ixx="0.003881243" ixy="0.0" ixz="0.0" iyy="0.000498940" iyz="0.0" izz="0.003879257"/>
     </inertial>
   </link>
-  <!-- camera depth joints and links -->
-  <joint name="gopher/right_arm_cam_depth_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0 0 0"/>
-    <parent link="gopher/right_arm_cam_link"/>
-    <child link="gopher/right_arm_cam_depth_frame"/>
-  </joint>
-  <link name="gopher/right_arm_cam_depth_frame"/>
-  <joint name="gopher/right_arm_cam_depth_optical_joint" type="fixed">
-    <origin rpy="-1.57079632679 0 -1.57079632679" xyz="0 0 0"/>
-    <parent link="gopher/right_arm_cam_depth_frame"/>
-    <child link="gopher/right_arm_cam_depth_optical_frame"/>
-  </joint>
-  <link name="gopher/right_arm_cam_depth_optical_frame"/>
-  <!-- camera left IR joints and links -->
-  <joint name="gopher/right_arm_cam_left_ir_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0 0.0 0"/>
-    <parent link="gopher/right_arm_cam_depth_frame"/>
-    <child link="gopher/right_arm_cam_left_ir_frame"/>
-  </joint>
-  <link name="gopher/right_arm_cam_left_ir_frame"/>
-  <joint name="gopher/right_arm_cam_left_ir_optical_joint" type="fixed">
-    <origin rpy="-1.57079632679 0 -1.57079632679" xyz="0 0 0"/>
-    <parent link="gopher/right_arm_cam_left_ir_frame"/>
-    <child link="gopher/right_arm_cam_left_ir_optical_frame"/>
-  </joint>
-  <link name="gopher/right_arm_cam_left_ir_optical_frame"/>
-  <!-- camera right IR joints and links -->
-  <joint name="gopher/right_arm_cam_right_ir_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0 -0.05 0"/>
-    <parent link="gopher/right_arm_cam_depth_frame"/>
-    <child link="gopher/right_arm_cam_right_ir_frame"/>
-  </joint>
-  <link name="gopher/right_arm_cam_right_ir_frame"/>
-  <joint name="gopher/right_arm_cam_right_ir_optical_joint" type="fixed">
-    <origin rpy="-1.57079632679 0 -1.57079632679" xyz="0 0 0"/>
-    <parent link="gopher/right_arm_cam_right_ir_frame"/>
-    <child link="gopher/right_arm_cam_right_ir_optical_frame"/>
-  </joint>
-  <link name="gopher/right_arm_cam_right_ir_optical_frame"/>
-  <!-- camera color joints and links -->
-  <joint name="gopher/right_arm_cam_color_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0 0.015 0"/>
-    <parent link="gopher/right_arm_cam_depth_frame"/>
-    <child link="gopher/right_arm_cam_color_frame"/>
-  </joint>
-  <link name="gopher/right_arm_cam_color_frame"/>
-  <joint name="gopher/right_arm_cam_color_optical_joint" type="fixed">
-    <origin rpy="-1.57079632679 0 -1.57079632679" xyz="0 0 0"/>
-    <parent link="gopher/right_arm_cam_color_frame"/>
-    <child link="gopher/right_arm_cam_color_optical_frame"/>
-  </joint>
-  <link name="gopher/right_arm_cam_color_optical_frame"/>
   <!-- Connect to Torso -->
   <joint name="gopher/left_arm_shoulder_to_arm_root" type="fixed">
     <child link="gopher/left_arm_base_link"/>
@@ -1353,18 +1231,6 @@
     <origin rpy="3.14159265358979 3.14159265358979 0" xyz="0 0.05639 -0.00305"/>
     <parent link="gopher/left_arm_end_effector_link"/>
     <child link="gopher/left_arm_camera_link"/>
-  </joint>
-  <link name="gopher/left_arm_camera_depth_frame"/>
-  <joint name="gopher/left_arm_depth_module" type="fixed">
-    <origin rpy="3.14159265358979 3.14159265358979 0" xyz="0.0275 0.066 -0.00305"/>
-    <parent link="gopher/left_arm_end_effector_link"/>
-    <child link="gopher/left_arm_camera_depth_frame"/>
-  </joint>
-  <link name="gopher/left_arm_camera_color_frame"/>
-  <joint name="gopher/left_arm_color_module" type="fixed">
-    <origin rpy="3.14159265358979 3.14159265358979 0" xyz="0 0.05639 -0.00305"/>
-    <parent link="gopher/left_arm_end_effector_link"/>
-    <child link="gopher/left_arm_camera_color_frame"/>
   </joint>
   <!-- Tool frame used by the arm -->
   <link name="gopher/left_arm_tool_frame"/>
@@ -1754,56 +1620,4 @@
       <inertia ixx="0.003881243" ixy="0.0" ixz="0.0" iyy="0.000498940" iyz="0.0" izz="0.003879257"/>
     </inertial>
   </link>
-  <!-- camera depth joints and links -->
-  <joint name="gopher/left_arm_cam_depth_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0 0 0"/>
-    <parent link="gopher/left_arm_cam_link"/>
-    <child link="gopher/left_arm_cam_depth_frame"/>
-  </joint>
-  <link name="gopher/left_arm_cam_depth_frame"/>
-  <joint name="gopher/left_arm_cam_depth_optical_joint" type="fixed">
-    <origin rpy="-1.57079632679 0 -1.57079632679" xyz="0 0 0"/>
-    <parent link="gopher/left_arm_cam_depth_frame"/>
-    <child link="gopher/left_arm_cam_depth_optical_frame"/>
-  </joint>
-  <link name="gopher/left_arm_cam_depth_optical_frame"/>
-  <!-- camera left IR joints and links -->
-  <joint name="gopher/left_arm_cam_left_ir_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0 0.0 0"/>
-    <parent link="gopher/left_arm_cam_depth_frame"/>
-    <child link="gopher/left_arm_cam_left_ir_frame"/>
-  </joint>
-  <link name="gopher/left_arm_cam_left_ir_frame"/>
-  <joint name="gopher/left_arm_cam_left_ir_optical_joint" type="fixed">
-    <origin rpy="-1.57079632679 0 -1.57079632679" xyz="0 0 0"/>
-    <parent link="gopher/left_arm_cam_left_ir_frame"/>
-    <child link="gopher/left_arm_cam_left_ir_optical_frame"/>
-  </joint>
-  <link name="gopher/left_arm_cam_left_ir_optical_frame"/>
-  <!-- camera right IR joints and links -->
-  <joint name="gopher/left_arm_cam_right_ir_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0 -0.05 0"/>
-    <parent link="gopher/left_arm_cam_depth_frame"/>
-    <child link="gopher/left_arm_cam_right_ir_frame"/>
-  </joint>
-  <link name="gopher/left_arm_cam_right_ir_frame"/>
-  <joint name="gopher/left_arm_cam_right_ir_optical_joint" type="fixed">
-    <origin rpy="-1.57079632679 0 -1.57079632679" xyz="0 0 0"/>
-    <parent link="gopher/left_arm_cam_right_ir_frame"/>
-    <child link="gopher/left_arm_cam_right_ir_optical_frame"/>
-  </joint>
-  <link name="gopher/left_arm_cam_right_ir_optical_frame"/>
-  <!-- camera color joints and links -->
-  <joint name="gopher/left_arm_cam_color_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0 0.015 0"/>
-    <parent link="gopher/left_arm_cam_depth_frame"/>
-    <child link="gopher/left_arm_cam_color_frame"/>
-  </joint>
-  <link name="gopher/left_arm_cam_color_frame"/>
-  <joint name="gopher/left_arm_cam_color_optical_joint" type="fixed">
-    <origin rpy="-1.57079632679 0 -1.57079632679" xyz="0 0 0"/>
-    <parent link="gopher/left_arm_cam_color_frame"/>
-    <child link="gopher/left_arm_cam_color_optical_frame"/>
-  </joint>
-  <link name="gopher/left_arm_cam_color_optical_frame"/>
 </robot>

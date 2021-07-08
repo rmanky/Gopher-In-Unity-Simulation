@@ -79,66 +79,6 @@ aluminum peripherial evaluation case.
                 izz="0.003879257" />
       </inertial>
     </link>
-   
-    <!-- camera depth joints and links -->
-    <joint name="${prefix}depth_joint" type="fixed">
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <parent link="${prefix}link"/>
-      <child link="${prefix}depth_frame" />
-    </joint>
-    <link name="${prefix}depth_frame"/>
-
-    <joint name="${prefix}depth_optical_joint" type="fixed">
-      <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}" />
-      <parent link="${prefix}depth_frame" />
-      <child link="${prefix}depth_optical_frame" />
-    </joint>
-    <link name="${prefix}depth_optical_frame"/>
-      
-    <!-- camera left IR joints and links -->
-    <joint name="${prefix}left_ir_joint" type="fixed">
-      <origin xyz="0 ${d435_cam_depth_to_left_ir_offset} 0" rpy="0 0 0" />
-      <parent link="${prefix}depth_frame" />
-      <child link="${prefix}left_ir_frame" />
-    </joint>
-    <link name="${prefix}left_ir_frame"/>
-
-    <joint name="${prefix}left_ir_optical_joint" type="fixed">
-      <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}" />
-      <parent link="${prefix}left_ir_frame" />
-      <child link="${prefix}left_ir_optical_frame" />
-    </joint>
-    <link name="${prefix}left_ir_optical_frame"/>
-
-    <!-- camera right IR joints and links -->
-    <joint name="${prefix}right_ir_joint" type="fixed">
-      <origin xyz="0 ${d435_cam_depth_to_right_ir_offset} 0" rpy="0 0 0" />
-      <parent link="${prefix}depth_frame" />
-      <child link="${prefix}right_ir_frame" />
-    </joint>
-    <link name="${prefix}right_ir_frame"/>
-
-    <joint name="${prefix}right_ir_optical_joint" type="fixed">
-      <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}" />
-      <parent link="${prefix}right_ir_frame" />
-      <child link="${prefix}right_ir_optical_frame" />
-    </joint>
-    <link name="${prefix}right_ir_optical_frame"/>
-
-    <!-- camera color joints and links -->
-    <joint name="${prefix}color_joint" type="fixed">
-      <origin xyz="0 ${d435_cam_depth_to_color_offset} 0" rpy="0 0 0" />
-      <parent link="${prefix}depth_frame" />
-      <child link="${prefix}color_frame" />
-    </joint>
-    <link name="${prefix}color_frame"/>
-
-    <joint name="${prefix}color_optical_joint" type="fixed">
-      <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}" />
-      <parent link="${prefix}color_frame" />
-      <child link="${prefix}color_optical_frame" />
-    </joint>
-    <link name="${prefix}color_optical_frame"/>
 
   </xacro:macro>
 </robot>

@@ -166,14 +166,6 @@
       <child link="${prefix}base_camera_link" />
     </joint>
 
-    <link name="${prefix}base_camera_optical_frame" />
-
-    <joint name="${prefix}base_camera_optical_joint" type="fixed">
-      <origin rpy="1.5707963267966 0 1.5707963267966" xyz="0 0 0" />
-      <parent link="${prefix}base_camera_link" />
-      <child link="${prefix}base_camera_optical_frame" />
-    </joint>
-
   </xacro:macro>
 
 </robot>
