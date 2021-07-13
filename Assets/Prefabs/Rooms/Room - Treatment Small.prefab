@@ -737,6 +737,23 @@ MonoBehaviour:
     m_ManualUV: 0
     elementGroup: -1
     m_TextureGroup: -1
+  - m_Indexes: 8e0000008d0000008c0000008e0000008f0000008d000000
+    m_SmoothingGroup: 0
+    m_Uv:
+      m_UseWorldSpace: 0
+      m_FlipU: 0
+      m_FlipV: 0
+      m_SwapUV: 0
+      m_Fill: 1
+      m_Scale: {x: 1, y: 1}
+      m_Offset: {x: 0, y: 0}
+      m_Rotation: 0
+      m_Anchor: 9
+    m_Material: {fileID: 0}
+    m_SubmeshIndex: 0
+    m_ManualUV: 0
+    elementGroup: -1
+    m_TextureGroup: -1
   m_SharedVertices:
   - m_Vertices: 030000000a0000002a00000033000000
   - m_Vertices: 0200000007000000220000002b000000
@@ -776,9 +793,9 @@ MonoBehaviour:
   - m_Vertices: 5500000058000000830000008a000000
   - m_Vertices: 5c00000089000000
   - m_Vertices: 5d00000068000000
-  - m_Vertices: 6000000065000000
+  - m_Vertices: 60000000650000008d000000
   - m_Vertices: 6100000084000000
-  - m_Vertices: 640000006d000000
+  - m_Vertices: 640000006d0000008c000000
   - m_Vertices: 6900000070000000
   - m_Vertices: 6c00000075000000
   - m_Vertices: 7100000078000000
@@ -786,6 +803,8 @@ MonoBehaviour:
   - m_Vertices: 7900000080000000
   - m_Vertices: 7c00000085000000
   - m_Vertices: 8100000088000000
+  - m_Vertices: 8e000000
+  - m_Vertices: 8f000000
   m_SharedTextures: []
   m_Positions:
   - {x: 0, y: 2.20005, z: 4.4}
@@ -928,6 +947,10 @@ MonoBehaviour:
   - {x: -3.1, y: 2.19995, z: 4.4}
   - {x: -3.4, y: 3.00005, z: 4.4}
   - {x: -3.1, y: 3.0000498, z: 4.4}
+  - {x: -2.1999998, y: 2.2000504, z: 4.3}
+  - {x: -3.1, y: 2.2000499, z: 4.3}
+  - {x: -2.1999998, y: 2.2000504, z: 4.3999}
+  - {x: -3.1, y: 2.2000499, z: 4.3999}
   m_Textures0:
   - {x: -0.002203039, y: 4.4}
   - {x: -0.002203039, y: 0}
@@ -1069,6 +1092,10 @@ MonoBehaviour:
   - {x: 3.1, y: 2.19995}
   - {x: 3.4, y: 3.00005}
   - {x: 3.1, y: 3.0000498}
+  - {x: 2.1999986, y: 4.3}
+  - {x: 3.0999987, y: 4.3}
+  - {x: 2.1999986, y: 4.3999}
+  - {x: 3.0999987, y: 4.3999}
   m_Textures2: []
   m_Textures3: []
   m_Tangents:
@@ -1212,6 +1239,10 @@ MonoBehaviour:
   - {x: -1, y: 0, z: 0, w: -1}
   - {x: -1, y: 0, z: 0, w: -1}
   - {x: -1, y: 0, z: 0, w: -1}
+  - {x: -1, y: -0.00000052981903, z: 0, w: -1}
+  - {x: -1, y: -0.00000052981903, z: 0, w: -1}
+  - {x: -1, y: -0.00000052981903, z: 0, w: -1}
+  - {x: -1, y: -0.00000052981903, z: 0, w: -1}
   m_Colors: []
   m_UnwrapParameters:
     m_HardAngle: 88
@@ -1223,8 +1254,10 @@ MonoBehaviour:
   m_Mesh: {fileID: 0}
   m_IsSelectable: 1
   m_SelectedFaces: 
-  m_SelectedEdges: []
-  m_SelectedVertices: 
+  m_SelectedEdges:
+  - a: 53
+    b: 55
+  m_SelectedVertices: 3500000037000000
 --- !u!114 &8666843153153831635
 MonoBehaviour:
   m_ObjectHideFlags: 0

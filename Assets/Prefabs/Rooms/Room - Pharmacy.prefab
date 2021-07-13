@@ -1230,6 +1230,23 @@ MonoBehaviour:
     m_ManualUV: 0
     elementGroup: -1
     m_TextureGroup: -1
+  - m_Indexes: 020100000101000000010000020100000301000001010000
+    m_SmoothingGroup: 0
+    m_Uv:
+      m_UseWorldSpace: 0
+      m_FlipU: 0
+      m_FlipV: 0
+      m_SwapUV: 0
+      m_Fill: 1
+      m_Scale: {x: 1, y: 1}
+      m_Offset: {x: 0, y: 0}
+      m_Rotation: 0
+      m_Anchor: 9
+    m_Material: {fileID: 0}
+    m_SubmeshIndex: 0
+    m_ManualUV: 0
+    elementGroup: -1
+    m_TextureGroup: -1
   m_SharedVertices:
   - m_Vertices: 0300000006000000330000007e000000
   - m_Vertices: 070000000a0000003200000037000000
@@ -1266,9 +1283,9 @@ MonoBehaviour:
   - m_Vertices: 4c00000055000000
   - m_Vertices: 5100000058000000
   - m_Vertices: 540000005d000000
-  - m_Vertices: 5900000060000000
+  - m_Vertices: 590000006000000000010000
   - m_Vertices: 5c00000065000000
-  - m_Vertices: 6100000068000000
+  - m_Vertices: 610000006800000001010000
   - m_Vertices: 640000006d000000
   - m_Vertices: 6900000070000000
   - m_Vertices: 6c00000075000000
@@ -1319,6 +1336,8 @@ MonoBehaviour:
   - m_Vertices: f0000000f9000000
   - m_Vertices: f5000000fc000000
   - m_Vertices: f8000000fd000000
+  - m_Vertices: 02010000
+  - m_Vertices: 03010000
   m_SharedTextures: []
   m_Positions:
   - {x: -0.39999962, y: 3.0000498, z: 3.1999998}
@@ -1577,6 +1596,10 @@ MonoBehaviour:
   - {x: -1.5999994, y: 0, z: 0}
   - {x: -1.5999994, y: 2.20015, z: 0.099999905}
   - {x: -1.5999994, y: 2.20005, z: 0}
+  - {x: -1.5999994, y: 2.19995, z: 7.3}
+  - {x: -1.5999994, y: 2.19995, z: 6.4}
+  - {x: -1.6999, y: 2.19995, z: 7.3}
+  - {x: -1.6999, y: 2.19995, z: 6.4}
   m_Textures0:
   - {x: -0.40300357, y: 3.1999998}
   - {x: -0.40300357, y: 0}
@@ -1834,6 +1857,10 @@ MonoBehaviour:
   - {x: 0, y: 0}
   - {x: 0.099999905, y: 2.20015}
   - {x: 0, y: 2.20005}
+  - {x: 1.5999994, y: 7.3}
+  - {x: 1.5999994, y: 6.4}
+  - {x: 1.6999, y: 7.3}
+  - {x: 1.6999, y: 6.4}
   m_Textures2: []
   m_Textures3: []
   m_Tangents:
@@ -2093,6 +2120,10 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 1, w: -1}
   - {x: 0, y: 0, z: 1, w: -1}
   - {x: 0, y: 0, z: 1, w: -1}
+  - {x: -1, y: 0, z: 0, w: -1}
+  - {x: -1, y: 0, z: 0, w: -1}
+  - {x: -1, y: 0, z: 0, w: -1}
+  - {x: -1, y: 0, z: 0, w: -1}
   m_Colors: []
   m_UnwrapParameters:
     m_HardAngle: 88

@@ -2256,6 +2256,23 @@ MonoBehaviour:
     m_ManualUV: 0
     elementGroup: -1
     m_TextureGroup: -1
+  - m_Indexes: ae000000ad000000ac000000ae000000af000000ad000000
+    m_SmoothingGroup: 0
+    m_Uv:
+      m_UseWorldSpace: 0
+      m_FlipU: 0
+      m_FlipV: 0
+      m_SwapUV: 0
+      m_Fill: 1
+      m_Scale: {x: 1, y: 1}
+      m_Offset: {x: 0, y: 0}
+      m_Rotation: 0
+      m_Anchor: 9
+    m_Material: {fileID: 0}
+    m_SubmeshIndex: 0
+    m_ManualUV: 0
+    elementGroup: -1
+    m_TextureGroup: -1
   m_SharedVertices:
   - m_Vertices: 130000005f00000062000000
   - m_Vertices: 2f000000420000005d00000060000000
@@ -2314,13 +2331,15 @@ MonoBehaviour:
   - m_Vertices: 8500000088000000
   - m_Vertices: 89000000
   - m_Vertices: 8c00000091000000
-  - m_Vertices: 8d0000009c000000
+  - m_Vertices: 8d0000009c000000ac000000
   - m_Vertices: 9000000099000000
   - m_Vertices: 94000000a5000000
   - m_Vertices: 95000000a8000000
   - m_Vertices: 98000000a1000000
-  - m_Vertices: 9d000000a4000000
+  - m_Vertices: 9d000000a4000000ad000000
   - m_Vertices: a0000000a9000000
+  - m_Vertices: ae000000
+  - m_Vertices: af000000
   m_SharedTextures: []
   m_Positions:
   - {x: 2.4000006, y: 2.2000499, z: 2.5999994}
@@ -2495,6 +2514,10 @@ MonoBehaviour:
   - {x: 4.430001, y: 2.20005, z: 2.5}
   - {x: 5.4, y: 3.000026, z: 2.5}
   - {x: 4.430001, y: 3.0000496, z: 2.5}
+  - {x: 3.3700008, y: 2.19995, z: 2.6000004}
+  - {x: 4.430001, y: 2.19995, z: 2.6000004}
+  - {x: 3.3700008, y: 2.19995, z: 2.5001}
+  - {x: 4.430001, y: 2.19995, z: 2.5001}
   m_Textures0:
   - {x: 2.4000018, y: 2.5985248}
   - {x: 3.370002, y: 2.5985258}
@@ -2668,6 +2691,10 @@ MonoBehaviour:
   - {x: 4.430001, y: 2.20005}
   - {x: 5.4, y: 3.000026}
   - {x: 4.430001, y: 3.0000496}
+  - {x: -3.3700008, y: 2.6000004}
+  - {x: -4.430001, y: 2.6000004}
+  - {x: -3.3700008, y: 2.5001}
+  - {x: -4.430001, y: 2.5001}
   m_Textures2: []
   m_Textures3: []
   m_Tangents:
@@ -2843,6 +2870,10 @@ MonoBehaviour:
   - {x: 1, y: 0, z: 0, w: -1}
   - {x: 1, y: 0, z: 0, w: -1}
   - {x: 1, y: 0, z: 0, w: -1}
+  - {x: -1, y: 0, z: 0, w: -1}
+  - {x: -1, y: 0, z: 0, w: -1}
+  - {x: -1, y: 0, z: 0, w: -1}
+  - {x: -1, y: 0, z: 0, w: -1}
   m_Colors: []
   m_UnwrapParameters:
     m_HardAngle: 88
