@@ -26,5 +26,4 @@ If you would like to edit or create a new building, you could also install `Prob
 
 Now you could `git clone` and download this repository, then cut and paste to the folder where it stores your Unity projects, to merge with your **Gopher In Unity Simulation** folder. Switch back to Unity, and now it should load all the necessary files.
 
-## TODO
-
+## Running
