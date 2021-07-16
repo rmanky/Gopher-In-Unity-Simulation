@@ -16,7 +16,7 @@ public class ModelStatePublisher : MonoBehaviour
     public string velocityTopicName = "model_vel";
 
     public GameObject model;
-    private MPose mModelPose;
+    private PoseMsg mModelPose;
 
 
     /// <summary>
@@ -27,7 +27,7 @@ public class ModelStatePublisher : MonoBehaviour
         // Get ROS connection static instance
         ros = ROSConnection.instance;
         
-        mModelPose = new MPose();
+        mModelPose = new PoseMsg();
     }
 
     void Update()
@@ -35,7 +35,7 @@ public class ModelStatePublisher : MonoBehaviour
         mModelPose.position = model.transform.position.To<FLU>();
         mModelPose.orientation = model.transform.rotation.To<FLU>();
 
-        //Geometry.MTwist mModelQuaternion = new Geometry.MTwist
+        //Geometry.TwistMsg mModelQuaternion = new Geometry.TwistMsg
         //{
         //    linear = mModelTwistLinear
         //    angular = mModelTwistAngular

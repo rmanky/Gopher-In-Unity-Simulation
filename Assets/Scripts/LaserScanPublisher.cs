@@ -20,7 +20,7 @@ public class LaserScanPublisher : MonoBehaviour
     private string FrameId = "Laser Scan";
     private float scanPeriod;
     private float previousScanTime = 0;
-    private MLaserScan laserScan;
+    private LaserScanMsg laserScan;
 
 
     void Start()
@@ -31,9 +31,9 @@ public class LaserScanPublisher : MonoBehaviour
         // Messages
         scanPeriod = (float)laserScanReader.samples / (float)laserScanReader.update_rate;
 
-        laserScan = new MLaserScan
+        laserScan = new LaserScanMsg
         {
-            header = new MHeader { frame_id = FrameId },
+            header = new HeaderMsg { frame_id = FrameId },
             angle_min       = laserScanReader.angle_min,
             angle_max       = laserScanReader.angle_max,
             angle_increment = laserScanReader.angle_increment,

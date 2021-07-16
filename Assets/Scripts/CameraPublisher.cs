@@ -29,9 +29,9 @@ public class CameraPublisher : MonoBehaviour
     private string rightFrameID = "Right Arm Camera";
     private string leftFrameID = "Left Arm Camera";
 
-    private MCompressedImage mainCameraImage;
-    private MCompressedImage rightArmCameraImage;
-    private MCompressedImage leftArmCameraImage;
+    private CompressedImageMsg mainCameraImage;
+    private CompressedImageMsg rightArmCameraImage;
+    private CompressedImageMsg leftArmCameraImage;
     private Texture2D texture2D;
     private Rect rect;
 
@@ -56,13 +56,13 @@ public class CameraPublisher : MonoBehaviour
         leftArmCamera.targetTexture = renderTexture;
         
         // Messages
-        mainCameraImage = new MCompressedImage();
+        mainCameraImage = new CompressedImageMsg();
         mainCameraImage.header.frame_id = mainFrameID;
         mainCameraImage.format = "jpeg";
-        rightArmCameraImage = new MCompressedImage();
+        rightArmCameraImage = new CompressedImageMsg();
         rightArmCameraImage.header.frame_id = rightFrameID;
         rightArmCameraImage.format = "jpeg";
-        leftArmCameraImage = new MCompressedImage();
+        leftArmCameraImage = new CompressedImageMsg();
         leftArmCameraImage.header.frame_id = leftFrameID;
         leftArmCameraImage.format = "jpeg";
 

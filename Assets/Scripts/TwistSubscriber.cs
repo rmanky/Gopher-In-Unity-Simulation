@@ -36,7 +36,7 @@ public class TwistSubscriber : MonoBehaviour
         // Transform of the controlled object
         rb = controlledObject.GetComponent<Rigidbody>();
 
-        ros.Subscribe<MTwist>(twistTopicName, updateVelocity);
+        ros.Subscribe<TwistMsg>(twistTopicName, updateVelocity);
     }
 
 
@@ -56,7 +56,7 @@ public class TwistSubscriber : MonoBehaviour
     }
 
 
-    private void updateVelocity(MTwist twist)
+    private void updateVelocity(TwistMsg twist)
     {
         linearVelocity = twist.linear.From<FLU>();
         angularVelocity = twist.angular.From<FLU>();
