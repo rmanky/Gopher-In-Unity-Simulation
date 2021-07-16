@@ -12,21 +12,13 @@ public class JointController : MonoBehaviour
     // ROS Connector
     private ROSConnection ros;
 
+    // Robot object
+    public GameObject gopher;
     // Hardcoded variables 
     private int numRobotJoints = 7;
-    private readonly float jointAssignmentWait = 0.1f;
-    private readonly float poseAssignmentWait = 0.5f;
-    private readonly Vector3 pickPoseOffset = Vector3.up * 0.1f;
 
     // Assures that the gripper is always positioned above the target cube before grasping.
     private readonly Quaternion pickOrientation = Quaternion.Euler(90, 90, 0);
-
-    // Variables required for ROS communication
-    public string rosServiceName = "gopher_arm";
-
-    public GameObject gopher;
-    //public GameObject target;
-    //public GameObject targetPlacement;
 
     // Articulation Bodies
     private ArticulationBody[] jointArticulationBodies;
