@@ -5701,7 +5701,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &936341445
 BoxCollider:
@@ -6323,6 +6323,10 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3236344825859044371, guid: e3db20ba418fbce0e9c95caad169aed5, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 6594528832948291967, guid: e3db20ba418fbce0e9c95caad169aed5, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -6389,6 +6393,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 143523941474413310}
     m_Modifications:
+    - target: {fileID: 7614298879516660695, guid: d0a59abb9c6a75d6f83ee7811e36c2f1, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 7614298880014393352, guid: d0a59abb9c6a75d6f83ee7811e36c2f1, type: 3}
       propertyPath: m_Name
       value: Wooden Door - Open - 1200
@@ -6456,6 +6464,10 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2907871391985781693, guid: 9464b3248a9dd6bb3a935c942a88f37b, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 5107832866163824590, guid: 9464b3248a9dd6bb3a935c942a88f37b, type: 3}
       propertyPath: m_Name
       value: Wheel Chair
@@ -6521,6 +6533,10 @@ PrefabInstance:
     - target: {fileID: 2474927819501631215, guid: 28234b9452435d7fa813f91b439fddb3, type: 3}
       propertyPath: m_Name
       value: Hospital Room Bed
+      objectReference: {fileID: 0}
+    - target: {fileID: 7519605709503829351, guid: 28234b9452435d7fa813f91b439fddb3, type: 3}
+      propertyPath: m_Constraints
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 8889198490291906708, guid: 28234b9452435d7fa813f91b439fddb3, type: 3}
       propertyPath: m_RootOrder
@@ -6631,6 +6647,10 @@ PrefabInstance:
     - target: {fileID: 6450789725977292120, guid: 32fb652e0d319c6eea29466f83682adb, type: 3}
       propertyPath: m_UseGravity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450789725977292120, guid: 32fb652e0d319c6eea29466f83682adb, type: 3}
+      propertyPath: m_Constraints
+      value: 126
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32fb652e0d319c6eea29466f83682adb, type: 3}
@@ -6854,6 +6874,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6061361857752034261, guid: ec5b8a8f9e96f3c2983545de857e73b9, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec5b8a8f9e96f3c2983545de857e73b9, type: 3}
 --- !u!4 &1786564090756406323 stripped
@@ -6930,6 +6954,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 143523941474413310}
     m_Modifications:
+    - target: {fileID: 4750712202969441205, guid: 4444aff6dd83386d2ac0b23f11d36732, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 6250826350519713342, guid: 4444aff6dd83386d2ac0b23f11d36732, type: 3}
       propertyPath: m_Name
       value: Window
@@ -6992,6 +7020,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 143523941474413310}
     m_Modifications:
+    - target: {fileID: 3755692839897897930, guid: 8014f0c57528a706c9d783306fe19b75, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 5805319374019915193, guid: 8014f0c57528a706c9d783306fe19b75, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -7120,6 +7152,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sink Set
       objectReference: {fileID: 0}
+    - target: {fileID: 2564965486633677839, guid: 1b00c6a81c47ee994ab2496321e8752d, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 5093644164565733791, guid: 1b00c6a81c47ee994ab2496321e8752d, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -7238,6 +7274,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6061361857752034261, guid: ec5b8a8f9e96f3c2983545de857e73b9, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec5b8a8f9e96f3c2983545de857e73b9, type: 3}
 --- !u!4 &5210162593878048133 stripped
@@ -7299,6 +7339,10 @@ PrefabInstance:
     - target: {fileID: 5719731720277057759, guid: e6c750c6fb7a91aacaeabcdcd974d0d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7361499148393633805, guid: e6c750c6fb7a91aacaeabcdcd974d0d4, type: 3}
+      propertyPath: m_Constraints
+      value: 126
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6c750c6fb7a91aacaeabcdcd974d0d4, type: 3}
@@ -7362,6 +7406,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Closet
       objectReference: {fileID: 0}
+    - target: {fileID: 4114830424086397807, guid: c76fda456d1722ed28d3531faf36c684, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 7307136682145215783, guid: c76fda456d1722ed28d3531faf36c684, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.2
@@ -7399,6 +7447,10 @@ PrefabInstance:
     - target: {fileID: 2770580078373382757, guid: 6aa2e2ad73c55ff4d8e26c597f722575, type: 3}
       propertyPath: m_UseGravity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2770580078373382757, guid: 6aa2e2ad73c55ff4d8e26c597f722575, type: 3}
+      propertyPath: m_Constraints
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 3086790053206675836, guid: 6aa2e2ad73c55ff4d8e26c597f722575, type: 3}
       propertyPath: m_Name
