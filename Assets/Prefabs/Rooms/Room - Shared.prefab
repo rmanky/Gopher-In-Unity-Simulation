@@ -2357,7 +2357,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -2476,7 +2476,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.0634e-41, y: 1.02e-43, z: 0, w: 1.2513654e+16}
+  m_BoundingSphereOverride: {x: 1.1631e-41, y: 1.02e-43, z: 0, w: 1.2513654e+16}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -7893,9 +7893,17 @@ MonoBehaviour:
   assetGuid: 
   m_Mesh: {fileID: 0}
   m_IsSelectable: 1
-  m_SelectedFaces: 
-  m_SelectedEdges: []
-  m_SelectedVertices: 
+  m_SelectedFaces: 00000000
+  m_SelectedEdges:
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  m_SelectedVertices: 64000000000000000000000000000000
 --- !u!114 &8356104989732195033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9499,6 +9507,14 @@ PrefabInstance:
     - target: {fileID: 208550042162612955, guid: 3e6be463f07a6c78098dc818c3fae804, type: 3}
       propertyPath: m_Name
       value: Wooden Door - Open - 900
+      objectReference: {fileID: 0}
+    - target: {fileID: 7352532904326242131, guid: 3e6be463f07a6c78098dc818c3fae804, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.049999014
+      objectReference: {fileID: 0}
+    - target: {fileID: 7352532904326242131, guid: 3e6be463f07a6c78098dc818c3fae804, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0000009536743
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e6be463f07a6c78098dc818c3fae804, type: 3}
