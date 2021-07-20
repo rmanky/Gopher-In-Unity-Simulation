@@ -3,7 +3,22 @@ guid: 495e53c53bca8b9528739646b9bed6c4
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DarkGray.001
+    second: {fileID: 2100000, guid: 7c3f83778f01f8e3b824b6673b74cd19, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorWood
+    second: {fileID: 2100000, guid: 3ebdf4a94821f8b8db84a0b20a5d0b1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorWood.002
+    second: {fileID: 2100000, guid: 3ebdf4a94821f8b8db84a0b20a5d0b1d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

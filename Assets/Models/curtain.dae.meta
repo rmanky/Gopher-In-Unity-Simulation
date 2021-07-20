@@ -3,7 +3,17 @@ guid: 5708454b26c54b97dacf444c2d001971
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Support
+    second: {fileID: 2100000, guid: 9b780618a3497e18c9caa25556a9b287, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dbl_skpF811_003.003
+    second: {fileID: 2100000, guid: fd79d9b6f903fcc6a988b2de1f78452c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
