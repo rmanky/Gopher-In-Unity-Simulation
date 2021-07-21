@@ -3,7 +3,47 @@ guid: d4aee9989d66d47aca7dca84c3351b4c
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Aluminium
+    second: {fileID: 2100000, guid: 9b780618a3497e18c9caa25556a9b287, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: 9992e44f9936512a49e911c92cb51e67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Iron
+    second: {fileID: 2100000, guid: 9166b7799a634e44c83237ccee43b315, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlasticBlack
+    second: {fileID: 2100000, guid: 3287081f1e2028e178156e9a64d9eddb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlasticDarkBlue
+    second: {fileID: 2100000, guid: 37e102812f26d8a3e933d903433e91bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlasticGray
+    second: {fileID: 2100000, guid: 8200e1edf2a8d0256b361ac4f842d92b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlasticLightGreen
+    second: {fileID: 2100000, guid: 62cb6fddac7b53e14a67093795b15035, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlasticRed
+    second: {fileID: 2100000, guid: 977438d4a534f6bad9905115e0f576f6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

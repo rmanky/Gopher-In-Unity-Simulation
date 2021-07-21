@@ -3,7 +3,32 @@ guid: 829838f3243117d2cbd5a1a6c5e184de
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Aluminium
+    second: {fileID: 2100000, guid: 9b780618a3497e18c9caa25556a9b287, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ClosetWood
+    second: {fileID: 2100000, guid: 41fe87c91cd47761ba081adf1490781f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: 9992e44f9936512a49e911c92cb51e67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlasticBlack
+    second: {fileID: 2100000, guid: 3287081f1e2028e178156e9a64d9eddb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlasticWhite
+    second: {fileID: 2100000, guid: e68e3838650e0ece496f2808437c39bc, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
