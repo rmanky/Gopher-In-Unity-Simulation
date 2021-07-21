@@ -88,7 +88,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 9.406e-42, y: 1.02e-43, z: 0, w: 1.2513654e+16}
+  m_BoundingSphereOverride: {x: 4.5607e-41, y: NaN, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -181,7 +181,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.138e-42, y: 1.02e-43, z: 0, w: 1.2513654e+16}
+  m_BoundingSphereOverride: {x: 9.841058e-12, y: NaN, z: 4.5607e-41, w: 1.71e-43}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -1970,7 +1970,7 @@ MonoBehaviour:
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
-  m_SelectedVertices: 
+  m_SelectedVertices: 00000000
 --- !u!114 &2486627022638161841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2105,7 +2105,7 @@ Transform:
   - {fileID: 5426652403066442571}
   - {fileID: 8856486242598507515}
   - {fileID: 5415906649273869773}
-  - {fileID: 5415906650643555261}
+  - {fileID: 8117489177558285634}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2197,7 +2197,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 9.406e-42, y: 1.02e-43, z: 0, w: 1.2513654e+16}
+  m_BoundingSphereOverride: {x: 0, y: 478.74097, z: 0, w: -2.0981808e-19}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -2290,7 +2290,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 9.406e-42, y: 1.02e-43, z: 0, w: 1.2513654e+16}
+  m_BoundingSphereOverride: {x: 2.368913e+20, y: 3.4e-44, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -2383,7 +2383,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 9.406e-42, y: 1.02e-43, z: 0, w: 1.2513654e+16}
+  m_BoundingSphereOverride: {x: 0, y: -28.426544, z: 0, w: -3.7400723e-19}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -2476,7 +2476,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.138e-42, y: 1.02e-43, z: 0, w: 1.2513654e+16}
+  m_BoundingSphereOverride: {x: 4.5607e-41, y: -3.1343523e+11, z: 0, w: -3.2118182e-19}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -2569,7 +2569,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.138e-42, y: 1.02e-43, z: 0, w: 1.2513654e+16}
+  m_BoundingSphereOverride: {x: 4.5607e-41, y: 4.9e-44, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -2662,7 +2662,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.138e-42, y: 1.02e-43, z: 0, w: 1.2513654e+16}
+  m_BoundingSphereOverride: {x: 9.3416784e+26, y: 2.8e-44, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -2729,65 +2729,65 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7614298880014393355, guid: d0a59abb9c6a75d6f83ee7811e36c2f1, type: 3}
   m_PrefabInstance: {fileID: 2486627022454687174}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &2486627022896448438
+--- !u!1001 &8606616469801518776
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 2486627023603568175}
     m_Modifications:
-    - target: {fileID: 7614298880014393352, guid: d0a59abb9c6a75d6f83ee7811e36c2f1, type: 3}
-      propertyPath: m_Name
-      value: Wooden Door - Open - 1200
-      objectReference: {fileID: 0}
-    - target: {fileID: 7614298880014393355, guid: d0a59abb9c6a75d6f83ee7811e36c2f1, type: 3}
+    - target: {fileID: 565137372899687418, guid: 35bf581d1ea282e75a70eb2d2175ee46, type: 3}
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 7614298880014393355, guid: d0a59abb9c6a75d6f83ee7811e36c2f1, type: 3}
+    - target: {fileID: 565137372899687418, guid: 35bf581d1ea282e75a70eb2d2175ee46, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.040000916
+      value: -2.039999
       objectReference: {fileID: 0}
-    - target: {fileID: 7614298880014393355, guid: d0a59abb9c6a75d6f83ee7811e36c2f1, type: 3}
+    - target: {fileID: 565137372899687418, guid: 35bf581d1ea282e75a70eb2d2175ee46, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7614298880014393355, guid: d0a59abb9c6a75d6f83ee7811e36c2f1, type: 3}
+    - target: {fileID: 565137372899687418, guid: 35bf581d1ea282e75a70eb2d2175ee46, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.8
+      value: -5.2
       objectReference: {fileID: 0}
-    - target: {fileID: 7614298880014393355, guid: d0a59abb9c6a75d6f83ee7811e36c2f1, type: 3}
+    - target: {fileID: 565137372899687418, guid: 35bf581d1ea282e75a70eb2d2175ee46, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: 7614298880014393355, guid: d0a59abb9c6a75d6f83ee7811e36c2f1, type: 3}
+    - target: {fileID: 565137372899687418, guid: 35bf581d1ea282e75a70eb2d2175ee46, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 7614298880014393355, guid: d0a59abb9c6a75d6f83ee7811e36c2f1, type: 3}
+    - target: {fileID: 565137372899687418, guid: 35bf581d1ea282e75a70eb2d2175ee46, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: 7614298880014393355, guid: d0a59abb9c6a75d6f83ee7811e36c2f1, type: 3}
+    - target: {fileID: 565137372899687418, guid: 35bf581d1ea282e75a70eb2d2175ee46, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 7614298880014393355, guid: d0a59abb9c6a75d6f83ee7811e36c2f1, type: 3}
+    - target: {fileID: 565137372899687418, guid: 35bf581d1ea282e75a70eb2d2175ee46, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7614298880014393355, guid: d0a59abb9c6a75d6f83ee7811e36c2f1, type: 3}
+    - target: {fileID: 565137372899687418, guid: 35bf581d1ea282e75a70eb2d2175ee46, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 7614298880014393355, guid: d0a59abb9c6a75d6f83ee7811e36c2f1, type: 3}
+    - target: {fileID: 565137372899687418, guid: 35bf581d1ea282e75a70eb2d2175ee46, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 565137372899687419, guid: 35bf581d1ea282e75a70eb2d2175ee46, type: 3}
+      propertyPath: m_Name
+      value: Wooden Door - Open - 1200 - 90 Degree
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d0a59abb9c6a75d6f83ee7811e36c2f1, type: 3}
---- !u!4 &5415906650643555261 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 35bf581d1ea282e75a70eb2d2175ee46, type: 3}
+--- !u!4 &8117489177558285634 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7614298880014393355, guid: d0a59abb9c6a75d6f83ee7811e36c2f1, type: 3}
-  m_PrefabInstance: {fileID: 2486627022896448438}
+  m_CorrespondingSourceObject: {fileID: 565137372899687418, guid: 35bf581d1ea282e75a70eb2d2175ee46, type: 3}
+  m_PrefabInstance: {fileID: 8606616469801518776}
   m_PrefabAsset: {fileID: 0}
