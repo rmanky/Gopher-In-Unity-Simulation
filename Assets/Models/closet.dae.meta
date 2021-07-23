@@ -3,7 +3,17 @@ guid: fac71c766f9cc84b0aada7339a946028
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ClosetWood
+    second: {fileID: 2100000, guid: 41fe87c91cd47761ba081adf1490781f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlasticBlack
+    second: {fileID: 2100000, guid: 3287081f1e2028e178156e9a64d9eddb, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
