@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<robot name="gopher" xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <!-- Arguments -->
+    <xacro:arg name="robot_name" default="gopher" />
+    <xacro:arg name="prefix" default="$(arg robot_name)/" />
+
+
+    <!-- Include files -->
+    <xacro:include filename="$(find gopher_description)/base/urdf/freight_macro.xacro" />
+    <xacro:include filename="$(find gopher_description)/base/urdf/torso.urdf.xacro" />
+    <xacro:include filename="$(find gopher_description)/camera/urdf/main_camera_support.urdf.xacro" />
+
+
+    <!-- Load the base -->
+    <xacro:load_base prefix="$(arg prefix)"/>
+
+    <!-- Load torso 
+    <xacro:load_torso prefix="$(arg prefix)"/> 
+    -->
+
+    <!-- Load main camera 
+    <xacro:load_main_camera prefix="$(arg prefix)main_cam_" camera_name="main_cam" 
+                            main_camera_base="$(arg prefix)torso"
+                            width="1080" height="720" update_rate="30" wide_flag="true"/>
+    -->
+</robot>
