@@ -7,16 +7,16 @@ public class CameraRotation : MonoBehaviour
 
     public float mouseSensitivity = 100f;
 
-    public Transform playerBody;
+    public Transform mainCamera;
+    public Transform armCamera;
 
     float xRotation = 0f;
-
-
+    float yRotation = 0f;
 
     // Use this for initialization
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        // Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -28,7 +28,10 @@ public class CameraRotation : MonoBehaviour
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -60f, 60f);
 
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        playerBody.Rotate(Vector3.up * mouseX);
+        yRotation += mouseX;
+        yRotation = Mathf.Clamp(yRotation, -60f, 60f);
+
+        mainCamera.localRotation = Quaternion.Euler(xRotation, yRotation, 0f);
+        armCamera.localRotation = Quaternion.Euler(yRotation, 0f, -xRotation + 180f);
     }
 }
