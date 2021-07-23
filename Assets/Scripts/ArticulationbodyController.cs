@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SimpleController : MonoBehaviour
+public class ArticulationController : MonoBehaviour
 {
     public float speed = 1.0f;
     public float angularSpeed = 1.5f;
 
-    private Rigidbody rb;
+    private ArticulationBody ab;
     private float xMove;
     private float zMove;
     private Vector3 forwardDirection;
@@ -15,7 +15,7 @@ public class SimpleController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        ab = GetComponent<ArticulationBody>();
     }
 
     // Update is called once per frame
@@ -30,7 +30,7 @@ public class SimpleController : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.velocity = speed * forwardDirection.normalized;
-        rb.angularVelocity = xMove * angularSpeed * Vector3.up;
+        ab.velocity = speed * forwardDirection.normalized;
+        ab.angularVelocity = xMove * angularSpeed * Vector3.up;
     }
 }

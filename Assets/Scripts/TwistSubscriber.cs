@@ -6,7 +6,6 @@ using Unity.Robotics.ROSTCPConnector;
 using Unity.Robotics.ROSTCPConnector.ROSGeometry;
 using RosMessageTypes.Geometry;
 
-
 public class TwistSubscriber : MonoBehaviour
 {
     // ROS Connector
@@ -21,7 +20,6 @@ public class TwistSubscriber : MonoBehaviour
     public float angularSpeed = 1.0f;
     private Rigidbody rb;
 
-    private float previousRealTime;
     private Vector3 forwardDirection;
     private Vector3 linearVelocity;
     private Vector3 angularVelocity;
@@ -37,8 +35,8 @@ public class TwistSubscriber : MonoBehaviour
         rb = controlledObject.GetComponent<Rigidbody>();
 
         ros.Subscribe<TwistMsg>(twistTopicName, updateVelocity);
+        isMessageReceived = false;
     }
-
 
     private void FixedUpdate()
     {
@@ -52,9 +50,7 @@ public class TwistSubscriber : MonoBehaviour
 
             isMessageReceived = false;
         }
-        previousRealTime = Time.realtimeSinceStartup;
     }
-
 
     private void updateVelocity(TwistMsg twist)
     {

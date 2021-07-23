@@ -22,7 +22,6 @@ public class LaserScanPublisher : MonoBehaviour
     private float previousScanTime = 0;
     private LaserScanMsg laserScan;
 
-
     void Start()
     {
         // Get ROS connection static instance
@@ -49,15 +48,9 @@ public class LaserScanPublisher : MonoBehaviour
     {
         if (Time.realtimeSinceStartup >= previousScanTime + scanPeriod)
         {
-            UpdateLaserScan();
+            laserScan.ranges = laserScanReader.Scan();
+            ros.Send(laserTopicName, laserScan);
             previousScanTime = Time.realtimeSinceStartup;
         }
-    }
-
-
-    private void UpdateLaserScan()
-    {
-        laserScan.ranges = laserScanReader.Scan();
-        ros.Send(laserTopicName, laserScan);
     }
 }

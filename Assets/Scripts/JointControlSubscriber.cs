@@ -7,7 +7,7 @@ using Unity.Robotics.ROSTCPConnector.ROSGeometry;
 using RosMessageTypes.Geometry;
 
 
-public class JointController : MonoBehaviour
+public class JointControlSubscriber : MonoBehaviour
 {
     // ROS Connector
     private ROSConnection ros;
