@@ -22,7 +22,7 @@ public class UIManager : MonoBehaviour
         {
             camera.targetDisplay = 0;
             camera.fieldOfView = 69.4f;
-            camera.rect = new Rect(0f, 0.1f, 0.8f, 0.8f);
+            camera.rect = new Rect(0f, 0.0f, 1.0f, 1.0f);
         }
 
         currentCameraIndex = 0;
