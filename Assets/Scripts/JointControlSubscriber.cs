@@ -1,10 +1,11 @@
-using System.Collections;
 using System.Linq;
-
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+
 using Unity.Robotics.ROSTCPConnector;
 using Unity.Robotics.ROSTCPConnector.ROSGeometry;
-using RosMessageTypes.Geometry;
+using RosMessageTypes.Std;
 
 
 public class JointControlSubscriber : MonoBehaviour
@@ -12,93 +13,99 @@ public class JointControlSubscriber : MonoBehaviour
     // ROS Connector
     private ROSConnection ros;
 
+    // Variables required for ROS communication
+    public string joint1ControllerTopicName = "joint_1_position_controller/command";
+    public string joint2ControllerTopicName = "joint_2_position_controller/command";
+    public string joint3ControllerTopicName = "joint_3_position_controller/command";
+    public string joint4ControllerTopicName = "joint_4_position_controller/command";
+    public string joint5ControllerTopicName = "joint_5_position_controller/command";
+    public string joint6ControllerTopicName = "joint_6_position_controller/command";
+    public string joint7ControllerTopicName = "joint_7_position_controller/command";
+    
     // Robot object
-    public GameObject gopher;
-    // Hardcoded variables 
-    private int numRobotJoints = 7;
-
-    // Assures that the gripper is always positioned above the target cube before grasping.
-    private readonly Quaternion pickOrientation = Quaternion.Euler(90, 90, 0);
-
+    public GameObject robotArm;
     // Articulation Bodies
-    private ArticulationBody[] jointArticulationBodies;
-    private ArticulationBody leftGripper;
-    private ArticulationBody rightGripper;
-
-    private Transform gripperBase;
-    private Transform leftGripperGameObject;
-    private Transform rightGripperGameObject;
-
-    private enum Poses
-    {
-        PreGrasp,
-        Grasp,
-        PickUp,
-        Place
-    };
+    public float[] homePosition = {0f, 0f, 0f, 0f, 0f, 0f, 0f};
+    private ArticulationBody[] articulationChain;
 
     // Start is called before the first frame update
-    void Start(){
+    void Start()
+    {
         // Get ROS connection static instance
         ros = ROSConnection.instance;
 
-        jointArticulationBodies = new ArticulationBody[numRobotJoints];
-        
-        string shoulder_link = "world/base_link/chassis_link/torso/left_shoulder_link/left_arm_base_link/left_arm_shoulder_link";
-        jointArticulationBodies[0] = gopher.transform.Find(shoulder_link).GetComponent<ArticulationBody>();
+        // Get joints
+        articulationChain = GetComponentsInChildren<ArticulationBody>();
+        articulationChain = articulationChain.Where(joint => joint.jointType 
+                                                    != ArticulationJointType.FixedJoint).ToArray();
 
-        string arm_link = shoulder_link + "/left_arm_half_arm_1_link";
-        jointArticulationBodies[1] = gopher.transform.Find(arm_link).GetComponent<ArticulationBody>();
+        // Initialize robot position
+        HomeRobot();
 
-        string elbow_link = arm_link + "/left_arm_half_arm_2_link";
-        jointArticulationBodies[2] = gopher.transform.Find(elbow_link).GetComponent<ArticulationBody>();
-
-        string forearm_link = elbow_link + "/left_arm_forearm_link";
-        jointArticulationBodies[3] = gopher.transform.Find(forearm_link).GetComponent<ArticulationBody>();
-
-        string wrist_link = forearm_link + "/left_arm_spherical_wrist_1_link";
-        jointArticulationBodies[4] = gopher.transform.Find(wrist_link).GetComponent<ArticulationBody>();
-
-        string hand_link = wrist_link + "/left_arm_spherical_wrist_2_link";
-        jointArticulationBodies[5] = gopher.transform.Find(hand_link).GetComponent<ArticulationBody>();
-
-        string end_link = hand_link + "left_arm_bracelet_link";
-        jointArticulationBodies[6] = gopher.transform.Find(end_link).GetComponent<ArticulationBody>();
-
-        /*
-        // Find left and right fingers
-        string right_gripper = hand_link + "/tool_link/gripper_base/servo_head/control_rod_right/right_gripper";
-        string left_gripper = hand_link + "/tool_link/gripper_base/servo_head/control_rod_left/left_gripper";
-        string gripper_base = hand_link + "/tool_link/gripper_base/Collisions/unnamed";
-
-        gripperBase = niryoOne.transform.Find(gripper_base);
-        leftGripperGameObject = niryoOne.transform.Find(left_gripper);
-        rightGripperGameObject = niryoOne.transform.Find(right_gripper);
-
-        rightGripper = rightGripperGameObject.GetComponent<ArticulationBody>();
-        leftGripper = leftGripperGameObject.GetComponent<ArticulationBody>();
-        */
-
-        /*
-        for (int joint = 0; joint < jointArticulationBodies.Length; joint++)
-        {
-            var joint1XDrive = jointArticulationBodies[joint].xDrive;
-            joint1XDrive.target = result[joint];
-            jointArticulationBodies[joint].xDrive = joint1XDrive;
-        }
-        */
-    }
-
-    public void MoveRobot()
-    {
-        var joint1XDrive = jointArticulationBodies[0].xDrive;
-        joint1XDrive.target = 45f;
-        jointArticulationBodies[0].xDrive = joint1XDrive;
+        // Subscribers
+        ros.Subscribe<Float64Msg>(joint1ControllerTopicName, moveJoint1);
+        ros.Subscribe<Float64Msg>(joint2ControllerTopicName, moveJoint2);
+        ros.Subscribe<Float64Msg>(joint3ControllerTopicName, moveJoint3);
+        ros.Subscribe<Float64Msg>(joint4ControllerTopicName, moveJoint4);
+        ros.Subscribe<Float64Msg>(joint5ControllerTopicName, moveJoint5);
+        ros.Subscribe<Float64Msg>(joint6ControllerTopicName, moveJoint6);
+        ros.Subscribe<Float64Msg>(joint7ControllerTopicName, moveJoint7);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+    }
+
+    public void HomeRobot()
+    {
+        for (int i = 0; i < homePosition.Length; i++)
+            if (articulationChain[i].xDrive.target != homePosition[i])
+            {
+                moveJoint(i, homePosition[i]);
+            }
+    }
+
+    // Callback functions
+    public void moveJoint(int jointNum, float target)
+    {
+        ArticulationDrive drive = articulationChain[jointNum].xDrive;
+        drive.target = target;
+        articulationChain[jointNum].xDrive = drive;
+    }
+
+    private void moveJoint1(Float64Msg target)
+    {
+        moveJoint(0, (float)target.data);
+    }
+
+    private void moveJoint2(Float64Msg target)
+    {
+        moveJoint(1, (float)target.data);
+    }
+
+    private void moveJoint3(Float64Msg target)
+    {
+        moveJoint(2, (float)target.data);
+    }
+
+    private void moveJoint4(Float64Msg target)
+    {
+        moveJoint(3, (float)target.data);
+    }
+
+    private void moveJoint5(Float64Msg target)
+    {
+        moveJoint(4, (float)target.data);
+    }
+
+    private void moveJoint6(Float64Msg target)
+    {
+        moveJoint(5, (float)target.data);
+    }
+
+    private void moveJoint7(Float64Msg target)
+    {
+        moveJoint(6, (float)target.data);
     }
 }
