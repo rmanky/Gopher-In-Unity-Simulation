@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ public class RigidbodyController : MonoBehaviour
 {
     public float speed = 1.0f;
     public float angularSpeed = 1.5f;
+    private float angularSpeedDegree;
 
     private Rigidbody rb;
     private float xMove;
@@ -28,6 +30,7 @@ public class RigidbodyController : MonoBehaviour
 
         forwardDirection = transform.forward * zMove;
         rotationVector = new Vector3(0, xMove, 0);
+        angularSpeedDegree = angularSpeed * 180f / (float)Math.PI;
     }
 
     void FixedUpdate()
@@ -35,7 +38,8 @@ public class RigidbodyController : MonoBehaviour
 
         rb.MovePosition(transform.position + 
                         forwardDirection.normalized * Time.fixedDeltaTime * speed);
-        Quaternion deltaRotation = Quaternion.Euler(rotationVector * angularSpeed * Time.fixedDeltaTime);
+        Quaternion deltaRotation = Quaternion.Euler(rotationVector * 
+                                                    angularSpeedDegree * Time.fixedDeltaTime);
         rb.MoveRotation(rb.rotation * deltaRotation);
         
         // rb.velocity = speed * forwardDirection.normalized;

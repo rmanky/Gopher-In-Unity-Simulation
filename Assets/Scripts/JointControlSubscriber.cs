@@ -23,7 +23,7 @@ public class JointControlSubscriber : MonoBehaviour
     public string joint7ControllerTopicName = "joint_7_position_controller/command";
     
     // Robot object
-    public GameObject robotArm;
+    public GameObject robot;
     // Articulation Bodies
     public float[] homePosition = {0f, 0f, 0f, 0f, 0f, 0f, 0f};
     private ArticulationBody[] articulationChain;
@@ -35,7 +35,7 @@ public class JointControlSubscriber : MonoBehaviour
         ros = ROSConnection.instance;
 
         // Get joints
-        articulationChain = GetComponentsInChildren<ArticulationBody>();
+        articulationChain = robot.GetComponentsInChildren<ArticulationBody>();
         articulationChain = articulationChain.Where(joint => joint.jointType 
                                                     != ArticulationJointType.FixedJoint).ToArray();
 
@@ -63,6 +63,7 @@ public class JointControlSubscriber : MonoBehaviour
             if (articulationChain[i].xDrive.target != homePosition[i])
             {
                 moveJoint(i, homePosition[i]);
+                Debug.Log(i + "" + homePosition[i]);
             }
     }
 
