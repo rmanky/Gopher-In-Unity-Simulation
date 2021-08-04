@@ -63,7 +63,6 @@ public class JointControlSubscriber : MonoBehaviour
             if (articulationChain[i].xDrive.target != homePosition[i])
             {
                 moveJoint(i, homePosition[i]);
-                Debug.Log(i + "" + homePosition[i]);
             }
     }
 

@@ -44,7 +44,6 @@ public class ArticulationVelocityController : MonoBehaviour
         {
             setLeftWheelVelocity(vLeft / wheelRadius * Mathf.Rad2Deg);
             setRightWheelVelocity(vRight / wheelRadius * Mathf.Rad2Deg);
-            Debug.Log(vLeft + " " + vRight);
         }
     }
 
@@ -54,8 +53,6 @@ public class ArticulationVelocityController : MonoBehaviour
         ArticulationDrive drive = leftWheel.xDrive;
         drive.target = drive.target + jointVelocity*Time.fixedDeltaTime;
         leftWheel.xDrive = drive;
-
-        Debug.Log("l" + drive.target);
     }
 
     void setRightWheelVelocity(float jointVelocity)
@@ -63,7 +60,5 @@ public class ArticulationVelocityController : MonoBehaviour
         ArticulationDrive drive = rightWheel.xDrive;
         drive.target = drive.target + jointVelocity*Time.fixedDeltaTime;
         rightWheel.xDrive = drive;
-
-        Debug.Log("r" + drive.target);
     }
 }

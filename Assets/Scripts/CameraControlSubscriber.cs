@@ -18,7 +18,7 @@ public class CameraControlSubscriber : MonoBehaviour
     public string cameraPitchControllerTopicName = "main_cam_pitch_controller/command";
     
     // Robot object
-    public GameObject robotArm;
+    public GameObject cameraJoints;
     // Articulation Bodies
     private ArticulationBody[] articulationChain;
 
@@ -29,7 +29,7 @@ public class CameraControlSubscriber : MonoBehaviour
         ros = ROSConnection.instance;
 
         // Get joints
-        articulationChain = GetComponentsInChildren<ArticulationBody>();
+        articulationChain = cameraJoints.GetComponentsInChildren<ArticulationBody>();
         articulationChain = articulationChain.Where(joint => joint.jointType 
                                                     != ArticulationJointType.FixedJoint).ToArray();
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -48,7 +49,7 @@ public class TwistStampedPublisher : MonoBehaviour
         linearVelocity = (publishedTransform.position - previousPosition)
                          /Time.fixedDeltaTime;
         angularVelocity = (publishedTransform.rotation.eulerAngles - previousRotation.eulerAngles)
-                          /Time.fixedDeltaTime;
+                          /Time.fixedDeltaTime * Mathf.Deg2Rad;
         previousPosition = publishedTransform.position;
         previousRotation = publishedTransform.rotation;
 
