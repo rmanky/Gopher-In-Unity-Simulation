@@ -44,7 +44,7 @@ public class ArticulationBodyInitialization : MonoBehaviour
             joint.jointFriction = defDyanmicVal;
             joint.angularDamping = defDyanmicVal;
 
-            ArticulationDrive currentDrive = joint.yDrive;
+            ArticulationDrive currentDrive = joint.xDrive;
             currentDrive.stiffness = stiffness;
             currentDrive.damping = damping;
             currentDrive.forceLimit = forceLimit;
