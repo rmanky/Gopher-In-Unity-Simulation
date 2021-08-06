@@ -16,6 +16,7 @@ public class JointStatePublisher : MonoBehaviour
     public string jointStateTopicName = "joint_states";
 
     // Joints
+    public GameObject jointRoot;
     private ArticulationBody[] articulationChain;
     private int jointStateLength;
     string[] names;
@@ -33,7 +34,7 @@ public class JointStatePublisher : MonoBehaviour
         ros = ROSConnection.instance;
 
         // Get joints
-        articulationChain = GetComponentsInChildren<ArticulationBody>();
+        articulationChain = jointRoot.GetComponentsInChildren<ArticulationBody>();
         articulationChain = articulationChain.Where(joint => joint.jointType 
                                                     != ArticulationJointType.FixedJoint).ToArray();
 

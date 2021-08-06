@@ -29,7 +29,7 @@ public class UIManager : MonoBehaviour
         DisableAllCamera();
         cameras[currentCameraIndex].enabled = true;
 
-        GetComponent<CameraRotation>().enabled = false;
+        GetComponent<CameraRotationController>().enabled = false;
         Cursor.lockState = CursorLockMode.Confined;
     }
 
@@ -77,7 +77,7 @@ public class UIManager : MonoBehaviour
 
     public void ChangeCameraControl()
     {
-        CameraRotation cr = GetComponent<CameraRotation>();
+        CameraRotationController cr = GetComponent<CameraRotationController>();
         cr.enabled = !cr.enabled;
         if (cr.enabled)
             Cursor.lockState = CursorLockMode.Locked;
