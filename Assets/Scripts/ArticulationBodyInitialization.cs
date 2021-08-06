@@ -25,10 +25,6 @@ public class ArticulationBodyInitialization : MonoBehaviour
         articulationChain = robotRoot.GetComponentsInChildren<ArticulationBody>();
         articulationChain = articulationChain.Where(joint => joint.jointType 
                                                     != ArticulationJointType.FixedJoint).ToArray();
-        foreach (ArticulationBody joint in articulationChain)
-        {
-            Debug.Log(joint.name);
-        }
 
         // joint length to assign
         int assignLength = articulationChain.Length;
