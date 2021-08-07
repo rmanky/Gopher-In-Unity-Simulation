@@ -22,14 +22,14 @@ public class UIManager : MonoBehaviour
         {
             camera.targetDisplay = 0;
             camera.fieldOfView = 69.4f;
-            camera.rect = new Rect(0f, 0.1f, 0.8f, 0.8f);
+            camera.rect = new Rect(0f, 0.0f, 1.0f, 1.0f);
         }
 
         currentCameraIndex = 0;
         DisableAllCamera();
         cameras[currentCameraIndex].enabled = true;
 
-        GetComponent<CameraRotation>().enabled = false;
+        GetComponent<CameraRotationController>().enabled = false;
         Cursor.lockState = CursorLockMode.Confined;
     }
 
@@ -77,7 +77,7 @@ public class UIManager : MonoBehaviour
 
     public void ChangeCameraControl()
     {
-        CameraRotation cr = GetComponent<CameraRotation>();
+        CameraRotationController cr = GetComponent<CameraRotationController>();
         cr.enabled = !cr.enabled;
         if (cr.enabled)
             Cursor.lockState = CursorLockMode.Locked;
