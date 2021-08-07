@@ -3,15 +3,15 @@
   <asset>
     <contributor>
       <author>Blender User</author>
-      <authoring_tool>Blender 2.93.1 commit date:2021-06-22, commit time:05:57, hash:1b8d33b18c2f</authoring_tool>
+      <authoring_tool>Blender 2.93.2 commit date:2021-08-03, commit time:05:58, hash:1eb06de2607a</authoring_tool>
     </contributor>
-    <created>2021-07-19T22:40:53</created>
-    <modified>2021-07-19T22:40:53</modified>
+    <created>2021-08-07T10:22:37</created>
+    <modified>2021-08-07T10:22:37</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
   <library_effects>
-    <effect id="VitaminC_005-effect">
+    <effect id="Vitamin-effect">
       <profile_COMMON>
         <newparam sid="VitaminC_jpg-surface">
           <surface type="2D">
@@ -29,7 +29,7 @@
               <color sid="emission">0 0 0 1</color>
             </emission>
             <diffuse>
-              <texture texture="VitaminC_jpg-sampler" texcoord="Cube_005-mesh-map-0"/>
+              <texture texture="VitaminC_jpg-sampler" texcoord="Cube_002-mesh-map-0"/>
             </diffuse>
             <index_of_refraction>
               <float sid="ior">1.45</float>
@@ -45,15 +45,15 @@
     </image>
   </library_images>
   <library_materials>
-    <material id="VitaminC_005-material" name="VitaminC.005">
-      <instance_effect url="#VitaminC_005-effect"/>
+    <material id="Vitamin-material" name="Vitamin">
+      <instance_effect url="#Vitamin-effect"/>
     </material>
   </library_materials>
   <library_geometries>
     <geometry id="Cube_002-mesh" name="Cube.002">
       <mesh>
         <source id="Cube_002-mesh-positions">
-          <float_array id="Cube_002-mesh-positions-array" count="24">-0.04999995 -0.01499992 0 -0.04999995 -0.01499992 0.03999996 -0.04999995 0.01499992 0 -0.04999995 0.01499992 0.03999996 0.04999995 -0.01499992 0 0.04999995 -0.01499992 0.03999996 0.04999995 0.01499992 0 0.04999995 0.01499992 0.03999996</float_array>
+          <float_array id="Cube_002-mesh-positions-array" count="24">-0.04999995 -0.01499986 0 -0.04999995 -0.01499986 0.03999996 -0.04999995 0.01499986 0 -0.04999995 0.01499986 0.03999996 0.04999995 -0.01499986 0 0.04999995 -0.01499986 0.03999996 0.04999995 0.01499986 0 0.04999995 0.01499986 0.03999996</float_array>
           <technique_common>
             <accessor source="#Cube_002-mesh-positions-array" count="8" stride="3">
               <param name="X" type="float"/>
@@ -73,7 +73,7 @@
           </technique_common>
         </source>
         <source id="Cube_002-mesh-map-0">
-          <float_array id="Cube_002-mesh-map-0-array" count="72">0.6848439 0.992279 0.9848439 0.7540255 0.6848439 0.7540255 0.9995443 0.7468214 4.55737e-4 0.2545974 0.9995443 0.2545974 0.3222503 0.9908602 0.02225029 0.7625385 0.3222503 0.7625385 0.59989 0.5595359 0 0.2602728 0.59989 0.2602728 4.67658e-4 0.744405 0.9995324 0.5861822 0.999772 0.7428802 0.2681589 0.2740101 0.5842829 0.2577761 0.5842829 0.2740101 0.6848439 0.992279 0.9848439 0.992279 0.9848439 0.7540255 0.9995443 0.7468214 4.55737e-4 0.7468214 4.55737e-4 0.2545974 0.3222503 0.9908602 0.02225029 0.9908602 0.02225029 0.7625385 0.59989 0.5595359 0 0.5595359 0 0.2602728 4.67658e-4 0.744405 2.28047e-4 0.5877071 0.9995324 0.5861822 0.2681589 0.2740101 0.2681589 0.2577761 0.5842829 0.2577761</float_array>
+          <float_array id="Cube_002-mesh-map-0-array" count="72">0.738633 0.9940829 0.541355 0.5808545 0.738633 0.5808545 0.9995443 0.9994091 4.55766e-4 0.00200963 0.9995443 0.00200963 0.162513 0.5794609 6.81213e-4 0.1057562 0.162513 0.1057562 0.6831871 0.664492 -0.08329713 -0.0310468 0.6831871 -0.0310468 0.9430351 0.8020429 0.9995324 0.7210928 0.999772 0.8005181 0.9430125 0.9132136 0.996653 0.8382238 0.996653 0.9132136 0.738633 0.9940829 0.541355 0.9940829 0.541355 0.5808545 0.9995443 0.9994091 4.55766e-4 0.9994091 4.55766e-4 0.00200963 0.162513 0.5794609 6.81213e-4 0.5794609 6.81213e-4 0.1057562 0.6831871 0.664492 -0.08329713 0.664492 -0.08329713 -0.0310468 0.9430351 0.8020429 0.9427955 0.7226177 0.9995324 0.7210928 0.9430125 0.9132136 0.9430125 0.8382238 0.996653 0.8382238</float_array>
           <technique_common>
             <accessor source="#Cube_002-mesh-map-0-array" count="36" stride="2">
               <param name="S" type="float"/>
@@ -84,7 +84,7 @@
         <vertices id="Cube_002-mesh-vertices">
           <input semantic="POSITION" source="#Cube_002-mesh-positions"/>
         </vertices>
-        <triangles material="VitaminC_005-material" count="12">
+        <triangles material="Vitamin-material" count="12">
           <input semantic="VERTEX" source="#Cube_002-mesh-vertices" offset="0"/>
           <input semantic="NORMAL" source="#Cube_002-mesh-normals" offset="1"/>
           <input semantic="TEXCOORD" source="#Cube_002-mesh-map-0" offset="2" set="0"/>
@@ -100,8 +100,8 @@
         <instance_geometry url="#Cube_002-mesh" name="Cube">
           <bind_material>
             <technique_common>
-              <instance_material symbol="VitaminC_005-material" target="#VitaminC_005-material">
-                <bind_vertex_input semantic="Cube_005-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
+              <instance_material symbol="Vitamin-material" target="#Vitamin-material">
+                <bind_vertex_input semantic="Cube_002-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
               </instance_material>
             </technique_common>
           </bind_material>

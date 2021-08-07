@@ -3,7 +3,12 @@ guid: 5940c6c4c52aff7d59d17f6f4d24b5c6
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FireExtinguisher
+    second: {fileID: 2100000, guid: fd5c0524a3bc9f409aa13226d9fae2d8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
