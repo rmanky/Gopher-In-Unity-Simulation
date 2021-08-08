@@ -3598,17 +3598,9 @@ MonoBehaviour:
   assetGuid: 
   m_Mesh: {fileID: 0}
   m_IsSelectable: 1
-  m_SelectedFaces: 18000000
-  m_SelectedEdges:
-  - a: 99
-    b: 96
-  - a: 96
-    b: 97
-  - a: 98
-    b: 99
-  - a: 97
-    b: 98
-  m_SelectedVertices: 63000000600000006100000062000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!114 &230647882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7052,50 +7044,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 143523941474413310}
     m_Modifications:
-    - target: {fileID: 125048865125759557, guid: 9464b3248a9dd6bb3a935c942a88f37b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1189168526584889205, guid: 9464b3248a9dd6bb3a935c942a88f37b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 2907871391985781693, guid: 9464b3248a9dd6bb3a935c942a88f37b, type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2907871391985781693, guid: 9464b3248a9dd6bb3a935c942a88f37b, type: 3}
-      propertyPath: m_Constraints
-      value: 126
-      objectReference: {fileID: 0}
-    - target: {fileID: 3928974786629461200, guid: 9464b3248a9dd6bb3a935c942a88f37b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 4138231545410119644, guid: 9464b3248a9dd6bb3a935c942a88f37b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 5090227029912315832, guid: 9464b3248a9dd6bb3a935c942a88f37b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 977438d4a534f6bad9905115e0f576f6, type: 2}
     - target: {fileID: 5107832866163824590, guid: 9464b3248a9dd6bb3a935c942a88f37b, type: 3}
       propertyPath: m_Name
       value: Wheel Chair
       objectReference: {fileID: 0}
-    - target: {fileID: 5286804233732675637, guid: 9464b3248a9dd6bb3a935c942a88f37b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 5657599062476606317, guid: 9464b3248a9dd6bb3a935c942a88f37b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 5845884965357628995, guid: 9464b3248a9dd6bb3a935c942a88f37b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9b780618a3497e18c9caa25556a9b287, type: 2}
     - target: {fileID: 6029744800553287127, guid: 9464b3248a9dd6bb3a935c942a88f37b, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -7139,10 +7091,6 @@ PrefabInstance:
     - target: {fileID: 6029744800553287127, guid: 9464b3248a9dd6bb3a935c942a88f37b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9023469488731133819, guid: 9464b3248a9dd6bb3a935c942a88f37b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9464b3248a9dd6bb3a935c942a88f37b, type: 3}

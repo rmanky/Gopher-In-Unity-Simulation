@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraRotationController : MonoBehaviour
+public class CameraJointController : MonoBehaviour
 {
     public float mouseSensitivity = 200f;
 
@@ -23,7 +23,7 @@ public class CameraRotationController : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         yawRotation = yawOffset;
-        pitchOffset = pitchOffset;
+        pitchRotation = pitchOffset;
     }
 
     // Update is called once per frame
