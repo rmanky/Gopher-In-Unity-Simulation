@@ -1,4 +1,3 @@
-using System;
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
@@ -41,15 +40,18 @@ public class JointPositionInitialization : MonoBehaviour
     {
         int count = 0;
         for (int i = 0; i < homePosition.Length; i++)
-            if (articulationChain[i].xDrive.target != homePosition[i])
-                moveJoint(i, homePosition[i]);
+        {
+            float targetPosition = homePosition[i] * Mathf.Rad2Deg;
+            if (articulationChain[i].xDrive.target != targetPosition)
+                moveJoint(i, targetPosition);
             else
                 count += 1;
+        }
 
         if (count == 7)
         {
             isHomed = true;
-            Debug.Log("All the joints homed.");
+            Debug.Log("All joints homed.");
         }
     }
 
@@ -58,12 +60,13 @@ public class JointPositionInitialization : MonoBehaviour
         ArticulationDrive drive = articulationChain[jointNum].xDrive;
 
         float currentTarget = drive.target;
-        if (Math.Abs(currentTarget - target) > speed*Time.fixedDeltaTime)
+        float deltaPosition = speed * Mathf.Rad2Deg * Time.fixedDeltaTime;
+        if (Mathf.Abs(currentTarget - target) > deltaPosition)
         {
             if (target > currentTarget)
-                drive.target = currentTarget + speed*Time.fixedDeltaTime;
+                drive.target = currentTarget + deltaPosition;
             else
-                drive.target = currentTarget - speed*Time.fixedDeltaTime;
+                drive.target = currentTarget - deltaPosition;
         }
         else
         {
