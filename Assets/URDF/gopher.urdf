@@ -51,8 +51,7 @@
     </collision>
   </link>
   <joint name="gopher/r_wheel_joint" type="continuous">
-    <origin rpy="-6.123E-17 0 0" xyz="0.0012914 -0.18738 0.0602"/>
-    <!-- r 0.0605 -->
+    <origin rpy="-6.123E-17 0 0" xyz="0.0012914 -0.18738 0.0605"/>
     <parent link="gopher/chassis_link"/>
     <child link="gopher/r_wheel_link"/>
     <axis xyz="0 1 0"/>
@@ -81,8 +80,7 @@
     </collision>
   </link>
   <joint name="gopher/l_wheel_joint" type="continuous">
-    <origin rpy="-6.123E-17 0 0" xyz="0.0012914 0.18738 0.0602"/>
-    <!-- r 0.0605 -->
+    <origin rpy="-6.123E-17 0 0" xyz="0.0012914 0.18738 0.0605"/>
     <parent link="gopher/chassis_link"/>
     <child link="gopher/l_wheel_link"/>
     <axis xyz="0 1 0"/>
@@ -144,13 +142,25 @@
     <child link="gopher/laser_link"/>
     <axis xyz="0 0 0"/>
   </joint>
-  <link name="gopher/base_camera_link"/>
+  <link name="gopher/base_camera_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5"/>
+    </inertial>
+  </link>
   <joint name="gopher/base_camera_joint" type="fixed">
     <origin rpy="0 -0.17453292519943 0" xyz="0.2645 0 0.198"/>
     <parent link="gopher/chassis_link"/>
     <child link="gopher/base_camera_link"/>
   </joint>
-  <link name="gopher/base_camera_optical_frame"/>
+  <link name="gopher/base_camera_optical_frame">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5"/>
+    </inertial>
+  </link>
   <joint name="gopher/base_camera_optical_joint" type="fixed">
     <origin rpy="1.5707963267966 0 1.5707963267966" xyz="0 0 0"/>
     <parent link="gopher/base_camera_link"/>
@@ -279,7 +289,13 @@
     <parent link="gopher/main_cam_pitch_link"/>
     <child link="gopher/main_cam_bottom_screw_frame"/>
   </joint>
-  <link name="gopher/main_cam_bottom_screw_frame"/>
+  <link name="gopher/main_cam_bottom_screw_frame">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5"/>
+    </inertial>
+  </link>
   <joint name="gopher/main_cam_link_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 0.0175 0.0125"/>
     <parent link="gopher/main_cam_bottom_screw_frame"/>
@@ -312,14 +328,26 @@
     <parent link="gopher/main_cam_link"/>
     <child link="gopher/main_cam_depth_frame"/>
   </joint>
-  <link name="gopher/main_cam_depth_frame"/>
+  <link name="gopher/main_cam_depth_frame">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5"/>
+    </inertial>
+  </link>
   <!-- camera color joints and links -->
   <joint name="gopher/main_cam_color_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 0.015 0"/>
     <parent link="gopher/main_cam_depth_frame"/>
     <child link="gopher/main_cam_color_frame"/>
   </joint>
-  <link name="gopher/main_cam_color_frame"/>
+  <link name="gopher/main_cam_color_frame">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5"/>
+    </inertial>
+  </link>
   <!-- Run the macros -->
   <!-- Attach to parent link -->
   <joint name="gopher/right_arm_shoulder_to_arm_root" type="fixed">
@@ -552,26 +580,50 @@
     <axis xyz="0 0 1"/>
     <limit effort="9" velocity="1.2218"/>
   </joint>
-  <link name="gopher/right_arm_end_effector_link"/>
+  <link name="gopher/right_arm_end_effector_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5"/>
+    </inertial>
+  </link>
   <joint name="gopher/right_arm_end_effector" type="fixed">
     <origin rpy="3.14159265358979 1.09937075168372E-32 0" xyz="0 0 -0.0615250000000001"/>
     <parent link="gopher/right_arm_bracelet_link"/>
     <child link="gopher/right_arm_end_effector_link"/>
     <axis xyz="0 0 0"/>
   </joint>
-  <link name="gopher/right_arm_camera_link"/>
+  <link name="gopher/right_arm_camera_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5"/>
+    </inertial>
+  </link>
   <joint name="gopher/right_arm_camera_module" type="fixed">
     <origin rpy="3.14159265358979 3.14159265358979 0" xyz="0 0.05639 -0.00305"/>
     <parent link="gopher/right_arm_end_effector_link"/>
     <child link="gopher/right_arm_camera_link"/>
   </joint>
-  <link name="gopher/right_arm_camera_depth_frame"/>
+  <link name="gopher/right_arm_camera_depth_frame">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5"/>
+    </inertial>
+  </link>
   <joint name="gopher/right_arm_depth_module" type="fixed">
     <origin rpy="3.14159265358979 3.14159265358979 0" xyz="0.0275 0.066 -0.00305"/>
     <parent link="gopher/right_arm_end_effector_link"/>
     <child link="gopher/right_arm_camera_depth_frame"/>
   </joint>
-  <link name="gopher/right_arm_camera_color_frame"/>
+  <link name="gopher/right_arm_camera_color_frame">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5"/>
+    </inertial>
+  </link>
   <joint name="gopher/right_arm_color_module" type="fixed">
     <origin rpy="3.14159265358979 3.14159265358979 0" xyz="0 0.05639 -0.00305"/>
     <parent link="gopher/right_arm_end_effector_link"/>
@@ -580,7 +632,13 @@
   <!-- This line was removed by Kinova because we replaced the transmission file with our own 
     <xacro:include filename="$(find robotiq_2f_85_gripper_visualization)/urdf/robotiq_arg2f_transmission.xacro" /> -->
   <!-- Tool frame used by the arm -->
-  <link name="gopher/right_arm_tool_frame"/>
+  <link name="gopher/right_arm_tool_frame">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5"/>
+    </inertial>
+  </link>
   <joint name="gopher/right_arm_tool_frame_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0.120"/>
     <parent link="gopher/right_arm_end_effector_link"/>
@@ -602,8 +660,6 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <!-- The DAE file doesn't show well in Gazebo so we're using the STL instead -->
-        <!-- <mesh filename="package://kortex_description/grippers/robotiq_2f_85/meshes/visual/robotiq_arg2f_85_base_link.dae" scale="0.001 0.001 0.001"/> -->
         <mesh filename="package://kortex_description/grippers/robotiq_2f_85/meshes/collision/robotiq_arg2f_base_link.stl"/>
       </geometry>
       <material name="">
@@ -617,9 +673,6 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="gopher/right_arm_robotiq_arg2f_base_link">
-    <material>Gazebo/Black</material>
-  </gazebo>
   <link name="gopher/right_arm_left_outer_knuckle">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.000200000000003065 0.0199435877845359 0.0292245259211331"/>
@@ -687,6 +740,11 @@
     </collision>
   </link>
   <link name="gopher/right_arm_left_inner_finger_pad">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5"/>
+    </inertial>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -795,6 +853,11 @@
     </collision>
   </link>
   <link name="gopher/right_arm_right_inner_finger_pad">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5"/>
+    </inertial>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -1143,26 +1206,50 @@
     <axis xyz="0 0 1"/>
     <limit effort="9" velocity="1.2218"/>
   </joint>
-  <link name="gopher/left_arm_end_effector_link"/>
+  <link name="gopher/left_arm_end_effector_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5"/>
+    </inertial>
+  </link>
   <joint name="gopher/left_arm_end_effector" type="fixed">
     <origin rpy="3.14159265358979 1.09937075168372E-32 0" xyz="0 0 -0.0615250000000001"/>
     <parent link="gopher/left_arm_bracelet_link"/>
     <child link="gopher/left_arm_end_effector_link"/>
     <axis xyz="0 0 0"/>
   </joint>
-  <link name="gopher/left_arm_camera_link"/>
+  <link name="gopher/left_arm_camera_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5"/>
+    </inertial>
+  </link>
   <joint name="gopher/left_arm_camera_module" type="fixed">
     <origin rpy="3.14159265358979 3.14159265358979 0" xyz="0 0.05639 -0.00305"/>
     <parent link="gopher/left_arm_end_effector_link"/>
     <child link="gopher/left_arm_camera_link"/>
   </joint>
-  <link name="gopher/left_arm_camera_depth_frame"/>
+  <link name="gopher/left_arm_camera_depth_frame">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5"/>
+    </inertial>
+  </link>
   <joint name="gopher/left_arm_depth_module" type="fixed">
     <origin rpy="3.14159265358979 3.14159265358979 0" xyz="0.0275 0.066 -0.00305"/>
     <parent link="gopher/left_arm_end_effector_link"/>
     <child link="gopher/left_arm_camera_depth_frame"/>
   </joint>
-  <link name="gopher/left_arm_camera_color_frame"/>
+  <link name="gopher/left_arm_camera_color_frame">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5"/>
+    </inertial>
+  </link>
   <joint name="gopher/left_arm_color_module" type="fixed">
     <origin rpy="3.14159265358979 3.14159265358979 0" xyz="0 0.05639 -0.00305"/>
     <parent link="gopher/left_arm_end_effector_link"/>
@@ -1171,7 +1258,13 @@
   <!-- This line was removed by Kinova because we replaced the transmission file with our own 
     <xacro:include filename="$(find robotiq_2f_85_gripper_visualization)/urdf/robotiq_arg2f_transmission.xacro" /> -->
   <!-- Tool frame used by the arm -->
-  <link name="gopher/left_arm_tool_frame"/>
+  <link name="gopher/left_arm_tool_frame">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5"/>
+    </inertial>
+  </link>
   <joint name="gopher/left_arm_tool_frame_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0.120"/>
     <parent link="gopher/left_arm_end_effector_link"/>
@@ -1193,8 +1286,6 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <!-- The DAE file doesn't show well in Gazebo so we're using the STL instead -->
-        <!-- <mesh filename="package://kortex_description/grippers/robotiq_2f_85/meshes/visual/robotiq_arg2f_85_base_link.dae" scale="0.001 0.001 0.001"/> -->
         <mesh filename="package://kortex_description/grippers/robotiq_2f_85/meshes/collision/robotiq_arg2f_base_link.stl"/>
       </geometry>
       <material name="">
@@ -1208,9 +1299,6 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="gopher/left_arm_robotiq_arg2f_base_link">
-    <material>Gazebo/Black</material>
-  </gazebo>
   <link name="gopher/left_arm_left_outer_knuckle">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.000200000000003065 0.0199435877845359 0.0292245259211331"/>
@@ -1278,6 +1366,11 @@
     </collision>
   </link>
   <link name="gopher/left_arm_left_inner_finger_pad">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5"/>
+    </inertial>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -1386,6 +1479,11 @@
     </collision>
   </link>
   <link name="gopher/left_arm_right_inner_finger_pad">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5"/>
+    </inertial>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>

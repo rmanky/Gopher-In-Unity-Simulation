@@ -43,7 +43,13 @@ aluminum peripherial evaluation case.
       <parent link="${parent}"/>
       <child link="${prefix}bottom_screw_frame" />
     </joint>
-    <link name="${prefix}bottom_screw_frame"/>
+    <link name="${prefix}bottom_screw_frame">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <mass value="0.001" />
+        <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5" />
+      </inertial>
+    </link>
 
     <joint name="${prefix}link_joint" type="fixed">
       <origin xyz="0 ${d435_cam_depth_py} ${d435_cam_depth_pz}" rpy="0 0 0"/>
@@ -81,7 +87,13 @@ aluminum peripherial evaluation case.
       <parent link="${prefix}link"/>
       <child link="${prefix}depth_frame" />
     </joint>
-    <link name="${prefix}depth_frame"/>
+    <link name="${prefix}depth_frame">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <mass value="0.001" />
+        <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5" />
+      </inertial>
+    </link>
 
     <!-- camera color joints and links -->
     <joint name="${prefix}color_joint" type="fixed">
@@ -89,7 +101,13 @@ aluminum peripherial evaluation case.
       <parent link="${prefix}depth_frame" />
       <child link="${prefix}color_frame" />
     </joint>
-    <link name="${prefix}color_frame"/>
+    <link name="${prefix}color_frame">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <mass value="0.001" />
+        <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5" />
+      </inertial>
+    </link>
 
   </xacro:macro>
 </robot>

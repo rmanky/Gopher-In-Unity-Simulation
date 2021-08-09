@@ -300,7 +300,13 @@
         effort="9"
         velocity="1.2218" />
     </joint>
-    <link name="${prefix}end_effector_link" />
+    <link name="${prefix}end_effector_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <mass value="0.001" />
+        <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5" />
+      </inertial>
+    </link>
     <joint
       name="${prefix}end_effector"
       type="fixed">
@@ -313,23 +319,42 @@
         xyz="0 0 0" />
     </joint>
     <xacro:if value="${vision}">
-      <link name="${prefix}camera_link" />
+      <link name="${prefix}camera_link">
+        <inertial>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <mass value="0.001" />
+          <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5" />
+        </inertial>
+      </link>
       <joint name="${prefix}camera_module" type="fixed">
         <origin xyz="0 0.05639 -0.00305" rpy="3.14159265358979 3.14159265358979 0" />
         <parent link="${prefix}end_effector_link" />
         <child  link="${prefix}camera_link" />
       </joint>
-      <link name="${prefix}camera_depth_frame" />
+      <link name="${prefix}camera_depth_frame">
+        <inertial>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <mass value="0.001" />
+          <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5" />
+        </inertial>
+      </link>
       <joint name="${prefix}depth_module" type="fixed">
         <origin xyz="0.0275 0.066 -0.00305" rpy="3.14159265358979 3.14159265358979 0" />
         <parent link="${prefix}end_effector_link" />
         <child  link="${prefix}camera_depth_frame" />
       </joint>
-      <link name="${prefix}camera_color_frame" />
+      <link name="${prefix}camera_color_frame">
+        <inertial>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <mass value="0.001" />
+          <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5" />
+        </inertial>
+      </link>
       <joint name="${prefix}color_module" type="fixed">
         <origin xyz="0 0.05639 -0.00305" rpy="3.14159265358979 3.14159265358979 0" />
         <parent link="${prefix}end_effector_link" />
         <child  link="${prefix}camera_color_frame" />
+      </joint>
     </xacro:if>
   </xacro:macro>
 </robot>

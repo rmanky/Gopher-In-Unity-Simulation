@@ -151,14 +151,26 @@
       <axis xyz="0 0 0" />
     </joint>
 
-    <link name="${prefix}base_camera_link" />
+    <link name="${prefix}base_camera_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <mass value="0.001" />
+        <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5" />
+      </inertial>
+    </link>
     <joint name="${prefix}base_camera_joint" type="fixed">
       <origin rpy="0 -0.17453292519943 0" xyz="0.2645 0 0.198" />
       <parent link="${prefix}chassis_link" />
       <child link="${prefix}base_camera_link" />
     </joint>
 
-    <link name="${prefix}base_camera_optical_frame" />
+    <link name="${prefix}base_camera_optical_frame">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <mass value="0.001" />
+        <inertia ixx="1E-5" ixy="0" ixz="0" iyy="1E-5" iyz="-0" izz="1E-5" />
+      </inertial>
+    </link>
     <joint name="${prefix}base_camera_optical_joint" type="fixed">
       <origin rpy="1.5707963267966 0 1.5707963267966" xyz="0 0 0" />
       <parent link="${prefix}base_camera_link" />
