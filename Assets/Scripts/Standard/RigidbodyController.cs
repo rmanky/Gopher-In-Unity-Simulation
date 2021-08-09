@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,7 +29,7 @@ public class RigidbodyController : MonoBehaviour
 
         forwardDirection = transform.forward * zMove;
         rotationVector = new Vector3(0, xMove, 0);
-        angularSpeedDegree = angularSpeed * 180f / (float)Math.PI;
+        angularSpeedDegree = angularSpeed * 180f / (float)Mathf.PI;
     }
 
     void FixedUpdate()

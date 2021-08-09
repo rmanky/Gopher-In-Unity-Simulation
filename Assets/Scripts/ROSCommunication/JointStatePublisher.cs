@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,9 +21,9 @@ public class JointStatePublisher : MonoBehaviour
     private ArticulationBody[] articulationChain;
     private int jointStateLength;
     string[] names;
-    List<float> positions;
-    List<float> velocities;
-    List<float> forces;
+    float[] positions;
+    float[] velocities;
+    float[] forces;
 
     // Message info
     private JointStateMsg jointState; 
@@ -38,11 +39,11 @@ public class JointStatePublisher : MonoBehaviour
         articulationChain = articulationChain.Where(joint => joint.jointType 
                                                     != ArticulationJointType.FixedJoint).ToArray();
 
-        int jointStateLength = articulationChain.Length;
-
-        positions = new List<float>();
-        velocities = new List<float>();
-        forces = new List<float>();
+        jointStateLength = articulationChain.Length;
+        
+        positions = new float[jointStateLength];
+        velocities = new float[jointStateLength];
+        forces = new float[jointStateLength];
         names = new string[jointStateLength];
         for (int i = 0; i < jointStateLength; i++)
             names[i] = articulationChain[i].name;
@@ -62,14 +63,18 @@ public class JointStatePublisher : MonoBehaviour
     {
         jointState.header.Update();
 
-        articulationChain[0].GetJointPositions(positions);
-        articulationChain[0].GetJointVelocities(velocities);
-        articulationChain[0].GetJointForces(forces);
+        for (int i = 0; i < jointStateLength; i++)
+        {   
+            positions[i] = articulationChain[i].jointPosition[0];
+            velocities[i] = articulationChain[i].jointVelocity[0];
+            forces[i] = articulationChain[i].jointForce[0];
+            Debug.Log(articulationChain[i].name + " " + positions[i] + " " + velocities[i]);
+        }
 
-        jointState.position = positions.Select(x => (double)x).ToArray();
-        jointState.velocity = velocities.Select(x => (double)x).ToArray();
-        jointState.effort = forces.Select(x => (double)x).ToArray();
+        jointState.position = Array.ConvertAll(positions, x => (double)x);
+        jointState.velocity = Array.ConvertAll(velocities, x => (double)x);
+        jointState.effort = Array.ConvertAll(forces, x => (double)x);
 
-        ros.Send(jointStateTopicName, jointState);
+        //ros.Send(jointStateTopicName, jointState);
     }
 }
