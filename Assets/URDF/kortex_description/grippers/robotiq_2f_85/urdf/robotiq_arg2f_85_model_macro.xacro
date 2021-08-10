@@ -76,6 +76,9 @@
         </geometry>
       </collision>
     </link>
+    <!-- Disable collision -->
+    <disable_collision link1="${prefix}${fingerprefix}_inner_knuckle" 
+                       link2="${prefix}${fingerprefix}_inner_finger"/>
   </xacro:macro>
 
   <xacro:macro name="inner_finger" params="prefix fingerprefix stroke">

@@ -786,6 +786,9 @@
       </geometry>
     </collision>
   </link>
+  <!-- Disable collision -->
+  <disable_collision link1="gopher/right_arm_left_inner_knuckle" 
+                     link2="gopher/right_arm_left_inner_finger"/>
   <link name="gopher/right_arm_right_outer_knuckle">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.000200000000003065 0.0199435877845359 0.0292245259211331"/>
@@ -899,6 +902,9 @@
       </geometry>
     </collision>
   </link>
+  <!-- Disable collision -->
+  <disable_collision link1="gopher/rihgt_arm_right_inner_knuckle" 
+                     link2="kinova/right_arm_right_inner_finger"/>
   <joint name="gopher/right_arm_finger_joint" type="revolute">
     <origin rpy="0 0 3.14159265359" xyz="0 -0.0306011 0.054904"/>
     <parent link="gopher/right_arm_robotiq_arg2f_base_link"/>
@@ -1412,6 +1418,9 @@
       </geometry>
     </collision>
   </link>
+  <!-- Disable collision -->
+  <disable_collision link1="gopher/left_arm_left_inner_knuckle" 
+                     link2="gopher/left_arm_left_inner_finger"/>
   <link name="gopher/left_arm_right_outer_knuckle">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.000200000000003065 0.0199435877845359 0.0292245259211331"/>
@@ -1525,6 +1534,9 @@
       </geometry>
     </collision>
   </link>
+  <!-- Disable collision -->
+  <disable_collision link1="gopher/left_arm_right_inner_knuckle" 
+                     link2="gopher/left_arm_right_inner_finger"/>
   <joint name="gopher/left_arm_finger_joint" type="revolute">
     <origin rpy="0 0 3.14159265359" xyz="0 -0.0306011 0.054904"/>
     <parent link="gopher/left_arm_robotiq_arg2f_base_link"/>
