@@ -17,13 +17,18 @@ public class CameraJointController : MonoBehaviour
 
     public float yawOffset = 0f;
     public float pitchOffset = 0f;
+    private float yawOffsetDeg;
+    private float pitchOffsetDeg;
+    private float angleLimit = 60f;
 
     // Use this for initialization
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        yawRotation = yawOffset;
-        pitchRotation = pitchOffset;
+        yawOffsetDeg = yawOffset * Mathf.Rad2Deg;
+        pitchOffsetDeg = pitchOffset * Mathf.Rad2Deg;
+        yawRotation = yawOffsetDeg;
+        pitchRotation = pitchOffsetDeg;
     }
 
     // Update is called once per frame
@@ -40,19 +45,20 @@ public class CameraJointController : MonoBehaviour
         
         yawRotation -= mouseX * mouseSensitivity * Time.fixedDeltaTime;
         pitchRotation += mouseY * mouseSensitivity * Time.fixedDeltaTime;
-        yawRotation = Mathf.Clamp(yawRotation, yawOffset-60f, yawOffset+60f);
-        pitchRotation = Mathf.Clamp(pitchRotation, pitchOffset-60f, pitchOffset+60f);;
+        yawRotation = Mathf.Clamp(yawRotation, 
+                                  yawOffsetDeg - angleLimit, yawOffsetDeg + angleLimit);
+        pitchRotation = Mathf.Clamp(pitchRotation, 
+                                    pitchOffsetDeg - angleLimit, pitchOffsetDeg + angleLimit);
 
         setJointTarget(cameraYawJoint, yawRotation);
         setJointTarget(cameraPitchJoint, pitchRotation);
     }
 
     // Control joints
-    void setJointTarget(ArticulationBody joint, float jointPosition)
+    void setJointTarget(ArticulationBody joint, float target)
     {
         ArticulationDrive drive = joint.xDrive;
-        drive.target = jointPosition;
+        drive.target = target;
         joint.xDrive = drive;
     }
-
 }
