@@ -9,27 +9,33 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     public Camera[] cameras;
+    public CameraJointController[] cameraControllers;
+
     private int currentCameraIndex;
 
-    public InputField cameraFOVInputField;
+    public float[] cameraFOV;
+    private int cameraFOVIndex;
 
     public GameObject minimap;
 
     // Start is called before the first frame update
     void Start()
     {
+        cameraFOVIndex = 0;
         foreach (Camera camera in cameras)
         {
             camera.targetDisplay = 0;
-            camera.fieldOfView = 69.4f;
+            camera.fieldOfView = cameraFOV[currentCameraIndex];
             camera.rect = new Rect(0f, 0.0f, 1.0f, 1.0f);
         }
-
         currentCameraIndex = 0;
         DisableAllCamera();
         cameras[currentCameraIndex].enabled = true;
 
-        GetComponent<CameraJointController>().enabled = false;
+        foreach (CameraJointController controller in cameraControllers)
+        {
+            controller.enabled = false;
+        }
         Cursor.lockState = CursorLockMode.Confined;
     }
 
@@ -56,18 +62,15 @@ public class UIManager : MonoBehaviour
     void DisableAllCamera()
     {
         foreach (Camera camera in cameras)
-        {
             camera.enabled = false;
-        }
     }
 
     public void ChangeCameraFOV()
     {
-        float.TryParse(cameraFOVInputField.text, out float fov);
+        cameraFOVIndex = (cameraFOVIndex+1) % cameraFOV.Length;
+
         foreach (Camera camera in cameras)
-        {
-            camera.fieldOfView = fov;
-        }
+            camera.fieldOfView = cameraFOV[cameraFOVIndex];
     }
 
     public void RestartScene()
@@ -87,6 +90,7 @@ public class UIManager : MonoBehaviour
 
     public void ChangeMinimapStatus()
     {
-        minimap.SetActive(!minimap.activeSelf);
+        if (minimap != null)
+            minimap.SetActive(!minimap.activeSelf);
     }
 }
