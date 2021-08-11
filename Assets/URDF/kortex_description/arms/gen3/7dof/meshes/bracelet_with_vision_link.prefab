@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1268226347268700649
+--- !u!1 &516523373411717637
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,77 +8,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8130578120542085871}
+  - component: {fileID: 1877393163445008158}
+  - component: {fileID: 9073791316621788386}
+  - component: {fileID: 6162159245281928326}
   m_Layer: 0
-  m_Name: bracelet_with_vision_link
+  m_Name: bracelet_with_vision_link_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8130578120542085871
+--- !u!4 &1877393163445008158
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1268226347268700649}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4708497815924874510}
-  - {fileID: 7500891502772623614}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &3135731102136573281
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7500891502772623614}
-  - component: {fileID: 1790623777796456761}
-  - component: {fileID: 1545019675827874957}
-  m_Layer: 0
-  m_Name: bracelet_with_vision_link_1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7500891502772623614
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3135731102136573281}
+  m_GameObject: {fileID: 516523373411717637}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8130578120542085871}
-  m_RootOrder: 1
+  m_Father: {fileID: 5996234404961664009}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1790623777796456761
+--- !u!33 &9073791316621788386
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3135731102136573281}
-  m_Mesh: {fileID: 4300000, guid: 89f09f95ea49b76589ada17398d13ab5, type: 2}
---- !u!23 &1545019675827874957
+  m_GameObject: {fileID: 516523373411717637}
+  m_Mesh: {fileID: 4300000, guid: 71740e5466754dc8eaf5a121e6c440b3, type: 2}
+--- !u!23 &6162159245281928326
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3135731102136573281}
+  m_GameObject: {fileID: 516523373411717637}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -113,7 +81,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &5302238561652940683
+--- !u!1 &2815930450292775886
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,45 +89,77 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4708497815924874510}
-  - component: {fileID: 8952867224774798981}
-  - component: {fileID: 240873942736904986}
+  - component: {fileID: 5996234404961664009}
   m_Layer: 0
-  m_Name: bracelet_with_vision_link_0
+  m_Name: bracelet_with_vision_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4708497815924874510
+--- !u!4 &5996234404961664009
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5302238561652940683}
+  m_GameObject: {fileID: 2815930450292775886}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1877393163445008158}
+  - {fileID: 1026286080586437525}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8770751746517864702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1026286080586437525}
+  - component: {fileID: 8176350313133807611}
+  - component: {fileID: 6624929800803933853}
+  m_Layer: 0
+  m_Name: bracelet_with_vision_link_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1026286080586437525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8770751746517864702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8130578120542085871}
-  m_RootOrder: 0
+  m_Father: {fileID: 5996234404961664009}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8952867224774798981
+--- !u!33 &8176350313133807611
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5302238561652940683}
-  m_Mesh: {fileID: 4300000, guid: 71740e5466754dc8eaf5a121e6c440b3, type: 2}
---- !u!23 &240873942736904986
+  m_GameObject: {fileID: 8770751746517864702}
+  m_Mesh: {fileID: 4300000, guid: 89f09f95ea49b76589ada17398d13ab5, type: 2}
+--- !u!23 &6624929800803933853
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5302238561652940683}
+  m_GameObject: {fileID: 8770751746517864702}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
