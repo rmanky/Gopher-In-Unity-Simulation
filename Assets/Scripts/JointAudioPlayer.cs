@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JointAudio : MonoBehaviour
+public class JointAudioPlayer : MonoBehaviour
 {
     public ArticulationBody[] jointRoots;
     public AudioClip audioClip;
@@ -57,7 +57,6 @@ public class JointAudio : MonoBehaviour
             // Get joint audio component
             jointAudio = joint.gameObject.GetComponent<AudioSource>();
             float speed = Mathf.Abs(joint.jointVelocity[0]);
-            Debug.Log(joint.name + " " + speed);
 
             // Gradually in and fade audio
             if (speed < lowerFilter && jointAudio.volume != 0f)
