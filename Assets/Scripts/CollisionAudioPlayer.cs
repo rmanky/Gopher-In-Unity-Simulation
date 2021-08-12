@@ -4,19 +4,14 @@ using UnityEngine;
 
 public class CollisionAudioPlayer : MonoBehaviour
 {
-    public AudioClip collisionAudioClip;
-    private AudioSource collisionAudio;
+    public AudioSource collisionAudio;
 
     private string selfName;
     private string otherName;
-       
 
     // Start is called before the first frame update
     void Start()
     {
-        collisionAudio = gameObject.AddComponent<AudioSource>();
-        collisionAudio.clip = collisionAudioClip;
-
         ArticulationBody AB = GetComponents<Collider>()[0].attachedArticulationBody;
         if (AB != null)
             selfName = AB.gameObject.name;
@@ -24,9 +19,9 @@ public class CollisionAudioPlayer : MonoBehaviour
             selfName = gameObject.name;
     }
 
-    public void SetAudioClip(AudioClip clip)
+    public void setAudioSource(AudioSource audioSource)
     {
-        collisionAudio.clip = clip;
+        collisionAudio = audioSource;
     }
 
     void OnCollisionEnter(Collision collision)
@@ -41,9 +36,6 @@ public class CollisionAudioPlayer : MonoBehaviour
             otherName = collision.collider.name;
         
         Debug.Log(selfName + " hits " + otherName);
-        if(!collisionAudio.isPlaying)
-        {
-            collisionAudio.Play();
-        }
+        collisionAudio.Play();
     }
 }

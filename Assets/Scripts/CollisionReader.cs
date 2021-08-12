@@ -8,35 +8,25 @@ public class CollisionReader : MonoBehaviour
     private Collider[] colliders;
 
     public AudioClip collisionAudioClip;
+    private AudioSource collisionAudio;
 
     // Start is called before the first frame update
     void Start()
     {
+        collisionAudio = gameObject.AddComponent<AudioSource>();
+        collisionAudio.clip = collisionAudioClip;
+        
         colliders = robot.GetComponentsInChildren<Collider>();
 
         foreach (Collider collider in colliders)
         {
             GameObject parent = collider.gameObject;
-            
-            // Add audio
-            /*
-            if (collisionAudioClip != null && 
-                parent.GetComponent<CollisionAudioPlayer>() == null)
-            {
-                CollisionAudioPlayer audioPlayer = parent.AddComponent<CollisionAudioPlayer>();
-                audioPlayer.collisionAudioClip = collisionAudioClip;
-            }
-            */
             CollisionAudioPlayer audioPlayer = parent.GetComponent<CollisionAudioPlayer>();
-            if (collisionAudioClip != null && audioPlayer == null)
+            if (audioPlayer == null)
             {
                 audioPlayer = parent.AddComponent<CollisionAudioPlayer>();
-                audioPlayer.collisionAudioClip = collisionAudioClip;
             }
-            else if (audioPlayer != null)
-            {
-                audioPlayer.SetAudioClip(collisionAudioClip);
-            }
+            audioPlayer.setAudioSource(collisionAudio);
         }
     }
 
