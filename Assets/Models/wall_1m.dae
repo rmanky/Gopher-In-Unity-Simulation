@@ -5,8 +5,8 @@
       <author>Blender User</author>
       <authoring_tool>Blender 2.93.2 commit date:2021-08-03, commit time:05:58, hash:1eb06de2607a</authoring_tool>
     </contributor>
-    <created>2021-08-11T11:13:31</created>
-    <modified>2021-08-11T11:13:31</modified>
+    <created>2021-08-13T05:07:07</created>
+    <modified>2021-08-13T05:07:07</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -79,6 +79,23 @@
         </technique>
       </profile_COMMON>
     </effect>
+    <effect id="Side-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8000001 0.05926756 0.795406 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
   </library_effects>
   <library_images/>
   <library_materials>
@@ -93,6 +110,9 @@
     </material>
     <material id="Default-material" name="Default">
       <instance_effect url="#Default-effect"/>
+    </material>
+    <material id="Side-material" name="Side">
+      <instance_effect url="#Side-effect"/>
     </material>
   </library_materials>
   <library_geometries>
@@ -109,7 +129,7 @@
           </technique_common>
         </source>
         <source id="Cube_001-mesh-normals">
-          <float_array id="Cube_001-mesh-normals-array" count="18">1 0 0 -1 0 0 0 1 0 0 -1 0 0 0 1 0 0 -1</float_array>
+          <float_array id="Cube_001-mesh-normals-array" count="18">0 0 -1 0 1 0 -1 0 0 0 -1 0 1 0 0 0 0 1</float_array>
           <technique_common>
             <accessor source="#Cube_001-mesh-normals-array" count="6" stride="3">
               <param name="X" type="float"/>
@@ -119,7 +139,7 @@
           </technique_common>
         </source>
         <source id="Cube_001-mesh-map-0">
-          <float_array id="Cube_001-mesh-map-0-array" count="120">0.625 0.5 0.5 0.75 0.5 0.5 0.625 0.5 0.625 0.75 0.5 0.75 0.5 0.5 0.375 0.75 0.375 0.5 0.5 0 0.375 0.25 0.375 0 0.5 0.5 0.5 0.75 0.375 0.75 0.5 0 0.5 0.25 0.375 0.25 0.625 0 0.5 0.25 0.5 0 0.625 0 0.625 0.25 0.5 0.25 0.625 0.25 0.5 0.5 0.5 0.25 0.625 0.75 0.5 1 0.5 0.75 0.8750001 0.5 0.625 0.75 0.625 0.5 0.625 0.25 0.625 0.5 0.5 0.5 0.625 0.75 0.625 1 0.5 1 0.8750001 0.5 0.8750001 0.75 0.625 0.75 0.375 0.5 0.125 0.75 0.125 0.5 0.5 0.75 0.375 1 0.375 0.75 0.5 0.25 0.375 0.5 0.375 0.25 0.375 0.5 0.375 0.75 0.125 0.75 0.5 0.75 0.5 1 0.375 1 0.5 0.25 0.5 0.5 0.375 0.5</float_array>
+          <float_array id="Cube_001-mesh-map-0-array" count="120">0.375 0.75 0.125 0.5 0.375 0.5 0.5 0.5 0.375 0.25 0.5 0.25 0.1074299 0.9999345 0.2146641 6.55024e-5 0.2146613 0.9999346 0.5 0.25 0.375 0 0.5 0 0.5 1 0.375 0.75 0.5 0.75 6.69062e-5 0.9999346 0.1072992 6.55024e-5 0.1072983 0.9999346 0.5 0.75 0.375 0.5 0.5 0.5 0 1 1 0 1 1 0 1 1 0 1 1 0.8750001 0.75 0.625 0.5 0.8750001 0.5 0.375 0.75 0.125 0.75 0.125 0.5 0.5 0.5 0.375 0.5 0.375 0.25 0.1074299 0.9999345 0.1074305 6.55024e-5 0.2146641 6.55024e-5 0.5 0.25 0.375 0.25 0.375 0 0.5 1 0.375 1 0.375 0.75 6.69062e-5 0.9999346 6.54981e-5 6.55024e-5 0.1072992 6.55024e-5 0.5 0.75 0.375 0.75 0.375 0.5 0 1 0 0 1 0 0 1 0 0 1 0 0.8750001 0.75 0.625 0.75 0.625 0.5</float_array>
           <technique_common>
             <accessor source="#Cube_001-mesh-map-0-array" count="60" stride="2">
               <param name="S" type="float"/>
@@ -134,25 +154,31 @@
           <input semantic="VERTEX" source="#Cube_001-mesh-vertices" offset="0"/>
           <input semantic="NORMAL" source="#Cube_001-mesh-normals" offset="1"/>
           <input semantic="TEXCOORD" source="#Cube_001-mesh-map-0" offset="2" set="0"/>
-          <p>7 0 0 11 0 1 10 0 2 7 0 3 5 0 4 11 0 5</p>
+          <p>5 4 21 10 4 22 7 4 23 5 4 51 11 4 52 10 4 53</p>
         </triangles>
         <triangles material="Skirting_Line-material" count="8">
           <input semantic="VERTEX" source="#Cube_001-mesh-vertices" offset="0"/>
           <input semantic="NORMAL" source="#Cube_001-mesh-normals" offset="1"/>
           <input semantic="TEXCOORD" source="#Cube_001-mesh-map-0" offset="2" set="0"/>
-          <p>10 0 6 4 0 7 6 0 8 8 1 9 2 1 10 0 1 11 10 0 12 11 0 13 4 0 14 8 1 15 9 1 16 2 1 17 11 3 45 0 3 46 4 3 47 9 2 48 6 2 49 2 2 50 11 3 54 8 3 55 0 3 56 9 2 57 10 2 58 6 2 59</p>
+          <p>10 1 3 2 1 4 9 1 5 9 2 9 0 2 10 8 2 11 8 3 12 4 3 13 11 3 14 11 4 18 6 4 19 10 4 20 10 1 33 6 1 34 2 1 35 9 2 39 2 2 40 0 2 41 8 3 42 0 3 43 4 3 44 11 4 48 4 4 49 6 4 50</p>
         </triangles>
         <triangles material="Back-material" count="2">
           <input semantic="VERTEX" source="#Cube_001-mesh-vertices" offset="0"/>
           <input semantic="NORMAL" source="#Cube_001-mesh-normals" offset="1"/>
           <input semantic="TEXCOORD" source="#Cube_001-mesh-map-0" offset="2" set="0"/>
-          <p>1 1 18 9 1 19 8 1 20 1 1 21 3 1 22 9 1 23</p>
+          <p>3 2 24 8 2 25 1 2 26 3 2 54 9 2 55 8 2 56</p>
         </triangles>
-        <triangles material="Default-material" count="8">
+        <triangles material="Default-material" count="4">
           <input semantic="VERTEX" source="#Cube_001-mesh-vertices" offset="0"/>
           <input semantic="NORMAL" source="#Cube_001-mesh-normals" offset="1"/>
           <input semantic="TEXCOORD" source="#Cube_001-mesh-map-0" offset="2" set="0"/>
-          <p>3 2 24 10 2 25 9 2 26 5 3 27 8 3 28 11 3 29 3 4 30 5 4 31 7 4 32 3 2 33 7 2 34 10 2 35 5 3 36 1 3 37 8 3 38 3 4 39 1 4 40 5 4 41 6 5 42 0 5 43 2 5 44 6 5 51 4 5 52 0 5 53</p>
+          <p>4 0 0 2 0 1 6 0 2 1 5 27 7 5 28 3 5 29 4 0 30 0 0 31 2 0 32 1 5 57 5 5 58 7 5 59</p>
+        </triangles>
+        <triangles material="Side-material" count="4">
+          <input semantic="VERTEX" source="#Cube_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Cube_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Cube_001-mesh-map-0" offset="2" set="0"/>
+          <p>7 1 6 9 1 7 3 1 8 1 3 15 11 3 16 5 3 17 7 1 36 10 1 37 9 1 38 1 3 45 8 3 46 11 3 47</p>
         </triangles>
       </mesh>
     </geometry>
@@ -174,6 +200,9 @@
                 <bind_vertex_input semantic="Cube_001-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
               </instance_material>
               <instance_material symbol="Default-material" target="#Default-material">
+                <bind_vertex_input semantic="Cube_001-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="Side-material" target="#Side-material">
                 <bind_vertex_input semantic="Cube_001-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
               </instance_material>
             </technique_common>
