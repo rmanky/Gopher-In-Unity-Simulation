@@ -8,8 +8,8 @@ OcclusionCullingSettings:
     smallestOccluder: 1.5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: ba6375fbb1d614291a6586c65793753a
-  m_OcclusionCullingData: {fileID: 36300000, guid: 4a5ad2e9e88c9f2e18880173604dac35, type: 2}
+  m_SceneGUID: 4e53d84f6d3ef21ab9ab5ed3c8c041a1
+  m_OcclusionCullingData: {fileID: 36300000, guid: ffdcc11ae6616593c958926ded4c4be0, type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 2f9bd88b51446b39b9c56fd8ffde255e, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 942f95520c1d34895bc6cd3691fb3480, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 1175ea4bb17940758b3421b52ee6ca16, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -5461,7 +5461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 126
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &435800747
 Transform:
   m_ObjectHideFlags: 0

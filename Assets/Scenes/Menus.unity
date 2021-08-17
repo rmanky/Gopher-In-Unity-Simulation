@@ -135,6 +135,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4447193125194513228, guid: f0bf9ea0b2d210662b2dd0ce158e4231, type: 3}
     - target: {fileID: 2145085383, guid: 31dc8130979a80fbfb1dcf184dae86fd, type: 3}
+      propertyPath: scenes.Array.data[0]
+      value: Hospital
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145085383, guid: 31dc8130979a80fbfb1dcf184dae86fd, type: 3}
       propertyPath: spawnPositions.Array.data[0].z
       value: -7
       objectReference: {fileID: 0}
