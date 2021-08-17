@@ -5,7 +5,7 @@ using UnityEngine;
 public class CollisionReader : MonoBehaviour
 {
     public GameObject robotRoot;
-    private Collider[] colliders;
+    private ArticulationBody[] articulationBodyChain;
 
     public AudioClip collisionAudioClip;
     private AudioSource collisionAudio;
@@ -23,16 +23,12 @@ public class CollisionReader : MonoBehaviour
         collisionAudio.volume = 0.5f;
         
         // Get collision detections
-        colliders = robotRoot.GetComponentsInChildren<Collider>();
-
-        foreach (Collider collider in colliders)
+        articulationBodyChain = robotRoot.GetComponentsInChildren<ArticulationBody>();
+        foreach (ArticulationBody articulationBody in articulationBodyChain)
         {
-            GameObject parent = collider.gameObject;
+            GameObject parent = articulationBody.gameObject;
             ArticulationCollisionDetection collisionDetection = 
-                                           parent.GetComponent<ArticulationCollisionDetection>();
-            if (collisionDetection == null)
-                collisionDetection = parent.AddComponent<ArticulationCollisionDetection>();
-            
+                                           parent.AddComponent<ArticulationCollisionDetection>();
             collisionDetection.setParent(robotRoot);
         }
 

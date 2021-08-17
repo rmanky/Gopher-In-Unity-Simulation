@@ -12,11 +12,7 @@ public class ArticulationCollisionDetection : MonoBehaviour
     
     void Start()
     {
-        ArticulationBody AB = GetComponents<Collider>()[0].attachedArticulationBody;
-        if (AB != null)
-            selfName = AB.gameObject.name;
-        else
-            selfName = gameObject.name;
+        selfName = gameObject.name;
     }
 
     public void setParent(GameObject p)
