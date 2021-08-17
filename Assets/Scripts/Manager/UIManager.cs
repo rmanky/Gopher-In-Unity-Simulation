@@ -10,13 +10,14 @@ public class UIManager : MonoBehaviour
 {
     public GameObject robotPrefab; 
     private GameObject robot;
+    private KeyboardWheelControl wheelController;
 
     private Camera[] cameras;
-    private int currentCameraIndex;
+    private MouseCameraControl[] cameraControllers;
+    private int cameraIndex;
     public float[] cameraFOV;
     private int cameraFOVIndex;
-    private CameraJointController[] cameraControllers;
-
+   
     public string mainScene;
     public GameObject[] level;
     public Vector3[] spawnPositions;
@@ -31,7 +32,7 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         // Initialize indices
-        currentCameraIndex = 0;
+        cameraIndex = 0;
         cameraFOVIndex = 0;
         levelIndex = 0;
         taskIndex = 0;
@@ -73,10 +74,13 @@ public class UIManager : MonoBehaviour
         // Spawn
         robot = Instantiate(robotPrefab, spawnPosition, spawnRotation);
 
-        /*/ Initialization
+        // Get components
+        wheelController = robot.GetComponentInChildren<KeyboardWheelControl>();
         cameras = robot.GetComponentsInChildren<Camera>();
-        cameraControllers = robot.GetComponentsInChildren<CameraJointController>();
-        InitializeCameras();*/
+        cameraControllers = robot.GetComponentsInChildren<MouseCameraControl>();
+        Debug.Log(cameras.Length + " " + cameraControllers.Length);
+        // Initialization
+        InitializeCameras();
     }
 
     private void InitializeCameras()
@@ -85,12 +89,12 @@ public class UIManager : MonoBehaviour
         {
             camera.enabled = false;
             camera.targetDisplay = 0;
-            camera.fieldOfView = cameraFOV[currentCameraIndex];
+            camera.fieldOfView = cameraFOV[cameraIndex];
             camera.rect = new Rect(0.0f, 0.0f, 1.0f, 1.0f);
         }
-        cameras[currentCameraIndex].enabled = true;
+        cameras[cameraIndex].enabled = true;
 
-        foreach (CameraJointController controller in cameraControllers)
+        foreach (MouseCameraControl controller in cameraControllers)
             controller.enabled = false;
         Cursor.lockState = CursorLockMode.Confined;
     }
@@ -99,10 +103,10 @@ public class UIManager : MonoBehaviour
     // camera
     public void ChangeCameraView()
     {
-        cameras[currentCameraIndex].enabled = false;
+        cameras[cameraIndex].enabled = false;
 
-        currentCameraIndex = (currentCameraIndex+1) % cameras.Length;
-        cameras[currentCameraIndex].enabled = true;
+        cameraIndex = (cameraIndex+1) % cameras.Length;
+        cameras[cameraIndex].enabled = true;
     }
 
     public void ChangeCameraFOV()
@@ -114,7 +118,7 @@ public class UIManager : MonoBehaviour
 
     public void ChangeCameraControl()
     {
-        CameraJointController cr = GetComponent<CameraJointController>();
+        MouseCameraControl cr = cameraControllers[cameraIndex];
         cr.enabled = !cr.enabled;
         if (cr.enabled)
             Cursor.lockState = CursorLockMode.Locked;
@@ -125,7 +129,16 @@ public class UIManager : MonoBehaviour
     // state
     public void ChangeRobotSpeed()
     {
-        
+        if (wheelController.speed == 1.5f)
+        {
+            wheelController.speed = 1.0f;
+            wheelController.angularSpeed = 1.0f;
+        }
+        else
+        {
+            wheelController.speed = 1.5f;
+            wheelController.angularSpeed = 1.5f;
+        }
     }
 
     public void ChangeRobotStateDisplay()
@@ -165,7 +178,7 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(mainScene);
         yield return new WaitForSeconds(0.5f);
         // level
-        Instantiate(robotPrefab, new Vector3(), new Quaternion());
+        Instantiate(level[levelIndex], new Vector3(), new Quaternion());
         yield return new WaitForSeconds(1.0f); 
         // Robot
         SpawnRobot(spawnPositions[taskIndex], Quaternion.Euler(spawnRotations[taskIndex]));
