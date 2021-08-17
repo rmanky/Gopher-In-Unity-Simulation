@@ -1,34 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!54 &9151096423291232262
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3917644231620459341}
-  serializedVersion: 2
-  m_Mass: 0.1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &2079751008152222943
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3917644231620459341}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 600.00006, y: 899.99994, z: 11.392444}
-  m_Center: {x: -4.075196, y: 2418.6687, z: -4.533089}
 --- !u!1 &4224144992609689731
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4224144992609689730
 Transform:
@@ -56,11 +27,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4401586941039485431}
+  - {fileID: 5467933847300911465}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &4224144994318239260
+--- !u!1001 &5505854642934371970
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -72,16 +43,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a8e854bff9d7063a19b9cf2cbbf90496, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.00066351896
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a8e854bff9d7063a19b9cf2cbbf90496, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.00066351896
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a8e854bff9d7063a19b9cf2cbbf90496, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a8e854bff9d7063a19b9cf2cbbf90496, type: 3}
       propertyPath: m_LocalPosition.y
@@ -93,27 +56,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a8e854bff9d7063a19b9cf2cbbf90496, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a8e854bff9d7063a19b9cf2cbbf90496, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000015454345
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a8e854bff9d7063a19b9cf2cbbf90496, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a8e854bff9d7063a19b9cf2cbbf90496, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000015454345
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a8e854bff9d7063a19b9cf2cbbf90496, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a8e854bff9d7063a19b9cf2cbbf90496, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a8e854bff9d7063a19b9cf2cbbf90496, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -125,17 +88,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a8e854bff9d7063a19b9cf2cbbf90496, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8e854bff9d7063a19b9cf2cbbf90496, type: 3}
---- !u!1 &3917644231620459341 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a8e854bff9d7063a19b9cf2cbbf90496, type: 3}
-  m_PrefabInstance: {fileID: 4224144994318239260}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &4401586941039485431 stripped
+--- !u!4 &5467933847300911465 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a8e854bff9d7063a19b9cf2cbbf90496, type: 3}
-  m_PrefabInstance: {fileID: 4224144994318239260}
+  m_PrefabInstance: {fileID: 5505854642934371970}
   m_PrefabAsset: {fileID: 0}
