@@ -17,11 +17,12 @@ public class UIManager : MonoBehaviour
     private int cameraFOVIndex;
     private CameraJointController[] cameraControllers;
 
-    public string[] scenes;
+    public string mainScene;
+    public GameObject[] level;
     public Vector3[] spawnPositions;
     public Vector3[] spawnRotations;
-    private int sceneIndex;
-    private int taskIndex;
+    public int levelIndex;
+    public int taskIndex;
 
     private bool isRecording = false;
 
@@ -32,7 +33,7 @@ public class UIManager : MonoBehaviour
         // Initialize indices
         currentCameraIndex = 0;
         cameraFOVIndex = 0;
-        sceneIndex = 0;
+        levelIndex = 0;
         taskIndex = 0;
 
         // Load scene
@@ -155,15 +156,17 @@ public class UIManager : MonoBehaviour
         // Keep this manager
         DontDestroyOnLoad(gameObject);
         // Load scene
-        StartCoroutine(LoadSceneWithRobotCoroutine(0.5f));
+        StartCoroutine(LoadSceneWithRobotCoroutine());
         // Loading sign
     }
-    private IEnumerator LoadSceneWithRobotCoroutine(float seconds)
+    private IEnumerator LoadSceneWithRobotCoroutine()
     {
-        // Scene
-        SceneManager.LoadScene(scenes[sceneIndex]);
-        // Sleep
-        yield return new WaitForSeconds(seconds); 
+        // mainScene
+        SceneManager.LoadScene(mainScene);
+        yield return new WaitForSeconds(0.5f);
+        // level
+        Instantiate(robotPrefab, new Vector3(), new Quaternion());
+        yield return new WaitForSeconds(1.0f); 
         // Robot
         SpawnRobot(spawnPositions[taskIndex], Quaternion.Euler(spawnRotations[taskIndex]));
         // Sleep
