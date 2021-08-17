@@ -6,57 +6,42 @@ using Unity.Robotics.ROSTCPConnector;
 using Unity.Robotics.ROSTCPConnector.ROSGeometry;
 using RosMessageTypes.Geometry;
 
+/// <summary>
+///     This script subscribes to twist command
+///     and use robot controller to 
+/// </summary>
 public class TwistSubscriber : MonoBehaviour
 {
     // ROS Connector
     private ROSConnection ros;
-
     // Variables required for ROS communication
     public string twistTopicName = "base_controller/cmd_vel";
 
-    // Transform
-    public GameObject controlledObject;
+    public ArticulationWheelController wheelController;
     public float linearSpeed = 1.5f;
-    public float angularSpeed = 1.0f;
-    private Rigidbody rb;
-
-    private Vector3 forwardDirection;
-    private Vector3 linearVelocity;
-    private Vector3 angularVelocity;
-    private bool isMessageReceived;
-
-
+    public float angularSpeed = 1.5f;
+    private float targetLinearVelocity;
+    private float targetAngularVelocity;
+    
     void Start()
     {
         // Get ROS connection static instance
         ros = ROSConnection.instance;
 
-        // Transform of the controlled object
-        rb = controlledObject.GetComponent<Rigidbody>();
-
+        targetLinearVelocity = 0f;
+        targetAngularVelocity = 0f;
+        
         ros.Subscribe<TwistMsg>(twistTopicName, updateVelocity);
-        isMessageReceived = false;
     }
 
     private void FixedUpdate()
     {
-        if (isMessageReceived)
-        {
-            // Linear velocity
-            forwardDirection = transform.forward * linearVelocity.z;
-            rb.velocity = linearSpeed * forwardDirection.normalized;
-            // Angular velocity
-            rb.angularVelocity = - angularVelocity.y * angularSpeed * Vector3.up;
-
-            isMessageReceived = false;
-        }
+        wheelController.SetRobotVelocity(targetLinearVelocity, targetAngularVelocity);
     }
 
     private void updateVelocity(TwistMsg twist)
     {
-        linearVelocity = twist.linear.From<FLU>();
-        angularVelocity = twist.angular.From<FLU>();
-
-        isMessageReceived = true;
+        targetLinearVelocity = twist.linear.From<FLU>().z * linearSpeed;
+        targetAngularVelocity = twist.angular.From<FLU>().y * angularSpeed;
     }
 }

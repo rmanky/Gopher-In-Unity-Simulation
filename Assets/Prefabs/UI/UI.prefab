@@ -236,7 +236,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5914956321936287753}
-  - component: {fileID: 5914956321936287752}
+  - component: {fileID: 2145085383}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -259,22 +259,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5914956321936287752
+--- !u!114 &2145085383
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5914956321936287754}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c60bb1713c4fb176db2e850d0dd7d297, type: 3}
+  m_Script: {fileID: 11500000, guid: 26ba111a4ab21ae0484d496ad94f70a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameras:
-  - {fileID: 0}
-  - {fileID: 0}
-  cameraFOVInputField: {fileID: 5914956321951499603}
+  robotPrefab: {fileID: 1684255215927694804, guid: 48e1df6e21712d909ae9f5ba05f6e5d7, type: 3}
+  cameraFOV:
+  - 69.4
+  - 91
+  scenes:
+  - New Scene Test
+  spawnPositions:
+  - {x: -7.5, y: 0, z: 7.5}
+  spawnRotations:
+  - {x: 0, y: 180, z: 0}
   minimap: {fileID: 0}
 --- !u!1 &5914956321951499613
 GameObject:
@@ -540,7 +546,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5914956321936287752}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ChangeCameraFOV
         m_Mode: 1
@@ -752,7 +758,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5914956321936287752}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: RestartScene
         m_Mode: 1

@@ -7,17 +7,23 @@ using Unity.Robotics.ROSTCPConnector.ROSGeometry;
 using RosMessageTypes.Std;
 using RosMessageTypes.Geometry;
 
+/// <summary>
+///     This script publishes robot stamped pose
+/// </summary>
 public class PoseStampedPublisher : MonoBehaviour
 {
     // ROS Connector
     private ROSConnection ros;
     // Variables required for ROS communication
     public string poseStampedTopicName = "model_pose";
+    
+    // Transform
     public Transform publishedTransform;
 
-    // Message info
+    // Message
     private PoseStampedMsg poseStamped;
-    private string frameId = "Model Pose";
+    private string frameId = "model_pose";
+    public float publishRate;
 
     void Start()
     {
@@ -32,9 +38,11 @@ public class PoseStampedPublisher : MonoBehaviour
                 frame_id = frameId
             }
         };
+
+        InvokeRepeating("PublishPoseStamped", 1f, 1f/publishRate);
     }
 
-    private void FixedUpdate()
+    private void PublishPoseStamped()
     {
         poseStamped.header.Update();
 

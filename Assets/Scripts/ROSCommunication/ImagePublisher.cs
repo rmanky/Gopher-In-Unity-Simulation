@@ -5,6 +5,10 @@ using UnityEngine;
 using Unity.Robotics.ROSTCPConnector;
 using RosMessageTypes.Sensor;
 
+/// <summary>
+///     This script publishes camera view
+///     as compressed image 
+/// </summary>
 public class ImagePublisher : MonoBehaviour
 {
     // ROS Connector
@@ -14,14 +18,13 @@ public class ImagePublisher : MonoBehaviour
 
     // Sensor
     public Camera imageCamera;
-    public int FieldOfView = 60;
     public int resolutionWidth = 1280;
     public int resolutionHeight = 720;
     public int qualityLevel = 50;
     
-    // Message info
+    // Message
     private CompressedImageMsg compressedImage;
-    private string frameID = "Camera";
+    private string frameID = "camera";
 
     private Texture2D texture2D;
     private Rect rect;
@@ -31,17 +34,14 @@ public class ImagePublisher : MonoBehaviour
         // Get ROS connection static instance
         ros = ROSConnection.instance;
 
-        // Setting FOV
-        imageCamera.fieldOfView = FieldOfView;
-
-        // Render image
+        // Initialize renderer
         texture2D = new Texture2D(resolutionWidth, resolutionHeight, TextureFormat.ARGB32, false);
         rect = new Rect(0, 0, resolutionWidth, resolutionHeight);
         RenderTexture renderTexture = new RenderTexture(resolutionWidth, resolutionHeight, 24, 
                                                         RenderTextureFormat.ARGB32, RenderTextureReadWrite.sRGB);
         imageCamera.targetTexture = renderTexture;
         
-        // Messages
+        // Initialize messages
         compressedImage = new CompressedImageMsg();
         compressedImage.header.frame_id = frameID;
         compressedImage.format = "jpeg";
@@ -50,13 +50,14 @@ public class ImagePublisher : MonoBehaviour
         Camera.onPostRender += UpdateImage;
     }
 
-    private void UpdateImage(Camera _camera)
+    private void UpdateImage(Camera cameraObject)
     {
-        if (texture2D != null && _camera == imageCamera)
+        if (texture2D != null && cameraObject == imageCamera)
         {
             compressedImage.header.Update();
             texture2D.ReadPixels(rect, 0, 0);
             compressedImage.data = texture2D.EncodeToJPG(qualityLevel);
+
             ros.Send(cameraTopicName, compressedImage);
         }
     }
