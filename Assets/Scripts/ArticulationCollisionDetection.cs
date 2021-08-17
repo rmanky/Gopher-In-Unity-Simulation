@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollisionAudioPlayer : MonoBehaviour
+public class ArticulationCollisionDetection : MonoBehaviour
 {
-    public AudioSource collisionAudio;
-
+    public GameObject parent;
+    
+    private CollisionReader collisionReader;
     private string selfName;
     private string otherName;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         ArticulationBody AB = GetComponents<Collider>()[0].attachedArticulationBody;
@@ -19,13 +19,20 @@ public class CollisionAudioPlayer : MonoBehaviour
             selfName = gameObject.name;
     }
 
-    public void setAudioSource(AudioSource audioSource)
+    public void setParent(GameObject p)
     {
-        collisionAudio = audioSource;
+        parent = p;
+        collisionReader = p.GetComponentInChildren<CollisionReader>();
     }
 
     void OnCollisionEnter(Collision collision)
     {
+        // Ignore self-collision
+        GameObject parentObject = collision.gameObject.transform.root.gameObject;
+        if(parent == parentObject)
+            return;
+        
+        // Get name
         Rigidbody otherRb = collision.collider.attachedRigidbody;
         ArticulationBody otherAB = collision.collider.attachedArticulationBody;
         if (otherRb != null)
@@ -34,8 +41,9 @@ public class CollisionAudioPlayer : MonoBehaviour
             otherName = otherAB.gameObject.name;
         else
             otherName = collision.collider.name;
-        
-        Debug.Log(selfName + " hits " + otherName);
-        collisionAudio.Play();
+
+        // On collision
+        if (collisionReader != null)
+            collisionReader.OnCollision(selfName, otherName);
     }
 }

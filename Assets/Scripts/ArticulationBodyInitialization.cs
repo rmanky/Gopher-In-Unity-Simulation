@@ -21,33 +21,33 @@ public class ArticulationBodyInitialization : MonoBehaviour
 
     void Start()
     {
-        // get non-fixed joints
+        // Get non-fixed joints
         articulationChain = robotRoot.GetComponentsInChildren<ArticulationBody>();
         articulationChain = articulationChain.Where(joint => joint.jointType 
                                                     != ArticulationJointType.FixedJoint).ToArray();
 
-        // joint length to assign
+        // Joint length to assign
         int assignLength = articulationChain.Length;
         if (!assignToAllChildren)
             assignLength = robotChainLength;
 
-        // setting stiffness, damping and force limit
+        // Setting stiffness, damping and force limit
         int defDyanmicVal = 100;
-        for (int i = 0; i < assignLength; i++)
+        for (int i = 0; i < assignLength; ++i)
         {
             ArticulationBody joint = articulationChain[i];
+            ArticulationDrive drive = joint.xDrive;
 
             joint.jointFriction = defDyanmicVal;
             joint.angularDamping = defDyanmicVal;
 
-            ArticulationDrive currentDrive = joint.xDrive;
-            currentDrive.stiffness = stiffness;
-            currentDrive.damping = damping;
-            currentDrive.forceLimit = forceLimit;
-            joint.xDrive = currentDrive;
+            drive.stiffness = stiffness;
+            drive.damping = damping;
+            drive.forceLimit = forceLimit;
+            joint.xDrive = drive;
         }
     }
-
+    
     void Update()
     {
     }

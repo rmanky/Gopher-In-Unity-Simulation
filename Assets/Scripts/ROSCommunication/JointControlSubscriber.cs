@@ -59,7 +59,7 @@ public class JointControlSubscriber : MonoBehaviour
 
     public void HomeRobot()
     {
-        for (int i = 0; i < homePosition.Length; i++)
+        for (int i = 0; i < homePosition.Length; ++i)
             if (articulationChain[i].xDrive.target != homePosition[i])
             {
                 moveJoint(i, homePosition[i]);

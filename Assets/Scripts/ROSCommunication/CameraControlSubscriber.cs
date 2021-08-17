@@ -48,7 +48,7 @@ public class CameraControlSubscriber : MonoBehaviour
 
     public void HomeRobot()
     {
-        for (int i = 0; i < articulationChain.Length; i++)
+        for (int i = 0; i < articulationChain.Length; ++i)
             if (articulationChain[i].xDrive.target != 0f)
             {
                 moveJoint(i, 0f);
