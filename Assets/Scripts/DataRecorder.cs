@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class DataRecorder : MonoBehaviour
 {
-    public float recordRate;
+    public float recordRate = 10;
 
     public GameObject robot;
     private StateReader stateReader;
@@ -14,6 +14,7 @@ public class DataRecorder : MonoBehaviour
     private CollisionReader collisionReader;
     private int collisionStorageIndex;
 
+    public bool updateData;
     private bool isRecording;
     public float[] states;
     public string[] collisions;
@@ -23,37 +24,56 @@ public class DataRecorder : MonoBehaviour
 
     void Start()
     {
-        stateReader = robot.GetComponentInChildren<StateReader>();
-        laser = robot.GetComponentInChildren<Laser>();
-        collisionReader = robot.GetComponentInChildren<CollisionReader>();
-        collisionStorageIndex = 0;
-
-        states = new float[18];
-        collisions = new string[2];
-        task = new float[12];
         twoPI = 2 * Mathf.PI;
+        
+        if (robot != null)
+            setRobot(robot);
+        else
+            states = new float[18];
+            collisions = new string[2];
+            task = new float[12]; 
 
-        isRecording = false;
+            isRecording = false;
+            updateData = false;
+
         InvokeRepeating("RecordData", 1f, 1/recordRate);
     }
-    
+
     void Update()
     {
     }
 
-    private void StartRecording()
+    public void setRobot(GameObject robot)
+    {
+        this.robot = robot;
+        stateReader = robot.GetComponentInChildren<StateReader>();
+        laser = robot.GetComponentInChildren<Laser>();
+        collisionReader = robot.GetComponentInChildren<CollisionReader>();
+        collisionStorageIndex = 0;
+        
+        states = new float[18];
+        collisions = new string[2];
+        task = new float[12]; 
+
+        isRecording = false;
+        updateData = false;
+    }
+
+    public void StartRecording()
     {
         isRecording = true;
     }
 
-    private void StopRecording()
+    public void StopRecording()
     {
         isRecording = false;
     }
 
     private void RecordData()
     {
-        if(!isRecording)
+        if (robot == null)
+            return;
+        if(!isRecording && !updateData)
             return;
         
         // Record state
@@ -74,15 +94,15 @@ public class DataRecorder : MonoBehaviour
         states[8] = laser.ranges[humMinI]; // Human
         states[9] = laser.directions[humMinI]; // Human
         // main camera joint
-        states[10] = stateReader.positions[28];
-        states[11] = ToFLUEuler(stateReader.positions[29]);
-        states[12] = stateReader.velocities[28];
-        states[13] = -stateReader.velocities[29];
+        states[10] = stateReader.positions[2];
+        states[11] = ToFLUEuler(stateReader.positions[3]);
+        states[12] = stateReader.velocities[2];
+        states[13] = -stateReader.velocities[3];
         // arm camera joint
-        states[14] = stateReader.positions[20];
-        states[15] = ToFLUEuler(stateReader.positions[19]);
-        states[16] = stateReader.velocities[20];
-        states[17] = -stateReader.velocities[19];
+        states[14] = stateReader.positions[22];
+        states[15] = ToFLUEuler(stateReader.positions[21]);
+        states[16] = stateReader.velocities[22];
+        states[17] = -stateReader.velocities[21];
 
         // Record collision
         if (collisionStorageIndex != collisionReader.storageIndex)
