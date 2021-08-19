@@ -174,6 +174,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 3365574599462207700, guid: 31dc8130979a80fbfb1dcf184dae86fd, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3365574599497890663, guid: 31dc8130979a80fbfb1dcf184dae86fd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -346,5 +350,13 @@ PrefabInstance:
       propertyPath: uIManager
       value: 
       objectReference: {fileID: 3365574599116519909}
+    - target: {fileID: 6847972499330631963, guid: c8c3868c3e4e73028a890db69a682fde, type: 3}
+      propertyPath: wideCameraRendertexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 4aad51ba1ba3fd194aa7858a74e66416, type: 2}
+    - target: {fileID: 6847972499330631963, guid: c8c3868c3e4e73028a890db69a682fde, type: 3}
+      propertyPath: regularCameraRendertexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 60d9c0f67c9db3f78b9a63ecdd07c793, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8c3868c3e4e73028a890db69a682fde, type: 3}

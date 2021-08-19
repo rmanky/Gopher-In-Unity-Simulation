@@ -127,6 +127,8 @@ public class UIManager : MonoBehaviour
         foreach (GameObject UI in UIs)
             UI.SetActive(false);
 
+        cameraDisplay.GetComponent<RawImage>().texture = 
+            gameManager.cameraRenderTextures[gameManager.cameraFOVIndex];
         cameraDisplay.SetActive(true);
         if (gameManager.cameraFOVIndex == 0)
         {

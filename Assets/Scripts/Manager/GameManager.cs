@@ -21,8 +21,10 @@ public class GameManager : MonoBehaviour
     public int cameraIndex;
     private float[] cameraFOV;
     public int cameraFOVIndex;
-    public RenderTexture cameraRendertexture;
-
+    public RenderTexture[] cameraRenderTextures;
+    public RenderTexture regularCameraRendertexture;
+    public RenderTexture wideCameraRendertexture;
+    
     // Scene
     public string mainScene;
     public GameObject[] level;
@@ -43,33 +45,35 @@ public class GameManager : MonoBehaviour
         cameraIndex = 0;
         cameraFOVIndex = 0;
         cameraFOV = new float[] {69.4f, 91.1f};
+        cameraRenderTextures = new RenderTexture[] {regularCameraRendertexture, 
+                                                    wideCameraRendertexture};
 
         // Scene
         levelIndex = 0;
         taskIndex = 0;
         tasks = new string[] {"Human Following", "Passage", "Corner", 
                               "Passing Doors", "Exploration"};
-
-        // Data
-        dataRecorder.updateData = true;
     }
 
     void Update()
     {
         // Hotkeys
-        // camera
-        if (Input.GetKeyDown(KeyCode.Tab)) 
-            ChangeCameraView();
-        if (Input.GetKeyDown(KeyCode.V))
-            ChangeCameraFOV();
-        if (Input.GetKeyDown(KeyCode.LeftControl))
-            ChangeCameraControl();
-        
-        // state
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-            ChangeRobotSpeed();
-        if (Input.GetKeyDown(KeyCode.R))
-            Record();
+        if (robot != null)
+        {
+            // camera
+            if (Input.GetKeyDown(KeyCode.Tab)) 
+                ChangeCameraView();
+            if (Input.GetKeyDown(KeyCode.V))
+                ChangeCameraFOV();
+            if (Input.GetKeyDown(KeyCode.LeftControl))
+                ChangeCameraControl();
+            
+            // state
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+                ChangeRobotSpeed();
+            if (Input.GetKeyDown(KeyCode.R))
+                Record();
+        }
     }
 
     public void LoadSceneWithRobot(int taskIndex, int levelIndex)
@@ -93,13 +97,14 @@ public class GameManager : MonoBehaviour
         Instantiate(level[levelIndex], new Vector3(), new Quaternion());
         yield return new WaitForSeconds(0.5f); 
         // Robot
-        SpawnRobot(spawnPositions[taskIndex], Quaternion.Euler(spawnRotations[taskIndex]));
+        SpawnRobot();
     }
 
-    private void SpawnRobot(Vector3 spawnPosition, Quaternion spawnRotation)
+    private void SpawnRobot()
     {
         // Spawn
-        robot = Instantiate(robotPrefab, spawnPosition, spawnRotation);
+        robot = Instantiate(robotPrefab, spawnPositions[taskIndex], 
+                                         Quaternion.Euler(spawnRotations[taskIndex]));
 
         // Get components
         wheelController = robot.GetComponentInChildren<KeyboardWheelControl>();
@@ -108,21 +113,19 @@ public class GameManager : MonoBehaviour
 
         // Initialization
         InitializeCameras();
+        
         dataRecorder.setRobot(robot);
         dataRecorder.updateData = true;
     }
 
     private void InitializeCameras()
     {
-        cameraRendertexture.width = 1920;
-        cameraRendertexture.height = 1080;
-
         foreach (Camera camera in cameras)
         {
             camera.enabled = false;
-            camera.targetTexture = cameraRendertexture;
-            camera.fieldOfView = cameraFOV[cameraIndex];
             camera.rect = new Rect(0.0f, 0.0f, 1.0f, 1.0f);
+            camera.fieldOfView = cameraFOV[cameraIndex];
+            camera.targetTexture = cameraRenderTextures[cameraIndex];     
         }
         cameras[cameraIndex].enabled = true;
 
@@ -149,22 +152,12 @@ public class GameManager : MonoBehaviour
     public void ChangeCameraFOV()
     {
         cameraFOVIndex = (cameraFOVIndex+1) % cameraFOV.Length;
+        
         foreach (Camera camera in cameras)
         {
-            camera.fieldOfView = cameraFOV[cameraFOVIndex];
             camera.enabled = false;
-        }
-
-        cameraRendertexture.Release();
-        if (cameraFOVIndex == 0)
-        {
-            cameraRendertexture.width = 1920;
-            cameraRendertexture.height = 1080;
-        }
-        else
-        {
-            cameraRendertexture.width = 2560;
-            cameraRendertexture.height = 1080;
+            camera.fieldOfView = cameraFOV[cameraFOVIndex];
+            camera.targetTexture = cameraRenderTextures[cameraFOVIndex];
         }
         cameras[cameraIndex].enabled = true;
 
@@ -201,7 +194,7 @@ public class GameManager : MonoBehaviour
     public void Record()
     {
         if (!isRecording)
-        {
+        {   
             dataRecorder.StartRecording();
             uIManager.recordIconImage.SetActive(true);
         }
