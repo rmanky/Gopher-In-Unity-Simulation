@@ -1,19 +1,21 @@
-using System;
-using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using System;
+using System.IO;
+using System.Globalization;
+using CsvHelper;
+
 public class DataRecorder : MonoBehaviour
 {
-    public float recordRate = 10;
-
     public GameObject robot;
     private StateReader stateReader;
     private Laser laser;
     private CollisionReader collisionReader;
     private int collisionStorageIndex;
 
+    public float recordRate = 10;
     public bool updateData;
     private bool isRecording;
     public float[] states;
@@ -24,17 +26,17 @@ public class DataRecorder : MonoBehaviour
 
     void Start()
     {
-        twoPI = 2 * Mathf.PI;
-        
+        // Initialization
+        states = new float[18];
+        collisions = new string[2];
+        task = new float[12]; 
+        isRecording = false;
+        updateData = false;
         if (robot != null)
             setRobot(robot);
-        else
-            states = new float[18];
-            collisions = new string[2];
-            task = new float[12]; 
 
-            isRecording = false;
-            updateData = false;
+        // Constant
+        twoPI = 2 * Mathf.PI;
 
         InvokeRepeating("RecordData", 1f, 1/recordRate);
     }
@@ -66,6 +68,7 @@ public class DataRecorder : MonoBehaviour
 
     public void StopRecording()
     {
+
         isRecording = false;
     }
 
@@ -114,6 +117,7 @@ public class DataRecorder : MonoBehaviour
             collisionStorageIndex = (collisionStorageIndex+1) % collisionReader.storageLength;
         }
     }   
+
     private float ToFLUEuler(float angle)
     {
         // Change direction
@@ -128,6 +132,7 @@ public class DataRecorder : MonoBehaviour
             angle -= twoPI; 
         return angle;
     }
+
     private int GetLaserMinIndex(float[] ranges)
     {
         int index = 0;
