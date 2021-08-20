@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public string[] tasks;
     public int levelIndex;
     public int taskIndex;
+    private int trialIndex;
 
     // Data
     public DataRecorder dataRecorder;
@@ -51,6 +52,7 @@ public class GameManager : MonoBehaviour
         // Scene
         levelIndex = 0;
         taskIndex = 0;
+        trialIndex = 0;
         tasks = new string[] {"Human Following", "Passage", "Corner", 
                               "Passing Doors", "Exploration"};
     }
@@ -167,9 +169,9 @@ public class GameManager : MonoBehaviour
 
     public void ChangeCameraControl()
     {
-        MouseCameraControl cr = cameraControllers[cameraIndex];
-        cr.enabled = !cr.enabled;
-        if (cr.enabled)
+        MouseCameraControl cameraControl = cameraControllers[cameraIndex];
+        cameraControl.enabled = !cameraControl.enabled;
+        if (cameraControl.enabled)
             Cursor.lockState = CursorLockMode.Locked;
         else
             Cursor.lockState = CursorLockMode.Confined;
@@ -195,7 +197,14 @@ public class GameManager : MonoBehaviour
     {
         if (!isRecording)
         {   
-            dataRecorder.StartRecording();
+            string indexNumber = cameraIndex + "." + 
+                                 cameraFOVIndex + "." +
+                                 (cameraControllers[cameraIndex].enabled? 1:0) + "." +
+                                 "; " +
+                                 taskIndex + "." +
+                                 levelIndex + "." +
+                                 trialIndex;
+            dataRecorder.StartRecording(indexNumber);
             uIManager.recordIconImage.SetActive(true);
         }
         else
