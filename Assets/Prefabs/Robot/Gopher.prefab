@@ -375,6 +375,7 @@ GameObject:
   - component: {fileID: 572059455834316358}
   - component: {fileID: 572059455834316359}
   - component: {fileID: 572059455834316356}
+  - component: {fileID: 7702653047197899922}
   m_Layer: 0
   m_Name: Base and Torso
   m_TagString: Untagged
@@ -437,7 +438,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572059455834316354}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b47b81d82351e0488a680f52450e6c7b, type: 3}
   m_Name: 
@@ -452,6 +453,30 @@ MonoBehaviour:
   rangeMin: 0.1
   rangeMax: 5
   ranges: []
+  directions: []
+--- !u!114 &7702653047197899922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572059455834316354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a840d529c8e02b2827424acb20b4d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserLink: {fileID: 7489454703080743509}
+  alwaysOn: 1
+  visualization: 0
+  samples: 180
+  angleMin: -3.14159
+  angleMax: 3.14159
+  updateRate: 10
+  rangeMin: 0.1
+  rangeMax: 5
+  obstacleRanges: []
+  humanRanges: []
   directions: []
 --- !u!1 &572059456386280192
 GameObject:

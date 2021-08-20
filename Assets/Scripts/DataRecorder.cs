@@ -1,17 +1,13 @@
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-using System;
-using System.IO;
-using System.Globalization;
-using CsvHelper;
 
 public class DataRecorder : MonoBehaviour
 {
     public GameObject robot;
     private StateReader stateReader;
-    private Laser laser;
+    private LaserSocial laser;
     private CollisionReader collisionReader;
     private int collisionStorageIndex;
 
@@ -21,6 +17,9 @@ public class DataRecorder : MonoBehaviour
     public float[] states;
     public string[] collisions;
     public float[] task;
+
+    private TextWriter stateTextWriter;
+    private TextWriter collisionTextWriter;
 
     private float twoPI;
 
@@ -49,7 +48,7 @@ public class DataRecorder : MonoBehaviour
     {
         this.robot = robot;
         stateReader = robot.GetComponentInChildren<StateReader>();
-        laser = robot.GetComponentInChildren<Laser>();
+        laser = robot.GetComponentInChildren<LaserSocial>();
         collisionReader = robot.GetComponentInChildren<CollisionReader>();
         collisionStorageIndex = 0;
         
@@ -61,16 +60,28 @@ public class DataRecorder : MonoBehaviour
         updateData = false;
     }
 
-    public void StartRecording()
+    public void StartRecording(string indexNumber)
     {
         isRecording = true;
+
+        string parentFolder = Application.dataPath + "/Data";
+        if (!Directory.Exists(parentFolder))
+            Directory.CreateDirectory(parentFolder); 
+        string name = parentFolder + "/" + indexNumber + 
+                      " " + System.DateTime.Now.ToString("MM-dd HH:mm:ss");
+
+        stateTextWriter = new StreamWriter(name + " state.csv", false);
+        collisionTextWriter = new StreamWriter(name + " collision.csv", false);
     }
 
     public void StopRecording()
     {
-
+        stateTextWriter.Close();
+        collisionTextWriter.Close();
         isRecording = false;
     }
+
+
 
     private void RecordData()
     {
@@ -90,12 +101,12 @@ public class DataRecorder : MonoBehaviour
         states[4] = stateReader.linearVelocity[2];
         states[5] = -stateReader.angularVelocity[1];
         // obs dis
-        int obsMinI = GetLaserMinIndex(laser.ranges);
-        int humMinI = GetLaserMinIndex(laser.ranges);
-        states[6] = laser.ranges[obsMinI];
+        int obsMinI = GetLaserMinIndex(laser.obstacleRanges);
+        int humMinI = GetLaserMinIndex(laser.humanRanges);
+        states[6] = laser.obstacleRanges[obsMinI];
         states[7] = laser.directions[obsMinI];
-        states[8] = laser.ranges[humMinI]; // Human
-        states[9] = laser.directions[humMinI]; // Human
+        states[8] = laser.humanRanges[humMinI];
+        states[9] = laser.directions[humMinI];
         // main camera joint
         states[10] = stateReader.positions[2];
         states[11] = ToFLUEuler(stateReader.positions[3]);
@@ -107,6 +118,10 @@ public class DataRecorder : MonoBehaviour
         states[16] = stateReader.velocities[22];
         states[17] = -stateReader.velocities[21];
 
+        // write to csv
+        if (isRecording)
+            stateTextWriter.WriteLine(ArrayToCSVLine(states));
+
         // Record collision
         if (collisionStorageIndex != collisionReader.storageIndex)
         {
@@ -115,8 +130,34 @@ public class DataRecorder : MonoBehaviour
             collisions[1] = collisionReader.collisionOtherNames[collisionStorageIndex];
 
             collisionStorageIndex = (collisionStorageIndex+1) % collisionReader.storageLength;
+
+            // write to csv
+            if (isRecording)
+                collisionTextWriter.WriteLine(string.Format("{0:0.000}", Time.time) + "," + 
+                                              ArrayToCSVLine(collisions));
         }
     }   
+
+    private string ArrayToCSVLine(float[] array)
+    {
+        string line = "";
+        foreach (float value in array)
+        {
+            line += string.Format("{0:0.000}", value) + ",";
+        }
+        line.Remove(line.Length - 1);
+        return line;
+    }
+    private string ArrayToCSVLine(string[] array)
+    {
+        string line = "";
+        foreach (string value in array)
+        {
+            line += value + ",";
+        }
+        line.Remove(line.Length - 1);
+        return line;
+    }
 
     private float ToFLUEuler(float angle)
     {
@@ -127,9 +168,7 @@ public class DataRecorder : MonoBehaviour
         angle =  angle % twoPI; 
         // positive remainder, 0 <= angle < 2pi  
         angle = (angle + twoPI) % twoPI;
-        // -180 < angle <= 180  
-        if (angle > Mathf.PI)  
-            angle -= twoPI; 
+        
         return angle;
     }
 
