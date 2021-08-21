@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: c051fe5a20f72814f9643eb10ebbd2fc, type: 2}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.55022347, g: 0.7962327, b: 0.9692979, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -16748,6 +16748,14 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 160
       objectReference: {fileID: 0}
+    - target: {fileID: 2662711816498682211, guid: 603d57263de64fd27bef536dea3224b5, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7035be9bfe4d4dccb8aed1d2444ac454, type: 2}
+    - target: {fileID: 3287250854863643922, guid: 603d57263de64fd27bef536dea3224b5, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7035be9bfe4d4dccb8aed1d2444ac454, type: 2}
     - target: {fileID: 4508404322703790400, guid: 603d57263de64fd27bef536dea3224b5, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -17716,6 +17724,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 293999893}
     m_Modifications:
+    - target: {fileID: 3488888366014468445, guid: ac3b244c98b7161d988f668501cd35fb, type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: a4e7c49b5e1b1b65ca3d13b406a3746a, type: 2}
+    - target: {fileID: 6612573406631973630, guid: ac3b244c98b7161d988f668501cd35fb, type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: a4e7c49b5e1b1b65ca3d13b406a3746a, type: 2}
     - target: {fileID: 8877245135210678154, guid: ac3b244c98b7161d988f668501cd35fb, type: 3}
       propertyPath: m_Name
       value: Room - Pharmacy

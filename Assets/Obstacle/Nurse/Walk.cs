@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class test : MonoBehaviour
+public class Walk : MonoBehaviour
 {
     public Transform currentTarget;
     private Quaternion currentTargetRotation;
