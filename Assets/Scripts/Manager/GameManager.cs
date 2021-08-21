@@ -9,12 +9,13 @@ public class GameManager : MonoBehaviour
 {   
     // UI
     public UIManager uIManager;
+    public bool isExperimenting;
 
     // Robot
     public GameObject robotPrefab; 
     private GameObject robot;
     // wheel
-    private KeyboardWheelControl wheelController;
+    public KeyboardWheelControl wheelController;
     // camera
     private Camera[] cameras;
     private MouseCameraControl[] cameraControllers;
@@ -24,6 +25,8 @@ public class GameManager : MonoBehaviour
     public RenderTexture[] cameraRenderTextures;
     public RenderTexture regularCameraRendertexture;
     public RenderTexture wideCameraRendertexture;
+    public int cameraMobility;
+    private int desiredFrameRate = 50;
     
     // Scene
     public string mainScene;
@@ -33,11 +36,10 @@ public class GameManager : MonoBehaviour
     public string[] tasks;
     public int levelIndex;
     public int taskIndex;
-    private int trialIndex;
 
     // Data
     public DataRecorder dataRecorder;
-    private bool isRecording = false;
+    public bool isRecording = false;
     
     void Start()
     {
@@ -45,6 +47,7 @@ public class GameManager : MonoBehaviour
         // camera
         cameraIndex = 0;
         cameraFOVIndex = 0;
+        cameraMobility = 0;
         cameraFOV = new float[] {69.4f, 91.1f};
         cameraRenderTextures = new RenderTexture[] {regularCameraRendertexture, 
                                                     wideCameraRendertexture};
@@ -52,7 +55,6 @@ public class GameManager : MonoBehaviour
         // Scene
         levelIndex = 0;
         taskIndex = 0;
-        trialIndex = 0;
         tasks = new string[] {"Human Following", "Passage", "Corner", 
                               "Passing Doors", "Exploration"};
     }
@@ -63,25 +65,42 @@ public class GameManager : MonoBehaviour
         if (robot != null)
         {
             // camera
-            if (Input.GetKeyDown(KeyCode.Tab)) 
-                ChangeCameraView();
-            if (Input.GetKeyDown(KeyCode.V))
-                ChangeCameraFOV();
-            if (Input.GetKeyDown(KeyCode.LeftControl))
-                ChangeCameraControl();
-            
-            // state
+            if (!isExperimenting)
+            {
+                if (Input.GetKeyDown(KeyCode.Tab)) 
+                    ChangeCameraView();
+                if (Input.GetKeyDown(KeyCode.V))
+                    ChangeCameraFOV();
+                if (Input.GetKeyDown(KeyCode.LeftControl))
+                    ChangeCameraControl();
+            }
+
+            // wheel
             if (Input.GetKeyDown(KeyCode.LeftShift))
                 ChangeRobotSpeed();
-            if (Input.GetKeyDown(KeyCode.R))
+
+            // record
+            if (Input.GetKeyDown(KeyCode.R) && !isExperimenting)
                 Record();
         }
     }
 
-    public void LoadSceneWithRobot(int taskIndex, int levelIndex)
+    public void ReloadScene()
+    {
+        LoadSceneWithRobot(taskIndex, levelIndex, cameraIndex, cameraFOVIndex, cameraMobility);
+    }
+
+    public void LoadSceneWithRobot(int taskIndex, int levelIndex,
+                                   int cameraIndex=0, int cameraFOVIndex=0, int cameraMobility=0)
     {   
+        // Load task
         this.taskIndex = taskIndex;
         this.levelIndex = levelIndex;
+
+        // Load camera configuration
+        this.cameraIndex = cameraIndex;
+        this.cameraFOVIndex = cameraFOVIndex;
+        this.cameraMobility = cameraMobility;
 
         // Keep this manager
         DontDestroyOnLoad(gameObject);
@@ -116,27 +135,46 @@ public class GameManager : MonoBehaviour
         // Initialization
         InitializeCameras();
         
+        // Set up data recorder
+        StartCoroutine(InitializeDataRecorder());
+    }
+
+    private IEnumerator InitializeDataRecorder()
+    {
         dataRecorder.setRobot(robot);
+        yield return new WaitForSeconds(0.5f);
         dataRecorder.updateData = true;
     }
 
     private void InitializeCameras()
     {
+        // Viewpoint + FOV
         foreach (Camera camera in cameras)
         {
             camera.enabled = false;
             camera.rect = new Rect(0.0f, 0.0f, 1.0f, 1.0f);
-            camera.fieldOfView = cameraFOV[cameraIndex];
-            camera.targetTexture = cameraRenderTextures[cameraIndex];     
+            camera.fieldOfView = cameraFOV[cameraFOVIndex];
+            camera.targetTexture = cameraRenderTextures[cameraFOVIndex];     
         }
-        cameras[cameraIndex].enabled = true;
 
+        InvokeRepeating("CameraRender", 0f, 1f/desiredFrameRate);
+
+        // Camera control
         foreach (MouseCameraControl controller in cameraControllers)
             controller.enabled = false;
-        Cursor.lockState = CursorLockMode.Confined;
+
+        cameraControllers[cameraIndex].enabled = (cameraMobility == 1);
+        if ((cameraMobility == 1))
+            Cursor.lockState = CursorLockMode.Locked;
+        else
+            Cursor.lockState = CursorLockMode.Confined;
+    }
+    private void CameraRender()
+    {
+        cameras[cameraIndex].Render();
     }
 
-    // camera
+    // UI - camera
     public void ChangeCameraView()
     {
         cameras[cameraIndex].enabled = false;
@@ -163,21 +201,25 @@ public class GameManager : MonoBehaviour
         }
         cameras[cameraIndex].enabled = true;
 
-        // Reload UI
-        uIManager.loadRobotUI();
+        // reload UI
+        uIManager.LoadRobotUI();
     }
 
     public void ChangeCameraControl()
     {
-        MouseCameraControl cameraControl = cameraControllers[cameraIndex];
-        cameraControl.enabled = !cameraControl.enabled;
-        if (cameraControl.enabled)
+        bool mobility = (cameraMobility == 1);
+
+        foreach (MouseCameraControl controller in cameraControllers)
+            controller.enabled = false;
+
+        cameraControllers[cameraIndex].enabled = mobility;
+        if (mobility)
             Cursor.lockState = CursorLockMode.Locked;
         else
             Cursor.lockState = CursorLockMode.Confined;
     }
 
-    // wheel
+    // UI - wheel
     public void ChangeRobotSpeed()
     {
         if (wheelController.speed == 1.5f)
@@ -193,17 +235,17 @@ public class GameManager : MonoBehaviour
     }
 
     // Data
-    public void Record()
+    public void Record(string filePrefix = "")
     {
         if (!isRecording)
         {   
-            string indexNumber = cameraIndex + "." + 
+            string indexNumber = filePrefix + "" +
+                                 cameraIndex + "." + 
                                  cameraFOVIndex + "." +
                                  (cameraControllers[cameraIndex].enabled? 1:0) + "." +
                                  "; " +
                                  taskIndex + "." +
-                                 levelIndex + "." +
-                                 trialIndex;
+                                 levelIndex + ".";
             dataRecorder.StartRecording(indexNumber);
             uIManager.recordIconImage.SetActive(true);
         }
