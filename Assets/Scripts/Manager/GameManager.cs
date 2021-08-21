@@ -171,7 +171,8 @@ public class GameManager : MonoBehaviour
     }
     private void CameraRender()
     {
-        cameras[cameraIndex].Render();
+        if (cameras[cameraIndex] != null)
+            cameras[cameraIndex].Render();
     }
 
     // UI - camera
@@ -242,10 +243,10 @@ public class GameManager : MonoBehaviour
             string indexNumber = filePrefix + "" +
                                  cameraIndex + "." + 
                                  cameraFOVIndex + "." +
-                                 (cameraControllers[cameraIndex].enabled? 1:0) + "." +
+                                 (cameraControllers[cameraIndex].enabled? 1:0) +
                                  "; " +
                                  taskIndex + "." +
-                                 levelIndex + ".";
+                                 levelIndex;
             dataRecorder.StartRecording(indexNumber);
             uIManager.recordIconImage.SetActive(true);
         }
