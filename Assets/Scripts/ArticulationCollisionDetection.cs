@@ -40,6 +40,7 @@ public class ArticulationCollisionDetection : MonoBehaviour
 
         // On collision
         if (collisionReader != null)
-            collisionReader.OnCollision(selfName, otherName);
+            collisionReader.OnCollision(selfName, otherName, 
+                                        collision.relativeVelocity.magnitude);
     }
 }

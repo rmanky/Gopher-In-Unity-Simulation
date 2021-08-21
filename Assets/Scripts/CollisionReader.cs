@@ -43,10 +43,11 @@ public class CollisionReader : MonoBehaviour
     {
     }
 
-    public void OnCollision(string self, string other)
+    public void OnCollision(string self, string other, float relativeSpeed)
     {
         if (!collisionAudio.isPlaying)
         {
+            collisionAudio.volume = relativeSpeed*0.3f;
             collisionAudio.Play();
 
             // Temporary
