@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
 {
     // Game manager
     public GameManager gameManager;
+    public Experiment experiment;
 
     // UI
     private GameObject[] UIs;
@@ -18,18 +19,25 @@ public class UIManager : MonoBehaviour
     public GameObject mainMenus;
     public GameObject loadingUI;
     public GameObject quitMenus;
+    private CursorLockMode previousCursorState;
     // camera
     public GameObject cameraDisplay;
     private RectTransform cameraDisplayRect;
     public GameObject regularViewUI;
     public GameObject wideViewUI;
+    public GameObject experimentUI;
     // task & state
     public GameObject allStateDisplay;
     private TextMeshProUGUI allStatePanelText;
     public GameObject taskStatePanel;
     public GameObject robotStatePanel;
+    public GameObject experimentTaskPanel;
+    public GameObject experimentStatePanel;
     private TextMeshProUGUI taskStatePanelText;
     private TextMeshProUGUI robotStatePanelText;
+    private TextMeshProUGUI experimentTaskPanelText;
+    private TextMeshProUGUI experimentStatePanelText;
+    private string[] taskMessage;
 
     // Scene
     public GameObject taskDropDown;
@@ -40,13 +48,18 @@ public class UIManager : MonoBehaviour
     public GameObject recordIconImage;
     
     // Others
+    public GameObject helpDisplay;
     public GameObject miniMap;
+
+    // Experiment
+    public GameObject experimentConditionUI;
 
     void Start()
     {
         // UI
-        UIs = new GameObject[] {mainMenus, loadingUI, quitMenus, 
-                                regularViewUI, wideViewUI,
+        UIs = new GameObject[] {mainMenus, loadingUI, experimentConditionUI, 
+                                experimentUI, wideViewUI, regularViewUI,
+                                quitMenus,
                                 cameraDisplay, allStateDisplay};
         cameraDisplayRect = cameraDisplay.GetComponent<RectTransform>();
 
@@ -57,9 +70,18 @@ public class UIManager : MonoBehaviour
         allStatePanelText = allStateDisplay.GetComponentInChildren<TextMeshProUGUI>();
         taskStatePanelText = taskStatePanel.GetComponentInChildren<TextMeshProUGUI>();
         robotStatePanelText = robotStatePanel.GetComponentInChildren<TextMeshProUGUI>();
+        experimentTaskPanelText = experimentTaskPanel.GetComponentInChildren<TextMeshProUGUI>();
+        experimentStatePanelText = experimentStatePanel.GetComponentInChildren<TextMeshProUGUI>();
 
+        // Experiment help
+        taskMessage = new string[] {
+                        "Please follow the nurse.", 
+                        "Please reach the shining circle.",
+                        "Please take a right turn and reach the shining circle.",
+                        "Please pass the door, enter the room and reach the shining circle.",
+                        "Please find the number boards inside the room and sum the numbers."};
         // Load menus
-        loadMainMenus();
+        LoadMainMenus();
     }
 
     void Update()
@@ -67,7 +89,7 @@ public class UIManager : MonoBehaviour
         // Hotkeys
         // info
         if (Input.GetKeyDown(KeyCode.I))
-            if (UIIndex != 0 && UIIndex != 1)
+            if (UIIndex != 0 && UIIndex != 1 && UIIndex != 2)
                 ChangeAllStateDisplay();
         // miniMap
         if (Input.GetKeyDown(KeyCode.M))
@@ -75,19 +97,29 @@ public class UIManager : MonoBehaviour
 
         // system
         if (Input.GetKeyDown(KeyCode.Escape)) 
-            if (UIIndex != 0 && UIIndex != 1)
+            if (UIIndex != 0 && UIIndex != 1 && UIIndex != 2)
                 LoadQuitScene();
+            
+        if (Input.GetKeyDown(KeyCode.H)) 
+            if (UIIndex != 0 && UIIndex != 1 && UIIndex != 2)
+                ChangeHelpDisplay();
 
         // Update panel
         if (allStateDisplay.activeSelf)
             updateAllStatePenal();
         if (wideViewUI.activeSelf)
             updateRobotUIStatePenal();
+        if (experimentUI.activeSelf)
+        {
+            updateExperimentPanel();
+        }
     }
     
     // UIs
-    public void loadMainMenus()
+    public void LoadMainMenus()
     {
+        Time.timeScale = 1f;
+
         UIIndex = 0;
         foreach (GameObject UI in UIs)
             UI.SetActive(false);
@@ -95,7 +127,7 @@ public class UIManager : MonoBehaviour
         UIs[UIIndex].SetActive(true);
     }
 
-    private IEnumerator loadLoading()
+    private IEnumerator LoadLoading()
     {
         UIIndex = 1;
         foreach (GameObject UI in UIs)
@@ -105,24 +137,56 @@ public class UIManager : MonoBehaviour
 
         yield return new WaitForSeconds(3.0f);
 
-        loadRobotUI();
+        LoadRobotUI();
+    }
+
+    public void LoadExperiment()
+    {
+        UIIndex = 2;
+        foreach (GameObject UI in UIs)
+            UI.SetActive(false);
+
+        UIs[UIIndex].SetActive(true);
+    }
+
+    public void StartExperiment()
+    {
+        Toggle[] toggles = experimentConditionUI.GetComponentsInChildren<Toggle>();
+        bool[] conditions = new bool[toggles.Length];
+
+        for (int i = 0; i < toggles.Length; ++i)
+            conditions[i] = toggles[i].isOn;
+        // Experiment condition
+        experiment.SetExperimentConditions(conditions);
+
+        // Start
+        experiment.StartExperiment();
+
+        StartCoroutine(LoadLoading());
     }
 
     public void LoadQuitScene()
     {
-        if (UIs[2].activeSelf)
+        if (UIs[6].activeSelf)
+        {
+            Cursor.lockState = previousCursorState;
             Time.timeScale = 1f;
+        }
         else
+        {
+            previousCursorState = Cursor.lockState;
+            Cursor.lockState = CursorLockMode.Confined;
             Time.timeScale = 0f;
+        }
 
-        UIs[UIIndex].SetActive(!UIs[2].activeSelf);
+        UIs[6].SetActive(!UIs[6].activeSelf);
     }
     public void Quit()
     {
         gameManager.Quit();
     }
 
-    public void loadRobotUI()
+    public void LoadRobotUI()
     {
         foreach (GameObject UI in UIs)
             UI.SetActive(false);
@@ -130,17 +194,20 @@ public class UIManager : MonoBehaviour
         cameraDisplay.GetComponent<RawImage>().texture = 
             gameManager.cameraRenderTextures[gameManager.cameraFOVIndex];
         cameraDisplay.SetActive(true);
+
+        if(!gameManager.isExperimenting)
+            UIs[3].SetActive(true);
+        else
+            UIs[4].SetActive(true);
         if (gameManager.cameraFOVIndex == 0)
         {
-            UIIndex = 3;
+            UIIndex = 5;
             UIs[UIIndex].SetActive(true);
-            UIs[UIIndex+1].SetActive(true);
             cameraDisplayRect.sizeDelta = new Vector2 (1462, 823);
         }
         else if (gameManager.cameraFOVIndex == 1)
         {
             UIIndex = 4;
-            UIs[UIIndex].SetActive(true);
             cameraDisplayRect.sizeDelta = new Vector2 (1920, 823);
         }
     }
@@ -157,17 +224,53 @@ public class UIManager : MonoBehaviour
             miniMap.SetActive(!miniMap.activeSelf);
     }
 
+    public void ChangeHelpDisplay()
+    {
+        helpDisplay.SetActive(!helpDisplay.activeSelf);
+    }
+
     // Scene
     public void ChangeScene()
     {
+        StartCoroutine(LoadLoading());
+        
         int taskIndex = taskDropDown.GetComponent<TMP_Dropdown>().value;
         int levelIndex = levelDropDown.GetComponent<TMP_Dropdown>().value;
         gameManager.LoadSceneWithRobot(taskIndex, levelIndex);
-        
-        StartCoroutine(loadLoading());
+    }
+
+    public void Reload()
+    {
+        // In quit scene
+        Time.timeScale = 1f;
+
+        StartCoroutine(LoadLoading());
+
+        if (gameManager.isExperimenting)
+        {
+            experiment.ReloadLevel();
+        }
+        else
+        {
+            gameManager.ReloadScene();
+        }
     }
     
     // Update panels
+    private void updateExperimentPanel()
+    {
+        experimentTaskPanelText.text =
+            "Task: \n" + 
+            "\t" + gameManager.tasks[gameManager.taskIndex] + "\n" + 
+            "Level: \n" + 
+            "\tlevel " + string.Format("{0:0}", gameManager.levelIndex+1);
+        experimentStatePanelText.text =
+            taskMessage[gameManager.taskIndex] +  "\n" + 
+            "Try not to hit any obstacles." + "\n\n" + 
+            "Speed: \t" + string.Format("{0:0.00}", gameManager.wheelController.speed);
+            
+    }
+
     private void updateRobotUIStatePenal()
     {
         taskStatePanelText.text =

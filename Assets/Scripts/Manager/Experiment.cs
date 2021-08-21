@@ -12,9 +12,6 @@ public class Experiment : MonoBehaviour
     public GameManager gameManager;
     public UIManager uIManager;
 
-    public int testCameraView;
-    public int testCameraFOV;
-    public int testCameraMobility;
     private int[] testCamera;
     private int[,] cameraConfigurations;
 
@@ -22,13 +19,11 @@ public class Experiment : MonoBehaviour
     public int[] testLevel;
     public int[] testTrial;
     
-    private int[] cameraView;
-    private int[] cameraFOV;
-    private int[] cameraMobility;
+    public int[] cameraIndices;
 
-    private int[] taskIndices;
-    private int[] levelIndices;
-    private int[] trialIndices;
+    public int[] taskIndices;
+    public int[] levelIndices;
+    public int[] trialIndices;
 
     private int experimentLength;
     private int currentIndex;
@@ -50,18 +45,39 @@ public class Experiment : MonoBehaviour
 
     void Update()
     {
-        if (!moved && (Input.GetAxis("vertical")!=0 || Input.GetAxis("horizontal")!=0) )
+        if (!moved &&
+            (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) ||
+             Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)) )
             moved = true;
     }
 
     public void StartExperiment()
     {
+        CreateIndicesArray();
         currentIndex = 0;
+
+        gameManager.isExperimenting = true;
+        int cameraConfigIndex = cameraIndices[currentIndex];
         gameManager.LoadSceneWithRobot(taskIndices[currentIndex], 
                                        levelIndices[currentIndex],
-                                       trialIndices[currentIndex]);
+                                       cameraConfigurations[cameraConfigIndex, 0],
+                                       cameraConfigurations[cameraConfigIndex, 1],
+                                       cameraConfigurations[cameraConfigIndex, 2]);
+
         moved = false;
-        StartCoroutine(StartRecordInAction());
+        StartCoroutine(StartRecordOnAction());
+    }
+
+    public void ReloadLevel()
+    {
+        StopCoroutine(StartRecordOnAction());
+        if (gameManager.isRecording)
+            gameManager.Record();
+
+        gameManager.ReloadScene();
+
+        moved = false;
+        StartCoroutine(StartRecordOnAction());
     }
 
     public void NextLevel()
@@ -69,61 +85,74 @@ public class Experiment : MonoBehaviour
         currentIndex += 1;
         if (currentIndex != experimentLength)
         {
+            int cameraConfigIndex = cameraIndices[currentIndex];
             gameManager.LoadSceneWithRobot(taskIndices[currentIndex], 
                                            levelIndices[currentIndex],
-                                           cameraConfigurations[currentIndex, 0],
-                                           cameraConfigurations[currentIndex, 1],
-                                           cameraConfigurations[currentIndex, 2]);
+                                           cameraConfigurations[cameraConfigIndex, 0],
+                                           cameraConfigurations[cameraConfigIndex, 1],
+                                           cameraConfigurations[cameraConfigIndex, 2]);
             moved = false;
-            StartCoroutine(StartRecordInAction());
+            StartCoroutine(StartRecordOnAction());
         }
         else
         {
             
         }
     }
-    private IEnumerator StartRecordInAction()
+    private IEnumerator StartRecordOnAction()
     {
         yield return new WaitUntil(() => moved == true);
         gameManager.Record(currentIndex.ToString() + ": " + 
                            trialIndices[currentIndex].ToString() + " ");
     }
 
-    public void SetExperimentConditions()
+    public void SetExperimentConditions(bool[] conditions)
     {
-        testCamera = new int[1 + testCameraView + testCameraFOV + testCameraMobility];
-        testCamera[0] = 0;
+        // Task array
+        testTask = ConditionToIndexArray(conditions.Skip(0).Take(5).ToArray());
 
-        int i = 1;
-        if (testCameraView == 1)
-        {
-            testCamera[i] = 1;
-            i += 1;
-        }
-        if (testCameraFOV == 1)
-        {
-            testCamera[i] = 2;
-            i += 1;
-        }
-        if (testCameraMobility == 1)
-        {
-            testCamera[i] = 3;
-        }
+        // Camera configuration array
+        bool[] cameraConditionsTemp = new bool[4];
+        cameraConditionsTemp[0] = true;
+        conditions.Skip(5).Take(3).ToArray().CopyTo(cameraConditionsTemp, 1);
+
+        testCamera = ConditionToIndexArray(cameraConditionsTemp);
+
+        // Level array
+        testLevel = ConditionToIndexArray(conditions.Skip(8).Take(3).ToArray());
+
+        // Trial array
+        testTrial = ConditionToIndexArray(conditions.Skip(11).Take(2).ToArray());
+    }
+    private int[] ConditionToIndexArray(bool[] conditions)
+    {
+        int[] indices;
+
+        // Initialization
+        int count = 0;
+        foreach (bool condition in conditions)
+            if (condition)
+                count += 1;
+        indices = new int[count];
+
+        // Fill
+        int i = 0;
+        for (int c = 0; c < conditions.Length; ++c)
+            if (conditions[c])
+            {
+                indices[i] = c;
+                i += 1;
+            }
+        return indices;
     }
         
     private void CreateIndicesArray()
     {
-        // temp
-        SetExperimentConditions();
-
-        // Intialization
-        int testCameraLength = (1 + testCameraView + testCameraFOV + testCameraMobility);
-        experimentLength = testCameraLength * testTask.Length * 
+        // Intialize indices array
+        experimentLength = testCamera.Length * testTask.Length * 
                            testLevel.Length * testTrial.Length;
 
-        cameraView = new int[experimentLength];
-        cameraFOV = new int[experimentLength];
-        cameraMobility = new int[experimentLength];
+        cameraIndices = new int[experimentLength];
 
         taskIndices = new int[experimentLength];
         levelIndices = new int[experimentLength];
@@ -135,7 +164,7 @@ public class Experiment : MonoBehaviour
         count = 0;
         for (int l = 0; l < testLevel.Length; ++l)
         {
-            for (int s = 0; s < testTrial.Length * testCameraLength * testTask.Length; ++s)
+            for (int s = 0; s < testTrial.Length * testCamera.Length * testTask.Length; ++s)
             {
                 levelIndices[count] = testLevel[l];
                 count += 1;
@@ -147,7 +176,7 @@ public class Experiment : MonoBehaviour
         {
             for (int tr = 0; tr < testTrial.Length; ++tr)
             {
-                for (int s = 0; s < testCameraLength * testTask.Length; ++s)
+                for (int s = 0; s < testCamera.Length * testTask.Length; ++s)
                 {
                     trialIndices[count] = testTrial[tr];
                     count += 1;
@@ -163,7 +192,7 @@ public class Experiment : MonoBehaviour
                 int[] randomTestTask = testTask.OrderBy(x => random.Next()).ToArray();
                 for (int ta = 0; ta < testTask.Length; ++ta)
                 {
-                    for (int s = 0; s < testCameraLength; ++s)
+                    for (int s = 0; s < testCamera.Length; ++s)
                     {
                         taskIndices[count] = randomTestTask[ta];
                         count += 1;
@@ -181,14 +210,15 @@ public class Experiment : MonoBehaviour
                 {
                     int[] randomTestCamera = 
                           testCamera.OrderBy(x => random.Next()).ToArray();
-                    for (int s = 0; s < testCameraLength; ++s)
+                    for (int s = 0; s < testCamera.Length; ++s)
                     {
-                        taskIndices[count] = randomTestCamera[s];
+                        cameraIndices[count] = randomTestCamera[s];
                         count += 1;
                     }
                 }
             }
         }
+
         currentIndex = 0;
     }
 }
