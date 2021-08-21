@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     public RenderTexture regularCameraRendertexture;
     public RenderTexture wideCameraRendertexture;
     public int cameraMobility;
-    private int desiredFrameRate = 50;
+    private int desiredFrameRate = 30;
     
     // Scene
     public string mainScene;
