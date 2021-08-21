@@ -81,8 +81,6 @@ public class DataRecorder : MonoBehaviour
         isRecording = false;
     }
 
-
-
     private void RecordData()
     {
         if (robot == null)
