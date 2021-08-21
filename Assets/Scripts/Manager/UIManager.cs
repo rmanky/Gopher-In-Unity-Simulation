@@ -195,7 +195,7 @@ public class UIManager : MonoBehaviour
             gameManager.cameraRenderTextures[gameManager.cameraFOVIndex];
         cameraDisplay.SetActive(true);
 
-        if(!gameManager.isExperimenting)
+        if(gameManager.isExperimenting)
             UIs[3].SetActive(true);
         else
             UIs[4].SetActive(true);

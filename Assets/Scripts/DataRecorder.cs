@@ -131,7 +131,9 @@ public class DataRecorder : MonoBehaviour
 
             // write to csv
             if (isRecording)
-                collisionTextWriter.WriteLine(string.Format("{0:0.000}", Time.time) + "," + 
+                collisionTextWriter.WriteLine(string.Format("{0:0.000}", states[0]) + "," + 
+                                              string.Format("{0:0.000}", states[1]) + "," + 
+                                              string.Format("{0:0.000}", states[2]) + "," + 
                                               ArrayToCSVLine(collisions));
         }
     }   

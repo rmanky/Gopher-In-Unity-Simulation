@@ -102,8 +102,8 @@ public class Experiment : MonoBehaviour
     private IEnumerator StartRecordOnAction()
     {
         yield return new WaitUntil(() => moved == true);
-        gameManager.Record(currentIndex.ToString() + ": " + 
-                           trialIndices[currentIndex].ToString() + " ");
+        gameManager.Record(currentIndex.ToString() + "- " + 
+                           trialIndices[currentIndex].ToString() + "; ");
     }
 
     public void SetExperimentConditions(bool[] conditions)

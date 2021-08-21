@@ -7684,7 +7684,7 @@ MonoBehaviour:
       - m_Target: {fileID: 598018753}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Record
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -15468,12 +15468,20 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6847972499330631963, guid: c8c3868c3e4e73028a890db69a682fde, type: 3}
+      propertyPath: spawnPositions.Array.data[0].x
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847972499330631963, guid: c8c3868c3e4e73028a890db69a682fde, type: 3}
+      propertyPath: spawnPositions.Array.data[0].z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847972499330631963, guid: c8c3868c3e4e73028a890db69a682fde, type: 3}
       propertyPath: spawnPositions.Array.data[1].x
-      value: -11.5
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 6847972499330631963, guid: c8c3868c3e4e73028a890db69a682fde, type: 3}
       propertyPath: spawnPositions.Array.data[1].z
-      value: 7
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 6847972499330631963, guid: c8c3868c3e4e73028a890db69a682fde, type: 3}
       propertyPath: spawnPositions.Array.data[2].x
@@ -15485,11 +15493,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6847972499330631963, guid: c8c3868c3e4e73028a890db69a682fde, type: 3}
       propertyPath: spawnPositions.Array.data[3].x
-      value: -11.5
+      value: -6.5
       objectReference: {fileID: 0}
     - target: {fileID: 6847972499330631963, guid: c8c3868c3e4e73028a890db69a682fde, type: 3}
       propertyPath: spawnPositions.Array.data[3].z
-      value: 7
+      value: -11.5
       objectReference: {fileID: 0}
     - target: {fileID: 6847972499330631963, guid: c8c3868c3e4e73028a890db69a682fde, type: 3}
       propertyPath: spawnPositions.Array.data[4].x
