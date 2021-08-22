@@ -33,11 +33,15 @@ public class UIManager : MonoBehaviour
     public GameObject robotStatePanel;
     public GameObject experimentTaskPanel;
     public GameObject experimentStatePanel;
+    public GameObject messagePanel;
     private TextMeshProUGUI taskStatePanelText;
     private TextMeshProUGUI robotStatePanelText;
     private TextMeshProUGUI experimentTaskPanelText;
     private TextMeshProUGUI experimentStatePanelText;
+    private TextMeshProUGUI messagePanelText;
+    
     private string[] taskMessage;
+
 
     // Scene
     public GameObject taskDropDown;
@@ -52,7 +56,12 @@ public class UIManager : MonoBehaviour
     public GameObject miniMap;
 
     // Experiment
+    public GameObject levelCompleteUI;
+    public GameObject questionFillUI;
+    public GameObject questionTextUI;
     public GameObject experimentConditionUI;
+    public GameObject NumberBoardAnswerUI;
+    public GameObject NumberBoardAnswerField;
 
     void Start()
     {
@@ -60,7 +69,8 @@ public class UIManager : MonoBehaviour
         UIs = new GameObject[] {mainMenus, loadingUI, experimentConditionUI, 
                                 experimentUI, wideViewUI, regularViewUI,
                                 quitMenus,
-                                cameraDisplay, allStateDisplay};
+                                cameraDisplay, allStateDisplay,
+                                levelCompleteUI, questionFillUI, questionTextUI};
         cameraDisplayRect = cameraDisplay.GetComponent<RectTransform>();
 
         // Data
@@ -72,16 +82,22 @@ public class UIManager : MonoBehaviour
         robotStatePanelText = robotStatePanel.GetComponentInChildren<TextMeshProUGUI>();
         experimentTaskPanelText = experimentTaskPanel.GetComponentInChildren<TextMeshProUGUI>();
         experimentStatePanelText = experimentStatePanel.GetComponentInChildren<TextMeshProUGUI>();
+        messagePanelText = messagePanel.GetComponentInChildren<TextMeshProUGUI>();
 
         // Experiment help
         taskMessage = new string[] {
-                        "Please follow the nurse.", 
-                        "Please reach the shining circle.",
-                        "Please take a right turn and reach the shining circle.",
+                        "Please follow the nurse until you reach the shining circle.", 
+                        "Please go straight and reach the shining circle.",
+                        "Please go straight and take a left turn and reach the shining circle.",
                         "Please pass the door, enter the room and reach the shining circle.",
                         "Please find the number boards inside the room and sum the numbers."};
         // Load menus
         LoadMainMenus();
+
+        // Update panel
+        InvokeRepeating("UpdateAllStatePenal", 1.0f, 0.1f);
+        InvokeRepeating("UpdateRobotUIStatePenal", 1.0f, 0.1f);
+        InvokeRepeating("UpdateExperimentPanel", 1.0f, 0.1f);
     }
 
     void Update()
@@ -103,16 +119,6 @@ public class UIManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.H)) 
             if (UIIndex != 0 && UIIndex != 1 && UIIndex != 2)
                 ChangeHelpDisplay();
-
-        // Update panel
-        if (allStateDisplay.activeSelf)
-            updateAllStatePenal();
-        if (wideViewUI.activeSelf)
-            updateRobotUIStatePenal();
-        if (experimentUI.activeSelf)
-        {
-            updateExperimentPanel();
-        }
     }
     
     // UIs
@@ -161,7 +167,24 @@ public class UIManager : MonoBehaviour
 
         // Start
         experiment.StartExperiment();
+        StartCoroutine(LoadLoading());
+    }
 
+    public void LoadNextLevelUI()
+    {
+        Time.timeScale = 0.0f;
+        Cursor.lockState = CursorLockMode.Confined;
+
+        foreach (GameObject UI in UIs)
+            UI.SetActive(false);
+        UIs[9].SetActive(true);
+    }
+
+    public void LoadNextLevel()
+    {
+        Time.timeScale = 1.0f;
+
+        experiment.NextLevel();
         StartCoroutine(LoadLoading());
     }
 
@@ -177,6 +200,8 @@ public class UIManager : MonoBehaviour
             previousCursorState = Cursor.lockState;
             Cursor.lockState = CursorLockMode.Confined;
             Time.timeScale = 0f;
+
+            NumberBoardAnswerUI.SetActive(gameManager.taskIndex == 4);
         }
 
         UIs[6].SetActive(!UIs[6].activeSelf);
@@ -229,6 +254,18 @@ public class UIManager : MonoBehaviour
         helpDisplay.SetActive(!helpDisplay.activeSelf);
     }
 
+    public void PopMessage(string message)
+    {
+        StartCoroutine(PopMessageCoroutine(message));
+    }
+    private IEnumerator PopMessageCoroutine(string message)
+    {
+        messagePanel.SetActive(true);
+        messagePanelText.text = message;
+        yield return new WaitForSeconds(1.5f);
+        messagePanel.SetActive(false);
+    }
+
     // Scene
     public void ChangeScene()
     {
@@ -255,62 +292,79 @@ public class UIManager : MonoBehaviour
             gameManager.ReloadScene();
         }
     }
+
+    // task
+    public void CheckNumberBoardAnswer()
+    {
+        int answer;
+        if(int.TryParse(NumberBoardAnswerField.GetComponent<TMP_InputField>().text, out answer))
+            gameManager.CheckNumberBoardAnswer(answer);
+    }
     
     // Update panels
-    private void updateExperimentPanel()
-    {
-        experimentTaskPanelText.text =
-            "Task: \n" + 
-            "\t" + gameManager.tasks[gameManager.taskIndex] + "\n" + 
-            "Level: \n" + 
-            "\tlevel " + string.Format("{0:0}", gameManager.levelIndex+1);
-        experimentStatePanelText.text =
-            taskMessage[gameManager.taskIndex] +  "\n" + 
-            "Try not to hit any obstacles." + "\n\n" + 
-            "Speed: \t" + string.Format("{0:0.00}", gameManager.wheelController.speed);
-            
+    private void UpdateExperimentPanel()
+    {   
+        if (experimentUI.activeSelf)
+        {
+            experimentTaskPanelText.text =
+                "Task: \n" + 
+                "\t" + gameManager.tasks[gameManager.taskIndex] + "\n" + 
+                "Level: \n" + 
+                "\tlevel " + string.Format("{0:0}", gameManager.levelIndex+1) + "\n" +
+                "FPS: " + string.Format("{0:0}", (1.0f/Time.deltaTime));
+            experimentStatePanelText.text =
+                taskMessage[gameManager.taskIndex] +  "\n" + 
+                "Try not to hit any obstacles." + "\n\n" + 
+                "Speed: \t" + string.Format("{0:0.0}", gameManager.GetRobotSpeed());
+        }
     }
 
-    private void updateRobotUIStatePenal()
+    private void UpdateRobotUIStatePenal()
     {
-        taskStatePanelText.text =
-            "Task: \n\t" + gameManager.tasks[gameManager.taskIndex] + "\n" + 
-            "\n" +
-            "Level: \t" + "level " + string.Format("{0:0}", gameManager.levelIndex+1);
-        robotStatePanelText.text = 
-            "x: \t\t" + string.Format("{0:0.00}", dataRecorder.states[1]) + "\n" +
-            "y: \t\t" + string.Format("{0:0.00}", dataRecorder.states[2]) + "\n" + 
-            "yaw: \t" + string.Format("{0:0.00}", dataRecorder.states[3]) + "\n" + 
-            "Vx: \t\t" + string.Format("{0:0.00}", dataRecorder.states[4]) +  "\n" +  
-            "Wz: \t\t" + string.Format("{0:0.00}", dataRecorder.states[5]) + "\n";
+        if (wideViewUI.activeSelf)
+        {
+            taskStatePanelText.text =
+                "Task: \n\t" + gameManager.tasks[gameManager.taskIndex] + "\n" + 
+                "\n" +
+                "Level: \t" + "level " + string.Format("{0:0}", gameManager.levelIndex+1);
+            robotStatePanelText.text = 
+                "x: \t\t" + string.Format("{0:0.00}", dataRecorder.states[1]) + "\n" +
+                "y: \t\t" + string.Format("{0:0.00}", dataRecorder.states[2]) + "\n" + 
+                "yaw: \t" + string.Format("{0:0.00}", dataRecorder.states[3]) + "\n" + 
+                "Vx: \t\t" + string.Format("{0:0.00}", dataRecorder.states[4]) +  "\n" +  
+                "Wz: \t\t" + string.Format("{0:0.00}", dataRecorder.states[5]) + "\n";
+        }
     }
 
-    private void updateAllStatePenal()
+    private void UpdateAllStatePenal()
     {
-        allStatePanelText.text = 
-            "time: \t" + string.Format("{0:0.00}", dataRecorder.states[0]) + "\n" + 
-            "\n" +
-            "x: \t\t" + string.Format("{0:0.00}", dataRecorder.states[1]) + "\n" +
-            "y: \t\t" + string.Format("{0:0.00}", dataRecorder.states[2]) + "\n" + 
-            "yaw: \t" + string.Format("{0:0.00}", dataRecorder.states[3]) + "\n" + 
-            "Vx: \t\t" + string.Format("{0:0.00}", dataRecorder.states[4]) +  "\n" +  
-            "Wz: \t\t" + string.Format("{0:0.00}", dataRecorder.states[5]) + "\n" + 
-            "\n" +
-            "min_dis_obs: \t\t" + string.Format("{0:0.00}", dataRecorder.states[6]) + "\n" + 
-            "min_dis_obs_dir: \t" + string.Format("{0:0.00}", dataRecorder.states[7]) + "\n" + 
-            "min_dis_h: \t\t" + string.Format("{0:0.00}", dataRecorder.states[8]) + "\n" + 
-            "min_dis_h_dir: \t" + string.Format("{0:0.00}", dataRecorder.states[9]) + "\n" + 
-            "\n" +
-            "main_cam_yaw: \t" + string.Format("{0:0.00}", dataRecorder.states[10]) + "\n" + 
-            "main_cam_yaw_vel: \t" + string.Format("{0:0.00}", dataRecorder.states[11]) + "\n" + 
-            "main_cam_pitch: \t" + string.Format("{0:0.00}", dataRecorder.states[12]) + "\n" + 
-            "main_cam_yaw_vel: \t" + string.Format("{0:0.00}", dataRecorder.states[13]) + "\n" +
-            "arm_cam_yaw: \t\t" + string.Format("{0:0.00}", dataRecorder.states[14]) + "\n" + 
-            "arm_cam_yaw_vel: \t" + string.Format("{0:0.00}", dataRecorder.states[15]) + "\n" + 
-            "arm_cam_pitch: \t" + string.Format("{0:0.00}", dataRecorder.states[16]) + "\n" + 
-            "arm_cam_yaw_vel: \t" + string.Format("{0:0.00}", dataRecorder.states[17]) + "\n" +
-            "\n" +
-            "collision_self_name: \n" + dataRecorder.collisions[0] + "\n" + 
-            "collision_other_name: \n" + dataRecorder.collisions[1];
+        if (allStateDisplay.activeSelf)
+        {
+            allStatePanelText.text = 
+                "time: \t" + string.Format("{0:0.00}", dataRecorder.states[0]) + "\n" + 
+                "\n" +
+                "x: \t\t" + string.Format("{0:0.00}", dataRecorder.states[1]) + "\n" +
+                "y: \t\t" + string.Format("{0:0.00}", dataRecorder.states[2]) + "\n" + 
+                "yaw: \t" + string.Format("{0:0.00}", dataRecorder.states[3]) + "\n" + 
+                "Vx: \t\t" + string.Format("{0:0.00}", dataRecorder.states[4]) +  "\n" +  
+                "Wz: \t\t" + string.Format("{0:0.00}", dataRecorder.states[5]) + "\n" + 
+                "\n" +
+                "min_dis_obs: \t\t" + string.Format("{0:0.00}", dataRecorder.states[6]) + "\n" + 
+                "min_dis_obs_dir: \t" + string.Format("{0:0.00}", dataRecorder.states[7]) + "\n" + 
+                "min_dis_h: \t\t" + string.Format("{0:0.00}", dataRecorder.states[8]) + "\n" + 
+                "min_dis_h_dir: \t" + string.Format("{0:0.00}", dataRecorder.states[9]) + "\n" + 
+                "\n" +
+                "main_cam_yaw: \t" + string.Format("{0:0.00}", dataRecorder.states[10]) + "\n" + 
+                "main_cam_yaw_vel: \t" + string.Format("{0:0.00}", dataRecorder.states[11]) + "\n" + 
+                "main_cam_pitch: \t" + string.Format("{0:0.00}", dataRecorder.states[12]) + "\n" + 
+                "main_cam_yaw_vel: \t" + string.Format("{0:0.00}", dataRecorder.states[13]) + "\n" +
+                "arm_cam_yaw: \t\t" + string.Format("{0:0.00}", dataRecorder.states[14]) + "\n" + 
+                "arm_cam_yaw_vel: \t" + string.Format("{0:0.00}", dataRecorder.states[15]) + "\n" + 
+                "arm_cam_pitch: \t" + string.Format("{0:0.00}", dataRecorder.states[16]) + "\n" + 
+                "arm_cam_yaw_vel: \t" + string.Format("{0:0.00}", dataRecorder.states[17]) + "\n" +
+                "\n" +
+                "collision_self_name: \n" + dataRecorder.collisions[0] + "\n" + 
+                "collision_other_name: \n" + dataRecorder.collisions[1];
+        }
     }
 }

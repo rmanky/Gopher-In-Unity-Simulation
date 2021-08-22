@@ -1,4 +1,3 @@
-using Random = System.Random;
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
@@ -27,9 +26,10 @@ public class Experiment : MonoBehaviour
 
     private int experimentLength;
     private int currentIndex;
-    private Random random;
     
     private bool moved;
+
+    // levelt
 
     void Start()
     {
@@ -39,8 +39,6 @@ public class Experiment : MonoBehaviour
         // Predifined full configuration
         cameraConfigurations = new int [,] 
                                {{1, 1, 1}, {0, 1, 1}, {1, 0, 1}, {1, 1, 0}};
-                               
-        random = new Random();
     }
 
     void Update()
@@ -96,7 +94,7 @@ public class Experiment : MonoBehaviour
         }
         else
         {
-            
+            uIManager.PopMessage("You have finished all the experiments!");
         }
     }
     private IEnumerator StartRecordOnAction()
@@ -148,6 +146,8 @@ public class Experiment : MonoBehaviour
         
     private void CreateIndicesArray()
     {
+        System.Random random = new System.Random();
+
         // Intialize indices array
         experimentLength = testCamera.Length * testTask.Length * 
                            testLevel.Length * testTrial.Length;

@@ -136,7 +136,7 @@ public class DataRecorder : MonoBehaviour
                                               string.Format("{0:0.000}", states[2]) + "," + 
                                               ArrayToCSVLine(collisions));
         }
-    }   
+    }
 
     private string ArrayToCSVLine(float[] array)
     {

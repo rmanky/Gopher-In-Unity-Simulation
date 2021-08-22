@@ -2781,6 +2781,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_1m_inner (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8457107597669813253, guid: 3b1ed30ee73b7708fb24c7a02786a643, type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: a4e7c49b5e1b1b65ca3d13b406a3746a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b1ed30ee73b7708fb24c7a02786a643, type: 3}
 --- !u!4 &8472594269591916838 stripped
@@ -3751,6 +3755,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 126
       objectReference: {fileID: 0}
+    - target: {fileID: 3985521147019519298, guid: d578d51f26ba087a1a93327ccd33aaea, type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: a4e7c49b5e1b1b65ca3d13b406a3746a, type: 2}
     - target: {fileID: 8124427279946407436, guid: d578d51f26ba087a1a93327ccd33aaea, type: 3}
       propertyPath: m_Name
       value: wall_1m (16) 4
