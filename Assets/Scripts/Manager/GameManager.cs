@@ -107,6 +107,7 @@ public class GameManager : MonoBehaviour
 
         // FPS
         cameraDesiredFrameRate = 30;
+        QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 30;
     }
 
