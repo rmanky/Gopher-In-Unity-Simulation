@@ -73,17 +73,17 @@ public class GameManager : MonoBehaviour
 
         // Scene
         numberBoardXRanges = new float[,,]
-                                {{{0f, 0f},         {-6.0f, -4.3f},   {-3.6f, -2.95f}},
-                                 {{-6.75f, -6.25f}, {-11.15f, -11.15f}, {-3.8f, -3.8f}},
-                                 {{-8.85f, -8.85f}, {-14.9f, -14.9f},   {-14.8f, -10f}}};
+                                {{{0f, 0f},         {-6.0f, -4.3f},     {-3.6f, -2.95f}, {0f, 0f}, {0f, 0f}},
+                                 {{-6.75f, -6.25f}, {-11.15f, -11.15f}, {-3.8f, -3.8f},  {-8.4f, -8.4f}, {0f, 0f}},
+                                 {{-8.85f, -8.85f}, {-14.9f, -14.9f},   {-14.8f, -10f},  {-14.9f, -14.9f}, {-14.9f, -14.9f}}};
         numberBoardZRanges = new float[,,]
-                                {{{-18.5f, -16.2f}, {-13.1f, -13.1f}, {-19.9f, -19.9f}},
-                                 {{-17.5f, -17.5f}, {-21.9f, -20.7f}, {-23.8f, -22.3f}},
-                                 {{-9.3f, -6.2f}, {-2.8f, -1.3f}, {1.4f, 1.4f}}};
+                                {{{-18.5f, -16.2f}, {-13.1f, -13.1f}, {-19.9f, -19.9f}, {0f, 0f}, {0f, 0f}},
+                                 {{-17.5f, -17.5f}, {-21.9f, -20.7f}, {-23.8f, -22.3f}, {-22.5f, -22.1f}, {0f, 0f}},
+                                 {{-9.3f, -6.2f},   {-2.8f, -1.3f},   {1.4f, 1.4f}    , {-6.4f, -4.0f}, {-3.7f, -1.3f}}};
         numberBoardYRotation = new float[,]
-                                {{-90f, 180f, 0f},
-                                 {180f, 90f, -90f},
-                                 {-90f, 90f, 180f}};
+                                {{-90f, 180f, 0f, 0f, 0f},
+                                 {180f, 90f, -90f, 90f, 0f},
+                                 {-90f, 90f, 180f, 90f, 90f}};
         levelIndex = 0;
         taskIndex = 0;
 
@@ -237,7 +237,15 @@ public class GameManager : MonoBehaviour
 
         float locationX;
         float locationZ;
-        int[] wallIndices = new int[] {0, 1, 2};
+
+        int[] wallIndices;
+        if (levelIndex == 0)
+            wallIndices = new int[] {0, 1, 2};
+        else if (levelIndex == 1)
+            wallIndices = new int[] {0, 1, 2, 3};
+        else
+            wallIndices = new int[] {0, 1, 2, 3, 4};
+
         wallIndices = wallIndices.OrderBy(x => randomInt.Next()).ToArray();
         
         wallNumberSum = 0;
