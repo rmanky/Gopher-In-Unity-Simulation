@@ -64,11 +64,11 @@ public class DataRecorder : MonoBehaviour
     {
         isRecording = true;
 
-        string parentFolder = Application.dataPath + "/Data";
+        string parentFolder = Application.persistentDataPath + "/Data";
         if (!Directory.Exists(parentFolder))
             Directory.CreateDirectory(parentFolder); 
         string name = parentFolder + "/" + indexNumber + 
-                      " " + System.DateTime.Now.ToString("MM-dd HH:mm:ss");
+                      " " + System.DateTime.Now.ToString("MM-dd HH-mm-ss");
 
         stateTextWriter = new StreamWriter(name + " state.csv", false);
         collisionTextWriter = new StreamWriter(name + " collision.csv", false);
