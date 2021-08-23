@@ -25,9 +25,11 @@ public class Experiment : MonoBehaviour
     public int[] trialIndices;
 
     private int experimentLength;
-    private int currentIndex;
+    public int currentIndex;
     
     private bool moved;
+
+    private bool[] questioning;
 
     // levelt
 
@@ -39,6 +41,8 @@ public class Experiment : MonoBehaviour
         // Predifined full configuration
         cameraConfigurations = new int [,] 
                                {{1, 1, 1}, {0, 1, 1}, {1, 0, 1}, {1, 1, 0}};
+                
+        questioning = new bool[] {false, false};
     }
 
     void Update()
@@ -81,8 +85,26 @@ public class Experiment : MonoBehaviour
     public void NextLevel()
     {
         currentIndex += 1;
+
+        // Load next level
         if (currentIndex != experimentLength)
         {
+            // Survey
+            int levelLength = testCamera.Length * testTask.Length * testTrial.Length;
+            if (trialIndices[currentIndex-1] == 1 && 
+                ((taskIndices[currentIndex-1] != taskIndices[currentIndex]) ||
+                 (levelIndices[currentIndex-1] != levelIndices[currentIndex])) )
+            {
+                Debug.Log("survey 1");
+                StartCoroutine(SurveyCoroutine(1));
+            }
+            if ((trialIndices[currentIndex-1] == 1) && 
+                (currentIndex % levelLength == 0))
+            {
+                Debug.Log("survey 0");
+                StartCoroutine(SurveyCoroutine(0));
+            }
+            Debug.Log(currentIndex + " " + levelLength);
             int cameraConfigIndex = cameraIndices[currentIndex];
             gameManager.LoadSceneWithRobot(taskIndices[currentIndex], 
                                            levelIndices[currentIndex],
@@ -94,7 +116,8 @@ public class Experiment : MonoBehaviour
         }
         else
         {
-            uIManager.PopMessage("You have finished all the experiments!");
+            StartCoroutine(SurveyCoroutine(1));
+            StartCoroutine(SurveyCoroutine(0));
         }
     }
     private IEnumerator StartRecordOnAction()
@@ -102,6 +125,31 @@ public class Experiment : MonoBehaviour
         yield return new WaitUntil(() => moved == true);
         gameManager.Record(currentIndex.ToString() + "- " + 
                            trialIndices[currentIndex].ToString() + "; ");
+    }
+
+    private IEnumerator SurveyCoroutine(int type)
+    {
+        uIManager.LoadSurvey(type);
+        questioning[type] = true;
+
+        yield return new WaitUntil(()=> isOnSurvey(type) == false);
+    }
+    private bool isOnSurvey(int type)
+    {
+        if (questioning[type])
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+        return questioning[type];
+    }
+    public void FinishSurvey(int type)
+    {
+        uIManager.LoadSurvey(type);
+        questioning[type] = false;
     }
 
     public void SetExperimentConditions(bool[] conditions)

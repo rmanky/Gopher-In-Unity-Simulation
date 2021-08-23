@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 
     // Robot
     public GameObject robotPrefab; 
-    private GameObject robot;
+    public GameObject robot;
     // wheel
     private KeyboardWheelControl wheelController;
     // camera
@@ -408,6 +408,7 @@ public class GameManager : MonoBehaviour
     public void ChangeCameraControl()
     {
         bool mobility = !(cameraMobility == 1);
+        cameraMobility = (cameraMobility == 1)? 0:1;
 
         foreach (MouseCameraControl controller in cameraControllers)
             controller.enabled = false;

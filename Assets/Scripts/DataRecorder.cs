@@ -84,7 +84,10 @@ public class DataRecorder : MonoBehaviour
     private void RecordData()
     {
         if (robot == null)
-            return;
+        {
+            states = new float[18];
+            collisions = new string[2];
+        }
         if(!isRecording && !updateData)
             return;
         
