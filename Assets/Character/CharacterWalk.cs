@@ -6,6 +6,7 @@ public class CharacterWalk : MonoBehaviour
 {
     public GameObject character;
     private Rigidbody rb;
+    private Transform tf;
 
     public float speed = 1.0f;
     public float angularSpeed = 1.0f;
@@ -22,6 +23,7 @@ public class CharacterWalk : MonoBehaviour
     void Start()
     {
         rb = character.GetComponent<Rigidbody>();
+        tf = character.GetComponent<Transform>();
         animator = character.GetComponentInChildren<Animator>();
 
         currentTarget = new Vector3(0f, -1f, 0f);
@@ -33,17 +35,17 @@ public class CharacterWalk : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (currentTarget.y != -1f && (rb.position - currentTarget).magnitude > 0.5)
+        if (currentTarget.y != -1f && (tf.position - currentTarget).magnitude > 0.5)
         {
             // Moving
             animator.enabled = true;
 
-            Vector3 position = Vector3.MoveTowards(rb.position, currentTarget, 
+            Vector3 position = Vector3.MoveTowards(tf.position, currentTarget, 
                                                    speed * Time.fixedDeltaTime);
-            rb.MovePosition(position);
-            Quaternion rotation = Quaternion.RotateTowards(rb.rotation, currentTargetRotation, 
+            tf.position = (position);
+            Quaternion rotation = Quaternion.RotateTowards(tf.rotation, currentTargetRotation, 
                                                    angularSpeedDegree * Time.fixedDeltaTime);
-            rb.MoveRotation(rotation);
+            tf.rotation = (rotation);
         }
         else
         {
@@ -72,7 +74,7 @@ public class CharacterWalk : MonoBehaviour
     public void MoveTo(Vector3 target)
     {
         currentTarget = target;
-        currentTargetRotation = Quaternion.LookRotation(currentTarget - rb.position);
+        currentTargetRotation = Quaternion.LookRotation(currentTarget - tf.position);
     }
 
     public void MoveTrajectory(Vector3[] trajectory)
