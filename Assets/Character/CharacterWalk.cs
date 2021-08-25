@@ -6,6 +6,8 @@ public class CharacterWalk : MonoBehaviour
 {
     public GameObject character;
     private Rigidbody rb;
+    private Vector3 prevPosition;
+    private float rbSpeed;
     private Transform tf;
 
     public float speed = 1.0f;
@@ -24,34 +26,37 @@ public class CharacterWalk : MonoBehaviour
     {
         rb = character.GetComponent<Rigidbody>();
         tf = character.GetComponent<Transform>();
-        animator = character.GetComponentInChildren<Animator>();
-
-        currentTarget = new Vector3(0f, -1f, 0f);
-        if (targetTrajectory.Length != 0)
-            MoveTrajectory(targetTrajectory);
+        prevPosition = tf.position;
        
         angularSpeedDegree = angularSpeed * Mathf.Rad2Deg;
+
+        currentTarget = tf.position;
+        if (targetTrajectory.Length != 0)
+            MoveTrajectory(targetTrajectory);
+
+        animator = character.GetComponentInChildren<Animator>();
     }
 
     void FixedUpdate()
     {
-        if (currentTarget.y != -1f && (tf.position - currentTarget).magnitude > 0.5)
-        {
-            // Moving
-            animator.enabled = true;
+        // Animation
+        rbSpeed = (tf.position - prevPosition).magnitude / Time.fixedDeltaTime;
+        prevPosition = tf.position;
+        animator.SetFloat("speed", rbSpeed);
 
+        // Track current target
+        if ((tf.position - currentTarget).magnitude > 0.1)
+        {
             Vector3 position = Vector3.MoveTowards(tf.position, currentTarget, 
                                                    speed * Time.fixedDeltaTime);
-            tf.position = (position);
+            rb.MovePosition(position);
             Quaternion rotation = Quaternion.RotateTowards(tf.rotation, currentTargetRotation, 
                                                    angularSpeedDegree * Time.fixedDeltaTime);
-            tf.rotation = (rotation);
+            rb.MoveRotation(rotation);
         }
+        // Start next target or Idle
         else
         {
-            // Arrive
-            animator.enabled = false;
-
             if (targetTrajectory.Length == 0)
                 return;
 
@@ -81,6 +86,6 @@ public class CharacterWalk : MonoBehaviour
     {   
         targetTrajectory = trajectory; 
         currentIndex = 0;
-        currentTarget = targetTrajectory[currentIndex];
+        MoveTo(targetTrajectory[currentIndex]);
     }
 }
