@@ -64,7 +64,7 @@ public class DataRecorder : MonoBehaviour
     {
         isRecording = true;
 
-        string parentFolder = Application.persistentDataPath + "/Data";
+        string parentFolder = Application.dataPath + "/Data";
         if (!Directory.Exists(parentFolder))
             Directory.CreateDirectory(parentFolder); 
         string name = parentFolder + "/" + indexNumber + 

@@ -169,7 +169,6 @@ public class UIManager : MonoBehaviour
         return false;
     }
 
-
     public void LoadExperiment()
     {
         UIIndex = 2;

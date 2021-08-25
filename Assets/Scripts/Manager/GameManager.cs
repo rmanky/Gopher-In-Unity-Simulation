@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
         numberBoardZRanges = new float[,,]
                                 {{{-18.5f, -16.2f}, {-13.1f, -13.1f}, {-19.9f, -19.9f}, {0f, 0f}, {0f, 0f}},
                                  {{-17.5f, -17.5f}, {-21.9f, -20.7f}, {-23.8f, -22.3f}, {-22.5f, -22.1f}, {0f, 0f}},
-                                 {{-9.3f, -6.2f},   {-2.8f, -1.3f},   {1.4f, 1.4f}    , {-6.4f, -4.0f}, {-3.7f, -1.3f}}};
+                                 {{-9.3f, -6.2f},   {-2.8f, -1.3f},   {1.4f, 1.4f}    , {-6.4f, -4.0f}, {-9.2f, -6.8f}}};
         numberBoardYRotation = new float[,]
                                 {{-90f, 180f, 0f, 0f, 0f},
                                  {180f, 90f, -90f, 90f, 0f},
@@ -99,9 +99,9 @@ public class GameManager : MonoBehaviour
                              {0f, 6.5f, -13f, -10f}, {-13f, 0f, -13f, -10f},
                              {-9f, -6f, -20f, -13.5f}};
         humanTrajectory = new Vector3[,]
-                            {{new Vector3(5.6f, 0f, -11f), new Vector3(11.3f, 0f, -11.5f)},
+                            {{new Vector3(5.6f, 0f, -10f), new Vector3(11.3f, 0f, -13f)},
                              {new Vector3(6.2f, 0f, 6.1f), new Vector3(14.7f, 0f, 6.1f)},
-                             {new Vector3(-1.4f, 0f, -11.5f), new Vector3(-1.4f, 0f, -7f)},
+                             {new Vector3(-2.0f, 0f, -12.0f), new Vector3(-0.7f, 0f, -7.7f)},
                              {new Vector3(-7.4f, 0f, -7f), new Vector3(-7.4f, 0f, -20f)}, 
                              {new Vector3(-10f, 0f, -16.4f), new Vector3(-2.5f, 0f, -16.4f)}};
 

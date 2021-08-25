@@ -56,7 +56,9 @@ public class Experiment : MonoBehaviour
     public void StartExperiment()
     {
         CreateIndicesArray();
-        currentIndex = 0;
+
+        // temp modifaication
+        currentIndex = testCamera.Length * testTask.Length;
 
         gameManager.isExperimenting = true;
         int cameraConfigIndex = cameraIndices[currentIndex];
@@ -91,15 +93,15 @@ public class Experiment : MonoBehaviour
         {
             // Survey
             int levelLength = testCamera.Length * testTask.Length * testTrial.Length;
-            if (trialIndices[currentIndex-1] == 1 && 
+            if ((trialIndices[currentIndex-1] == 1) && (levelIndices[currentIndex-1] != 0) &&
                 ((taskIndices[currentIndex-1] != taskIndices[currentIndex]) ||
                  (levelIndices[currentIndex-1] != levelIndices[currentIndex])) )
             {
                 Debug.Log("survey 1");
                 StartCoroutine(SurveyCoroutine(1));
             }
-            if ((trialIndices[currentIndex-1] == 1) && 
-                (currentIndex % levelLength == 0))
+            if ((trialIndices[currentIndex-1] == 1) && (levelIndices[currentIndex-1] != 0) &&
+                (currentIndex % levelLength == 0) )
             {
                 Debug.Log("survey 0");
                 StartCoroutine(SurveyCoroutine(0));
@@ -123,8 +125,8 @@ public class Experiment : MonoBehaviour
     private IEnumerator StartRecordOnAction()
     {
         yield return new WaitUntil(() => moved == true);
-        gameManager.Record(currentIndex.ToString() + "- " + 
-                           trialIndices[currentIndex].ToString() + "; ");
+        gameManager.Record((currentIndex-(testCamera.Length * testTask.Length)).ToString() + 
+                           "- " + trialIndices[currentIndex].ToString() + "; ");
     }
 
     private IEnumerator SurveyCoroutine(int type)
