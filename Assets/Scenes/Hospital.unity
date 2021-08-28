@@ -3917,7 +3917,7 @@ Transform:
   - {fileID: 511156225}
   - {fileID: 1025164273}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &295330026
 PrefabInstance:
@@ -8274,7 +8274,7 @@ Transform:
   - {fileID: 1965832043}
   - {fileID: 1328617124}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &622952298
 PrefabInstance:
@@ -24116,7 +24116,7 @@ Transform:
   - {fileID: 1326750271}
   - {fileID: 1303009806}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1833761194
 PrefabInstance:
@@ -29648,3 +29648,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac4688668ae64b25181f436d6bcc7271, type: 3}
+--- !u!1001 &8833562970551197976
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2123726393965431517, guid: 326252ed61b8845429fc08109da5e0b5, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123726393965431517, guid: 326252ed61b8845429fc08109da5e0b5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123726393965431517, guid: 326252ed61b8845429fc08109da5e0b5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123726393965431517, guid: 326252ed61b8845429fc08109da5e0b5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123726393965431517, guid: 326252ed61b8845429fc08109da5e0b5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123726393965431517, guid: 326252ed61b8845429fc08109da5e0b5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123726393965431517, guid: 326252ed61b8845429fc08109da5e0b5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123726393965431517, guid: 326252ed61b8845429fc08109da5e0b5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123726393965431517, guid: 326252ed61b8845429fc08109da5e0b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123726393965431517, guid: 326252ed61b8845429fc08109da5e0b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123726393965431517, guid: 326252ed61b8845429fc08109da5e0b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123726393965431518, guid: 326252ed61b8845429fc08109da5e0b5, type: 3}
+      propertyPath: m_Name
+      value: Gopher With Pole
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 326252ed61b8845429fc08109da5e0b5, type: 3}
