@@ -58,7 +58,10 @@ public class Experiment : MonoBehaviour
         CreateIndicesArray();
 
         // temp modifaication
-        currentIndex = testCamera.Length * testTask.Length;
+        if (levelIndices[0] == 0)
+            currentIndex = testCamera.Length * testTask.Length;
+        else
+            currentIndex = 0;
 
         gameManager.isExperimenting = true;
         int cameraConfigIndex = cameraIndices[currentIndex];
@@ -167,10 +170,10 @@ public class Experiment : MonoBehaviour
         testCamera = ConditionToIndexArray(cameraConditionsTemp);
 
         // Level array
-        testLevel = ConditionToIndexArray(conditions.Skip(8).Take(3).ToArray());
+        testLevel = ConditionToIndexArray(conditions.Skip(8).Take(4).ToArray());
 
         // Trial array
-        testTrial = ConditionToIndexArray(conditions.Skip(11).Take(2).ToArray());
+        testTrial = ConditionToIndexArray(conditions.Skip(12).Take(2).ToArray());
     }
     private int[] ConditionToIndexArray(bool[] conditions)
     {

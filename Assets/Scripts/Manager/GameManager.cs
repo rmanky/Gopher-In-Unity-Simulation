@@ -11,7 +11,8 @@ public class GameManager : MonoBehaviour
     public UIManager uIManager;
 
     // Robot
-    public GameObject robotPrefab; 
+    public GameObject robotPrefab;
+    public GameObject robotPrefab2;
     public GameObject robot;
     // wheel
     private KeyboardWheelControl wheelController;
@@ -75,14 +76,17 @@ public class GameManager : MonoBehaviour
         numberBoardXRanges = new float[,,]
                                 {{{0f, 0f},         {-6.0f, -4.3f},     {-3.6f, -2.95f}, {0f, 0f}, {0f, 0f}},
                                  {{-6.75f, -6.25f}, {-11.15f, -11.15f}, {-3.8f, -3.8f},  {-8.4f, -8.4f}, {0f, 0f}},
+                                 {{-8.85f, -8.85f}, {-14.9f, -14.9f},   {-14.8f, -10f},  {-14.9f, -14.9f}, {-14.9f, -14.9f}},
                                  {{-8.85f, -8.85f}, {-14.9f, -14.9f},   {-14.8f, -10f},  {-14.9f, -14.9f}, {-14.9f, -14.9f}}};
         numberBoardZRanges = new float[,,]
                                 {{{-18.5f, -16.2f}, {-13.1f, -13.1f}, {-19.9f, -19.9f}, {0f, 0f}, {0f, 0f}},
                                  {{-17.5f, -17.5f}, {-21.9f, -20.7f}, {-23.8f, -22.3f}, {-22.5f, -22.1f}, {0f, 0f}},
+                                 {{-9.3f, -6.2f},   {-2.8f, -1.3f},   {1.4f, 1.4f}    , {-6.4f, -4.0f}, {-9.2f, -6.8f}},
                                  {{-9.3f, -6.2f},   {-2.8f, -1.3f},   {1.4f, 1.4f}    , {-6.4f, -4.0f}, {-9.2f, -6.8f}}};
         numberBoardYRotation = new float[,]
                                 {{-90f, 180f, 0f, 0f, 0f},
                                  {180f, 90f, -90f, 90f, 0f},
+                                 {-90f, 90f, 180f, 90f, 90f},
                                  {-90f, 90f, 180f, 90f, 90f}};
         levelIndex = 0;
         taskIndex = 0;
@@ -196,6 +200,14 @@ public class GameManager : MonoBehaviour
                                                 Quaternion.Euler(humanSpawnPose[taskIndex+1, 1]));
             StartCoroutine(CharacterMoveOnAction(levelNurse, taskIndex+1));
         }
+
+        if (levelIndex == 3 && taskIndex != 4)
+        {
+            GameObject levelNurse = Instantiate(humanModelPrefab, 
+                                                humanSpawnPose[taskIndex+1, 0], 
+                                                Quaternion.Euler(humanSpawnPose[taskIndex+1, 1]));
+            StartCoroutine(CharacterMoveOnAction(levelNurse, taskIndex+1));
+        }
     }
 
     private IEnumerator CharacterMoveOnAction(GameObject character, int index)
@@ -277,14 +289,20 @@ public class GameManager : MonoBehaviour
         int spawnIndex = taskIndex;
         if (taskIndex == 4)
             spawnIndex += levelIndex;
-        robot = Instantiate(robotPrefab, spawnPositions[spawnIndex], 
+        if (levelIndex != 3)
+            robot = Instantiate(robotPrefab, spawnPositions[spawnIndex], 
+                                         Quaternion.Euler(spawnRotations[spawnIndex]));
+        else 
+            robot = Instantiate(robotPrefab2, spawnPositions[spawnIndex], 
                                          Quaternion.Euler(spawnRotations[spawnIndex]));
         // goal
         currentGoalPosition = goalPositions[taskIndex];
         if (taskIndex == 4)
             currentGoalPosition = new Vector3(0f, -10f, 0f);
-        if (taskIndex == 3 && levelIndex != 0)
+        if (taskIndex == 3 && (levelIndex == 1 || levelIndex == 2))
             currentGoalPosition = goalPositions[taskIndex+1];
+        else if (taskIndex == 3 && levelIndex == 3)
+            currentGoalPosition = goalPositions[taskIndex+2];
         StopCoroutine(CheckGoalCoroutine());
         StartCoroutine(CheckGoalCoroutine());
 

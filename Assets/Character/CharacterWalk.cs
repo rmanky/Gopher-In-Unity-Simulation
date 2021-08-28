@@ -22,6 +22,8 @@ public class CharacterWalk : MonoBehaviour
     
     private Animator animator;
 
+    private bool isBlocked;
+
     void Start()
     {
         rb = character.GetComponent<Rigidbody>();
@@ -43,6 +45,14 @@ public class CharacterWalk : MonoBehaviour
         rbSpeed = (tf.position - prevPosition).magnitude / Time.fixedDeltaTime;
         prevPosition = tf.position;
         animator.SetFloat("speed", rbSpeed);
+
+        // Check obstacles
+        RaycastHit hitInfo = new RaycastHit();
+        if (Physics.Raycast(tf.position, tf.forward, out hitInfo, 1f))
+        {
+            Debug.Log("obs");
+            return;
+        }
 
         // Track current target
         if ((tf.position - currentTarget).magnitude > 0.1)
