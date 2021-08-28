@@ -46,12 +46,19 @@ public class CharacterWalk : MonoBehaviour
         prevPosition = tf.position;
         animator.SetFloat("speed", rbSpeed);
 
-        // Check obstacles
-        RaycastHit hitInfo = new RaycastHit();
-        if (Physics.Raycast(tf.position, tf.forward, out hitInfo, 1f))
+        // Check collision
+        RaycastHit hit;
+        int i = -2;
+        while (i < 2)
         {
-            Debug.Log("obs");
-            return;
+            ++i;
+            Vector3 detectPosition = tf.position + tf.TransformDirection(new Vector3(i*0.3f, 0.2f, 0));
+            Vector3 detectRotation = tf.forward;
+            if (Physics.Raycast(detectPosition, detectRotation, out hit, 1.0f))
+            {
+                Debug.DrawRay(detectPosition, hit.distance * detectRotation, Color.red, 0.1f);
+                return;
+            }
         }
 
         // Track current target
