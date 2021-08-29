@@ -53,6 +53,9 @@ public class GameManager : MonoBehaviour
     public float[,] humanActionDectionRange;
     public Vector3[,] humanTrajectory;
 
+    public Vector3[,] humanSpawnPose2;
+    public Vector3[,] humanTrajectory2;
+
 
     public int levelIndex;
     public int taskIndex;
@@ -185,12 +188,12 @@ public class GameManager : MonoBehaviour
 
     private void GenerateHumanModel()
     {
-        if (taskIndex == 0)
+        if (taskIndex == 0 && levelIndex != 3)
         {
             GameObject taskNurse = Instantiate(humanModelPrefab, 
                                                 humanSpawnPose[0, 0], 
                                                 Quaternion.Euler(humanSpawnPose[0, 1]));
-            StartCoroutine(CharacterMoveOnAction(taskNurse, 0));
+            StartCoroutine(CharacterMoveOnAction(taskNurse, 0, humanTrajectory));
         }
 
         if (levelIndex == 2 && taskIndex != 4)
@@ -198,25 +201,72 @@ public class GameManager : MonoBehaviour
             GameObject levelNurse = Instantiate(humanModelPrefab, 
                                                 humanSpawnPose[taskIndex+1, 0], 
                                                 Quaternion.Euler(humanSpawnPose[taskIndex+1, 1]));
-            StartCoroutine(CharacterMoveOnAction(levelNurse, taskIndex+1));
+            StartCoroutine(CharacterMoveOnAction(levelNurse, taskIndex+1, humanTrajectory));
         }
 
         if (levelIndex == 3 && taskIndex != 4)
         {
+            Vector3[,] humanTrajectory0 = new Vector3[,]
+                            {{new Vector3(5.6f, 0f, -0.3f), new Vector3(5f, 0f, -1.1f), 
+                              new Vector3(3.3f, 0f, -1.1f), new Vector3(0.5f, 0f, -1.9f),
+                              new Vector3(-1.8f, 0f, -1.1f), new Vector3(-6.4f, 0f, -1.4f),
+                              new Vector3(-10.4f, 0f, -1.4f)}};
+            
+            humanSpawnPose2 = new Vector3[,]
+                            {{new Vector3(-7.4f, 0f, -16f), new Vector3(0f, 0f, 0f), new Vector3(-7.4f, 0f, -6.8f), new Vector3(0f, 180f, 0f)},
+                             {new Vector3(-7f, 0f, -11.5f), new Vector3(0f, 90f, 0f), new Vector3(6.2f, 0f, -9.5f), new Vector3(0f, 0f, 0f)}, 
+                             {new Vector3(-7.4f, 0f, -7f), new Vector3(0f, 180f, 0f), new Vector3(6.2f, 0f, -9.5f), new Vector3(0f, 0f, 0f)}, 
+                             {new Vector3(-10f, 0f, -16.4f), new Vector3(0f, 90f, 0f), new Vector3(6.2f, 0f, -9.5f), new Vector3(0f, 0f, 0f)}};
+            humanTrajectory2 = new Vector3[,]
+                            {{new Vector3(-7.4f, 0f, -16f), new Vector3(-7.4f, 0f, -11.6f), new Vector3(-7.4f, 0f, -6.8f)},
+                             {new Vector3(-2.0f, 0f, -12.0f), new Vector3(-0.7f, 0f, -7.7f), new Vector3(-0.7f, 0f, -7.7f)},
+                             {new Vector3(-7.4f, 0f, -7f), new Vector3(-7.4f, 0f, -20f), new Vector3(-7.4f, 0f, -20f)}, 
+                             {new Vector3(-10f, 0f, -16.4f), new Vector3(-2.5f, 0f, -16.4f), new Vector3(-2.5f, 0f, -16.4f)}};
+            
+            GameObject taskNurse = Instantiate(humanModelPrefab, 
+                                                humanSpawnPose[0, 0], 
+                                                Quaternion.Euler(humanSpawnPose[0, 1]));
+            CharacterWalk characterWalk = taskNurse.GetComponent<CharacterWalk>();
+            characterWalk.collisionDetection = false;
+            StartCoroutine(CharacterMoveOnAction(taskNurse, 0, humanTrajectory0));
+
             GameObject levelNurse = Instantiate(humanModelPrefab, 
                                                 humanSpawnPose[taskIndex+1, 0], 
                                                 Quaternion.Euler(humanSpawnPose[taskIndex+1, 1]));
-            StartCoroutine(CharacterMoveOnAction(levelNurse, taskIndex+1));
+            StartCoroutine(CharacterMoveOnAction(levelNurse, taskIndex+1, humanTrajectory));
+
+            // Temp
+            int ii = 0;
+            if (Random.Range(0f, 1f) > 0.5)
+                ii = 0;
+            else
+                ii = 2;
+
+            /*
+            GameObject loopNurse = Instantiate(humanModelPrefab, 
+                                                humanSpawnPose2[taskIndex+1, ii], 
+                                                Quaternion.Euler(humanSpawnPose2[taskIndex+1, ii+1]));
+            characterWalk = loopNurse.GetComponent<CharacterWalk>();
+            characterWalk.loop = true;
+            
+            Vector3[] trajectory = new Vector3[humanTrajectory2.GetLength(1)];
+            for (int r = 0; r < trajectory.Length; ++r)
+            {
+                trajectory[r] = humanTrajectory2[taskIndex-1, r];
+            }
+            characterWalk.MoveTrajectory(trajectory);
+            */
         }
     }
 
-    private IEnumerator CharacterMoveOnAction(GameObject character, int index)
+    private IEnumerator CharacterMoveOnAction(GameObject character, int index, Vector3[,] humanTrajectory)
     {
         if (character == null)
             yield break; 
             
-
         CharacterWalk characterWalk = character.GetComponent<CharacterWalk>();
+        if (index ==2)
+            characterWalk.collisionDetection = false;
 
         float xLower = humanActionDectionRange[index, 0];
         float xUpper = humanActionDectionRange[index, 1];
