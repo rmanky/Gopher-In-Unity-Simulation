@@ -214,6 +214,7 @@ public class GameManager : MonoBehaviour
     {
         if (character == null)
             yield break; 
+            
 
         CharacterWalk characterWalk = character.GetComponent<CharacterWalk>();
 
@@ -228,8 +229,11 @@ public class GameManager : MonoBehaviour
         for (int r = 0; r < trajectory.Length; ++r)
             trajectory[r] = humanTrajectory[index, r];
         
-        characterWalk.MoveTrajectory(trajectory);
+        // In case previous human gets destroyed
+        if (characterWalk != null)
+            characterWalk.MoveTrajectory(trajectory);
     }
+
 
     private bool RobotInArea(float xLower, float xUpper, float zLower, float zUpper)
     {
