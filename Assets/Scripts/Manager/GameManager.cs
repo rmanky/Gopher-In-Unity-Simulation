@@ -303,10 +303,10 @@ public class GameManager : MonoBehaviour
         currentGoalPosition = goalPositions[taskIndex];
         if (taskIndex == 4)
             currentGoalPosition = new Vector3(0f, -10f, 0f);
-        if (taskIndex == 3 && (levelIndex == 1 || levelIndex == 2))
-            currentGoalPosition = goalPositions[taskIndex+1];
-        else if (taskIndex == 3 && levelIndex == 3)
-            currentGoalPosition = goalPositions[taskIndex+2];
+        else if (taskIndex == 3)
+            currentGoalPosition = goalPositions[taskIndex + levelIndex];
+        else if (levelIndex == 3)
+            currentGoalPosition = goalPositions[taskIndex + 7];
         StopCoroutine(CheckGoalCoroutine());
         StartCoroutine(CheckGoalCoroutine());
 
