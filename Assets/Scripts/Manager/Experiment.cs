@@ -100,16 +100,15 @@ public class Experiment : MonoBehaviour
                 ((taskIndices[currentIndex-1] != taskIndices[currentIndex]) ||
                  (levelIndices[currentIndex-1] != levelIndices[currentIndex])) )
             {
-                Debug.Log("survey 1");
                 StartCoroutine(SurveyCoroutine(1));
             }
             if ((trialIndices[currentIndex-1] == 1) && (levelIndices[currentIndex-1] != 0) &&
                 (currentIndex % levelLength == 0) )
             {
-                Debug.Log("survey 0");
                 StartCoroutine(SurveyCoroutine(0));
             }
-            Debug.Log(currentIndex + " " + levelLength);
+
+            // Next configuration
             int cameraConfigIndex = cameraIndices[currentIndex];
             gameManager.LoadSceneWithRobot(taskIndices[currentIndex], 
                                            levelIndices[currentIndex],
