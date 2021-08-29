@@ -95,8 +95,8 @@ public class KeyboardJointControl : MonoBehaviour
         joint1Rotation += speedDeg * targetJoint1Speed * Time.fixedDeltaTime * 2.0f;
         joint3Rotation -= speedDeg * targetJoint3Speed * Time.fixedDeltaTime * 1.8f;
 
-        joint1Rotation = Mathf.Clamp(joint1Rotation, 52f, 90f);
-        joint3Rotation = Mathf.Clamp(joint3Rotation, 60f, 103f);
+        joint1Rotation = Mathf.Clamp(joint1Rotation, 52f, 91f);
+        joint3Rotation = Mathf.Clamp(joint3Rotation, 60f, 104f);
         
         jointController.SetJointTarget(joint1, joint1Rotation, speedDeg);
         jointController.SetJointTarget(joint3, joint3Rotation, speedDeg);
