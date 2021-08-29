@@ -113,7 +113,7 @@ public class UIManager : MonoBehaviour
     {
         // Hotkeys
         // info
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.U))
             if (UIIndex != 0 && UIIndex != 1 && UIIndex != 2)
                 ChangeAllStateDisplay();
         // miniMap
@@ -161,7 +161,6 @@ public class UIManager : MonoBehaviour
     }
     private bool CheckArmPose()
     {
-        Debug.Log(dataRecorder.states[14]);
         if (gameManager.dataRecorder != null && 
             gameManager.robot != null &&
             Mathf.Abs(dataRecorder.states[14] + 1.57f) < 0.02)
