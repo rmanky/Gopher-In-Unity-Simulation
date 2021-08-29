@@ -57,7 +57,7 @@ public class Experiment : MonoBehaviour
     {
         CreateIndicesArray();
 
-        // temp modifaication
+        // start with training phase
         if (levelIndices[0] == 0)
             currentIndex = testCamera.Length * testTask.Length;
         else
@@ -127,7 +127,11 @@ public class Experiment : MonoBehaviour
     private IEnumerator StartRecordOnAction()
     {
         yield return new WaitUntil(() => moved == true);
-        gameManager.Record((currentIndex-(testCamera.Length * testTask.Length)).ToString() + 
+        if (levelIndices[0] == 0)
+            gameManager.Record((currentIndex-(testCamera.Length * testTask.Length)).ToString() + 
+                           "- " + trialIndices[currentIndex].ToString() + "; ");
+        else
+            gameManager.Record((currentIndex).ToString() + 
                            "- " + trialIndices[currentIndex].ToString() + "; ");
     }
 
