@@ -22,7 +22,6 @@ public class CharacterWalk : MonoBehaviour
     
     private Animator animator;
 
-    public bool collisionDetection = true;
     private bool isBlocked;
 
     void Start()
@@ -50,18 +49,16 @@ public class CharacterWalk : MonoBehaviour
         // Check collision
         RaycastHit hit;
         int i = -2;
-        if (collisionDetection)
+        while (i < 2)
         {
-            while (i < 2)
+            ++i;
+            Vector3 detectPosition = tf.position + tf.TransformDirection(new Vector3(i*0.3f, 0.2f, 0));
+            Vector3 detectRotation = tf.forward;
+            if (Physics.Raycast(detectPosition, detectRotation, out hit, 1.0f))
             {
-                ++i;
-                Vector3 detectPosition = tf.position + tf.TransformDirection(new Vector3(i*0.3f, 0.2f, 0));
-                Vector3 detectRotation = tf.forward;
-                if (Physics.Raycast(detectPosition, detectRotation, out hit, 1.0f))
-                {
-                    Debug.DrawRay(detectPosition, hit.distance * detectRotation, Color.red, 0.1f);
+                Debug.DrawRay(detectPosition, hit.distance * detectRotation, Color.red, 0.1f);
+                if (hit.collider.gameObject.layer == 8)
                     return;
-                }
             }
         }
 

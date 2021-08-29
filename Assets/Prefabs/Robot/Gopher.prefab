@@ -68,7 +68,7 @@ GameObject:
   - component: {fileID: 572059454552077429}
   - component: {fileID: 572059454552077427}
   - component: {fileID: 572059454552077426}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Interface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 572059455150877613}
   - component: {fileID: 572059455150877612}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 572059455320795331}
   - component: {fileID: 572059455320795332}
   - component: {fileID: 572059455320795333}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: State
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,6 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   robotRoot: {fileID: 7489454703369971795}
+  extraObjects: []
   collisionAudioClip: {fileID: 8300000, guid: 7399071ef6edeb3828649653248a892a, type: 3}
   storageIndex: 0
   storageLength: 0
@@ -281,7 +282,7 @@ GameObject:
   - component: {fileID: 572059455351224179}
   - component: {fileID: 572059455351224176}
   - component: {fileID: 572059455351224177}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +377,7 @@ GameObject:
   - component: {fileID: 572059455834316359}
   - component: {fileID: 572059455834316356}
   - component: {fileID: 7702653047197899922}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Base and Torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,7 +489,7 @@ GameObject:
   m_Component:
   - component: {fileID: 572059456386280195}
   - component: {fileID: 572059456386280194}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1563,7 +1564,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702502475014}
   - component: {fileID: 7489454702502475013}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1607,7 +1608,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702506490955}
   - component: {fileID: 7489454702506490954}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1652,7 +1653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702513069166}
   - component: {fileID: 7489454702513069165}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1696,7 +1697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702515944143}
   - component: {fileID: 7489454702515944142}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1743,7 +1744,7 @@ GameObject:
   - component: {fileID: 7489454702516180241}
   - component: {fileID: 7489454702516180242}
   - component: {fileID: 7489454702516180243}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/right_arm_right_outer_knuckle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1875,7 +1876,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702518269267}
   - component: {fileID: 7489454702518269266}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1922,7 +1923,7 @@ GameObject:
   - component: {fileID: 7489454702519263346}
   - component: {fileID: 7489454702519263347}
   - component: {fileID: 7489454702519263348}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/r_wheel_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2056,7 +2057,7 @@ GameObject:
   - component: {fileID: 7489454702529141417}
   - component: {fileID: 7489454702529141418}
   - component: {fileID: 7489454702529141419}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/right_arm_half_arm_1_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2191,7 +2192,7 @@ GameObject:
   - component: {fileID: 7489454702531137806}
   - component: {fileID: 7489454702531137807}
   - component: {fileID: 7489454702531137808}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/main_cam_bottom_screw_frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2326,7 +2327,7 @@ GameObject:
   - component: {fileID: 7489454702534673677}
   - component: {fileID: 7489454702534673678}
   - component: {fileID: 7489454702534673679}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/estop_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2460,7 +2461,7 @@ GameObject:
   - component: {fileID: 7489454702536384293}
   - component: {fileID: 7489454702536384294}
   - component: {fileID: 7489454702536384295}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/right_arm_left_inner_finger_pad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2591,7 +2592,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702543460145}
   - component: {fileID: 7489454702543460144}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2635,7 +2636,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702545679860}
   - component: {fileID: 7489454702545679859}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2679,7 +2680,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702556330217}
   - component: {fileID: 7489454702556330216}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2726,7 +2727,7 @@ GameObject:
   - component: {fileID: 7489454702568083453}
   - component: {fileID: 7489454702568083451}
   - component: {fileID: 7489454702568083452}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/base_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2804,7 +2805,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702569538962}
   - component: {fileID: 7489454702569538961}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2847,7 +2848,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702577918267}
   - component: {fileID: 7489454702577918266}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2891,7 +2892,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702612135220}
   - component: {fileID: 7489454702612135219}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2936,7 +2937,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702617731114}
   - component: {fileID: 7489454702617731113}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2981,7 +2982,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702625666134}
   - component: {fileID: 7489454702625666133}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3029,7 +3030,7 @@ GameObject:
   - component: {fileID: 7489454702635301031}
   - component: {fileID: 7489454702635301032}
   - component: {fileID: 7489454702635301033}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/right_arm_camera_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3161,7 +3162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702640929338}
   - component: {fileID: 7489454702640929337}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3205,7 +3206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702650216701}
   - component: {fileID: 7489454702650216700}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3248,7 +3249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702671619848}
   - component: {fileID: 7489454702671619847}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3291,7 +3292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702681386295}
   - component: {fileID: 7489454702681386294}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3336,7 +3337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702681446584}
   - component: {fileID: 7489454702681446583}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3380,7 +3381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702684941859}
   - component: {fileID: 7489454702684941858}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3425,7 +3426,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702693919222}
   - component: {fileID: 7489454702693919221}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3468,7 +3469,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702702397330}
   - component: {fileID: 7489454702702397329}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3515,7 +3516,7 @@ GameObject:
   - component: {fileID: 7489454702706891697}
   - component: {fileID: 7489454702706891698}
   - component: {fileID: 7489454702706891699}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/right_arm_left_outer_finger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3647,7 +3648,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702730075841}
   - component: {fileID: 7489454702730075840}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3692,7 +3693,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702735883453}
   - component: {fileID: 7489454702735883452}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3740,7 +3741,7 @@ GameObject:
   - component: {fileID: 7489454702735980341}
   - component: {fileID: 7489454702735980342}
   - component: {fileID: 7489454702735980343}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/right_arm_right_outer_finger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3872,7 +3873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702739212710}
   - component: {fileID: 7489454702739212709}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3916,7 +3917,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702747603683}
   - component: {fileID: 7489454702747603682}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3960,7 +3961,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702749768741}
   - component: {fileID: 7489454702749768740}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4006,7 +4007,7 @@ GameObject:
   - component: {fileID: 7489454702756513795}
   - component: {fileID: 7489454702756513793}
   - component: {fileID: 7489454702756513794}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4090,7 +4091,7 @@ GameObject:
   - component: {fileID: 7489454702763772949}
   - component: {fileID: 7489454702763772950}
   - component: {fileID: 7489454702763772951}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/main_cam_pitch_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4225,7 +4226,7 @@ GameObject:
   - component: {fileID: 7489454702764357940}
   - component: {fileID: 7489454702764357941}
   - component: {fileID: 7489454702764357942}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/left_arm_left_inner_finger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4357,7 +4358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702773304998}
   - component: {fileID: 7489454702773304997}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4403,7 +4404,7 @@ GameObject:
   - component: {fileID: 7489454702782660004}
   - component: {fileID: 7489454702782660002}
   - component: {fileID: 7489454702782660003}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4484,7 +4485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702790067043}
   - component: {fileID: 7489454702790067042}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4531,7 +4532,7 @@ GameObject:
   - component: {fileID: 7489454702791004354}
   - component: {fileID: 7489454702791004355}
   - component: {fileID: 7489454702791004356}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/left_arm_left_inner_knuckle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4665,7 +4666,7 @@ GameObject:
   - component: {fileID: 7489454702823281534}
   - component: {fileID: 7489454702823281535}
   - component: {fileID: 7489454702823281408}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/left_arm_base_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4797,7 +4798,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702832242774}
   - component: {fileID: 7489454702832242773}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4844,7 +4845,7 @@ GameObject:
   - component: {fileID: 7489454702842016346}
   - component: {fileID: 7489454702842016347}
   - component: {fileID: 7489454702842016348}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/main_cam_depth_frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4976,7 +4977,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702850603238}
   - component: {fileID: 7489454702850603237}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5024,7 +5025,7 @@ GameObject:
   - component: {fileID: 7489454702867919699}
   - component: {fileID: 7489454702867919700}
   - component: {fileID: 7489454702867919701}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/left_arm_camera_depth_frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5156,7 +5157,7 @@ GameObject:
   - component: {fileID: 7489454702879470798}
   - component: {fileID: 7489454702879470796}
   - component: {fileID: 7489454702879470797}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5237,7 +5238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702907289336}
   - component: {fileID: 7489454702907289335}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5281,7 +5282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702913895226}
   - component: {fileID: 7489454702913895225}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5325,7 +5326,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702914749311}
   - component: {fileID: 7489454702914749310}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5369,7 +5370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702915098430}
   - component: {fileID: 7489454702915098429}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5412,7 +5413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702915893144}
   - component: {fileID: 7489454702915893143}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5460,7 +5461,7 @@ GameObject:
   - component: {fileID: 7489454702916088026}
   - component: {fileID: 7489454702916088027}
   - component: {fileID: 7489454702916088028}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/left_arm_half_arm_2_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5592,7 +5593,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702919219333}
   - component: {fileID: 7489454702919219332}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5635,7 +5636,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702927915862}
   - component: {fileID: 7489454702927915861}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5679,7 +5680,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702928911367}
   - component: {fileID: 7489454702928911366}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5724,7 +5725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702946754240}
   - component: {fileID: 7489454702946753855}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5768,7 +5769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702951683895}
   - component: {fileID: 7489454702951683894}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5813,7 +5814,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702954184328}
   - component: {fileID: 7489454702954184327}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5858,7 +5859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702955036453}
   - component: {fileID: 7489454702955036452}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5905,7 +5906,7 @@ GameObject:
   - component: {fileID: 7489454702956941859}
   - component: {fileID: 7489454702956941860}
   - component: {fileID: 7489454702956941861}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/left_arm_spherical_wrist_1_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6037,7 +6038,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702964708894}
   - component: {fileID: 7489454702964708893}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6081,7 +6082,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702965786171}
   - component: {fileID: 7489454702965786170}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6124,7 +6125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702972187786}
   - component: {fileID: 7489454702972187785}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6168,7 +6169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702975582408}
   - component: {fileID: 7489454702975582407}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6213,7 +6214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702976568028}
   - component: {fileID: 7489454702976568027}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6257,7 +6258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454702983326524}
   - component: {fileID: 7489454702983326523}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6304,7 +6305,7 @@ GameObject:
   - component: {fileID: 7489454702996069483}
   - component: {fileID: 7489454702996069484}
   - component: {fileID: 7489454702996069485}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6438,7 +6439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703005626018}
   - component: {fileID: 7489454703005626017}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6482,7 +6483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703008592231}
   - component: {fileID: 7489454703008592230}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6525,7 +6526,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703015736571}
   - component: {fileID: 7489454703015736570}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6569,7 +6570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703028854984}
   - component: {fileID: 7489454703028854983}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6614,7 +6615,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703031911215}
   - component: {fileID: 7489454703031911214}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6659,7 +6660,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703032431749}
   - component: {fileID: 7489454703032431748}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6704,7 +6705,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703036791641}
   - component: {fileID: 7489454703036791640}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6748,7 +6749,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703041096425}
   - component: {fileID: 7489454703041096424}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6794,7 +6795,7 @@ GameObject:
   - component: {fileID: 7489454703059191643}
   - component: {fileID: 7489454703059191644}
   - component: {fileID: 7489454703059191645}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/right_arm_right_inner_finger_pad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6925,7 +6926,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703059922627}
   - component: {fileID: 7489454703059922626}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6969,7 +6970,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703067345196}
   - component: {fileID: 7489454703067345195}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7017,7 +7018,7 @@ GameObject:
   - component: {fileID: 7489454703072727145}
   - component: {fileID: 7489454703072727146}
   - component: {fileID: 7489454703072727147}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/left_arm_bracelet_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7149,7 +7150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703075459227}
   - component: {fileID: 7489454703075459226}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7196,7 +7197,7 @@ GameObject:
   - component: {fileID: 7489454703080743505}
   - component: {fileID: 7489454703080743506}
   - component: {fileID: 7489454703080743507}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/laser_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7330,7 +7331,7 @@ GameObject:
   - component: {fileID: 7489454703085505887}
   - component: {fileID: 7489454703085505888}
   - component: {fileID: 7489454703085505889}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/left_arm_right_inner_finger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7462,7 +7463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703090709532}
   - component: {fileID: 7489454703090709531}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7507,7 +7508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703107375019}
   - component: {fileID: 7489454703107375018}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7550,7 +7551,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703112286126}
   - component: {fileID: 7489454703112286125}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7594,7 +7595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703115143496}
   - component: {fileID: 7489454703115143495}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7641,7 +7642,7 @@ GameObject:
   - component: {fileID: 7489454703118758451}
   - component: {fileID: 7489454703118758452}
   - component: {fileID: 7489454703118758453}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/left_arm_tool_frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7772,7 +7773,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703120352371}
   - component: {fileID: 7489454703120352370}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7816,7 +7817,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703123184156}
   - component: {fileID: 7489454703123184155}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7859,7 +7860,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703126999487}
   - component: {fileID: 7489454703126999486}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7904,7 +7905,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703137975192}
   - component: {fileID: 7489454703137975191}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7949,7 +7950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703144420692}
   - component: {fileID: 7489454703144420691}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7993,7 +7994,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703148188171}
   - component: {fileID: 7489454703148188170}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8040,7 +8041,7 @@ GameObject:
   - component: {fileID: 7489454703152674302}
   - component: {fileID: 7489454703152674303}
   - component: {fileID: 7489454703152674176}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/left_arm_shoulder_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8172,7 +8173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703181840749}
   - component: {fileID: 7489454703181840748}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8217,7 +8218,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703186370399}
   - component: {fileID: 7489454703186370398}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8261,7 +8262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703193553211}
   - component: {fileID: 7489454703193553210}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8305,7 +8306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703197584586}
   - component: {fileID: 7489454703197584585}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8349,7 +8350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703203555382}
   - component: {fileID: 7489454703203555381}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8394,7 +8395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703217025638}
   - component: {fileID: 7489454703217025637}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8439,7 +8440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703231423803}
   - component: {fileID: 7489454703231423802}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8483,7 +8484,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703248344333}
   - component: {fileID: 7489454703248344332}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8528,7 +8529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703259454407}
   - component: {fileID: 7489454703259454406}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8573,7 +8574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703260986782}
   - component: {fileID: 7489454703260986781}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8617,7 +8618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703264385937}
   - component: {fileID: 7489454703264385936}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8660,7 +8661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703281448762}
   - component: {fileID: 7489454703281448761}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8705,7 +8706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703299937061}
   - component: {fileID: 7489454703299937060}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8749,7 +8750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703300056759}
   - component: {fileID: 7489454703300056758}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8794,7 +8795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703312176266}
   - component: {fileID: 7489454703312176265}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8838,7 +8839,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703318003692}
   - component: {fileID: 7489454703318003691}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8883,7 +8884,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703321171454}
   - component: {fileID: 7489454703321171453}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8927,7 +8928,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703361211352}
   - component: {fileID: 7489454703361211351}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8975,9 +8976,9 @@ GameObject:
   - component: {fileID: 7489454703369971794}
   - component: {fileID: 7632526701925199803}
   - component: {fileID: 3160675709935834815}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gopher
-  m_TagString: robot
+  m_TagString: Robot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9077,7 +9078,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703384529911}
   - component: {fileID: 7489454703384529910}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9121,7 +9122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703400580210}
   - component: {fileID: 7489454703400580209}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9166,7 +9167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703404758244}
   - component: {fileID: 7489454703404758243}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9210,7 +9211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703414948441}
   - component: {fileID: 7489454703414948440}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9255,7 +9256,7 @@ GameObject:
   - component: {fileID: 7489454703415571541}
   - component: {fileID: 7489454703415571539}
   - component: {fileID: 7489454703415571540}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9339,7 +9340,7 @@ GameObject:
   - component: {fileID: 7489454703422487030}
   - component: {fileID: 7489454703422487031}
   - component: {fileID: 7489454703422487032}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/right_arm_camera_depth_frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9470,7 +9471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703443698808}
   - component: {fileID: 7489454703443698807}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9514,7 +9515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703451258683}
   - component: {fileID: 7489454703451258682}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9559,7 +9560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703451898933}
   - component: {fileID: 7489454703451898932}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9606,7 +9607,7 @@ GameObject:
   - component: {fileID: 7489454703451962224}
   - component: {fileID: 7489454703451962225}
   - component: {fileID: 7489454703451962226}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/main_cam_support
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9741,7 +9742,7 @@ GameObject:
   - component: {fileID: 7489454703454131855}
   - component: {fileID: 7489454703454131856}
   - component: {fileID: 7489454703454131857}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/chassis_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9878,7 +9879,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703457549256}
   - component: {fileID: 7489454703457549255}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9922,7 +9923,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703470161805}
   - component: {fileID: 7489454703470161804}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9970,7 +9971,7 @@ GameObject:
   - component: {fileID: 7489454703477200837}
   - component: {fileID: 7489454703477200838}
   - component: {fileID: 7489454703477200839}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/right_arm_spherical_wrist_1_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10102,7 +10103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703484838019}
   - component: {fileID: 7489454703484838018}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10146,7 +10147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703485007805}
   - component: {fileID: 7489454703485007804}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10194,7 +10195,7 @@ GameObject:
   - component: {fileID: 7489454703490229964}
   - component: {fileID: 7489454703490229965}
   - component: {fileID: 7489454703490229966}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/l_wheel_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10328,7 +10329,7 @@ GameObject:
   - component: {fileID: 7489454703506390616}
   - component: {fileID: 7489454703506390617}
   - component: {fileID: 7489454703506390618}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/right_arm_bracelet_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10460,7 +10461,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703510970096}
   - component: {fileID: 7489454703510970095}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10504,7 +10505,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703536454533}
   - component: {fileID: 7489454703536454532}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10548,7 +10549,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703537687552}
   - component: {fileID: 7489454703537687679}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10595,7 +10596,7 @@ GameObject:
   - component: {fileID: 7489454703540209500}
   - component: {fileID: 7489454703540209501}
   - component: {fileID: 7489454703540209502}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/left_arm_right_outer_finger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10727,7 +10728,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703543513197}
   - component: {fileID: 7489454703543513196}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10772,7 +10773,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703545479857}
   - component: {fileID: 7489454703545479856}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10816,7 +10817,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703551192326}
   - component: {fileID: 7489454703551192325}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10862,7 +10863,7 @@ GameObject:
   - component: {fileID: 7489454703564595796}
   - component: {fileID: 7489454703564595797}
   - component: {fileID: 7489454703564595798}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/base_camera_optical_frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10993,7 +10994,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703575586947}
   - component: {fileID: 7489454703575586946}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11037,7 +11038,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703580605485}
   - component: {fileID: 7489454703580605484}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11082,7 +11083,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703594793092}
   - component: {fileID: 7489454703594793091}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11130,7 +11131,7 @@ GameObject:
   - component: {fileID: 7489454703598054503}
   - component: {fileID: 7489454703598054504}
   - component: {fileID: 7489454703598054505}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/right_arm_tool_frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11264,7 +11265,7 @@ GameObject:
   - component: {fileID: 7489454703622697984}
   - component: {fileID: 7489454703622697985}
   - component: {fileID: 7489454703622697986}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/right_arm_shoulder_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11396,7 +11397,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703625070929}
   - component: {fileID: 7489454703625070928}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11441,7 +11442,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703627846595}
   - component: {fileID: 7489454703627846594}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11485,7 +11486,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703634210014}
   - component: {fileID: 7489454703634210013}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11528,7 +11529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703652454252}
   - component: {fileID: 7489454703652454251}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11572,7 +11573,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703662968474}
   - component: {fileID: 7489454703662968473}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11616,7 +11617,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703664290059}
   - component: {fileID: 7489454703664290058}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11661,7 +11662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703664734788}
   - component: {fileID: 7489454703664734787}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11706,7 +11707,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703666854032}
   - component: {fileID: 7489454703666854031}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11750,7 +11751,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703669815925}
   - component: {fileID: 7489454703669815924}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11798,7 +11799,7 @@ GameObject:
   - component: {fileID: 7489454703671276260}
   - component: {fileID: 7489454703671276261}
   - component: {fileID: 7489454703671276262}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/left_arm_half_arm_1_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11930,7 +11931,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703683718123}
   - component: {fileID: 7489454703683718122}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11975,7 +11976,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703695889604}
   - component: {fileID: 7489454703695889603}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12019,7 +12020,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703696381010}
   - component: {fileID: 7489454703696381009}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12066,7 +12067,7 @@ GameObject:
   - component: {fileID: 7489454703705221798}
   - component: {fileID: 7489454703705221799}
   - component: {fileID: 7489454703705221800}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/left_arm_left_outer_finger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12201,7 +12202,7 @@ GameObject:
   - component: {fileID: 7489454703707044960}
   - component: {fileID: 7489454703707044961}
   - component: {fileID: 7489454703707044962}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/left_arm_robotiq_arg2f_base_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12336,7 +12337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703711879083}
   - component: {fileID: 7489454703711879082}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12379,7 +12380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703717782808}
   - component: {fileID: 7489454703717782807}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12427,7 +12428,7 @@ GameObject:
   - component: {fileID: 7489454703727485270}
   - component: {fileID: 7489454703727485271}
   - component: {fileID: 7489454703727485272}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/right_arm_left_outer_knuckle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12559,7 +12560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703731773651}
   - component: {fileID: 7489454703731773650}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12604,7 +12605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703735630997}
   - component: {fileID: 7489454703735630996}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12652,7 +12653,7 @@ GameObject:
   - component: {fileID: 7489454703735780966}
   - component: {fileID: 7489454703735780967}
   - component: {fileID: 7489454703735780968}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/right_arm_right_inner_finger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12784,7 +12785,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703737772279}
   - component: {fileID: 7489454703737772278}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12831,7 +12832,7 @@ GameObject:
   - component: {fileID: 7489454703738820570}
   - component: {fileID: 7489454703738820571}
   - component: {fileID: 7489454703738820572}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/main_cam_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12964,7 +12965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703743575041}
   - component: {fileID: 7489454703743575040}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13009,7 +13010,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703749855754}
   - component: {fileID: 7489454703749855753}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13053,7 +13054,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703751126672}
   - component: {fileID: 7489454703751126671}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13096,7 +13097,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703754108004}
   - component: {fileID: 7489454703754108003}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13144,7 +13145,7 @@ GameObject:
   - component: {fileID: 7489454703755706369}
   - component: {fileID: 7489454703755706370}
   - component: {fileID: 7489454703755706371}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/right_arm_left_inner_knuckle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13275,7 +13276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703777978098}
   - component: {fileID: 7489454703777978097}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13319,7 +13320,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703779833138}
   - component: {fileID: 7489454703779833137}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13363,7 +13364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703781890603}
   - component: {fileID: 7489454703781890602}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13412,7 +13413,7 @@ GameObject:
   - component: {fileID: 7489454703794050020}
   - component: {fileID: 7489454703794050021}
   - component: {fileID: 7489454703794050022}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plugins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13517,7 +13518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703795819421}
   - component: {fileID: 7489454703795819420}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13565,7 +13566,7 @@ GameObject:
   - component: {fileID: 7489454703798487079}
   - component: {fileID: 7489454703798487080}
   - component: {fileID: 7489454703798487081}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/left_arm_right_inner_finger_pad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13696,7 +13697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703801278385}
   - component: {fileID: 7489454703801278384}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13743,7 +13744,7 @@ GameObject:
   - component: {fileID: 7489454703806225833}
   - component: {fileID: 7489454703806225834}
   - component: {fileID: 7489454703806225835}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/base_camera_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13875,7 +13876,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703806766963}
   - component: {fileID: 7489454703806766962}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13919,7 +13920,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703807842998}
   - component: {fileID: 7489454703807842997}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13964,7 +13965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703814835721}
   - component: {fileID: 7489454703814835720}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14008,7 +14009,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703821551561}
   - component: {fileID: 7489454703821551560}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14052,7 +14053,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703834218897}
   - component: {fileID: 7489454703834218896}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14097,7 +14098,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703858391359}
   - component: {fileID: 7489454703858391358}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14140,7 +14141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703870561951}
   - component: {fileID: 7489454703870561950}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14185,7 +14186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703871079709}
   - component: {fileID: 7489454703871079708}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14232,7 +14233,7 @@ GameObject:
   - component: {fileID: 7489454703876531772}
   - component: {fileID: 7489454703876531773}
   - component: {fileID: 7489454703876531774}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/right_arm_robotiq_arg2f_base_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14367,7 +14368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703880346522}
   - component: {fileID: 7489454703880346521}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14412,7 +14413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703893417007}
   - component: {fileID: 7489454703893417006}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14457,7 +14458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703899663553}
   - component: {fileID: 7489454703899663552}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14502,7 +14503,7 @@ GameObject:
   - component: {fileID: 7489454703902628554}
   - component: {fileID: 7489454703902628552}
   - component: {fileID: 7489454703902628553}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14583,7 +14584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703911295924}
   - component: {fileID: 7489454703911295923}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14627,7 +14628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703913002469}
   - component: {fileID: 7489454703913002468}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14672,7 +14673,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703920692414}
   - component: {fileID: 7489454703920692413}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14716,7 +14717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703926660975}
   - component: {fileID: 7489454703926660974}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14759,7 +14760,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703940910791}
   - component: {fileID: 7489454703940910790}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14804,7 +14805,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703940935727}
   - component: {fileID: 7489454703940935726}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14847,7 +14848,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703945811091}
   - component: {fileID: 7489454703945811090}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14891,7 +14892,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703948056510}
   - component: {fileID: 7489454703948056509}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14939,7 +14940,7 @@ GameObject:
   - component: {fileID: 7489454703949740493}
   - component: {fileID: 7489454703949740494}
   - component: {fileID: 7489454703949740495}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/right_arm_half_arm_2_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15071,7 +15072,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703950257596}
   - component: {fileID: 7489454703950257595}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15116,7 +15117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703952980641}
   - component: {fileID: 7489454703952980640}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15161,7 +15162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703966280472}
   - component: {fileID: 7489454703966280471}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15206,7 +15207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703977591210}
   - component: {fileID: 7489454703977591209}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15251,7 +15252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454703990543315}
   - component: {fileID: 7489454703990543314}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15297,7 +15298,7 @@ GameObject:
   - component: {fileID: 7489454704000725913}
   - component: {fileID: 7489454704000725914}
   - component: {fileID: 7489454704000725915}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15411,7 +15412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704002109764}
   - component: {fileID: 7489454704002109763}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15458,7 +15459,7 @@ GameObject:
   - component: {fileID: 7489454704006628879}
   - component: {fileID: 7489454704006628880}
   - component: {fileID: 7489454704006628881}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/right_arm_base_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15590,7 +15591,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704022023934}
   - component: {fileID: 7489454704022023933}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15635,7 +15636,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704030587009}
   - component: {fileID: 7489454704030587008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15679,7 +15680,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704032549570}
   - component: {fileID: 7489454704032549569}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15722,7 +15723,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704038095245}
   - component: {fileID: 7489454704038095244}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15765,7 +15766,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704038516780}
   - component: {fileID: 7489454704038516779}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15810,7 +15811,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704040467776}
   - component: {fileID: 7489454704040467903}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15854,7 +15855,7 @@ GameObject:
   - component: {fileID: 7489454704041949910}
   - component: {fileID: 7489454704041949908}
   - component: {fileID: 7489454704041949909}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15935,7 +15936,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704042829941}
   - component: {fileID: 7489454704042829940}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15979,7 +15980,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704061436804}
   - component: {fileID: 7489454704061436803}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16023,7 +16024,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704062305661}
   - component: {fileID: 7489454704062305660}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16071,7 +16072,7 @@ GameObject:
   - component: {fileID: 7489454704072718943}
   - component: {fileID: 7489454704072718944}
   - component: {fileID: 7489454704072718945}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/right_arm_right_inner_knuckle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16202,7 +16203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704072782296}
   - component: {fileID: 7489454704072782295}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16246,7 +16247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704076502509}
   - component: {fileID: 7489454704076502508}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16291,7 +16292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704096755332}
   - component: {fileID: 7489454704096755331}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16336,7 +16337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704101637592}
   - component: {fileID: 7489454704101637591}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16381,7 +16382,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704106963922}
   - component: {fileID: 7489454704106963921}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16429,7 +16430,7 @@ GameObject:
   - component: {fileID: 7489454704114132706}
   - component: {fileID: 7489454704114132707}
   - component: {fileID: 7489454704114132708}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/main_cam_yaw_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16561,7 +16562,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704126714517}
   - component: {fileID: 7489454704126714516}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16605,7 +16606,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704132345906}
   - component: {fileID: 7489454704132345905}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16650,7 +16651,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704136878069}
   - component: {fileID: 7489454704136878068}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16694,7 +16695,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704142928468}
   - component: {fileID: 7489454704142928467}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16739,7 +16740,7 @@ GameObject:
   - component: {fileID: 7489454704149798403}
   - component: {fileID: 7489454704149798401}
   - component: {fileID: 7489454704149798402}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16820,7 +16821,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704164076878}
   - component: {fileID: 7489454704164076877}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16864,7 +16865,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704166513558}
   - component: {fileID: 7489454704166513557}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16907,7 +16908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704180420127}
   - component: {fileID: 7489454704180420126}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16951,7 +16952,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704204007872}
   - component: {fileID: 7489454704204007487}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16994,7 +16995,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704204960253}
   - component: {fileID: 7489454704204960252}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17039,7 +17040,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704205185244}
   - component: {fileID: 7489454704205185243}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17082,7 +17083,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704205886816}
   - component: {fileID: 7489454704205886815}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17126,7 +17127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704215421817}
   - component: {fileID: 7489454704215421816}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17170,7 +17171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704218252298}
   - component: {fileID: 7489454704218252297}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17213,7 +17214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704219903361}
   - component: {fileID: 7489454704219903360}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17258,7 +17259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704230508754}
   - component: {fileID: 7489454704230508753}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17301,7 +17302,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704231240776}
   - component: {fileID: 7489454704231240775}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17345,7 +17346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704236085297}
   - component: {fileID: 7489454704236085296}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17390,7 +17391,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704238307797}
   - component: {fileID: 7489454704238307796}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17434,7 +17435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704242826581}
   - component: {fileID: 7489454704242826580}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17478,7 +17479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704245779954}
   - component: {fileID: 7489454704245779953}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17523,7 +17524,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704248687325}
   - component: {fileID: 7489454704248687324}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17571,7 +17572,7 @@ GameObject:
   - component: {fileID: 7489454704250363206}
   - component: {fileID: 7489454704250363207}
   - component: {fileID: 7489454704250363208}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/left_arm_camera_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17702,7 +17703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704253215521}
   - component: {fileID: 7489454704253215520}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17750,7 +17751,7 @@ GameObject:
   - component: {fileID: 7489454704254586215}
   - component: {fileID: 7489454704254586216}
   - component: {fileID: 7489454704254586217}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/left_arm_camera_color_frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17881,7 +17882,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704255175696}
   - component: {fileID: 7489454704255175695}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17925,7 +17926,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704261770973}
   - component: {fileID: 7489454704261770972}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17969,7 +17970,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704266051915}
   - component: {fileID: 7489454704266051914}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18014,7 +18015,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704266949029}
   - component: {fileID: 7489454704266949028}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18059,7 +18060,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704275546543}
   - component: {fileID: 7489454704275546542}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18107,7 +18108,7 @@ GameObject:
   - component: {fileID: 7489454704289221700}
   - component: {fileID: 7489454704289221701}
   - component: {fileID: 7489454704289221702}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/left_arm_left_inner_finger_pad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18238,7 +18239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704290939358}
   - component: {fileID: 7489454704290939357}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18282,7 +18283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704292672935}
   - component: {fileID: 7489454704292672934}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18327,7 +18328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704298515151}
   - component: {fileID: 7489454704298515150}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18371,7 +18372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704298684704}
   - component: {fileID: 7489454704298684703}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18415,7 +18416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704298690388}
   - component: {fileID: 7489454704298690387}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18460,7 +18461,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704316164939}
   - component: {fileID: 7489454704316164938}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18505,7 +18506,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704324737162}
   - component: {fileID: 7489454704324737161}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18549,7 +18550,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704331711036}
   - component: {fileID: 7489454704331711035}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18593,7 +18594,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704332190572}
   - component: {fileID: 7489454704332190571}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18638,7 +18639,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704342152547}
   - component: {fileID: 7489454704342152546}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18685,7 +18686,7 @@ GameObject:
   - component: {fileID: 7489454704343653471}
   - component: {fileID: 7489454704343653472}
   - component: {fileID: 7489454704343653473}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/right_arm_left_inner_finger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18817,7 +18818,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704354079609}
   - component: {fileID: 7489454704354079608}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18862,7 +18863,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704356835674}
   - component: {fileID: 7489454704356835673}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18910,7 +18911,7 @@ GameObject:
   - component: {fileID: 7489454704363601317}
   - component: {fileID: 7489454704363601318}
   - component: {fileID: 7489454704363601319}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/left_arm_left_outer_knuckle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19042,7 +19043,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704364727433}
   - component: {fileID: 7489454704364727432}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19086,7 +19087,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704368137040}
   - component: {fileID: 7489454704368137039}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19130,7 +19131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704379166848}
   - component: {fileID: 7489454704379166975}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19173,7 +19174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704386845405}
   - component: {fileID: 7489454704386845404}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19221,7 +19222,7 @@ GameObject:
   - component: {fileID: 7489454704389256727}
   - component: {fileID: 7489454704389256728}
   - component: {fileID: 7489454704389256729}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/right_arm_camera_color_frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19355,7 +19356,7 @@ GameObject:
   - component: {fileID: 7489454704390466196}
   - component: {fileID: 7489454704390466197}
   - component: {fileID: 7489454704390466198}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/right_arm_end_effector_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19491,7 +19492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704391725091}
   - component: {fileID: 7489454704391725090}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19537,7 +19538,7 @@ GameObject:
   - component: {fileID: 7489454704403294664}
   - component: {fileID: 7489454704403294665}
   - component: {fileID: 7489454704403294666}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/left_arm_right_inner_knuckle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19668,7 +19669,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704406745441}
   - component: {fileID: 7489454704406745440}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19713,7 +19714,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704411150629}
   - component: {fileID: 7489454704411150628}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19757,7 +19758,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704416700225}
   - component: {fileID: 7489454704416700224}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19800,7 +19801,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704437384048}
   - component: {fileID: 7489454704437384047}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19844,7 +19845,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704439222293}
   - component: {fileID: 7489454704439222292}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19890,7 +19891,7 @@ GameObject:
   - component: {fileID: 7489454704439803184}
   - component: {fileID: 7489454704439803185}
   - component: {fileID: 7489454704439803186}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/left_arm_end_effector_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20026,7 +20027,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704472802055}
   - component: {fileID: 7489454704472802054}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20073,7 +20074,7 @@ GameObject:
   - component: {fileID: 7489454704496226744}
   - component: {fileID: 7489454704496226745}
   - component: {fileID: 7489454704496226746}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/main_cam_color_frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20204,7 +20205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704500283934}
   - component: {fileID: 7489454704500283933}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20247,7 +20248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704503592152}
   - component: {fileID: 7489454704503592151}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20291,7 +20292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704515519271}
   - component: {fileID: 7489454704515519270}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20335,7 +20336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704542016134}
   - component: {fileID: 7489454704542016133}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20382,7 +20383,7 @@ GameObject:
   - component: {fileID: 7489454704545628877}
   - component: {fileID: 7489454704545628878}
   - component: {fileID: 7489454704545628879}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right Arm Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20496,7 +20497,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704549809375}
   - component: {fileID: 7489454704549809374}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20540,7 +20541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704558011797}
   - component: {fileID: 7489454704558011796}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20585,7 +20586,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704559966868}
   - component: {fileID: 7489454704559966867}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20632,7 +20633,7 @@ GameObject:
   - component: {fileID: 7489454704564032746}
   - component: {fileID: 7489454704564032747}
   - component: {fileID: 7489454704564032748}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/left_arm_right_outer_knuckle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20767,7 +20768,7 @@ GameObject:
   - component: {fileID: 7489454704572473924}
   - component: {fileID: 7489454704572473925}
   - component: {fileID: 7489454704572473926}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/right_arm_spherical_wrist_2_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20899,7 +20900,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704586507339}
   - component: {fileID: 7489454704586507338}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20944,7 +20945,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704590581778}
   - component: {fileID: 7489454704590581777}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20989,7 +20990,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704614738720}
   - component: {fileID: 7489454704614738719}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21037,7 +21038,7 @@ GameObject:
   - component: {fileID: 7489454704627423531}
   - component: {fileID: 7489454704627423532}
   - component: {fileID: 7489454704627423533}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/left_arm_forearm_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21169,7 +21170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704631151881}
   - component: {fileID: 7489454704631151880}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21214,7 +21215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489454704638764715}
   - component: {fileID: 7489454704638764714}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21262,7 +21263,7 @@ GameObject:
   - component: {fileID: 7489454704640218980}
   - component: {fileID: 7489454704640218981}
   - component: {fileID: 7489454704640218982}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/left_arm_spherical_wrist_2_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21397,7 +21398,7 @@ GameObject:
   - component: {fileID: 7489454704644447963}
   - component: {fileID: 7489454704644447964}
   - component: {fileID: 7489454704644447965}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gopher/right_arm_forearm_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21896,18 +21897,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_base_link
       objectReference: {fileID: 0}
+    - target: {fileID: 4653688659977863003, guid: cd0874c12f5844406abdc8564c3da808, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8780227997601881631, guid: cd0874c12f5844406abdc8564c3da808, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8927274781647487212, guid: cd0874c12f5844406abdc8564c3da808, type: 3}
     - {fileID: 5459670100685522246, guid: cd0874c12f5844406abdc8564c3da808, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cd0874c12f5844406abdc8564c3da808, type: 3}
---- !u!4 &8493659125062457975 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1310664753037489586, guid: cd0874c12f5844406abdc8564c3da808, type: 3}
-  m_PrefabInstance: {fileID: 7489454702518005701}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2176999518410191322 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8780227997601881631, guid: cd0874c12f5844406abdc8564c3da808, type: 3}
+  m_PrefabInstance: {fileID: 7489454702518005701}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8493659125062457975 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1310664753037489586, guid: cd0874c12f5844406abdc8564c3da808, type: 3}
   m_PrefabInstance: {fileID: 7489454702518005701}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7489454702556036589
@@ -21964,6 +21973,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3477b703eb3f7f2e7a68422a48356d5c, type: 3}
       propertyPath: m_Name
       value: robotiq_arg2f_85_outer_knuckle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3477b703eb3f7f2e7a68422a48356d5c, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 3477b703eb3f7f2e7a68422a48356d5c, type: 3}
@@ -22062,6 +22075,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: d435
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c67b7312514dba5bf89c85a5ec8a5efc, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c67b7312514dba5bf89c85a5ec8a5efc, type: 3}
 --- !u!4 &6946057104469259589 stripped
@@ -22076,6 +22093,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7489454703543513197}
     m_Modifications:
+    - target: {fileID: 5214182253065464476, guid: 2be5954697c224a69a2ee98278164d10, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5783696546959385827, guid: 2be5954697c224a69a2ee98278164d10, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -22124,6 +22145,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: shoulder_link
       objectReference: {fileID: 0}
+    - target: {fileID: 8196666276598603837, guid: 2be5954697c224a69a2ee98278164d10, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7285966367647780609, guid: 2be5954697c224a69a2ee98278164d10, type: 3}
     - {fileID: 1474154366239145869, guid: 2be5954697c224a69a2ee98278164d10, type: 3}
@@ -22145,6 +22170,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7489454703361211352}
     m_Modifications:
+    - target: {fileID: 2420851567163106334, guid: 1b7b86da8d2bfbbec8e2ee6c57b1d285, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2812203670266884577, guid: 1b7b86da8d2bfbbec8e2ee6c57b1d285, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -22152,6 +22181,10 @@ PrefabInstance:
     - target: {fileID: 3589051416659370217, guid: 1b7b86da8d2bfbbec8e2ee6c57b1d285, type: 3}
       propertyPath: m_Name
       value: r_wheel_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589051416659370217, guid: 1b7b86da8d2bfbbec8e2ee6c57b1d285, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6829212862400465769, guid: 1b7b86da8d2bfbbec8e2ee6c57b1d285, type: 3}
       propertyPath: m_RootOrder
@@ -22271,18 +22304,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_inner_finger
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2846dcee480d28db99a041af1d4e31b4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 2846dcee480d28db99a041af1d4e31b4, type: 3}
     - {fileID: -5754084199372789682, guid: 2846dcee480d28db99a041af1d4e31b4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2846dcee480d28db99a041af1d4e31b4, type: 3}
---- !u!1 &7723262757266381450 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2846dcee480d28db99a041af1d4e31b4, type: 3}
-  m_PrefabInstance: {fileID: 7489454702599399387}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6946057104435019824 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2846dcee480d28db99a041af1d4e31b4, type: 3}
+  m_PrefabInstance: {fileID: 7489454702599399387}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7723262757266381450 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2846dcee480d28db99a041af1d4e31b4, type: 3}
   m_PrefabInstance: {fileID: 7489454702599399387}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7489454702601232473
@@ -22292,6 +22329,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7489454704586507339}
     m_Modifications:
+    - target: {fileID: 5214182253065464476, guid: 2be5954697c224a69a2ee98278164d10, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5783696546959385827, guid: 2be5954697c224a69a2ee98278164d10, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -22344,6 +22385,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: shoulder_link
       objectReference: {fileID: 0}
+    - target: {fileID: 8196666276598603837, guid: 2be5954697c224a69a2ee98278164d10, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2be5954697c224a69a2ee98278164d10, type: 3}
 --- !u!4 &4011636355469018298 stripped
@@ -22362,6 +22407,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dd857b0677f5a4f229c4dbb17aaca03b, type: 2}
+    - target: {fileID: 1272255473712329463, guid: e39aad7858fabe5e5884c00199898c6e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6984865813102150970, guid: e39aad7858fabe5e5884c00199898c6e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -22409,6 +22458,10 @@ PrefabInstance:
     - target: {fileID: 8088189177708889745, guid: e39aad7858fabe5e5884c00199898c6e, type: 3}
       propertyPath: m_Name
       value: spherical_wrist_1_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088189177708889745, guid: e39aad7858fabe5e5884c00199898c6e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e39aad7858fabe5e5884c00199898c6e, type: 3}
@@ -22488,6 +22541,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_inner_finger
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca577c395ad6fd9be9d189d29a22ab48, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca577c395ad6fd9be9d189d29a22ab48, type: 3}
 --- !u!4 &6946057104355711470 stripped
@@ -22553,6 +22610,14 @@ PrefabInstance:
     - target: {fileID: 5424442045685090418, guid: 807202cce04f11ab1af8a1beb79ef0ec, type: 3}
       propertyPath: m_Name
       value: l_wheel_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 5424442045685090418, guid: 807202cce04f11ab1af8a1beb79ef0ec, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8143454442913761697, guid: 807202cce04f11ab1af8a1beb79ef0ec, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 807202cce04f11ab1af8a1beb79ef0ec, type: 3}
@@ -22632,6 +22697,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_inner_knuckle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78d487c28efb88e6a8f25138b6affe6d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78d487c28efb88e6a8f25138b6affe6d, type: 3}
 --- !u!4 &6946057104312793702 stripped
@@ -22693,6 +22762,14 @@ PrefabInstance:
     - target: {fileID: 4653688659977863003, guid: cd0874c12f5844406abdc8564c3da808, type: 3}
       propertyPath: m_Name
       value: robotiq_arg2f_base_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653688659977863003, guid: cd0874c12f5844406abdc8564c3da808, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8780227997601881631, guid: cd0874c12f5844406abdc8564c3da808, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8927274781647487212, guid: cd0874c12f5844406abdc8564c3da808, type: 3}
@@ -22775,6 +22852,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_inner_knuckle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5407f7eceff92d56f931acf3b1d4b2be, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 5407f7eceff92d56f931acf3b1d4b2be, type: 3}
     - {fileID: -5754084199372789682, guid: 5407f7eceff92d56f931acf3b1d4b2be, type: 3}
@@ -22800,6 +22881,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dd857b0677f5a4f229c4dbb17aaca03b, type: 2}
+    - target: {fileID: 1272255473712329463, guid: e39aad7858fabe5e5884c00199898c6e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6984865813102150970, guid: e39aad7858fabe5e5884c00199898c6e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -22848,6 +22933,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: spherical_wrist_1_link
       objectReference: {fileID: 0}
+    - target: {fileID: 8088189177708889745, guid: e39aad7858fabe5e5884c00199898c6e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e39aad7858fabe5e5884c00199898c6e, type: 3}
 --- !u!4 &504641941644760540 stripped
@@ -22865,6 +22954,10 @@ PrefabInstance:
     - target: {fileID: 346251138735752365, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
       propertyPath: m_Name
       value: half_arm_1_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 346251138735752365, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4947128099148051341, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
       propertyPath: m_RootOrder
@@ -22910,18 +23003,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7324500774427206800, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5339638033055388560, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
     - {fileID: 8608340486478440522, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
---- !u!1 &165008085731838718 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7324500774427206800, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
-  m_PrefabInstance: {fileID: 7489454702767353454}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2542380484520910307 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4947128099148051341, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
+  m_PrefabInstance: {fileID: 7489454702767353454}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &165008085731838718 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7324500774427206800, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
   m_PrefabInstance: {fileID: 7489454702767353454}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7489454702809762679
@@ -22986,6 +23083,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2846dcee480d28db99a041af1d4e31b4, type: 3}
       propertyPath: m_Name
       value: robotiq_arg2f_85_inner_finger
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2846dcee480d28db99a041af1d4e31b4, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 2846dcee480d28db99a041af1d4e31b4, type: 3}
@@ -23060,6 +23161,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: half_arm_2_link
       objectReference: {fileID: 0}
+    - target: {fileID: 8730486796124797751, guid: 4e5b385b3493faa2e9c0dc7cf2d828fb, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100709019994993247, guid: 4e5b385b3493faa2e9c0dc7cf2d828fb, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e5b385b3493faa2e9c0dc7cf2d828fb, type: 3}
 --- !u!4 &3783600758059099370 stripped
@@ -23125,6 +23234,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 39d261406c0967f559723c621cc192a5, type: 3}
       propertyPath: m_Name
       value: robotiq_arg2f_85_outer_knuckle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 39d261406c0967f559723c621cc192a5, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d261406c0967f559723c621cc192a5, type: 3}
@@ -23204,6 +23317,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_outer_knuckle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 39d261406c0967f559723c621cc192a5, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d261406c0967f559723c621cc192a5, type: 3}
 --- !u!4 &6946057104100277701 stripped
@@ -23221,6 +23338,14 @@ PrefabInstance:
     - target: {fileID: 1909912928482705309, guid: ecdd1e2e354bdc00ca4b7829c8f7623d, type: 3}
       propertyPath: m_Name
       value: spherical_wrist_2_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 1909912928482705309, guid: ecdd1e2e354bdc00ca4b7829c8f7623d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4358937934029525297, guid: ecdd1e2e354bdc00ca4b7829c8f7623d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4366139386632517657, guid: ecdd1e2e354bdc00ca4b7829c8f7623d, type: 3}
       propertyPath: m_RootOrder
@@ -23339,6 +23464,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_inner_knuckle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78d487c28efb88e6a8f25138b6affe6d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78d487c28efb88e6a8f25138b6affe6d, type: 3}
 --- !u!4 &6946057103950020549 stripped
@@ -23356,6 +23485,10 @@ PrefabInstance:
     - target: {fileID: 346251138735752365, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
       propertyPath: m_Name
       value: half_arm_1_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 346251138735752365, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4947128099148051341, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
       propertyPath: m_RootOrder
@@ -23405,6 +23538,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dd857b0677f5a4f229c4dbb17aaca03b, type: 2}
+    - target: {fileID: 7324500774427206800, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
 --- !u!4 &2542380484827707707 stripped
@@ -23424,8 +23561,16 @@ PrefabInstance:
       value: spherical_wrist_2_link
       objectReference: {fileID: 0}
     - target: {fileID: 1909912928482705309, guid: ecdd1e2e354bdc00ca4b7829c8f7623d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1909912928482705309, guid: ecdd1e2e354bdc00ca4b7829c8f7623d, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4358937934029525297, guid: ecdd1e2e354bdc00ca4b7829c8f7623d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4366139386632517657, guid: ecdd1e2e354bdc00ca4b7829c8f7623d, type: 3}
       propertyPath: m_RootOrder
@@ -23549,6 +23694,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_outer_finger
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 365f3eede2caf3f2db2100043fcc2f1f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 365f3eede2caf3f2db2100043fcc2f1f, type: 3}
     - {fileID: -5754084199372789682, guid: 365f3eede2caf3f2db2100043fcc2f1f, type: 3}
@@ -23622,6 +23771,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_inner_finger
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca577c395ad6fd9be9d189d29a22ab48, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca577c395ad6fd9be9d189d29a22ab48, type: 3}
 --- !u!4 &6946057103853236207 stripped
@@ -23683,6 +23836,14 @@ PrefabInstance:
     - target: {fileID: 6186505834312647654, guid: c98dfddce84a0aa2596928a06a4a7c0a, type: 3}
       propertyPath: m_Name
       value: laser_link_collision
+      objectReference: {fileID: 0}
+    - target: {fileID: 6186505834312647654, guid: c98dfddce84a0aa2596928a06a4a7c0a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258179824892638506, guid: c98dfddce84a0aa2596928a06a4a7c0a, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6442019449771096928, guid: c98dfddce84a0aa2596928a06a4a7c0a, type: 3}
@@ -23757,6 +23918,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: forearm_link
       objectReference: {fileID: 0}
+    - target: {fileID: 7935769152661019622, guid: e0e1990c3510f5a699a6ea3d2fa31b94, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362518318356845718, guid: e0e1990c3510f5a699a6ea3d2fa31b94, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0e1990c3510f5a699a6ea3d2fa31b94, type: 3}
 --- !u!4 &6458701522899450529 stripped
@@ -23771,6 +23940,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7489454703834218897}
     m_Modifications:
+    - target: {fileID: 5214182253065464476, guid: 2be5954697c224a69a2ee98278164d10, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5783696546959385827, guid: 2be5954697c224a69a2ee98278164d10, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -23822,6 +23995,10 @@ PrefabInstance:
     - target: {fileID: 8196666276598603837, guid: 2be5954697c224a69a2ee98278164d10, type: 3}
       propertyPath: m_Name
       value: shoulder_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 8196666276598603837, guid: 2be5954697c224a69a2ee98278164d10, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2be5954697c224a69a2ee98278164d10, type: 3}
@@ -23884,6 +24061,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a393e18620e42de9580449430c0ace70, type: 3}
       propertyPath: m_Name
       value: torso
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a393e18620e42de9580449430c0ace70, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: a393e18620e42de9580449430c0ace70, type: 3}
@@ -23958,6 +24139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_inner_knuckle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78d487c28efb88e6a8f25138b6affe6d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78d487c28efb88e6a8f25138b6affe6d, type: 3}
 --- !u!4 &6946057103671380574 stripped
@@ -24019,6 +24204,14 @@ PrefabInstance:
     - target: {fileID: 4653688659977863003, guid: cd0874c12f5844406abdc8564c3da808, type: 3}
       propertyPath: m_Name
       value: robotiq_arg2f_base_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653688659977863003, guid: cd0874c12f5844406abdc8564c3da808, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8780227997601881631, guid: cd0874c12f5844406abdc8564c3da808, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8927274781647487212, guid: cd0874c12f5844406abdc8564c3da808, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -24086,6 +24279,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_base_link
       objectReference: {fileID: 0}
+    - target: {fileID: 4653688659977863003, guid: cd0874c12f5844406abdc8564c3da808, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8780227997601881631, guid: cd0874c12f5844406abdc8564c3da808, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8927274781647487212, guid: cd0874c12f5844406abdc8564c3da808, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -24104,9 +24305,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7489454703217025638}
     m_Modifications:
+    - target: {fileID: 797104751641866256, guid: 56b5d46edddfc0a5ab3670f82522cfb7, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1091232811646455467, guid: 56b5d46edddfc0a5ab3670f82522cfb7, type: 3}
       propertyPath: m_Name
       value: base_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 1091232811646455467, guid: 56b5d46edddfc0a5ab3670f82522cfb7, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2109062056562986961, guid: 56b5d46edddfc0a5ab3670f82522cfb7, type: 3}
       propertyPath: m_RootOrder
@@ -24218,6 +24427,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_inner_knuckle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5407f7eceff92d56f931acf3b1d4b2be, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 5407f7eceff92d56f931acf3b1d4b2be, type: 3}
     - {fileID: -5754084199372789682, guid: 5407f7eceff92d56f931acf3b1d4b2be, type: 3}
@@ -24239,6 +24452,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7489454704614738720}
     m_Modifications:
+    - target: {fileID: 5214182253065464476, guid: 2be5954697c224a69a2ee98278164d10, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5783696546959385827, guid: 2be5954697c224a69a2ee98278164d10, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -24287,6 +24504,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: shoulder_link
       objectReference: {fileID: 0}
+    - target: {fileID: 8196666276598603837, guid: 2be5954697c224a69a2ee98278164d10, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7285966367647780609, guid: 2be5954697c224a69a2ee98278164d10, type: 3}
     - {fileID: 1474154366239145869, guid: 2be5954697c224a69a2ee98278164d10, type: 3}
@@ -24312,9 +24533,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: laser_link
       objectReference: {fileID: 0}
+    - target: {fileID: 3217663806972988930, guid: 3c6839c198b469ec9ad010a93a39bef1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4078537759038351225, guid: 3c6839c198b469ec9ad010a93a39bef1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5828580950881329918, guid: 3c6839c198b469ec9ad010a93a39bef1, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6185958281426657699, guid: 3c6839c198b469ec9ad010a93a39bef1, type: 3}
       propertyPath: m_RootOrder
@@ -24438,6 +24667,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_inner_finger
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca577c395ad6fd9be9d189d29a22ab48, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca577c395ad6fd9be9d189d29a22ab48, type: 3}
 --- !u!4 &6946057103445705735 stripped
@@ -24455,6 +24688,10 @@ PrefabInstance:
     - target: {fileID: 346251138735752365, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
       propertyPath: m_Name
       value: half_arm_1_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 346251138735752365, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4947128099148051341, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
       propertyPath: m_RootOrder
@@ -24504,6 +24741,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dd857b0677f5a4f229c4dbb17aaca03b, type: 2}
+    - target: {fileID: 7324500774427206800, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
 --- !u!4 &2542380484777541380 stripped
@@ -24566,18 +24807,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: forearm_link
       objectReference: {fileID: 0}
+    - target: {fileID: 7935769152661019622, guid: e0e1990c3510f5a699a6ea3d2fa31b94, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362518318356845718, guid: e0e1990c3510f5a699a6ea3d2fa31b94, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4804992792353057673, guid: e0e1990c3510f5a699a6ea3d2fa31b94, type: 3}
     - {fileID: 8066493486879602586, guid: e0e1990c3510f5a699a6ea3d2fa31b94, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e0e1990c3510f5a699a6ea3d2fa31b94, type: 3}
---- !u!4 &6458701523304927934 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4489536390841890132, guid: e0e1990c3510f5a699a6ea3d2fa31b94, type: 3}
-  m_PrefabInstance: {fileID: 7489454703584782314}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1432779399854814076 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8362518318356845718, guid: e0e1990c3510f5a699a6ea3d2fa31b94, type: 3}
+  m_PrefabInstance: {fileID: 7489454703584782314}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6458701523304927934 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4489536390841890132, guid: e0e1990c3510f5a699a6ea3d2fa31b94, type: 3}
   m_PrefabInstance: {fileID: 7489454703584782314}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7489454703602112425
@@ -24635,18 +24884,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_outer_knuckle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3477b703eb3f7f2e7a68422a48356d5c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 3477b703eb3f7f2e7a68422a48356d5c, type: 3}
     - {fileID: -5754084199372789682, guid: 3477b703eb3f7f2e7a68422a48356d5c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3477b703eb3f7f2e7a68422a48356d5c, type: 3}
---- !u!4 &6946057103423860802 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3477b703eb3f7f2e7a68422a48356d5c, type: 3}
-  m_PrefabInstance: {fileID: 7489454703602112425}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7723262756255181560 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3477b703eb3f7f2e7a68422a48356d5c, type: 3}
+  m_PrefabInstance: {fileID: 7489454703602112425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6946057103423860802 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3477b703eb3f7f2e7a68422a48356d5c, type: 3}
   m_PrefabInstance: {fileID: 7489454703602112425}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7489454703612722286
@@ -24700,14 +24953,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 65702495048144492, guid: 283da4a2d971e4c67ae73a210a69c85a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 283da4a2d971e4c67ae73a210a69c85a, type: 3}
       propertyPath: m_Name
       value: base_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 283da4a2d971e4c67ae73a210a69c85a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2476952962555639312, guid: 283da4a2d971e4c67ae73a210a69c85a, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7720897672290341269, guid: 283da4a2d971e4c67ae73a210a69c85a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 14d1624401c38a249a68d794534579fa, type: 2}
+    - target: {fileID: 8934777400606672865, guid: 283da4a2d971e4c67ae73a210a69c85a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 283da4a2d971e4c67ae73a210a69c85a, type: 3}
 --- !u!4 &6946057103380028293 stripped
@@ -24782,6 +25051,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_inner_knuckle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5407f7eceff92d56f931acf3b1d4b2be, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 5407f7eceff92d56f931acf3b1d4b2be, type: 3}
     - {fileID: -5754084199372789682, guid: 5407f7eceff92d56f931acf3b1d4b2be, type: 3}
@@ -24850,6 +25123,14 @@ PrefabInstance:
     - target: {fileID: 8730486796124797751, guid: 4e5b385b3493faa2e9c0dc7cf2d828fb, type: 3}
       propertyPath: m_Name
       value: half_arm_2_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730486796124797751, guid: 4e5b385b3493faa2e9c0dc7cf2d828fb, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100709019994993247, guid: 4e5b385b3493faa2e9c0dc7cf2d828fb, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7823300052565730884, guid: 4e5b385b3493faa2e9c0dc7cf2d828fb, type: 3}
@@ -24924,6 +25205,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: half_arm_2_link
       objectReference: {fileID: 0}
+    - target: {fileID: 8730486796124797751, guid: 4e5b385b3493faa2e9c0dc7cf2d828fb, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100709019994993247, guid: 4e5b385b3493faa2e9c0dc7cf2d828fb, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e5b385b3493faa2e9c0dc7cf2d828fb, type: 3}
 --- !u!4 &3783600756801123647 stripped
@@ -24938,9 +25227,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7489454702730075841}
     m_Modifications:
+    - target: {fileID: 797104751641866256, guid: 56b5d46edddfc0a5ab3670f82522cfb7, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1091232811646455467, guid: 56b5d46edddfc0a5ab3670f82522cfb7, type: 3}
       propertyPath: m_Name
       value: base_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 1091232811646455467, guid: 56b5d46edddfc0a5ab3670f82522cfb7, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2109062056562986961, guid: 56b5d46edddfc0a5ab3670f82522cfb7, type: 3}
       propertyPath: m_RootOrder
@@ -25055,18 +25352,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: base_link_collision
       objectReference: {fileID: 0}
+    - target: {fileID: 2732182625445700886, guid: a7c86553bc2a59476a5b036f5efe3441, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3308760071249642687, guid: a7c86553bc2a59476a5b036f5efe3441, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1836616159871519293, guid: a7c86553bc2a59476a5b036f5efe3441, type: 3}
     - {fileID: 3999105407279527490, guid: a7c86553bc2a59476a5b036f5efe3441, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a7c86553bc2a59476a5b036f5efe3441, type: 3}
---- !u!4 &9137912665612331561 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1819314031085617080, guid: a7c86553bc2a59476a5b036f5efe3441, type: 3}
-  m_PrefabInstance: {fileID: 7489454703774815633}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5333652421689512238 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3308760071249642687, guid: a7c86553bc2a59476a5b036f5efe3441, type: 3}
+  m_PrefabInstance: {fileID: 7489454703774815633}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &9137912665612331561 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1819314031085617080, guid: a7c86553bc2a59476a5b036f5efe3441, type: 3}
   m_PrefabInstance: {fileID: 7489454703774815633}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7489454703803430757
@@ -25136,18 +25441,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_outer_finger
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 365f3eede2caf3f2db2100043fcc2f1f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 365f3eede2caf3f2db2100043fcc2f1f, type: 3}
     - {fileID: -5754084199372789682, guid: 365f3eede2caf3f2db2100043fcc2f1f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 365f3eede2caf3f2db2100043fcc2f1f, type: 3}
---- !u!4 &6946057103222608014 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 365f3eede2caf3f2db2100043fcc2f1f, type: 3}
-  m_PrefabInstance: {fileID: 7489454703803430757}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7723262756322396724 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 365f3eede2caf3f2db2100043fcc2f1f, type: 3}
+  m_PrefabInstance: {fileID: 7489454703803430757}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6946057103222608014 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 365f3eede2caf3f2db2100043fcc2f1f, type: 3}
   m_PrefabInstance: {fileID: 7489454703803430757}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7489454703805145628
@@ -25160,6 +25469,10 @@ PrefabInstance:
     - target: {fileID: 7475430314484176440, guid: 10f4ddce4b32f0b4689f1d615dd88f6b, type: 3}
       propertyPath: m_Name
       value: estop_link_collision
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475430314484176440, guid: 10f4ddce4b32f0b4689f1d615dd88f6b, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7817195388914238244, guid: 10f4ddce4b32f0b4689f1d615dd88f6b, type: 3}
       propertyPath: m_RootOrder
@@ -25205,6 +25518,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8008851967290267236, guid: 10f4ddce4b32f0b4689f1d615dd88f6b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6085382674627877847, guid: 10f4ddce4b32f0b4689f1d615dd88f6b, type: 3}
     - {fileID: 4126768020607204764, guid: 10f4ddce4b32f0b4689f1d615dd88f6b, type: 3}
@@ -25229,6 +25546,14 @@ PrefabInstance:
     - target: {fileID: 1909912928482705309, guid: ecdd1e2e354bdc00ca4b7829c8f7623d, type: 3}
       propertyPath: m_Name
       value: spherical_wrist_2_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 1909912928482705309, guid: ecdd1e2e354bdc00ca4b7829c8f7623d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4358937934029525297, guid: ecdd1e2e354bdc00ca4b7829c8f7623d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4366139386632517657, guid: ecdd1e2e354bdc00ca4b7829c8f7623d, type: 3}
       propertyPath: m_RootOrder
@@ -25352,6 +25677,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_inner_finger
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca577c395ad6fd9be9d189d29a22ab48, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca577c395ad6fd9be9d189d29a22ab48, type: 3}
 --- !u!4 &6946057103137793992 stripped
@@ -25426,6 +25755,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_outer_knuckle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3477b703eb3f7f2e7a68422a48356d5c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 3477b703eb3f7f2e7a68422a48356d5c, type: 3}
     - {fileID: -5754084199372789682, guid: 3477b703eb3f7f2e7a68422a48356d5c, type: 3}
@@ -25447,6 +25780,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7489454703594793092}
     m_Modifications:
+    - target: {fileID: 1272255473712329463, guid: e39aad7858fabe5e5884c00199898c6e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6984865813102150970, guid: e39aad7858fabe5e5884c00199898c6e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -25494,6 +25831,10 @@ PrefabInstance:
     - target: {fileID: 8088189177708889745, guid: e39aad7858fabe5e5884c00199898c6e, type: 3}
       propertyPath: m_Name
       value: spherical_wrist_1_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088189177708889745, guid: e39aad7858fabe5e5884c00199898c6e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 529392014382554623, guid: e39aad7858fabe5e5884c00199898c6e, type: 3}
@@ -25580,6 +25921,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_outer_knuckle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 39d261406c0967f559723c621cc192a5, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d261406c0967f559723c621cc192a5, type: 3}
 --- !u!4 &6946057103076806718 stripped
@@ -25594,9 +25939,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7489454703137975192}
     m_Modifications:
+    - target: {fileID: 516523373411717637, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2815930450292775886, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
       propertyPath: m_Name
       value: bracelet_with_vision_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 2815930450292775886, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5996234404961664009, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
       propertyPath: m_RootOrder
@@ -25653,6 +26006,10 @@ PrefabInstance:
     - target: {fileID: 8176350313133807611, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8770751746517864702, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
@@ -25719,6 +26076,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 39d261406c0967f559723c621cc192a5, type: 3}
       propertyPath: m_Name
       value: robotiq_arg2f_85_outer_knuckle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 39d261406c0967f559723c621cc192a5, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d261406c0967f559723c621cc192a5, type: 3}
@@ -25794,6 +26155,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_outer_knuckle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3477b703eb3f7f2e7a68422a48356d5c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 3477b703eb3f7f2e7a68422a48356d5c, type: 3}
     - {fileID: -5754084199372789682, guid: 3477b703eb3f7f2e7a68422a48356d5c, type: 3}
@@ -25815,9 +26180,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7489454704354079609}
     m_Modifications:
+    - target: {fileID: 797104751641866256, guid: 56b5d46edddfc0a5ab3670f82522cfb7, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1091232811646455467, guid: 56b5d46edddfc0a5ab3670f82522cfb7, type: 3}
       propertyPath: m_Name
       value: base_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 1091232811646455467, guid: 56b5d46edddfc0a5ab3670f82522cfb7, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2109062056562986961, guid: 56b5d46edddfc0a5ab3670f82522cfb7, type: 3}
       propertyPath: m_RootOrder
@@ -25929,18 +26302,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_inner_finger
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2846dcee480d28db99a041af1d4e31b4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 2846dcee480d28db99a041af1d4e31b4, type: 3}
     - {fileID: -5754084199372789682, guid: 2846dcee480d28db99a041af1d4e31b4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2846dcee480d28db99a041af1d4e31b4, type: 3}
---- !u!4 &6946057102933620785 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2846dcee480d28db99a041af1d4e31b4, type: 3}
-  m_PrefabInstance: {fileID: 7489454704101072858}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7723262756620575371 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2846dcee480d28db99a041af1d4e31b4, type: 3}
+  m_PrefabInstance: {fileID: 7489454704101072858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6946057102933620785 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2846dcee480d28db99a041af1d4e31b4, type: 3}
   m_PrefabInstance: {fileID: 7489454704101072858}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7489454704144993092
@@ -25950,6 +26327,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7489454703966280472}
     m_Modifications:
+    - target: {fileID: 1272255473712329463, guid: e39aad7858fabe5e5884c00199898c6e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6984865813102150970, guid: e39aad7858fabe5e5884c00199898c6e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -25997,6 +26378,10 @@ PrefabInstance:
     - target: {fileID: 8088189177708889745, guid: e39aad7858fabe5e5884c00199898c6e, type: 3}
       propertyPath: m_Name
       value: spherical_wrist_1_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088189177708889745, guid: e39aad7858fabe5e5884c00199898c6e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 529392014382554623, guid: e39aad7858fabe5e5884c00199898c6e, type: 3}
@@ -26070,6 +26455,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4418518315e09431d88180935618d909, type: 3}
       propertyPath: m_Name
       value: robotiq_arg2f_85_outer_finger
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4418518315e09431d88180935618d909, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4418518315e09431d88180935618d909, type: 3}
@@ -26149,6 +26538,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_outer_finger
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4418518315e09431d88180935618d909, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4418518315e09431d88180935618d909, type: 3}
 --- !u!4 &6946057102779113280 stripped
@@ -26227,6 +26620,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_outer_finger
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4418518315e09431d88180935618d909, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4418518315e09431d88180935618d909, type: 3}
 --- !u!4 &6946057102771530015 stripped
@@ -26293,6 +26690,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: torso
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a393e18620e42de9580449430c0ace70, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a393e18620e42de9580449430c0ace70, type: 3}
 --- !u!4 &6946057102800310691 stripped
@@ -26307,9 +26708,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7489454704038516780}
     m_Modifications:
+    - target: {fileID: 516523373411717637, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2815930450292775886, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
       propertyPath: m_Name
       value: bracelet_with_vision_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 2815930450292775886, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2815930450292775886, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
       propertyPath: m_IsActive
@@ -26370,6 +26779,10 @@ PrefabInstance:
     - target: {fileID: 8176350313133807611, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8770751746517864702, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
@@ -26433,18 +26846,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: forearm_link
       objectReference: {fileID: 0}
+    - target: {fileID: 7935769152661019622, guid: e0e1990c3510f5a699a6ea3d2fa31b94, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362518318356845718, guid: e0e1990c3510f5a699a6ea3d2fa31b94, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4804992792353057673, guid: e0e1990c3510f5a699a6ea3d2fa31b94, type: 3}
     - {fileID: 8066493486879602586, guid: e0e1990c3510f5a699a6ea3d2fa31b94, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e0e1990c3510f5a699a6ea3d2fa31b94, type: 3}
---- !u!1 &1432779399544558723 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8362518318356845718, guid: e0e1990c3510f5a699a6ea3d2fa31b94, type: 3}
-  m_PrefabInstance: {fileID: 7489454704347480085}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6458701523866318145 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4489536390841890132, guid: e0e1990c3510f5a699a6ea3d2fa31b94, type: 3}
+  m_PrefabInstance: {fileID: 7489454704347480085}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1432779399544558723 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8362518318356845718, guid: e0e1990c3510f5a699a6ea3d2fa31b94, type: 3}
   m_PrefabInstance: {fileID: 7489454704347480085}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7489454704347828805
@@ -26518,6 +26939,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_inner_knuckle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78d487c28efb88e6a8f25138b6affe6d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78d487c28efb88e6a8f25138b6affe6d, type: 3}
 --- !u!4 &6946057102644917678 stripped
@@ -26583,6 +27008,14 @@ PrefabInstance:
     - target: {fileID: 7935769152661019622, guid: e0e1990c3510f5a699a6ea3d2fa31b94, type: 3}
       propertyPath: m_Name
       value: forearm_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 7935769152661019622, guid: e0e1990c3510f5a699a6ea3d2fa31b94, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362518318356845718, guid: e0e1990c3510f5a699a6ea3d2fa31b94, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0e1990c3510f5a699a6ea3d2fa31b94, type: 3}
@@ -26654,6 +27087,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_outer_finger
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 365f3eede2caf3f2db2100043fcc2f1f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 365f3eede2caf3f2db2100043fcc2f1f, type: 3}
     - {fileID: -5754084199372789682, guid: 365f3eede2caf3f2db2100043fcc2f1f, type: 3}
@@ -26723,6 +27160,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_inner_knuckle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5407f7eceff92d56f931acf3b1d4b2be, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 5407f7eceff92d56f931acf3b1d4b2be, type: 3}
     - {fileID: -5754084199372789682, guid: 5407f7eceff92d56f931acf3b1d4b2be, type: 3}
@@ -26744,9 +27185,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7489454703318003692}
     m_Modifications:
+    - target: {fileID: 516523373411717637, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2815930450292775886, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
       propertyPath: m_Name
       value: bracelet_with_vision_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 2815930450292775886, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5996234404961664009, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
       propertyPath: m_RootOrder
@@ -26792,6 +27241,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8770751746517864702, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6162159245281928326, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
     - {fileID: 9073791316621788386, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
@@ -26803,14 +27256,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8770751746517864702, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
   m_PrefabInstance: {fileID: 7489454704452258959}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &3808079578987393158 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5996234404961664009, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
-  m_PrefabInstance: {fileID: 7489454704452258959}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6972957719659880074 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 516523373411717637, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
+  m_PrefabInstance: {fileID: 7489454704452258959}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3808079578987393158 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5996234404961664009, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
   m_PrefabInstance: {fileID: 7489454704452258959}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7489454704459281517
@@ -26868,6 +27321,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: half_arm_2_link
       objectReference: {fileID: 0}
+    - target: {fileID: 8730486796124797751, guid: 4e5b385b3493faa2e9c0dc7cf2d828fb, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100709019994993247, guid: 4e5b385b3493faa2e9c0dc7cf2d828fb, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7823300052565730884, guid: 4e5b385b3493faa2e9c0dc7cf2d828fb, type: 3}
     - {fileID: 4451976489625561259, guid: 4e5b385b3493faa2e9c0dc7cf2d828fb, type: 3}
@@ -26892,6 +27353,14 @@ PrefabInstance:
     - target: {fileID: 1909912928482705309, guid: ecdd1e2e354bdc00ca4b7829c8f7623d, type: 3}
       propertyPath: m_Name
       value: spherical_wrist_2_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 1909912928482705309, guid: ecdd1e2e354bdc00ca4b7829c8f7623d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4358937934029525297, guid: ecdd1e2e354bdc00ca4b7829c8f7623d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4366139386632517657, guid: ecdd1e2e354bdc00ca4b7829c8f7623d, type: 3}
       propertyPath: m_RootOrder
@@ -27006,6 +27475,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_outer_finger
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 365f3eede2caf3f2db2100043fcc2f1f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 365f3eede2caf3f2db2100043fcc2f1f, type: 3}
     - {fileID: -5754084199372789682, guid: 365f3eede2caf3f2db2100043fcc2f1f, type: 3}
@@ -27087,6 +27560,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_outer_finger
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4418518315e09431d88180935618d909, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4418518315e09431d88180935618d909, type: 3}
 --- !u!4 &6946057102440755827 stripped
@@ -27101,9 +27578,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7489454704332190572}
     m_Modifications:
+    - target: {fileID: 797104751641866256, guid: 56b5d46edddfc0a5ab3670f82522cfb7, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1091232811646455467, guid: 56b5d46edddfc0a5ab3670f82522cfb7, type: 3}
       propertyPath: m_Name
       value: base_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 1091232811646455467, guid: 56b5d46edddfc0a5ab3670f82522cfb7, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2109062056562986961, guid: 56b5d46edddfc0a5ab3670f82522cfb7, type: 3}
       propertyPath: m_RootOrder
@@ -27153,14 +27638,14 @@ PrefabInstance:
     - {fileID: 8738268872367581609, guid: 56b5d46edddfc0a5ab3670f82522cfb7, type: 3}
     - {fileID: 482411037957361086, guid: 56b5d46edddfc0a5ab3670f82522cfb7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 56b5d46edddfc0a5ab3670f82522cfb7, type: 3}
---- !u!1 &7845272557053721420 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 797104751641866256, guid: 56b5d46edddfc0a5ab3670f82522cfb7, type: 3}
-  m_PrefabInstance: {fileID: 7489454704568372060}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8839167057449452685 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2109062056562986961, guid: 56b5d46edddfc0a5ab3670f82522cfb7, type: 3}
+  m_PrefabInstance: {fileID: 7489454704568372060}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7845272557053721420 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 797104751641866256, guid: 56b5d46edddfc0a5ab3670f82522cfb7, type: 3}
   m_PrefabInstance: {fileID: 7489454704568372060}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7489454704587963010
@@ -27174,10 +27659,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: estop_link
       objectReference: {fileID: 0}
+    - target: {fileID: 1302334530095814695, guid: 0ee530d63faaa4c6d983618d39a29965, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4578648343666445806, guid: 0ee530d63faaa4c6d983618d39a29965, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1189b1aa39be2febb9a7ce8ac2f9b27b, type: 2}
+    - target: {fileID: 6429968596725213823, guid: 0ee530d63faaa4c6d983618d39a29965, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7632640897158434720, guid: 0ee530d63faaa4c6d983618d39a29965, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -27296,18 +27789,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_inner_finger
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2846dcee480d28db99a041af1d4e31b4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 2846dcee480d28db99a041af1d4e31b4, type: 3}
     - {fileID: -5754084199372789682, guid: 2846dcee480d28db99a041af1d4e31b4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2846dcee480d28db99a041af1d4e31b4, type: 3}
---- !u!4 &6946057102425987683 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2846dcee480d28db99a041af1d4e31b4, type: 3}
-  m_PrefabInstance: {fileID: 7489454704600251784}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7723262756045865177 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2846dcee480d28db99a041af1d4e31b4, type: 3}
+  m_PrefabInstance: {fileID: 7489454704600251784}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6946057102425987683 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2846dcee480d28db99a041af1d4e31b4, type: 3}
   m_PrefabInstance: {fileID: 7489454704600251784}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7489454704624643576
@@ -27320,6 +27817,10 @@ PrefabInstance:
     - target: {fileID: 346251138735752365, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
       propertyPath: m_Name
       value: half_arm_1_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 346251138735752365, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4947128099148051341, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
       propertyPath: m_RootOrder
@@ -27365,18 +27866,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7324500774427206800, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5339638033055388560, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
     - {fileID: 8608340486478440522, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
---- !u!4 &2542380485843426933 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4947128099148051341, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
-  m_PrefabInstance: {fileID: 7489454704624643576}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &165008085449509224 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7324500774427206800, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
+  m_PrefabInstance: {fileID: 7489454704624643576}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2542380485843426933 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4947128099148051341, guid: bb2e9169aa3b52532bbad3712f1d9508, type: 3}
   m_PrefabInstance: {fileID: 7489454704624643576}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7489454704641432105
@@ -27386,9 +27891,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7489454702684941859}
     m_Modifications:
+    - target: {fileID: 516523373411717637, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2815930450292775886, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
       propertyPath: m_Name
       value: bracelet_with_vision_link
+      objectReference: {fileID: 0}
+    - target: {fileID: 2815930450292775886, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5996234404961664009, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
       propertyPath: m_RootOrder
@@ -27434,15 +27947,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8770751746517864702, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6162159245281928326, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
     - {fileID: 9073791316621788386, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
     - {fileID: 6624929800803933853, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
     - {fileID: 8176350313133807611, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
---- !u!1 &2186527722645375703 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8770751746517864702, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
+--- !u!4 &3808079579125442080 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5996234404961664009, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
   m_PrefabInstance: {fileID: 7489454704641432105}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &6972957719521364012 stripped
@@ -27450,8 +27967,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 516523373411717637, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
   m_PrefabInstance: {fileID: 7489454704641432105}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &3808079579125442080 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5996234404961664009, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
+--- !u!1 &2186527722645375703 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8770751746517864702, guid: 5df6815905a73972782652ea3b4c87af, type: 3}
   m_PrefabInstance: {fileID: 7489454704641432105}
   m_PrefabAsset: {fileID: 0}

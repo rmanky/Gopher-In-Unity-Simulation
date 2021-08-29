@@ -250,12 +250,12 @@ public class UIManager : MonoBehaviour
         {
             UIIndex = 5;
             UIs[UIIndex].SetActive(true);
-            cameraDisplayRect.sizeDelta = new Vector2 (1462, 823);
+            cameraDisplayRect.sizeDelta = new Vector2 (1920, 1080);
         }
         else if (gameManager.cameraFOVIndex == 1)
         {
             UIIndex = 4;
-            cameraDisplayRect.sizeDelta = new Vector2 (1920, 823);
+            cameraDisplayRect.sizeDelta = new Vector2 (2560, 1080);
         }
     }
 
