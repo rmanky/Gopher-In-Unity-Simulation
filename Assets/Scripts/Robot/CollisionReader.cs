@@ -55,7 +55,7 @@ public class CollisionReader : MonoBehaviour
     {
         if (!collisionAudio.isPlaying)
         {
-            collisionAudio.volume = relativeSpeed*0.3f;
+            collisionAudio.volume = relativeSpeed*0.15f + 0.3f;
             collisionAudio.Play();
 
             // Temporary
