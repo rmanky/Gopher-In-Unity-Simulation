@@ -45,7 +45,7 @@ public class KeyboardJointControl : MonoBehaviour
         joint1Rotation = joint1OffsetDeg;
         joint3Rotation = joint3OffsetDeg;
 
-        objectPos = new Vector3(objectRangeX[0], 0, objectRangeZ[1]);
+        objectPos = new Vector3(objectRangeX[1], 0, objectRangeZ[1]);
     }
 
     // Update is called once per frame
