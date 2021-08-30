@@ -231,7 +231,9 @@ public class GameManager : MonoBehaviour
 
             // Temp
             int ii = 0;
-            if (Random.Range(0f, 1f) > 0.5)
+            float r = Random.Range(0f, 1f);
+            Debug.Log(r);
+            if (r > 0.5f)
                 ii = 0;
             else
                 ii = 2;
@@ -269,7 +271,7 @@ public class GameManager : MonoBehaviour
         CharacterWalk characterWalk = character.GetComponent<CharacterWalk>();
         characterWalk.loop = true;
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(Random.Range(1f, 3f));
 
         // In case previous human gets destroyed
         if (characterWalk != null)

@@ -138,18 +138,6 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 598018753}
-    - target: {fileID: 3968069514249780970, guid: 13a35128dcb858342bd6c5885ced9450, type: 3}
-      propertyPath: experimentStatePanel
-      value: 
-      objectReference: {fileID: 694779077}
-    - target: {fileID: 3968069515093202529, guid: 13a35128dcb858342bd6c5885ced9450, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7279874581834887512, guid: 13a35128dcb858342bd6c5885ced9450, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7279874583279694116, guid: 13a35128dcb858342bd6c5885ced9450, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -293,11 +281,6 @@ MonoBehaviour:
   taskIndex: 0
   isRecording: 0
   dataRecorder: {fileID: 1130727459}
---- !u!1 &694779077 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3968069514139543390, guid: 13a35128dcb858342bd6c5885ced9450, type: 3}
-  m_PrefabInstance: {fileID: 532522005}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &730234799
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 598018753}
-  uIManager: {fileID: 0}
+  uIManager: {fileID: 532522006}
   testTask: 
   testLevel: 
   testTrial: 
