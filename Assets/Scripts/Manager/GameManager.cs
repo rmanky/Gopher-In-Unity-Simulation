@@ -232,7 +232,6 @@ public class GameManager : MonoBehaviour
             // Temp
             int ii = 0;
             float r = Random.Range(0f, 1f);
-            Debug.Log(r);
             if (r > 0.5f)
                 ii = 0;
             else
@@ -241,9 +240,11 @@ public class GameManager : MonoBehaviour
             if (taskIndex == 1 || taskIndex == 2)
             {
                 Vector3[] spawnP = new Vector3[]
-                            {new Vector3(-7.4f, 0f, -16f), new Vector3(0f, 0f, 0f), new Vector3(-7.4f, 0f, -6.8f), new Vector3(0f, 180f, 0f)};
+                            {new Vector3(-7.4f, 0f, -16f), new Vector3(0f, 0f, 0f), 
+                             new Vector3(-7.4f, 0f, -6.8f), new Vector3(0f, 180f, 0f)};
                 Vector3[] humanTraj = new Vector3[]
-                            {new Vector3(-7.4f, 0f, -16f), new Vector3(-7.4f, 0f, -11.6f), new Vector3(-7.4f, 0f, -6.8f)};
+                            {new Vector3(-7.4f, 0f, -16f), new Vector3(-7.4f, 0f, -11.6f), 
+                             new Vector3(-7.4f, 0f, -6.8f)};
                 GameObject loopNurse = Instantiate(humanModelPrefab,
                                                    spawnP[ii],
                                                    Quaternion.Euler(spawnP[ii + 1]));
@@ -252,9 +253,11 @@ public class GameManager : MonoBehaviour
             else if (taskIndex == 3)
             {
                 Vector3[] spawnP = new Vector3[]
-                            {new Vector3(-12.4f, 0f, -16.3f), new Vector3(0f, 90f, 0f), new Vector3(-2.4f, 0f, -16.3f), new Vector3(0f, -90f, 0f)};
+                            {new Vector3(-12.4f, 0f, -16.3f), new Vector3(0f, 90f, 0f), 
+                             new Vector3(-2.4f, 0f, -16.3f), new Vector3(0f, -90f, 0f)};
                 Vector3[] humanTraj = new Vector3[]
-                            {new Vector3(-12.4f, 0f, -16.3f), new Vector3(-7.4f, 0f, -16.3f), new Vector3(-2.4f, 0f, -16.3f)};
+                            {new Vector3(-12.4f, 0f, -16.3f), new Vector3(-7.4f, 0f, -16.3f), 
+                             new Vector3(-2.4f, 0f, -16.3f)};
                 GameObject loopNurse = Instantiate(humanModelPrefab,
                                                    spawnP[ii],
                                                    Quaternion.Euler(spawnP[ii + 1]));

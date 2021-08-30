@@ -12,6 +12,11 @@ public class UIManager : MonoBehaviour
     public GameManager gameManager;
     public Experiment experiment;
 
+    // Screen
+    public bool isWideScreen;
+    private Vector2[] resolution;
+    private Vector2[] wideResolution;
+
     // UI
     private GameObject[] UIs;
     private int UIIndex;
@@ -68,6 +73,10 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
+        // Screen
+        resolution = new Vector2[] {new Vector2 (1463, 823), new Vector2 (1920, 823)};
+        wideResolution = new Vector2[] {new Vector2 (1920, 1080), new Vector2 (2560, 1080)};
+
         // UI
         UIs = new GameObject[] {mainMenus, loadingUI, experimentConditionUI, 
                                 experimentUI, wideViewUI, regularViewUI,
@@ -246,16 +255,23 @@ public class UIManager : MonoBehaviour
             UIs[3].SetActive(true);
         else
             UIs[4].SetActive(true);
+
+        Vector2[] displaySize;
+        if (isWideScreen)
+            displaySize = wideResolution;
+        else
+            displaySize = resolution;
+
         if (gameManager.cameraFOVIndex == 0)
         {
             UIIndex = 5;
             UIs[UIIndex].SetActive(true);
-            cameraDisplayRect.sizeDelta = new Vector2 (1920, 1080);
+            cameraDisplayRect.sizeDelta = displaySize[0];
         }
         else if (gameManager.cameraFOVIndex == 1)
         {
             UIIndex = 4;
-            cameraDisplayRect.sizeDelta = new Vector2 (2560, 1080);
+            cameraDisplayRect.sizeDelta = displaySize[1];
         }
     }
 
