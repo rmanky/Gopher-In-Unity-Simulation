@@ -130,6 +130,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3968069514090844527, guid: 13a35128dcb858342bd6c5885ced9450, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968069514090844527, guid: 13a35128dcb858342bd6c5885ced9450, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1589651114}
+    - target: {fileID: 3968069514090844527, guid: 13a35128dcb858342bd6c5885ced9450, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FinishSurvey
+      objectReference: {fileID: 0}
     - target: {fileID: 3968069514249780970, guid: 13a35128dcb858342bd6c5885ced9450, type: 3}
       propertyPath: experiment
       value: 
@@ -138,6 +150,30 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 598018753}
+    - target: {fileID: 3968069514249780970, guid: 13a35128dcb858342bd6c5885ced9450, type: 3}
+      propertyPath: isWideScreen
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968069514309778411, guid: 13a35128dcb858342bd6c5885ced9450, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968069514653105829, guid: 13a35128dcb858342bd6c5885ced9450, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968069514653105829, guid: 13a35128dcb858342bd6c5885ced9450, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1589651114}
+    - target: {fileID: 3968069514653105829, guid: 13a35128dcb858342bd6c5885ced9450, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FinishSurvey
+      objectReference: {fileID: 0}
+    - target: {fileID: 7279874581834887512, guid: 13a35128dcb858342bd6c5885ced9450, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7279874583279694116, guid: 13a35128dcb858342bd6c5885ced9450, type: 3}
       propertyPath: m_RootOrder
       value: 0
