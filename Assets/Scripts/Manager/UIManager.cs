@@ -366,7 +366,7 @@ public class UIManager : MonoBehaviour
             experimentTaskPanelText.text =
                 "Task: \n" + 
                 "\t" + gameManager.tasks[gameManager.taskIndex] + "\n" + 
-                "Level: " + "\tLevel " + string.Format("{0:0}", gameManager.levelIndex+1) + "\n" +
+                "Level: " + "\tLevel " + string.Format("{0:0}", gameManager.levelIndex) + "\n" +
                 "Trial: " + "\tTrial " + string.Format("{0:0}", trialIndex) + "\n" +
                 "FPS: " + string.Format("{0:0}", FPS);
             experimentStatePanelText.text =

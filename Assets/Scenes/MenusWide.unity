@@ -296,11 +296,11 @@ MonoBehaviour:
   - {x: -8, y: 0, z: -3}
   goalPrefab: {fileID: 2075622757900185994, guid: 845719786c1c896ac83165c019c2763e, type: 3}
   tasks:
-  - Human Following
+  - Following
   - Corridor
-  - Crossing
-  - Passing Doors
-  - Exploration
+  - Turning
+  - Door
+  - Searching
   numberBoardPrefab:
   - {fileID: 8338345066636034671, guid: dcdce1e5cbf228aae88c3c4aa418da78, type: 3}
   - {fileID: 8338345066636034671, guid: f1534be41a4ed403b835c890c10ac747, type: 3}

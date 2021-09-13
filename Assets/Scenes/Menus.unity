@@ -202,6 +202,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: FinishSurvey
       objectReference: {fileID: 0}
+    - target: {fileID: 5175743612983717663, guid: ba228af2a943a0c4f902ad923f13c41d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba228af2a943a0c4f902ad923f13c41d, type: 3}
 --- !u!114 &76659645 stripped
@@ -276,11 +280,11 @@ MonoBehaviour:
   - {x: -8, y: 0, z: -3}
   goalPrefab: {fileID: 2075622757900185994, guid: 845719786c1c896ac83165c019c2763e, type: 3}
   tasks:
-  - Human Following
+  - Following
   - Corridor
-  - Crossing
-  - Passing Doors
-  - Exploration
+  - Turning
+  - Door
+  - Searching
   numberBoardPrefab:
   - {fileID: 8338345066636034671, guid: dcdce1e5cbf228aae88c3c4aa418da78, type: 3}
   - {fileID: 8338345066636034671, guid: f1534be41a4ed403b835c890c10ac747, type: 3}
