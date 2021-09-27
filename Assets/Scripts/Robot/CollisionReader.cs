@@ -22,14 +22,14 @@ public class CollisionReader : MonoBehaviour
         collisionAudio = gameObject.AddComponent<AudioSource>();
         collisionAudio.clip = collisionAudioClip;
         collisionAudio.volume = 0.5f;
-        
+
         // Get collision detections
         // robot
         articulationBodyChain = robotRoot.GetComponentsInChildren<ArticulationBody>();
         foreach (ArticulationBody articulationBody in articulationBodyChain)
         {
             GameObject parent = articulationBody.gameObject;
-            ArticulationCollisionDetection collisionDetection = 
+            ArticulationCollisionDetection collisionDetection =
                                            parent.AddComponent<ArticulationCollisionDetection>();
             collisionDetection.setParent(robotRoot);
         }
@@ -61,7 +61,7 @@ public class CollisionReader : MonoBehaviour
             // Temporary
             collisionSelfNames[storageIndex] = self;
             collisionOtherNames[storageIndex] = other;
-            storageIndex = (storageIndex+1) % storageLength;
+            storageIndex = (storageIndex + 1) % storageLength;
         }
     }
 }

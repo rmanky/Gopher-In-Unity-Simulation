@@ -19,7 +19,7 @@ public class CharacterWalk : MonoBehaviour
     private int currentIndex;
     public Vector3 currentTarget;
     private Quaternion currentTargetRotation;
-    
+
     private Animator animator;
 
     private bool isBlocked;
@@ -29,7 +29,7 @@ public class CharacterWalk : MonoBehaviour
         rb = character.GetComponent<Rigidbody>();
         tf = character.GetComponent<Transform>();
         prevPosition = tf.position;
-       
+
         angularSpeedDegree = angularSpeed * Mathf.Rad2Deg;
 
         currentTarget = tf.position;
@@ -65,10 +65,10 @@ public class CharacterWalk : MonoBehaviour
         // Track current target
         if ((tf.position - currentTarget).magnitude > 0.1)
         {
-            Vector3 position = Vector3.MoveTowards(tf.position, currentTarget, 
+            Vector3 position = Vector3.MoveTowards(tf.position, currentTarget,
                                                    speed * Time.fixedDeltaTime);
             rb.MovePosition(position);
-            Quaternion rotation = Quaternion.RotateTowards(tf.rotation, currentTargetRotation, 
+            Quaternion rotation = Quaternion.RotateTowards(tf.rotation, currentTargetRotation,
                                                    angularSpeedDegree * Time.fixedDeltaTime);
             rb.MoveRotation(rotation);
         }
@@ -80,12 +80,12 @@ public class CharacterWalk : MonoBehaviour
 
             if (loop)
             {
-                currentIndex = (currentIndex+1) % targetTrajectory.Length;
+                currentIndex = (currentIndex + 1) % targetTrajectory.Length;
                 MoveTo(targetTrajectory[currentIndex]);
             }
             else
             {
-                if (currentIndex+1 != targetTrajectory.Length)
+                if (currentIndex + 1 != targetTrajectory.Length)
                 {
                     currentIndex += 1;
                     MoveTo(targetTrajectory[currentIndex]);
@@ -101,8 +101,8 @@ public class CharacterWalk : MonoBehaviour
     }
 
     public void MoveTrajectory(Vector3[] trajectory)
-    {   
-        targetTrajectory = trajectory; 
+    {
+        targetTrajectory = trajectory;
         currentIndex = 0;
         MoveTo(targetTrajectory[currentIndex]);
     }

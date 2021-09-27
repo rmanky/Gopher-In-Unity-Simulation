@@ -264,6 +264,14 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(CharacterMoveWait(loopNurse, humanTraj));
             }
         }
+
+        if (levelIndex == 3 && taskIndex != 4)
+        {
+            GameObject levelNurse = Instantiate(humanModelPrefab,
+                                                humanSpawnPose[taskIndex + 1, 0],
+                                                Quaternion.Euler(humanSpawnPose[taskIndex + 1, 1]));
+            StartCoroutine(CharacterMoveOnAction(levelNurse, taskIndex + 1));
+        }
     }
 
     private IEnumerator CharacterMoveWait(GameObject character, Vector3[] traj)
@@ -366,8 +374,8 @@ public class GameManager : MonoBehaviour
         if (levelIndex != 3)
             robot = Instantiate(robotPrefab, spawnPositions[spawnIndex], 
                                          Quaternion.Euler(spawnRotations[spawnIndex]));
-        else 
-            robot = Instantiate(robotPrefab2, spawnPositions[spawnIndex], 
+        else
+            robot = Instantiate(robotPrefab2, spawnPositions[spawnIndex],
                                          Quaternion.Euler(spawnRotations[spawnIndex]));
         // goal
         currentGoalPosition = goalPositions[taskIndex];

@@ -70,6 +70,7 @@ public class UIManager : MonoBehaviour
     public GameObject experimentConditionUI;
     public GameObject NumberBoardAnswerUI;
     public GameObject NumberBoardAnswerField;
+    public GameObject FinishUI;
 
     void Start()
     {
@@ -94,7 +95,8 @@ public class UIManager : MonoBehaviour
         taskStatePanelText = taskStatePanel.GetComponentInChildren<TextMeshProUGUI>();
         robotStatePanelText = robotStatePanel.GetComponentInChildren<TextMeshProUGUI>();
         experimentTaskPanelText = experimentTaskPanel.GetComponentInChildren<TextMeshProUGUI>();
-        experimentStatePanelText = experimentStatePanel.GetComponentInChildren<TextMeshProUGUI>();
+        if (experimentStatePanel != null)
+            experimentStatePanelText = experimentStatePanel.GetComponentInChildren<TextMeshProUGUI>();
         messagePanelText = messagePanel.GetComponentInChildren<TextMeshProUGUI>();
 
         // Experiment help
@@ -368,11 +370,13 @@ public class UIManager : MonoBehaviour
                 "\t" + gameManager.tasks[gameManager.taskIndex] + "\n" + 
                 "Level: " + "\tLevel " + string.Format("{0:0}", gameManager.levelIndex) + "\n" +
                 "Trial: " + "\tTrial " + string.Format("{0:0}", trialIndex) + "\n" +
-                "FPS: " + string.Format("{0:0}", FPS);
-            experimentStatePanelText.text =
-                taskMessage[gameManager.taskIndex] +  "\n" + 
-                "Try not to hit any obstacles." + "\n\n" + 
                 "Speed: \t" + string.Format("{0:0.0}", gameManager.GetRobotSpeed());
+
+            if (experimentStatePanelText != null)
+                experimentStatePanelText.text =
+                    taskMessage[gameManager.taskIndex] +  "\n" + 
+                    "Try not to hit any obstacles." + "\n\n" + 
+                    "FPS: " + string.Format("{0:0}", FPS);
         }
     }
 
