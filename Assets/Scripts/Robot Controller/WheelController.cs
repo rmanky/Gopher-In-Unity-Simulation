@@ -24,13 +24,6 @@ public class WheelController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        foreach (ArticulationBody stabilizer in stabilizers)
-        {
-            ArticulationDrive stabilizerDrive = stabilizer.xDrive;
-            stabilizerDrive.stiffness = 0;
-            stabilizer.xDrive = stabilizerDrive;
-        }
-
         wheelDriveLeft = wheelLeft.xDrive;
         wheelDriveLeft.stiffness = 0;
         wheelDriveLeft.damping = 10;
