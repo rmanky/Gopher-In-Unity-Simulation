@@ -19,15 +19,15 @@ LightingSettings:
   m_BakeBackend: 2
   m_LightmapMaxSize: 2048
   m_BakeResolution: 48
-  m_Padding: 4
+  m_Padding: 8
   m_TextureCompression: 1
   m_AO: 1
   m_AOMaxDistance: 0.5
-  m_CompAOExponent: 1
-  m_CompAOExponentDirect: 1
+  m_CompAOExponent: 0.5
+  m_CompAOExponentDirect: 0.5
   m_ExtractAO: 0
   m_MixedBakeMode: 2
-  m_LightmapsBakeMode: 1
+  m_LightmapsBakeMode: 0
   m_FilterMode: 1
   m_LightmapParameters: {fileID: 15204, guid: 0000000000000000f000000000000000, type: 0}
   m_ExportTrainingData: 0
@@ -40,24 +40,24 @@ LightingSettings:
   m_FinalGatherFiltering: 1
   m_PVRCulling: 1
   m_PVRSampling: 1
-  m_PVRDirectSampleCount: 128
-  m_PVRSampleCount: 256
-  m_PVREnvironmentSampleCount: 256
+  m_PVRDirectSampleCount: 256
+  m_PVRSampleCount: 512
+  m_PVREnvironmentSampleCount: 512
   m_PVREnvironmentReferencePointCount: 2048
   m_LightProbeSampleCountMultiplier: 4
-  m_PVRBounces: 4
-  m_PVRMinBounces: 2
+  m_PVRBounces: 8
+  m_PVRMinBounces: 4
   m_PVREnvironmentMIS: 1
   m_PVRFilteringMode: 2
   m_PVRDenoiserTypeDirect: 0
   m_PVRDenoiserTypeIndirect: 0
   m_PVRDenoiserTypeAO: 0
-  m_PVRFilterTypeDirect: 1
-  m_PVRFilterTypeIndirect: 1
-  m_PVRFilterTypeAO: 1
-  m_PVRFilteringGaussRadiusDirect: 1
-  m_PVRFilteringGaussRadiusIndirect: 5
-  m_PVRFilteringGaussRadiusAO: 2
+  m_PVRFilterTypeDirect: 0
+  m_PVRFilterTypeIndirect: 0
+  m_PVRFilterTypeAO: 0
+  m_PVRFilteringGaussRadiusDirect: 4
+  m_PVRFilteringGaussRadiusIndirect: 4
+  m_PVRFilteringGaussRadiusAO: 4
   m_PVRFilteringAtrousPositionSigmaDirect: 0.5
   m_PVRFilteringAtrousPositionSigmaIndirect: 0.5
   m_PVRFilteringAtrousPositionSigmaAO: 0.5
