@@ -1,13 +1,16 @@
 using System;
-using System.Linq;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-
-using Unity.Robotics.ROSTCPConnector;
-using Unity.Robotics.ROSTCPConnector.ROSGeometry;
+using System.Linq;
+using RosMessageTypes.Geometry;
 using RosMessageTypes.Sensor;
 using RosMessageTypes.Std;
+using RosMessageTypes.Tf2;
+using Unity.Robotics.Core;
+using Unity.Robotics.ROSTCPConnector;
+using Unity.Robotics.ROSTCPConnector.ROSGeometry;
+using Unity.Robotics.SlamExample;
+using Unity.Robotics.UrdfImporter;
+using UnityEngine;
 
 /// <summary>
 ///     This script publishes all the 
@@ -21,6 +24,7 @@ public class JointStatePublisher : MonoBehaviour
     // Variables required for ROS communication
     public string jointStateTopicName = "joint_states";
 
+
     // Joints
     public GameObject jointRoot;
     private ArticulationBody[] articulationChain;
@@ -32,13 +36,14 @@ public class JointStatePublisher : MonoBehaviour
 
     // Message
     private JointStateMsg jointState; 
-    private string frameId = "joint_states";
+    private string frameId = "";
     public float publishRate;
 
     void Start()
     {
         // Get ROS connection static instance
-        ros = ROSConnection.instance;
+        ros = ROSConnection.GetOrCreateInstance();
+        ros.RegisterPublisher<JointStateMsg>(jointStateTopicName);
 
         // Get joints
         articulationChain = jointRoot.GetComponentsInChildren<ArticulationBody>();
@@ -54,25 +59,29 @@ public class JointStatePublisher : MonoBehaviour
 
         // Initialize message
         for (int i = 0; i < jointStateLength; ++i)
-            names[i] = articulationChain[i].name;
+            if (articulationChain[i].GetComponent<UrdfJoint>()) {
+                names[i] = articulationChain[i].GetComponent<UrdfJoint>().jointName;
+            } else {
+                names[i] = "blah";
+            }
         
         jointState = new JointStateMsg
         {
-            header = new HeaderMsg { frame_id = frameId },
+            header = new HeaderMsg(Clock.GetCount(), new TimeStamp(Clock.time), frameId),
             name = names,
             position = new double[jointStateLength],
             velocity = new double[jointStateLength],
             effort = new double[jointStateLength]
         };
 
-        InvokeRepeating("PublishJointStrates", 1f, 1f/publishRate);
+        InvokeRepeating("PublishJointStates", 1f, 1f/publishRate);
     }
 
     void Update()
     {
     }
 
-    private void PublishJointStrates()
+    private void PublishJointStates()
     {
         jointState.header.Update();
 
@@ -87,6 +96,6 @@ public class JointStatePublisher : MonoBehaviour
         jointState.velocity = Array.ConvertAll(velocities, x => (double)x);
         jointState.effort = Array.ConvertAll(forces, x => (double)x);
 
-        ros.Send(jointStateTopicName, jointState);
+        ros.Publish(jointStateTopicName, jointState);
     }
 }
