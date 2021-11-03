@@ -27,7 +27,7 @@ public class JointStatePublisher : MonoBehaviour
 
     // Joints
     public GameObject jointRoot;
-    private ArticulationBody[] articulationChain;
+    private UrdfJoint[] jointChain;
     private int jointStateLength;
     string[] names;
     float[] positions;
@@ -46,11 +46,12 @@ public class JointStatePublisher : MonoBehaviour
         ros.RegisterPublisher<JointStateMsg>(jointStateTopicName);
 
         // Get joints
-        articulationChain = jointRoot.GetComponentsInChildren<ArticulationBody>();
-        articulationChain = articulationChain.Where(joint => joint.jointType 
-                                                    != ArticulationJointType.FixedJoint).ToArray();
+        jointChain = jointRoot.GetComponentsInChildren<UrdfJoint>();
 
-        jointStateLength = articulationChain.Length;
+        // This is broken, and had to be manually patch in UrdfJoint.cs
+        jointChain = jointChain.Where(joint => joint.IsRevoluteOrContinuous).ToArray();
+
+        jointStateLength = jointChain.Length;
         
         positions = new float[jointStateLength];
         velocities = new float[jointStateLength];
@@ -59,11 +60,9 @@ public class JointStatePublisher : MonoBehaviour
 
         // Initialize message
         for (int i = 0; i < jointStateLength; ++i)
-            if (articulationChain[i].GetComponent<UrdfJoint>()) {
-                names[i] = articulationChain[i].GetComponent<UrdfJoint>().jointName;
-            } else {
-                names[i] = "blah";
-            }
+        {
+            names[i] = jointChain[i].jointName;
+        }
         
         jointState = new JointStateMsg
         {
@@ -87,9 +86,9 @@ public class JointStatePublisher : MonoBehaviour
 
         for (int i = 0; i < jointStateLength; ++i)
         {   
-            positions[i] = articulationChain[i].jointPosition[0];
-            velocities[i] = articulationChain[i].jointVelocity[0];
-            forces[i] = articulationChain[i].jointForce[0];
+            positions[i] = jointChain[i].GetPosition();
+            velocities[i] = jointChain[i].GetVelocity();
+            forces[i] = jointChain[i].GetEffort();
         }
 
         jointState.position = Array.ConvertAll(positions, x => (double)x);
