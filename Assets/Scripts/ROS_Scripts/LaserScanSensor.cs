@@ -4,13 +4,17 @@ using RosMessageTypes.Sensor;
 using RosMessageTypes.Std;
 using RosMessageTypes.BuiltinInterfaces;
 using Unity.Robotics.Core;
-using UnityEngine;
 using Unity.Robotics.ROSTCPConnector;
+using Unity.Robotics.ROSTCPConnector.ROSGeometry;
+using Unity.Robotics.SlamExample;
+using UnityEngine;
 using UnityEngine.Serialization;
+
 
 public class LaserScanSensor : MonoBehaviour
 {
     public string topic;
+    public GameObject laserLink;
     [FormerlySerializedAs("TimeBetweenScansSeconds")]
     public double PublishPeriodSeconds = 0.1;
     public float RangeMetersMin = 0;
@@ -21,7 +25,7 @@ public class LaserScanSensor : MonoBehaviour
     public float ScanOffsetAfterPublish = 0f;
     public int NumMeasurementsPerScan = 10;
     public float TimeBetweenMeasurementsSeconds = 0.01f;
-    public string LayerMaskName = "TurtleBot3Manual";
+    // public string LayerMaskName = "TurtleBot3Manual"; this doesn't do anything?
     public string FrameId = "base_scan";
 
     float m_CurrentScanAngleStart;
@@ -42,13 +46,13 @@ public class LaserScanSensor : MonoBehaviour
         m_CurrentScanAngleStart = ScanAngleStartDegrees;
         m_CurrentScanAngleEnd = ScanAngleEndDegrees;
 
-        m_TimeNextScanSeconds = Clock.Now + PublishPeriodSeconds;
+        m_TimeNextScanSeconds = Clock.time + PublishPeriodSeconds;
     }
 
     void BeginScan()
     {
         isScanning = true;
-        m_TimeLastScanBeganSeconds = Clock.Now;
+        m_TimeLastScanBeganSeconds = Clock.time;
         m_TimeNextScanSeconds = m_TimeLastScanBeganSeconds + PublishPeriodSeconds;
         m_NumMeasurementsTaken = 0;
     }
@@ -65,30 +69,21 @@ public class LaserScanSensor : MonoBehaviour
                              $"and recorded {ranges.Count} ranges.");
         }
 
-        var timestamp = new TimeStamp(Clock.time);
         // Invert the angle ranges when going from Unity to ROS
-        var angleStartRos = -m_CurrentScanAngleStart * Mathf.Deg2Rad;
-        var angleEndRos = -m_CurrentScanAngleEnd * Mathf.Deg2Rad;
-        if (angleStartRos > angleEndRos)
-        {
-            Debug.LogWarning("LaserScan was performed in a clockwise direction but ROS expects a counter-clockwise scan, flipping the ranges...");
-            var temp = angleEndRos;
-            angleEndRos = angleStartRos;
-            angleStartRos = temp;
-            ranges.Reverse();
-        }
+        var angleStartRos = m_CurrentScanAngleStart * Mathf.Deg2Rad;
+        var angleEndRos = m_CurrentScanAngleEnd * Mathf.Deg2Rad;
+//         if (angleStartRos > angleEndRos)
+//         {
+//             Debug.LogWarning("LaserScan was performed in a clockwise direction but ROS expects a counter-clockwise scan, flipping the ranges...");
+//             var temp = angleEndRos;
+//             angleEndRos = angleStartRos;
+//             angleStartRos = temp;
+//             ranges.Reverse();
+//         }
 
         var msg = new LaserScanMsg
         {
-            header = new HeaderMsg
-            {
-                frame_id = FrameId,
-                stamp = new TimeMsg
-                {
-                    sec = timestamp.Seconds,
-                    nanosec = timestamp.NanoSeconds,
-                }
-            },
+            header = new HeaderMsg(Clock.GetCount(), new TimeStamp(Clock.time), FrameId),
             range_min = RangeMetersMin,
             range_max = RangeMetersMax,
             angle_min = angleStartRos,
@@ -140,20 +135,23 @@ public class LaserScanSensor : MonoBehaviour
         if (measurementsSoFar > NumMeasurementsPerScan)
             measurementsSoFar = NumMeasurementsPerScan;
 
-        var yawBaseDegrees = transform.rotation.eulerAngles.y;
+        var yawBaseDegrees = laserLink.transform.rotation.eulerAngles.y;
         while (m_NumMeasurementsTaken < measurementsSoFar)
         {
             var t = m_NumMeasurementsTaken / (float)NumMeasurementsPerScan;
             var yawSensorDegrees = Mathf.Lerp(m_CurrentScanAngleStart, m_CurrentScanAngleEnd, t);
             var yawDegrees = yawBaseDegrees + yawSensorDegrees;
             var directionVector = Quaternion.Euler(0f, yawDegrees, 0f) * Vector3.forward;
-            var measurementStart = RangeMetersMin * directionVector + transform.position;
+            var measurementStart = RangeMetersMin * directionVector + laserLink.transform.position;
             var measurementRay = new Ray(measurementStart, directionVector);
+
             var foundValidMeasurement = Physics.Raycast(measurementRay, out var hit, RangeMetersMax);
+
             // Only record measurement if it's within the sensor's operating range
             if (foundValidMeasurement)
             {
                 ranges.Add(hit.distance);
+                Debug.DrawRay(measurementStart, hit.distance * directionVector, Color.red);
             }
             else
             {

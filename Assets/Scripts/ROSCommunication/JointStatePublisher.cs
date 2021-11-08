@@ -27,6 +27,7 @@ public class JointStatePublisher : MonoBehaviour
 
     // Joints
     public GameObject jointRoot;
+    public string frameId = "gopher/base_link";
     private UrdfJoint[] jointChain;
     private int jointStateLength;
     string[] names;
@@ -36,7 +37,6 @@ public class JointStatePublisher : MonoBehaviour
 
     // Message
     private JointStateMsg jointState; 
-    private string frameId = "";
     public float publishRate;
 
     void Start()
@@ -91,6 +91,7 @@ public class JointStatePublisher : MonoBehaviour
             forces[i] = jointChain[i].GetEffort();
         }
 
+        jointState.header = new HeaderMsg(Clock.GetCount(), new TimeStamp(Clock.time), frameId);
         jointState.position = Array.ConvertAll(positions, x => (double)x);
         jointState.velocity = Array.ConvertAll(velocities, x => (double)x);
         jointState.effort = Array.ConvertAll(forces, x => (double)x);
