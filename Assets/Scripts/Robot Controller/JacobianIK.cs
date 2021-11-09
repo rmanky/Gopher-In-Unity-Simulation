@@ -9,8 +9,7 @@ public class JacobianIK : MonoBehaviour
     public GameObject endEffector;
     public float positionAlpha = 10f;
     public float rotationAlpha = 5f;
-    
-    private ArticulationBody arBody;
+    public ArticulationBody arBody;
     
     private ArticulationJacobian arJacobian;
 
@@ -23,7 +22,6 @@ public class JacobianIK : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        arBody = gameObject.GetComponent<ArticulationBody>();
         arJacobian = new ArticulationJacobian();
         arJacobian.elements = new List<float>();
         jointSpacePositions = new List<float>();
@@ -102,6 +100,7 @@ public class JacobianIK : MonoBehaviour
             jacobian[row2, i] = temp;
         }
     }
+
     ArticulationJacobian JacobianInverse(ArticulationJacobian jacobian)
     {
         const float deltaE = 1e-8f;
@@ -179,15 +178,16 @@ public class JacobianIK : MonoBehaviour
     */
     void FixedUpdate()
     {
-        if (!arBody || !arBody.isRoot)
+        if (!arBody) {
+            Debug.Log("No articulation body assigned!");
             return;
+        }
 
         // nRows set to number of rows in matrix, which corresponds to the number of articulation links times 6.
-        // nCols set to number of columns in matrix, which corresponds to the number of joint DOFs, plus 6 in the case eFIX_BASE is false.
+        // nCols set to number of columns in matrix, which corresponds to the number of joint DOFs, plus 6 in the case FIX_BASE is false.
         // Note that this computes the dense representation of an inherently sparse matrix.  Multiplication with this matrix maps 
         //joint space velocities to 6DOF world space linear and angular velocities.
-        arBody.GetDofStartIndices(jointDofStarts);
-        
+        int totalStartIndices = arBody.GetDofStartIndices(jointDofStarts);
         
         arBody.GetDenseJacobian(ref arJacobian);
         Vector3 targetPos = target.transform.position;
@@ -198,13 +198,13 @@ public class JacobianIK : MonoBehaviour
         List<float> jointSpacePositions = new List<float>();
         int totalDofs = arBody.GetJointPositions(jointSpacePositions);
 
-        Vector3 targetRot = target.transform.rotation.eulerAngles;
-        Vector3 eeRot = endEffector.transform.rotation.eulerAngles;
+        Vector3 targetRot = target.transform.up;
+        Vector3 eeRot = endEffector.transform.up;
 
         Vector3 dirToTargetRot = targetRot - eeRot;
             
         var deltaPos = Time.fixedDeltaTime * positionAlpha * dirToTarget;
-        var deltaRot = Time.fixedDeltaTime * rotationAlpha * dirToTargetRot;
+        var deltaRot = dirToTargetRot * Time.fixedDeltaTime * rotationAlpha;
 
         List<float> deltaTarget = new List<float>(arJacobian.rows);
         for (int i = deltaTarget.Count; i < arJacobian.rows - 6; i++)
