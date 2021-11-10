@@ -7,8 +7,8 @@ public class JacobianIK : MonoBehaviour
 {
     public GameObject target;
     public GameObject endEffector;
-    public float positionAlpha = 10f;
-    public float rotationAlpha = 5f;
+    public float positionAlpha = 3000f;
+    public float rotationAlpha = 300f;
     public ArticulationBody arBody;
     
     private ArticulationJacobian arJacobian;
@@ -221,6 +221,7 @@ public class JacobianIK : MonoBehaviour
             jointSpacePositions[i] += deltaJointReducedSpace[i];
         }
         
-        arBody.SetDriveTargets(jointSpacePositions);
+        // arBody.SetDriveTargets(jointSpacePositions);
+        arBody.SetDriveTargetVelocities(deltaJointReducedSpace);
     }
 }
