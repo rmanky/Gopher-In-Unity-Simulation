@@ -197,14 +197,9 @@ public class JacobianIK : MonoBehaviour
         
         List<float> jointSpacePositions = new List<float>();
         int totalDofs = arBody.GetJointPositions(jointSpacePositions);
-
-        Vector3 targetRot = target.transform.up;
-        Vector3 eeRot = endEffector.transform.up;
-
-        Vector3 dirToTargetRot = targetRot - eeRot;
             
-        var deltaPos = Time.fixedDeltaTime * positionAlpha * dirToTarget;
-        var deltaRot = dirToTargetRot * Time.fixedDeltaTime * rotationAlpha;
+        var deltaPos = dirToTarget * Time.fixedDeltaTime * positionAlpha;
+        var deltaRot = new Vector3(0.0f, 0.0f, 0.0f);
 
         List<float> deltaTarget = new List<float>(arJacobian.rows);
         for (int i = deltaTarget.Count; i < arJacobian.rows - 6; i++)
@@ -221,7 +216,7 @@ public class JacobianIK : MonoBehaviour
             jointSpacePositions[i] += deltaJointReducedSpace[i];
         }
         
-        // arBody.SetDriveTargets(jointSpacePositions);
-        arBody.SetDriveTargetVelocities(deltaJointReducedSpace);
+        arBody.SetDriveTargets(jointSpacePositions);
+        // arBody.SetDriveTargetVelocities(deltaJointReducedSpace);
     }
 }
