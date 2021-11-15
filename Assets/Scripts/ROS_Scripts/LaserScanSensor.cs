@@ -156,6 +156,7 @@ public class LaserScanSensor : MonoBehaviour
             else
             {
                 ranges.Add(float.MaxValue);
+                Debug.DrawRay(measurementStart, RangeMetersMax * directionVector, Color.white);
             }
 
             // Even if Raycast didn't find a valid hit, we still count it as a measurement

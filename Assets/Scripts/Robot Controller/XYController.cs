@@ -18,6 +18,9 @@ public class XYController : MonoBehaviour
     private bool autoSetOffsets = true;
 
     [SerializeField]
+    private bool inheritLimits = true;
+
+    [SerializeField]
     private float verticalOffset;
 
     [SerializeField]
@@ -45,18 +48,20 @@ public class XYController : MonoBehaviour
         float verticalLook = Input.GetAxis("Mouse Y") * sensitivity;
         ArticulationDrive verticalDrive = verticalJoint.xDrive;
         _verticalTarget -= verticalLook;
+        if (inheritLimits) {
+            _verticalTarget = Mathf.Clamp(_verticalTarget, verticalDrive.lowerLimit, verticalDrive.upperLimit);
+        }
         verticalDrive.target = _verticalTarget;
-        verticalDrive.damping = 1000;
-        verticalDrive.forceLimit = 0.5f;
         verticalJoint.xDrive = verticalDrive;
 
 
         float horizontalLook = Input.GetAxis("Mouse X") * sensitivity;
         ArticulationDrive horizontalDrive = horizontalJoint.xDrive;
         _horizontalTarget += horizontalLook;
+        if (inheritLimits) {
+            _horizontalTarget = Mathf.Clamp(_horizontalTarget, horizontalDrive.lowerLimit, horizontalDrive.upperLimit);
+        }
         horizontalDrive.target = _horizontalTarget;
-        horizontalDrive.damping = 1000;
-        horizontalDrive.forceLimit = 0.5f;
         horizontalJoint.xDrive = horizontalDrive;
     }
 }
