@@ -5,18 +5,21 @@ using UnityEngine;
 
 public class JacobianIK : MonoBehaviour
 {
-    public GameObject target;
     public GameObject endEffector;
     public float positionAlpha = 3000f;
     public float rotationAlpha = 300f;
     public ArticulationBody arBody;
-    
+    public ArticulationBody[] arChain;
+
+    public List<int> arIndices = new List<int>();
+    public List<int> arDofStartIndices = new List<int>();
+
+    private ArticulationJacobian minJacobian = new ArticulationJacobian(6, 7);
     private ArticulationJacobian arJacobian;
-
     private List<float> jointSpacePositions;
-
     private List<float> jointSpaceTargets;
     private List<int> jointDofStarts;
+    private int totalDofs = 0;
     
     
     // Start is called before the first frame update
@@ -27,6 +30,15 @@ public class JacobianIK : MonoBehaviour
         jointSpacePositions = new List<float>();
         jointSpaceTargets = new List<float>();
         jointDofStarts = new List<int>();
+
+        int totalStartIndices = arBody.GetDofStartIndices(jointDofStarts);
+
+        foreach (ArticulationBody arSubBody in arChain) {
+            arIndices.Add(arSubBody.index);
+            arDofStartIndices.Add(jointDofStarts[arSubBody.index]);
+            totalDofs += arSubBody.dofCount;
+        }
+
     }
 
     
@@ -163,6 +175,20 @@ public class JacobianIK : MonoBehaviour
         }
     }
 
+    void fillMatrix(int startRow, List<int> cols, ArticulationJacobian mJ)
+    {
+        int row = -1;
+        for (int r = startRow; r < startRow + 6; r++) {
+            row += 1;
+            int col = -1;
+            foreach (int c in cols) {
+                col += 1;
+                mJ[row, col] = arJacobian[r, c];
+            }
+
+        }
+    }
+
     // Does not work, for some reason solution is not converging.
     /*
     ArticulationJacobian GetDampedListSquaresJacobianMatrix(ArticulationJacobian jacobian, float lambda)
@@ -187,36 +213,37 @@ public class JacobianIK : MonoBehaviour
         // nCols set to number of columns in matrix, which corresponds to the number of joint DOFs, plus 6 in the case FIX_BASE is false.
         // Note that this computes the dense representation of an inherently sparse matrix.  Multiplication with this matrix maps 
         //joint space velocities to 6DOF world space linear and angular velocities.
-        int totalStartIndices = arBody.GetDofStartIndices(jointDofStarts);
         
         arBody.GetDenseJacobian(ref arJacobian);
-        Vector3 targetPos = target.transform.position;
-        Vector3 eePos = endEffector.transform.position;
 
-        Vector3 dirToTarget = targetPos - eePos;
+        int arIndex = arIndices[6]; // the index of the end effector
+
+        fillMatrix(arIndex*6 - 6, arDofStartIndices, minJacobian);
         
         List<float> jointSpacePositions = new List<float>();
-        int totalDofs = arBody.GetJointPositions(jointSpacePositions);
+        // int totalDofs = arBody.GetJointPositions(jointSpacePositions);
             
-        var deltaPos = dirToTarget * Time.fixedDeltaTime * positionAlpha;
-        var deltaRot = new Vector3(0.0f, 0.0f, 0.0f);
+        var deltaPos = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f) * positionAlpha;
+        var deltaRot = new Vector3(0.0f, 0.0f, 0.0f) * rotationAlpha;
 
-        List<float> deltaTarget = new List<float>(arJacobian.rows);
-        for (int i = deltaTarget.Count; i < arJacobian.rows - 6; i++)
+        List<float> deltaTarget = new List<float>(minJacobian.rows);
+        for (int i = deltaTarget.Count; i < minJacobian.rows - 6; i++) {
             deltaTarget.Add(0.0f);
+        }
         deltaTarget.AddRange(new float[] {deltaPos.x, deltaPos.y, deltaPos.z, deltaRot.x, deltaRot.y, deltaRot.z});
 
         
         // Pretend that jacobian transpose is like an inverse.
-        ArticulationJacobian jacobianT = JacobianTranspose(arJacobian);
+        ArticulationJacobian jacobianT = JacobianTranspose(minJacobian);
         
         var deltaJointReducedSpace = JacobianMultiply(jacobianT, deltaTarget);
-        for (int i = 0; i < totalDofs; i++)
-        {
-            jointSpacePositions[i] += deltaJointReducedSpace[i];
+
+        var m = 0;
+        foreach (ArticulationBody arSubBody in arChain) {
+            ArticulationDrive drive = arSubBody.xDrive;
+            drive.target += deltaJointReducedSpace[m];
+            arSubBody.xDrive = drive;
+            m++;
         }
-        
-        arBody.SetDriveTargets(jointSpacePositions);
-        // arBody.SetDriveTargetVelocities(deltaJointReducedSpace);
     }
 }
