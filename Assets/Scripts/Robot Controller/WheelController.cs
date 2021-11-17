@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class WheelController : MonoBehaviour
 {
     [SerializeField]
-    private ArticulationBody wheelLeft;
-
-    [SerializeField]
-    private ArticulationBody wheelRight;
+    private ArticulationBody wheelLeft, wheelRight;
+    private ArticulationDrive wheelDriveLeft, wheelDriveRight;
 
     [SerializeField]
     private List<ArticulationBody> stabilizers = new List<ArticulationBody>();
@@ -16,13 +15,8 @@ public class WheelController : MonoBehaviour
     [SerializeField]
     private float maxSpeed = 100f;
 
-    private ArticulationDrive wheelDriveLeft;
-
-    private ArticulationDrive wheelDriveRight;
-
-
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         wheelDriveLeft = wheelLeft.xDrive;
         wheelDriveLeft.stiffness = 0;
@@ -37,11 +31,9 @@ public class WheelController : MonoBehaviour
         wheelRight.xDrive = wheelDriveRight;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        float forwardSpeed = Input.GetAxis("Vertical") * maxSpeed;
-        float rotationalSpeed = Input.GetAxis("Horizontal") * maxSpeed;
+    public void Drive(Vector2 driveVector) {
+        float forwardSpeed = driveVector.y * maxSpeed;
+        float rotationalSpeed = driveVector.x * maxSpeed;
         wheelLeft.xDrive = DriveWheel(wheelDriveLeft, forwardSpeed + rotationalSpeed);
         wheelRight.xDrive = DriveWheel(wheelDriveRight, forwardSpeed - rotationalSpeed);
     }

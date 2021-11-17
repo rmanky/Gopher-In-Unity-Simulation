@@ -6,21 +6,23 @@ using UnityEngine;
 public class JacobianIK : MonoBehaviour
 {
     public GameObject endEffector;
-    public float positionAlpha = 3000f;
-    public float rotationAlpha = 300f;
-    public ArticulationBody arBody;
+    public float positionSensitivity = 0.02f;
+    public float rotationSensitivity = 0.02f;
+    public float positionStrength = 10f;
+    public float rotationStrength = 2f;
+    public ArticulationBody arRoot;
     public ArticulationBody[] arChain;
 
-    public List<int> arIndices = new List<int>();
-    public List<int> arDofStartIndices = new List<int>();
+    private List<int> arIndices = new List<int>();
+    private List<int> arDofStartIndices = new List<int>();
 
     private ArticulationJacobian minJacobian = new ArticulationJacobian(6, 7);
     private ArticulationJacobian arJacobian;
-    private List<float> jointSpacePositions;
-    private List<float> jointSpaceTargets;
+    private List<float> jointSpacePositions, jointSpaceTargets;
     private List<int> jointDofStarts;
-    private int totalDofs = 0;
-    
+
+    private Vector3 targetPos;
+    private Quaternion targetRot;
     
     // Start is called before the first frame update
     void Start()
@@ -31,14 +33,15 @@ public class JacobianIK : MonoBehaviour
         jointSpaceTargets = new List<float>();
         jointDofStarts = new List<int>();
 
-        int totalStartIndices = arBody.GetDofStartIndices(jointDofStarts);
+        int totalStartIndices = arRoot.GetDofStartIndices(jointDofStarts);
 
         foreach (ArticulationBody arSubBody in arChain) {
             arIndices.Add(arSubBody.index);
             arDofStartIndices.Add(jointDofStarts[arSubBody.index]);
-            totalDofs += arSubBody.dofCount;
         }
 
+        targetPos = endEffector.transform.position;
+        targetRot = endEffector.transform.rotation;
     }
 
     
@@ -189,6 +192,16 @@ public class JacobianIK : MonoBehaviour
         }
     }
 
+    public void OnDrawGizmos() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(targetPos, new Vector3(0.2f, 0.2f, 0.2f));
+        Gizmos.DrawLine(targetPos, targetPos + (targetRot * Vector3.forward).normalized * 0.4f);
+    }
+
+    public void FixedUpdate() {
+        MoveDirection(Vector3.zero, Vector3.zero);
+    }
+
     // Does not work, for some reason solution is not converging.
     /*
     ArticulationJacobian GetDampedListSquaresJacobianMatrix(ArticulationJacobian jacobian, float lambda)
@@ -202,9 +215,9 @@ public class JacobianIK : MonoBehaviour
         return result;
     }
     */
-    void FixedUpdate()
+    public void MoveDirection(Vector3 deltaPosIn, Vector3 deltaRotIn)
     {
-        if (!arBody) {
+        if (!arRoot) {
             Debug.Log("No articulation body assigned!");
             return;
         }
@@ -214,17 +227,30 @@ public class JacobianIK : MonoBehaviour
         // Note that this computes the dense representation of an inherently sparse matrix.  Multiplication with this matrix maps 
         //joint space velocities to 6DOF world space linear and angular velocities.
         
-        arBody.GetDenseJacobian(ref arJacobian);
+        arRoot.GetDenseJacobian(ref arJacobian);
 
         int arIndex = arIndices[6]; // the index of the end effector
 
         fillMatrix(arIndex*6 - 6, arDofStartIndices, minJacobian);
         
         List<float> jointSpacePositions = new List<float>();
-        // int totalDofs = arBody.GetJointPositions(jointSpacePositions);
-            
-        var deltaPos = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f) * positionAlpha;
-        var deltaRot = new Vector3(0.0f, 0.0f, 0.0f) * rotationAlpha;
+
+        targetPos += deltaPosIn * positionSensitivity;
+        targetRot = Quaternion.Slerp(targetRot, targetRot * Quaternion.Euler(deltaRotIn), rotationSensitivity);
+        
+        Quaternion rotation = targetRot * Quaternion.Inverse(endEffector.transform.rotation);
+        Debug.Log(rotation);
+        float angle;
+        Vector3 axis;
+
+        rotation.ToAngleAxis(out angle, out axis);
+        Vector3 deltaRot = (angle * rotationStrength) * axis;
+        Vector3 clamped = Vector3.ClampMagnitude(targetPos - endEffector.transform.position, 1.0f);
+        Vector3 deltaPos = clamped * positionStrength;
+        //Vector3 deltaRot = endEffector.transform.rotation * deltaRotIn * rotationSensitivity;
+
+        Debug.Log(deltaPos);
+        Debug.Log(deltaRot);
 
         List<float> deltaTarget = new List<float>(minJacobian.rows);
         for (int i = deltaTarget.Count; i < minJacobian.rows - 6; i++) {
@@ -241,7 +267,8 @@ public class JacobianIK : MonoBehaviour
         var m = 0;
         foreach (ArticulationBody arSubBody in arChain) {
             ArticulationDrive drive = arSubBody.xDrive;
-            drive.target += deltaJointReducedSpace[m];
+            // stop explosions
+            drive.target += Mathf.Clamp(deltaJointReducedSpace[m], -0.25f, 0.25f);
             arSubBody.xDrive = drive;
             m++;
         }
