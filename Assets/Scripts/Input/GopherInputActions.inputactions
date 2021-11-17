@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Camera Head",
+                    "type": "Button",
+                    "id": "73f97052-74fe-465a-b2cc-f502cb2d3b65",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -180,7 +189,7 @@
                 {
                     "name": "up",
                     "id": "66a5b66d-c456-44f1-a3b7-1582162d3889",
-                    "path": "<Keyboard>/numpad1",
+                    "path": "<Keyboard>/numpad8",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -191,7 +200,7 @@
                 {
                     "name": "down",
                     "id": "566d8b86-5515-48c1-921e-35edd88335fe",
-                    "path": "<Keyboard>/numpad0",
+                    "path": "<Keyboard>/numpad2",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -202,7 +211,7 @@
                 {
                     "name": "left",
                     "id": "f110c058-3b12-45c3-be45-881e9e9f0614",
-                    "path": "<Keyboard>/leftArrow",
+                    "path": "<Keyboard>/numpad4",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -213,7 +222,7 @@
                 {
                     "name": "right",
                     "id": "ff5d223f-3c20-40be-b7f0-dc41d7db1b28",
-                    "path": "<Keyboard>/rightArrow",
+                    "path": "<Keyboard>/numpad6",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -224,7 +233,7 @@
                 {
                     "name": "forward",
                     "id": "a518a0fe-fc9d-4842-87f1-f47f0e86cc33",
-                    "path": "<Keyboard>/upArrow",
+                    "path": "<Keyboard>/numpad7",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -235,13 +244,24 @@
                 {
                     "name": "backward",
                     "id": "bc0135aa-d461-4903-9ab8-7b5a3a7fe02c",
-                    "path": "<Keyboard>/downArrow",
+                    "path": "<Keyboard>/numpad9",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Right Arm Rot",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "807791e6-cdca-4ab4-b41c-b3a0e92c3d96",
+                    "path": "<Keyboard>/numpad5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Camera Head",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

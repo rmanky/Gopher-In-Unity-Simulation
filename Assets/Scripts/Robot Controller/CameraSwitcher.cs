@@ -8,30 +8,18 @@ public class CameraSwitcher : MonoBehaviour
     private Camera camera;
 
     [SerializeField]
-    private CameraView[] cameraViews;
+    private Transform[] cameraLocations;
 
-    [System.Serializable]
-    public class CameraView
-    {
-        public Transform cameraLocation;
-        public KeyCode cameraKey;
-    }
     void Start()
     {
-        
+        Transform origin = cameraLocations[0];
+        camera.transform.parent = origin;
+        camera.transform.position = origin.position;
+        camera.transform.rotation = origin.rotation;
     }
 
     // Update is called once per frame
     void Update()
     {
-        foreach (CameraView view in cameraViews)
-        {
-            if (Input.GetKeyDown(view.cameraKey))
-            {
-                camera.transform.parent = view.cameraLocation;
-                camera.transform.position = view.cameraLocation.position;
-                camera.transform.rotation = view.cameraLocation.rotation;
-            }
-        }
     }
 }

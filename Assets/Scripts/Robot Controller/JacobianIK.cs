@@ -6,8 +6,6 @@ using UnityEngine;
 public class JacobianIK : MonoBehaviour
 {
     public GameObject endEffector;
-    public float positionSensitivity = 0.02f;
-    public float rotationSensitivity = 0.02f;
     public float positionStrength = 10f;
     public float rotationStrength = 2f;
     public ArticulationBody arRoot;
@@ -16,14 +14,13 @@ public class JacobianIK : MonoBehaviour
     private List<int> arIndices = new List<int>();
     private List<int> arDofStartIndices = new List<int>();
 
-    private ArticulationJacobian minJacobian = new ArticulationJacobian(6, 7);
+    private ArticulationJacobian minJacobian = new ArticulationJacobian(6, 8);
     private ArticulationJacobian arJacobian;
     private List<float> jointSpacePositions, jointSpaceTargets;
     private List<int> jointDofStarts;
 
-    private Vector3 targetPos;
-    private Quaternion targetRot;
-    
+    Vector3 targetPos = new Vector3(0f, 0f, 0f);
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,12 +36,9 @@ public class JacobianIK : MonoBehaviour
             arIndices.Add(arSubBody.index);
             arDofStartIndices.Add(jointDofStarts[arSubBody.index]);
         }
-
-        targetPos = endEffector.transform.position;
-        targetRot = endEffector.transform.rotation;
     }
 
-    
+
     List<float> JacobianMultiply(ArticulationJacobian jacobian, List<float> targetDelta)
     {
         List<float> result = new List<float>(jacobian.rows);
@@ -71,7 +65,7 @@ public class JacobianIK : MonoBehaviour
                     result[row, column] += jacobian1[row, i] * jacobian2[i, column];
         return result;
     }
-    
+
     ArticulationJacobian JacobianMultiply(ArticulationJacobian jacobian, float value)
     {
         ArticulationJacobian result = new ArticulationJacobian(jacobian.rows, jacobian.columns);
@@ -91,7 +85,7 @@ public class JacobianIK : MonoBehaviour
                 result[row, column] = jacobian1[row, column] + jacobian2[row, column];
         return result;
     }
-    
+
     ArticulationJacobian JacobianTranspose(ArticulationJacobian jacobian)
     {
         ArticulationJacobian jacobianT = new ArticulationJacobian(jacobian.columns, jacobian.rows);
@@ -125,7 +119,7 @@ public class JacobianIK : MonoBehaviour
         // Initialize to identity
         for (int diagonal = 0; diagonal < jacobianInv.rows; diagonal++)
             jacobianInv[diagonal, diagonal] = 1.0f;
-        
+
         for (int diagonal = 0; diagonal < jacobian.rows; diagonal++)
         {
             int maxRow = diagonal;
@@ -163,7 +157,7 @@ public class JacobianIK : MonoBehaviour
 
                 }
             }
-            
+
         }
         return jacobianInv;
 
@@ -194,17 +188,14 @@ public class JacobianIK : MonoBehaviour
 
     public void OnDrawGizmos() {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(targetPos, new Vector3(0.2f, 0.2f, 0.2f));
-        Gizmos.DrawLine(targetPos, targetPos + (targetRot * Vector3.forward).normalized * 0.4f);
+        Gizmos.DrawWireSphere(targetPos, 0.2f);
     }
 
     public void FixedUpdate() {
         MoveDirection(Vector3.zero, Vector3.zero);
     }
 
-    // Does not work, for some reason solution is not converging.
-    /*
-    ArticulationJacobian GetDampedListSquaresJacobianMatrix(ArticulationJacobian jacobian, float lambda)
+    ArticulationJacobian GetDampedLeastSquaresJacobianMatrix(ArticulationJacobian jacobian, float lambda)
     {
         ArticulationJacobian jacobianT = JacobianTranspose(jacobian);
         ArticulationJacobian jjT = JacobianMultiply(jacobian, jacobianT);
@@ -214,7 +205,7 @@ public class JacobianIK : MonoBehaviour
         ArticulationJacobian result = JacobianMultiply(jacobianT, inverseTerm);
         return result;
     }
-    */
+
     public void MoveDirection(Vector3 deltaPosIn, Vector3 deltaRotIn)
     {
         if (!arRoot) {
@@ -224,33 +215,31 @@ public class JacobianIK : MonoBehaviour
 
         // nRows set to number of rows in matrix, which corresponds to the number of articulation links times 6.
         // nCols set to number of columns in matrix, which corresponds to the number of joint DOFs, plus 6 in the case FIX_BASE is false.
-        // Note that this computes the dense representation of an inherently sparse matrix.  Multiplication with this matrix maps 
+        // Note that this computes the dense representation of an inherently sparse matrix.  Multiplication with this matrix maps
         //joint space velocities to 6DOF world space linear and angular velocities.
-        
+
         arRoot.GetDenseJacobian(ref arJacobian);
 
-        int arIndex = arIndices[6]; // the index of the end effector
+        int arIndex = arIndices[arIndices.Count - 1]; // the index of the end effector
 
         fillMatrix(arIndex*6 - 6, arDofStartIndices, minJacobian);
-        
+
         List<float> jointSpacePositions = new List<float>();
 
-        targetPos += deltaPosIn * positionSensitivity;
-        targetRot = Quaternion.Slerp(targetRot, targetRot * Quaternion.Euler(deltaRotIn), rotationSensitivity);
-        
-        Quaternion rotation = targetRot * Quaternion.Inverse(endEffector.transform.rotation);
-        Debug.Log(rotation);
-        float angle;
-        Vector3 axis;
 
-        rotation.ToAngleAxis(out angle, out axis);
-        Vector3 deltaRot = (angle * rotationStrength) * axis;
-        Vector3 clamped = Vector3.ClampMagnitude(targetPos - endEffector.transform.position, 1.0f);
-        Vector3 deltaPos = clamped * positionStrength;
-        //Vector3 deltaRot = endEffector.transform.rotation * deltaRotIn * rotationSensitivity;
+        Vector3 deltaPosLocal = (endEffector.transform.right * deltaPosIn.x) + (endEffector.transform.up * deltaPosIn.y) + (endEffector.transform.forward * deltaPosIn.z);
+        targetPos += deltaPosLocal * 0.01f;
 
-        Debug.Log(deltaPos);
-        Debug.Log(deltaRot);
+        //Vector3 deltaPos = (endEffector.transform.right * deltaPosIn.x) + (endEffector.transform.up * deltaPosIn.y) + (endEffector.transform.forward * deltaPosIn.z);
+        Vector3 deltaPos = Vector3.ClampMagnitude(targetPos - endEffector.transform.position, 1.0f);
+        Vector3 deltaRot = endEffector.transform.rotation * new Vector3(-deltaRotIn.y, deltaRotIn.x, deltaRotIn.z);
+
+        Debug.DrawLine(endEffector.transform.position, endEffector.transform.position + deltaPos);
+
+        deltaPos *= positionStrength;
+        deltaRot *= rotationStrength;
+
+        Debug.Log(deltaPos + " " + deltaRot);
 
         List<float> deltaTarget = new List<float>(minJacobian.rows);
         for (int i = deltaTarget.Count; i < minJacobian.rows - 6; i++) {
@@ -258,10 +247,12 @@ public class JacobianIK : MonoBehaviour
         }
         deltaTarget.AddRange(new float[] {deltaPos.x, deltaPos.y, deltaPos.z, deltaRot.x, deltaRot.y, deltaRot.z});
 
-        
+
         // Pretend that jacobian transpose is like an inverse.
-        ArticulationJacobian jacobianT = JacobianTranspose(minJacobian);
-        
+        // ArticulationJacobian jacobianT = JacobianTranspose(minJacobian);
+
+        ArticulationJacobian jacobianT = GetDampedLeastSquaresJacobianMatrix(minJacobian, 2.0f);
+
         var deltaJointReducedSpace = JacobianMultiply(jacobianT, deltaTarget);
 
         var m = 0;
@@ -269,6 +260,7 @@ public class JacobianIK : MonoBehaviour
             ArticulationDrive drive = arSubBody.xDrive;
             // stop explosions
             drive.target += Mathf.Clamp(deltaJointReducedSpace[m], -0.25f, 0.25f);
+            Debug.Log(arSubBody.name + " " + drive.target);
             arSubBody.xDrive = drive;
             m++;
         }
