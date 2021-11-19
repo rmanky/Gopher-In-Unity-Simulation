@@ -8,6 +8,9 @@ public class HomeJoints : MonoBehaviour
     private bool autoUpdate = false;
 
     [SerializeField]
+    private float smoothingDuration = 5f;
+
+    [SerializeField]
     private JointTargetEntry[] entries;
 
     [System.Serializable]
@@ -17,18 +20,18 @@ public class HomeJoints : MonoBehaviour
         public float target;
     }
 
-    void SetJointTargets() {
+    void SetJointTargets(float lerp) {
         foreach (JointTargetEntry entry in entries)
         {
             ArticulationBody joint = entry.joint;
-            float target = entry.target;
             if (joint.dofCount < 1)
             {
                 Debug.LogError("The degrees of freedom is zero!");
                 break;
             }
             ArticulationDrive drive = joint.xDrive;
-            drive.target = target;
+            float smoothTarget = Mathf.Lerp(0f, entry.target, lerp);
+            drive.target = smoothTarget;
             joint.xDrive = drive;
         }
     }
@@ -36,14 +39,27 @@ public class HomeJoints : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetJointTargets();
+        StartCoroutine(InterpelateRoutine());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (autoUpdate) {
-            SetJointTargets();
+        // if (autoUpdate) {
+        //     SetJointTargets();
+        // }
+    }
+
+    private IEnumerator InterpelateRoutine()
+    {
+        float lerp = 0;
+        while(lerp < 1)
+        {
+            lerp = Mathf.MoveTowards(lerp, 1.0f, Time.deltaTime / smoothingDuration);
+            Debug.Log(lerp);
+            SetJointTargets(lerp);
+    
+            yield return null;
         }
     }
 }

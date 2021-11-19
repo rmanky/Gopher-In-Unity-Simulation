@@ -33,6 +33,15 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "Right Gripper",
+                    "type": "Value",
+                    "id": "fc4aa252-ff65-4911-92e2-720740b801ea",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
                     "name": "Camera Head",
                     "type": "Button",
                     "id": "73f97052-74fe-465a-b2cc-f502cb2d3b65",
@@ -200,7 +209,7 @@
                 {
                     "name": "down",
                     "id": "566d8b86-5515-48c1-921e-35edd88335fe",
-                    "path": "<Keyboard>/numpad2",
+                    "path": "<Keyboard>/numpad5",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -262,6 +271,39 @@
                     "action": "Camera Head",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "5b558122-29f6-42e8-ab7f-d07acc7e5ad5",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right Gripper",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "638787b9-184e-4309-866e-8f933804c832",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right Gripper",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "0f37794c-7625-46f6-944c-3eb8a9435c38",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right Gripper",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }

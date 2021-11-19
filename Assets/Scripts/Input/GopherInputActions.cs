@@ -55,6 +55,15 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
+                    ""name"": ""Right Gripper"",
+                    ""type"": ""Value"",
+                    ""id"": ""fc4aa252-ff65-4911-92e2-720740b801ea"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
                     ""name"": ""Camera Head"",
                     ""type"": ""Button"",
                     ""id"": ""73f97052-74fe-465a-b2cc-f502cb2d3b65"",
@@ -222,7 +231,7 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""down"",
                     ""id"": ""566d8b86-5515-48c1-921e-35edd88335fe"",
-                    ""path"": ""<Keyboard>/numpad2"",
+                    ""path"": ""<Keyboard>/numpad5"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -284,6 +293,39 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Camera Head"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""5b558122-29f6-42e8-ab7f-d07acc7e5ad5"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right Gripper"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""638787b9-184e-4309-866e-8f933804c832"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right Gripper"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""0f37794c-7625-46f6-944c-3eb8a9435c38"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right Gripper"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -312,6 +354,7 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
         m_Gopher_Movement = m_Gopher.FindAction("Movement", throwIfNotFound: true);
         m_Gopher_RightArmMove = m_Gopher.FindAction("Right Arm Move", throwIfNotFound: true);
         m_Gopher_RightArmRot = m_Gopher.FindAction("Right Arm Rot", throwIfNotFound: true);
+        m_Gopher_RightGripper = m_Gopher.FindAction("Right Gripper", throwIfNotFound: true);
         m_Gopher_CameraHead = m_Gopher.FindAction("Camera Head", throwIfNotFound: true);
     }
 
@@ -375,6 +418,7 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_Gopher_Movement;
     private readonly InputAction m_Gopher_RightArmMove;
     private readonly InputAction m_Gopher_RightArmRot;
+    private readonly InputAction m_Gopher_RightGripper;
     private readonly InputAction m_Gopher_CameraHead;
     public struct GopherActions
     {
@@ -383,6 +427,7 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Gopher_Movement;
         public InputAction @RightArmMove => m_Wrapper.m_Gopher_RightArmMove;
         public InputAction @RightArmRot => m_Wrapper.m_Gopher_RightArmRot;
+        public InputAction @RightGripper => m_Wrapper.m_Gopher_RightGripper;
         public InputAction @CameraHead => m_Wrapper.m_Gopher_CameraHead;
         public InputActionMap Get() { return m_Wrapper.m_Gopher; }
         public void Enable() { Get().Enable(); }
@@ -402,6 +447,9 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                 @RightArmRot.started -= m_Wrapper.m_GopherActionsCallbackInterface.OnRightArmRot;
                 @RightArmRot.performed -= m_Wrapper.m_GopherActionsCallbackInterface.OnRightArmRot;
                 @RightArmRot.canceled -= m_Wrapper.m_GopherActionsCallbackInterface.OnRightArmRot;
+                @RightGripper.started -= m_Wrapper.m_GopherActionsCallbackInterface.OnRightGripper;
+                @RightGripper.performed -= m_Wrapper.m_GopherActionsCallbackInterface.OnRightGripper;
+                @RightGripper.canceled -= m_Wrapper.m_GopherActionsCallbackInterface.OnRightGripper;
                 @CameraHead.started -= m_Wrapper.m_GopherActionsCallbackInterface.OnCameraHead;
                 @CameraHead.performed -= m_Wrapper.m_GopherActionsCallbackInterface.OnCameraHead;
                 @CameraHead.canceled -= m_Wrapper.m_GopherActionsCallbackInterface.OnCameraHead;
@@ -418,6 +466,9 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                 @RightArmRot.started += instance.OnRightArmRot;
                 @RightArmRot.performed += instance.OnRightArmRot;
                 @RightArmRot.canceled += instance.OnRightArmRot;
+                @RightGripper.started += instance.OnRightGripper;
+                @RightGripper.performed += instance.OnRightGripper;
+                @RightGripper.canceled += instance.OnRightGripper;
                 @CameraHead.started += instance.OnCameraHead;
                 @CameraHead.performed += instance.OnCameraHead;
                 @CameraHead.canceled += instance.OnCameraHead;
@@ -439,6 +490,7 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnRightArmMove(InputAction.CallbackContext context);
         void OnRightArmRot(InputAction.CallbackContext context);
+        void OnRightGripper(InputAction.CallbackContext context);
         void OnCameraHead(InputAction.CallbackContext context);
     }
 }

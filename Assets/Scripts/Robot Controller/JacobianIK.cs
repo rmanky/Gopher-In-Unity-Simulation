@@ -19,7 +19,7 @@ public class JacobianIK : MonoBehaviour
     private List<float> jointSpacePositions, jointSpaceTargets;
     private List<int> jointDofStarts;
 
-    Vector3 targetPos = new Vector3(0f, 0f, 0f);
+    public Quaternion targetRot = Quaternion.Euler(Vector3.zero);
 
     // Start is called before the first frame update
     void Start()
@@ -185,15 +185,9 @@ public class JacobianIK : MonoBehaviour
 
         }
     }
-
-    public void OnDrawGizmos() {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(targetPos, 0.2f);
-    }
-
-    public void FixedUpdate() {
-        MoveDirection(Vector3.zero, Vector3.zero);
-    }
+    // public void FixedUpdate() {
+    //     MoveDirection(Vector3.zero, Vector3.zero);
+    // }
 
     ArticulationJacobian GetDampedLeastSquaresJacobianMatrix(ArticulationJacobian jacobian, float lambda)
     {
@@ -213,6 +207,12 @@ public class JacobianIK : MonoBehaviour
             return;
         }
 
+        // yes
+        deltaRotIn = new Vector3(deltaRotIn.y, deltaRotIn.x, deltaRotIn.z);
+
+        deltaPosIn = Vector3.ClampMagnitude(deltaPosIn, 1.0f);
+        deltaRotIn = Vector3.ClampMagnitude(deltaRotIn, 1.0f);
+
         // nRows set to number of rows in matrix, which corresponds to the number of articulation links times 6.
         // nCols set to number of columns in matrix, which corresponds to the number of joint DOFs, plus 6 in the case FIX_BASE is false.
         // Note that this computes the dense representation of an inherently sparse matrix.  Multiplication with this matrix maps
@@ -226,20 +226,30 @@ public class JacobianIK : MonoBehaviour
 
         List<float> jointSpacePositions = new List<float>();
 
+        targetRot = Quaternion.Slerp(targetRot, targetRot * Quaternion.Euler(deltaRotIn), 0.2f);
 
-        Vector3 deltaPosLocal = (endEffector.transform.right * deltaPosIn.x) + (endEffector.transform.up * deltaPosIn.y) + (endEffector.transform.forward * deltaPosIn.z);
-        targetPos += deltaPosLocal * 0.01f;
+        Quaternion rotation = targetRot * Quaternion.Inverse(endEffector.transform.rotation);
+        
+        rotation.ToAngleAxis(out float angle, out Vector3 axis);
+        if (angle > 180f) {
+            angle -= 360f;
+        }
 
-        //Vector3 deltaPos = (endEffector.transform.right * deltaPosIn.x) + (endEffector.transform.up * deltaPosIn.y) + (endEffector.transform.forward * deltaPosIn.z);
-        Vector3 deltaPos = Vector3.ClampMagnitude(targetPos - endEffector.transform.position, 1.0f);
-        Vector3 deltaRot = endEffector.transform.rotation * new Vector3(-deltaRotIn.y, deltaRotIn.x, deltaRotIn.z);
+        Vector3 deltaRot = Vector3.zero;
 
-        Debug.DrawLine(endEffector.transform.position, endEffector.transform.position + deltaPos);
+        if (!float.IsInfinity(axis.x)) {
+            deltaRot = (angle * rotationStrength) * axis.normalized;
+        }
+
+        Debug.Log("current: " + endEffector.transform.rotation.eulerAngles);
+        Debug.Log("target: " + targetRot.eulerAngles);
+        Debug.Log("delta: " + deltaRot);
+
+        Vector3 deltaPos = (endEffector.transform.right * deltaPosIn.x) + (endEffector.transform.up * deltaPosIn.y) + (endEffector.transform.forward * deltaPosIn.z);
+        // Vector3 deltaRot = endEffector.transform.rotation * new Vector3(-deltaRotIn.y, deltaRotIn.x, deltaRotIn.z);
 
         deltaPos *= positionStrength;
         deltaRot *= rotationStrength;
-
-        Debug.Log(deltaPos + " " + deltaRot);
 
         List<float> deltaTarget = new List<float>(minJacobian.rows);
         for (int i = deltaTarget.Count; i < minJacobian.rows - 6; i++) {
@@ -259,8 +269,9 @@ public class JacobianIK : MonoBehaviour
         foreach (ArticulationBody arSubBody in arChain) {
             ArticulationDrive drive = arSubBody.xDrive;
             // stop explosions
-            drive.target += Mathf.Clamp(deltaJointReducedSpace[m], -0.25f, 0.25f);
-            Debug.Log(arSubBody.name + " " + drive.target);
+            float target = drive.target + deltaJointReducedSpace[m];
+            // control yourself :(
+            drive.target = (target + 3.0f * drive.target) / 4.0f;
             arSubBody.xDrive = drive;
             m++;
         }

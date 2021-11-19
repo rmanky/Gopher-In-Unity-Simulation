@@ -6,13 +6,19 @@ using UnityEngine.InputSystem;
 public class SimulationController : MonoBehaviour
 {
     private GopherInputActions gopherInputActions;
-    private InputAction movement, rightArmMoveInput, rightArmRotInput;
+    private InputAction movement, rightArmGripper, rightArmMoveInput, rightArmRotInput;
 
     [SerializeField]
     private WheelController wheelController;
 
     [SerializeField]
     private JacobianIK rightArmIK;
+
+    [SerializeField]
+    private GripController gripController;
+
+    [SerializeField]
+    private bool gripperHold = true;
 
     private bool rightArmMoving, rightArmRotating;
     private Vector3 rightArmPos, rightArmRot = new Vector3(0f, 0f, 0f);
@@ -28,28 +34,45 @@ public class SimulationController : MonoBehaviour
         wheelController.Drive(context.ReadValue<Vector2>());
     }
 
+    /// MOVING
+
     private void StartRightArmMove(InputAction.CallbackContext context) {
+        rightArmPos = Vector3.zero;
         rightArmMoving = true;
     }
 
     private void PerformRightArmMove(InputAction.CallbackContext context) {
-        rightArmPos = context.ReadValue<Vector3>();
+        Vector3 val = context.ReadValue<Vector3>();
+        if (val.magnitude < 0.1f) {
+            rightArmPos = Vector3.zero;
+            rightArmMoving = false;
+        } else {
+            rightArmPos = context.ReadValue<Vector3>();
+            rightArmMoving = true;
+        }
     }
 
-    private void StopRightArmMove(InputAction.CallbackContext context) {
-        rightArmMoving = false;
-    }
+    /// ROTATING
 
     private void StartRightArmRot(InputAction.CallbackContext context) {
-        rightArmMoving = true;
+        rightArmRot = Vector3.zero;
+        rightArmRotating = true;
     }
 
     private void PerformRightArmRot(InputAction.CallbackContext context) {
-        rightArmRot = context.ReadValue<Vector3>();
+        Vector3 val = context.ReadValue<Vector3>();
+        if (val.magnitude < 0.1f) {
+            rightArmRot = Vector3.zero;
+            rightArmRotating = false;
+        } else {
+            rightArmRot = context.ReadValue<Vector3>();
+            rightArmRotating = true;
+        }
     }
 
-    private void StopRightArmRot(InputAction.CallbackContext context) {
-        rightArmMoving = false;
+    private void RightGripper(InputAction.CallbackContext context) {
+        float val = Mathf.Max(0f, context.ReadValue<float>());
+        gripController.SetGrippers(val);
     }
 
     private void OnEnable() {
@@ -58,15 +81,19 @@ public class SimulationController : MonoBehaviour
         movement.performed += Moved;
         movement.canceled += Stopped;
 
+        rightArmGripper = gopherInputActions.Gopher.RightGripper;
+        rightArmGripper.performed += RightGripper;
+        if (!gripperHold) {
+            rightArmGripper.canceled += RightGripper;
+        }
+
         rightArmMoveInput = gopherInputActions.Gopher.RightArmMove;
         rightArmMoveInput.started += StartRightArmMove;
         rightArmMoveInput.performed += PerformRightArmMove;
-        rightArmMoveInput.canceled += StopRightArmMove;
 
         rightArmRotInput = gopherInputActions.Gopher.RightArmRot;
         rightArmRotInput.started += StartRightArmRot;
         rightArmRotInput.performed += PerformRightArmRot;
-        rightArmRotInput.canceled += StopRightArmRot;
     }
 
     private void OnDisable() {
@@ -74,13 +101,21 @@ public class SimulationController : MonoBehaviour
         movement.performed -= Moved;
         movement.canceled -= Stopped;
 
+        rightArmGripper.performed -= RightGripper;
+        if (!gripperHold) {
+            rightArmGripper.canceled -= RightGripper;
+        }
+
         rightArmMoveInput.started -= StartRightArmMove;
         rightArmMoveInput.performed -= PerformRightArmMove;
-        rightArmMoveInput.canceled -= StopRightArmMove;
+
+        rightArmRotInput.started -= StartRightArmRot;
+        rightArmRotInput.performed -= PerformRightArmRot;
     }
 
     private void FixedUpdate() {
         if(rightArmMoving || rightArmRotating) {
+            Debug.Log(rightArmMoving + " " + rightArmRotating);
             rightArmIK.MoveDirection(rightArmPos, rightArmRot);
         }
     }

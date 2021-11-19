@@ -23,13 +23,11 @@ public class GripController : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        SetTarget(leftFinger, Input.GetAxis("Fire1") * 50);
-        SetTarget(leftFingerTip, Input.GetAxis("Fire1") * -40);
-        SetTarget(rightFinger, Input.GetAxis("Fire1") * 50);
-        SetTarget(rightFingerTip, Input.GetAxis("Fire1") * -40);
+    public void SetGrippers(float closeValue) {
+        SetTarget(leftFinger, closeValue * 50);
+        SetTarget(leftFingerTip, closeValue * -30);
+        SetTarget(rightFinger, closeValue * 50);
+        SetTarget(rightFingerTip, closeValue * -30);
     }
 
     void SetTarget(ArticulationBody joint, float target)
