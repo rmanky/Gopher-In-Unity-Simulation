@@ -44,7 +44,7 @@ public class HandController : MonoBehaviour
         rBody.AddTorque(axis * rBody.mass * maxRotation);
     }
 
-    Quaternion FromToRot(Vector3 a, Vector3 b)
+    private Quaternion FromToRot(Vector3 a, Vector3 b)
     {
         float ma = a.magnitude;
         float mb = b.magnitude;
