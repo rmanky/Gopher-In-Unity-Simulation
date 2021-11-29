@@ -5,11 +5,16 @@ using UnityEngine;
 
 public class JacobianIK : MonoBehaviour
 {
-    public GameObject endEffector;
-    public float positionStrength = 10f;
-    public float rotationStrength = 2f;
-    public ArticulationBody arRoot;
-    public ArticulationBody[] arChain;
+    [SerializeField]
+    private GameObject endEffector;
+    [SerializeField]
+    private float positionStrength = 10f;
+    [SerializeField]
+    private float rotationStrength = 2f;
+    [SerializeField]
+    private ArticulationBody arRoot;
+    [SerializeField]
+    private ArticulationBody[] arChain;
 
     private List<int> arIndices = new List<int>();
     private List<int> arDofStartIndices = new List<int>();
@@ -19,7 +24,8 @@ public class JacobianIK : MonoBehaviour
     private List<float> jointSpacePositions, jointSpaceTargets;
     private List<int> jointDofStarts;
 
-    public Quaternion targetRot = Quaternion.Euler(Vector3.zero);
+    [SerializeField]
+    private Transform targetForward;
 
     // Start is called before the first frame update
     void Start()
@@ -226,9 +232,9 @@ public class JacobianIK : MonoBehaviour
 
         List<float> jointSpacePositions = new List<float>();
 
-        targetRot = Quaternion.Slerp(targetRot, targetRot * Quaternion.Euler(deltaRotIn), 0.2f);
+        targetForward.rotation = Quaternion.Slerp(targetForward.rotation, targetForward.rotation * Quaternion.Euler(deltaRotIn), 0.2f);
 
-        Quaternion rotation = targetRot * Quaternion.Inverse(endEffector.transform.rotation);
+        Quaternion rotation = targetForward.rotation * Quaternion.Inverse(endEffector.transform.rotation);
         
         rotation.ToAngleAxis(out float angle, out Vector3 axis);
         if (angle > 180f) {
@@ -240,10 +246,6 @@ public class JacobianIK : MonoBehaviour
         if (!float.IsInfinity(axis.x)) {
             deltaRot = (angle * rotationStrength) * axis.normalized;
         }
-
-        Debug.Log("current: " + endEffector.transform.rotation.eulerAngles);
-        Debug.Log("target: " + targetRot.eulerAngles);
-        Debug.Log("delta: " + deltaRot);
 
         Vector3 deltaPos = (endEffector.transform.right * deltaPosIn.x) + (endEffector.transform.up * deltaPosIn.y) + (endEffector.transform.forward * deltaPosIn.z);
         // Vector3 deltaRot = endEffector.transform.rotation * new Vector3(-deltaRotIn.y, deltaRotIn.x, deltaRotIn.z);

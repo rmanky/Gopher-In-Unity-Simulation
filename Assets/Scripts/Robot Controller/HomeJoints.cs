@@ -56,7 +56,6 @@ public class HomeJoints : MonoBehaviour
         while(lerp < 1)
         {
             lerp = Mathf.MoveTowards(lerp, 1.0f, Time.deltaTime / smoothingDuration);
-            Debug.Log(lerp);
             SetJointTargets(lerp);
     
             yield return null;

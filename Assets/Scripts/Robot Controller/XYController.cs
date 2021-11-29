@@ -29,10 +29,8 @@ public class XYController : MonoBehaviour
     private float _verticalTarget, _horizontalTarget;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-
         if (autoSetOffsets) {
             verticalOffset = verticalJoint.xDrive.target;
             horizontalOffset = horizontalJoint.xDrive.target;    
@@ -42,12 +40,11 @@ public class XYController : MonoBehaviour
         _horizontalTarget = horizontalOffset;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetTarget(Vector2 lookDir)
     {
-        float verticalLook = Input.GetAxis("Mouse Y") * sensitivity;
+        float verticalLook = lookDir.y;
         ArticulationDrive verticalDrive = verticalJoint.xDrive;
-        _verticalTarget -= verticalLook;
+        _verticalTarget += verticalLook;
         if (inheritLimits) {
             _verticalTarget = Mathf.Clamp(_verticalTarget, verticalDrive.lowerLimit, verticalDrive.upperLimit);
         }
@@ -55,7 +52,7 @@ public class XYController : MonoBehaviour
         verticalJoint.xDrive = verticalDrive;
 
 
-        float horizontalLook = Input.GetAxis("Mouse X") * sensitivity;
+        float horizontalLook = lookDir.x;
         ArticulationDrive horizontalDrive = horizontalJoint.xDrive;
         _horizontalTarget += horizontalLook;
         if (inheritLimits) {

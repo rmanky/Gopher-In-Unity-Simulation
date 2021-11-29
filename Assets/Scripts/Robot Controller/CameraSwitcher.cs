@@ -4,22 +4,38 @@ using UnityEngine;
 
 public class CameraSwitcher : MonoBehaviour
 {
-    [SerializeField]
-    private Camera camera;
+    public enum CameraLocation {Head, Left, Right};
 
     [SerializeField]
-    private Transform[] cameraLocations;
+    private Camera mainCamera;
+    
+    [SerializeField]
+    private Transform headCameraLocation;
 
-    void Start()
+    [SerializeField]
+    private Transform leftCameraLocation;
+
+    [SerializeField]
+    private Transform rightCameraLocation;
+
+    private void Start()
     {
-        Transform origin = cameraLocations[0];
-        camera.transform.parent = origin;
-        camera.transform.position = origin.position;
-        camera.transform.rotation = origin.rotation;
+        SetCameraLocation(headCameraLocation);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    private void SetCameraLocation(Transform targetTransform) {
+        mainCamera.transform.parent = targetTransform;
+        mainCamera.transform.position = targetTransform.position;
+        mainCamera.transform.rotation = targetTransform.rotation;
+    }
+
+    public void SetCamera(CameraLocation cameraLocation) {
+        if (cameraLocation == CameraLocation.Head) {
+            SetCameraLocation(headCameraLocation);
+        } else if (cameraLocation == CameraLocation.Left) {
+            SetCameraLocation(leftCameraLocation);
+        } else if (cameraLocation == CameraLocation.Right) {
+            SetCameraLocation(rightCameraLocation);
+        }
     }
 }

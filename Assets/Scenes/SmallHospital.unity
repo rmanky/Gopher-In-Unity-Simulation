@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028386, g: 0.22571427, b: 0.3069231, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -810,7 +810,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh450878
+  m_Name: pb_Mesh75534
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1322,7 +1322,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh450754
+  m_Name: pb_Mesh75416
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2135,28 +2135,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1018300577, guid: f0bf9ea0b2d210662b2dd0ce158e4231, type: 3}
-      propertyPath: camera
+      propertyPath: mainCamera
       value: 
       objectReference: {fileID: 782208835}
     - target: {fileID: 1018300579, guid: f0bf9ea0b2d210662b2dd0ce158e4231, type: 3}
-      propertyPath: targetRot.w
-      value: -0.00000004371139
-      objectReference: {fileID: 0}
-    - target: {fileID: 1018300579, guid: f0bf9ea0b2d210662b2dd0ce158e4231, type: 3}
-      propertyPath: targetRot.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1018300579, guid: f0bf9ea0b2d210662b2dd0ce158e4231, type: 3}
       propertyPath: positionStrength
-      value: 12
+      value: 24
       objectReference: {fileID: 0}
-    - target: {fileID: 1018300579, guid: f0bf9ea0b2d210662b2dd0ce158e4231, type: 3}
-      propertyPath: rotationStrength
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5651201407803220176, guid: f0bf9ea0b2d210662b2dd0ce158e4231, type: 3}
-      propertyPath: m_Enabled
-      value: 1
+    - target: {fileID: 5835283546382092983, guid: f0bf9ea0b2d210662b2dd0ce158e4231, type: 3}
+      propertyPath: positionStrength
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 7489454703369971792, guid: f0bf9ea0b2d210662b2dd0ce158e4231, type: 3}
       propertyPath: m_RootOrder
@@ -2205,10 +2193,6 @@ PrefabInstance:
     - target: {fileID: 7489454703369971795, guid: f0bf9ea0b2d210662b2dd0ce158e4231, type: 3}
       propertyPath: m_Name
       value: Gopher
-      objectReference: {fileID: 0}
-    - target: {fileID: 7489454703369971795, guid: f0bf9ea0b2d210662b2dd0ce158e4231, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0bf9ea0b2d210662b2dd0ce158e4231, type: 3}
@@ -2544,18 +2528,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1414197184, guid: d855ef4e530e8a8419455e31beb50459, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 1414197184, guid: d855ef4e530e8a8419455e31beb50459, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 1414197184, guid: d855ef4e530e8a8419455e31beb50459, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
     - target: {fileID: 6272036863271901749, guid: d855ef4e530e8a8419455e31beb50459, type: 3}
       propertyPath: m_Name
       value: DefaultSetup.UnityXR
@@ -4439,7 +4411,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh450920
+  m_Name: pb_Mesh75582
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4608,7 +4580,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh450844
+  m_Name: pb_Mesh75502
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

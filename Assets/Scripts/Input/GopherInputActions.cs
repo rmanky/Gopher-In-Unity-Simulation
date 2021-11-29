@@ -28,16 +28,7 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
             ""id"": ""8799d70f-0288-4313-a7a5-a8b2f432b3ae"",
             ""actions"": [
                 {
-                    ""name"": ""Movement"",
-                    ""type"": ""Value"",
-                    ""id"": ""8b1626fa-4adc-483c-b45a-6a790957ea66"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Right Arm Move"",
+                    ""name"": ""Move 3D"",
                     ""type"": ""Value"",
                     ""id"": ""049c3fd5-305a-45bb-b9bc-ebff21aa51f1"",
                     ""expectedControlType"": ""Vector3"",
@@ -46,7 +37,7 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Right Arm Rot"",
+                    ""name"": ""Rotate 3D"",
                     ""type"": ""Value"",
                     ""id"": ""44aa8fed-bdf0-451d-9d37-b9a294cdb265"",
                     ""expectedControlType"": ""Vector3"",
@@ -55,13 +46,49 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Right Gripper"",
+                    ""name"": ""Gripper"",
                     ""type"": ""Value"",
                     ""id"": ""fc4aa252-ff65-4911-92e2-720740b801ea"",
                     ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Select Base"",
+                    ""type"": ""Button"",
+                    ""id"": ""91fac2fa-f22b-4c66-8633-329e4bf9acc7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Select Right Arm"",
+                    ""type"": ""Button"",
+                    ""id"": ""7d945ee5-1686-47ed-a3ee-3ee1907bded8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Select Left Arm"",
+                    ""type"": ""Button"",
+                    ""id"": ""d1b9293d-47ca-4f45-b3cf-dcdaad32c799"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Select Both"",
+                    ""type"": ""Button"",
+                    ""id"": ""52330af8-e101-4e56-ad1b-727a7b5c86a6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 },
                 {
                     ""name"": ""Camera Head"",
@@ -71,64 +98,27 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Camera Left"",
+                    ""type"": ""Button"",
+                    ""id"": ""63f326a2-34af-4c08-b238-9faad720709f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Camera Right"",
+                    ""type"": ""Button"",
+                    ""id"": ""bd3c4b65-a773-44d1-825b-cf785ee4d7b9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""0072e7e6-5756-4914-8d01-dd46ef9c4f30"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""6ec6fe55-84d4-4773-bf53-f56cfac84bbf"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""7c2744c3-7ba0-46e1-8998-0a515c820406"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""cae2b499-0792-4511-8ec4-89e493d6b1df"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""1f10b357-38eb-4d8d-91fe-111a97dff809"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
                 {
                     ""name"": ""3D Vector"",
                     ""id"": ""98dad55f-4541-4076-8b5a-a0963be5a37a"",
@@ -136,7 +126,7 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Right Arm Move"",
+                    ""action"": ""Move 3D"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -147,7 +137,7 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Right Arm Move"",
+                    ""action"": ""Move 3D"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -158,7 +148,7 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Right Arm Move"",
+                    ""action"": ""Move 3D"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -169,7 +159,7 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Right Arm Move"",
+                    ""action"": ""Move 3D"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -180,7 +170,7 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Right Arm Move"",
+                    ""action"": ""Move 3D"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -191,7 +181,7 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Right Arm Move"",
+                    ""action"": ""Move 3D"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -202,7 +192,7 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Right Arm Move"",
+                    ""action"": ""Move 3D"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -213,7 +203,7 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Right Arm Rot"",
+                    ""action"": ""Rotate 3D"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -224,7 +214,7 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Right Arm Rot"",
+                    ""action"": ""Rotate 3D"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -235,7 +225,7 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Right Arm Rot"",
+                    ""action"": ""Rotate 3D"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -246,7 +236,7 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Right Arm Rot"",
+                    ""action"": ""Rotate 3D"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -257,7 +247,7 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Right Arm Rot"",
+                    ""action"": ""Rotate 3D"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -268,7 +258,7 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Right Arm Rot"",
+                    ""action"": ""Rotate 3D"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -279,20 +269,9 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Right Arm Rot"",
+                    ""action"": ""Rotate 3D"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""807791e6-cdca-4ab4-b41c-b3a0e92c3d96"",
-                    ""path"": ""<Keyboard>/numpad5"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Camera Head"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": ""1D Axis"",
@@ -301,7 +280,7 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Right Gripper"",
+                    ""action"": ""Gripper"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -312,7 +291,7 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Right Gripper"",
+                    ""action"": ""Gripper"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -323,9 +302,86 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Right Gripper"",
+                    ""action"": ""Gripper"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""21b1b3eb-60e2-489a-9de5-dfee7d57ed3b"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Select Right Arm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0b4a60cb-fcad-41fb-8a42-0758730d0f9b"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Select Left Arm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""76365a48-93b0-44c8-a31d-910bef33c888"",
+                    ""path"": ""<Keyboard>/numpad1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Camera Left"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8a364391-ae68-4d23-92d5-d390a6322bda"",
+                    ""path"": ""<Keyboard>/numpad3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Camera Right"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""807791e6-cdca-4ab4-b41c-b3a0e92c3d96"",
+                    ""path"": ""<Keyboard>/numpad2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Camera Head"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fd2ac358-ea9c-4dab-99fa-840ddd8c75db"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Select Both"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""17069748-8023-44b2-b5b4-2b28e8a48b61"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Select Base"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -351,11 +407,16 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
 }");
         // Gopher
         m_Gopher = asset.FindActionMap("Gopher", throwIfNotFound: true);
-        m_Gopher_Movement = m_Gopher.FindAction("Movement", throwIfNotFound: true);
-        m_Gopher_RightArmMove = m_Gopher.FindAction("Right Arm Move", throwIfNotFound: true);
-        m_Gopher_RightArmRot = m_Gopher.FindAction("Right Arm Rot", throwIfNotFound: true);
-        m_Gopher_RightGripper = m_Gopher.FindAction("Right Gripper", throwIfNotFound: true);
+        m_Gopher_Move3D = m_Gopher.FindAction("Move 3D", throwIfNotFound: true);
+        m_Gopher_Rotate3D = m_Gopher.FindAction("Rotate 3D", throwIfNotFound: true);
+        m_Gopher_Gripper = m_Gopher.FindAction("Gripper", throwIfNotFound: true);
+        m_Gopher_SelectBase = m_Gopher.FindAction("Select Base", throwIfNotFound: true);
+        m_Gopher_SelectRightArm = m_Gopher.FindAction("Select Right Arm", throwIfNotFound: true);
+        m_Gopher_SelectLeftArm = m_Gopher.FindAction("Select Left Arm", throwIfNotFound: true);
+        m_Gopher_SelectBoth = m_Gopher.FindAction("Select Both", throwIfNotFound: true);
         m_Gopher_CameraHead = m_Gopher.FindAction("Camera Head", throwIfNotFound: true);
+        m_Gopher_CameraLeft = m_Gopher.FindAction("Camera Left", throwIfNotFound: true);
+        m_Gopher_CameraRight = m_Gopher.FindAction("Camera Right", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -415,20 +476,30 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
     // Gopher
     private readonly InputActionMap m_Gopher;
     private IGopherActions m_GopherActionsCallbackInterface;
-    private readonly InputAction m_Gopher_Movement;
-    private readonly InputAction m_Gopher_RightArmMove;
-    private readonly InputAction m_Gopher_RightArmRot;
-    private readonly InputAction m_Gopher_RightGripper;
+    private readonly InputAction m_Gopher_Move3D;
+    private readonly InputAction m_Gopher_Rotate3D;
+    private readonly InputAction m_Gopher_Gripper;
+    private readonly InputAction m_Gopher_SelectBase;
+    private readonly InputAction m_Gopher_SelectRightArm;
+    private readonly InputAction m_Gopher_SelectLeftArm;
+    private readonly InputAction m_Gopher_SelectBoth;
     private readonly InputAction m_Gopher_CameraHead;
+    private readonly InputAction m_Gopher_CameraLeft;
+    private readonly InputAction m_Gopher_CameraRight;
     public struct GopherActions
     {
         private @GopherInputActions m_Wrapper;
         public GopherActions(@GopherInputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_Gopher_Movement;
-        public InputAction @RightArmMove => m_Wrapper.m_Gopher_RightArmMove;
-        public InputAction @RightArmRot => m_Wrapper.m_Gopher_RightArmRot;
-        public InputAction @RightGripper => m_Wrapper.m_Gopher_RightGripper;
+        public InputAction @Move3D => m_Wrapper.m_Gopher_Move3D;
+        public InputAction @Rotate3D => m_Wrapper.m_Gopher_Rotate3D;
+        public InputAction @Gripper => m_Wrapper.m_Gopher_Gripper;
+        public InputAction @SelectBase => m_Wrapper.m_Gopher_SelectBase;
+        public InputAction @SelectRightArm => m_Wrapper.m_Gopher_SelectRightArm;
+        public InputAction @SelectLeftArm => m_Wrapper.m_Gopher_SelectLeftArm;
+        public InputAction @SelectBoth => m_Wrapper.m_Gopher_SelectBoth;
         public InputAction @CameraHead => m_Wrapper.m_Gopher_CameraHead;
+        public InputAction @CameraLeft => m_Wrapper.m_Gopher_CameraLeft;
+        public InputAction @CameraRight => m_Wrapper.m_Gopher_CameraRight;
         public InputActionMap Get() { return m_Wrapper.m_Gopher; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -438,40 +509,70 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
         {
             if (m_Wrapper.m_GopherActionsCallbackInterface != null)
             {
-                @Movement.started -= m_Wrapper.m_GopherActionsCallbackInterface.OnMovement;
-                @Movement.performed -= m_Wrapper.m_GopherActionsCallbackInterface.OnMovement;
-                @Movement.canceled -= m_Wrapper.m_GopherActionsCallbackInterface.OnMovement;
-                @RightArmMove.started -= m_Wrapper.m_GopherActionsCallbackInterface.OnRightArmMove;
-                @RightArmMove.performed -= m_Wrapper.m_GopherActionsCallbackInterface.OnRightArmMove;
-                @RightArmMove.canceled -= m_Wrapper.m_GopherActionsCallbackInterface.OnRightArmMove;
-                @RightArmRot.started -= m_Wrapper.m_GopherActionsCallbackInterface.OnRightArmRot;
-                @RightArmRot.performed -= m_Wrapper.m_GopherActionsCallbackInterface.OnRightArmRot;
-                @RightArmRot.canceled -= m_Wrapper.m_GopherActionsCallbackInterface.OnRightArmRot;
-                @RightGripper.started -= m_Wrapper.m_GopherActionsCallbackInterface.OnRightGripper;
-                @RightGripper.performed -= m_Wrapper.m_GopherActionsCallbackInterface.OnRightGripper;
-                @RightGripper.canceled -= m_Wrapper.m_GopherActionsCallbackInterface.OnRightGripper;
+                @Move3D.started -= m_Wrapper.m_GopherActionsCallbackInterface.OnMove3D;
+                @Move3D.performed -= m_Wrapper.m_GopherActionsCallbackInterface.OnMove3D;
+                @Move3D.canceled -= m_Wrapper.m_GopherActionsCallbackInterface.OnMove3D;
+                @Rotate3D.started -= m_Wrapper.m_GopherActionsCallbackInterface.OnRotate3D;
+                @Rotate3D.performed -= m_Wrapper.m_GopherActionsCallbackInterface.OnRotate3D;
+                @Rotate3D.canceled -= m_Wrapper.m_GopherActionsCallbackInterface.OnRotate3D;
+                @Gripper.started -= m_Wrapper.m_GopherActionsCallbackInterface.OnGripper;
+                @Gripper.performed -= m_Wrapper.m_GopherActionsCallbackInterface.OnGripper;
+                @Gripper.canceled -= m_Wrapper.m_GopherActionsCallbackInterface.OnGripper;
+                @SelectBase.started -= m_Wrapper.m_GopherActionsCallbackInterface.OnSelectBase;
+                @SelectBase.performed -= m_Wrapper.m_GopherActionsCallbackInterface.OnSelectBase;
+                @SelectBase.canceled -= m_Wrapper.m_GopherActionsCallbackInterface.OnSelectBase;
+                @SelectRightArm.started -= m_Wrapper.m_GopherActionsCallbackInterface.OnSelectRightArm;
+                @SelectRightArm.performed -= m_Wrapper.m_GopherActionsCallbackInterface.OnSelectRightArm;
+                @SelectRightArm.canceled -= m_Wrapper.m_GopherActionsCallbackInterface.OnSelectRightArm;
+                @SelectLeftArm.started -= m_Wrapper.m_GopherActionsCallbackInterface.OnSelectLeftArm;
+                @SelectLeftArm.performed -= m_Wrapper.m_GopherActionsCallbackInterface.OnSelectLeftArm;
+                @SelectLeftArm.canceled -= m_Wrapper.m_GopherActionsCallbackInterface.OnSelectLeftArm;
+                @SelectBoth.started -= m_Wrapper.m_GopherActionsCallbackInterface.OnSelectBoth;
+                @SelectBoth.performed -= m_Wrapper.m_GopherActionsCallbackInterface.OnSelectBoth;
+                @SelectBoth.canceled -= m_Wrapper.m_GopherActionsCallbackInterface.OnSelectBoth;
                 @CameraHead.started -= m_Wrapper.m_GopherActionsCallbackInterface.OnCameraHead;
                 @CameraHead.performed -= m_Wrapper.m_GopherActionsCallbackInterface.OnCameraHead;
                 @CameraHead.canceled -= m_Wrapper.m_GopherActionsCallbackInterface.OnCameraHead;
+                @CameraLeft.started -= m_Wrapper.m_GopherActionsCallbackInterface.OnCameraLeft;
+                @CameraLeft.performed -= m_Wrapper.m_GopherActionsCallbackInterface.OnCameraLeft;
+                @CameraLeft.canceled -= m_Wrapper.m_GopherActionsCallbackInterface.OnCameraLeft;
+                @CameraRight.started -= m_Wrapper.m_GopherActionsCallbackInterface.OnCameraRight;
+                @CameraRight.performed -= m_Wrapper.m_GopherActionsCallbackInterface.OnCameraRight;
+                @CameraRight.canceled -= m_Wrapper.m_GopherActionsCallbackInterface.OnCameraRight;
             }
             m_Wrapper.m_GopherActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Movement.started += instance.OnMovement;
-                @Movement.performed += instance.OnMovement;
-                @Movement.canceled += instance.OnMovement;
-                @RightArmMove.started += instance.OnRightArmMove;
-                @RightArmMove.performed += instance.OnRightArmMove;
-                @RightArmMove.canceled += instance.OnRightArmMove;
-                @RightArmRot.started += instance.OnRightArmRot;
-                @RightArmRot.performed += instance.OnRightArmRot;
-                @RightArmRot.canceled += instance.OnRightArmRot;
-                @RightGripper.started += instance.OnRightGripper;
-                @RightGripper.performed += instance.OnRightGripper;
-                @RightGripper.canceled += instance.OnRightGripper;
+                @Move3D.started += instance.OnMove3D;
+                @Move3D.performed += instance.OnMove3D;
+                @Move3D.canceled += instance.OnMove3D;
+                @Rotate3D.started += instance.OnRotate3D;
+                @Rotate3D.performed += instance.OnRotate3D;
+                @Rotate3D.canceled += instance.OnRotate3D;
+                @Gripper.started += instance.OnGripper;
+                @Gripper.performed += instance.OnGripper;
+                @Gripper.canceled += instance.OnGripper;
+                @SelectBase.started += instance.OnSelectBase;
+                @SelectBase.performed += instance.OnSelectBase;
+                @SelectBase.canceled += instance.OnSelectBase;
+                @SelectRightArm.started += instance.OnSelectRightArm;
+                @SelectRightArm.performed += instance.OnSelectRightArm;
+                @SelectRightArm.canceled += instance.OnSelectRightArm;
+                @SelectLeftArm.started += instance.OnSelectLeftArm;
+                @SelectLeftArm.performed += instance.OnSelectLeftArm;
+                @SelectLeftArm.canceled += instance.OnSelectLeftArm;
+                @SelectBoth.started += instance.OnSelectBoth;
+                @SelectBoth.performed += instance.OnSelectBoth;
+                @SelectBoth.canceled += instance.OnSelectBoth;
                 @CameraHead.started += instance.OnCameraHead;
                 @CameraHead.performed += instance.OnCameraHead;
                 @CameraHead.canceled += instance.OnCameraHead;
+                @CameraLeft.started += instance.OnCameraLeft;
+                @CameraLeft.performed += instance.OnCameraLeft;
+                @CameraLeft.canceled += instance.OnCameraLeft;
+                @CameraRight.started += instance.OnCameraRight;
+                @CameraRight.performed += instance.OnCameraRight;
+                @CameraRight.canceled += instance.OnCameraRight;
             }
         }
     }
@@ -487,10 +588,15 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
     }
     public interface IGopherActions
     {
-        void OnMovement(InputAction.CallbackContext context);
-        void OnRightArmMove(InputAction.CallbackContext context);
-        void OnRightArmRot(InputAction.CallbackContext context);
-        void OnRightGripper(InputAction.CallbackContext context);
+        void OnMove3D(InputAction.CallbackContext context);
+        void OnRotate3D(InputAction.CallbackContext context);
+        void OnGripper(InputAction.CallbackContext context);
+        void OnSelectBase(InputAction.CallbackContext context);
+        void OnSelectRightArm(InputAction.CallbackContext context);
+        void OnSelectLeftArm(InputAction.CallbackContext context);
+        void OnSelectBoth(InputAction.CallbackContext context);
         void OnCameraHead(InputAction.CallbackContext context);
+        void OnCameraLeft(InputAction.CallbackContext context);
+        void OnCameraRight(InputAction.CallbackContext context);
     }
 }
