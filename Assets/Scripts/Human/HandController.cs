@@ -36,8 +36,12 @@ public class HandController : MonoBehaviour
         rBody.AddForce(direction.normalized * rBody.mass * maxSpeed);
 
         Vector3 axis = Vector3.Cross(transform.forward, target.forward);
-        //float maxRotation = Mathf.Min(rotationSpeed, axis. * rotationSpeed);
-        rBody.AddTorque(rBody.angularVelocity * rBody.mass, ForceMode.Impulse);
+        float maxRotation = Mathf.Min(rotationSpeed, axis.magnitude * rotationSpeed);
+        rBody.AddTorque(-rBody.angularVelocity, ForceMode.VelocityChange);
+        rBody.AddTorque(axis * rBody.mass * maxRotation);
+
+        axis = Vector3.Cross(transform.up, target.up);
+        rBody.AddTorque(axis * rBody.mass * maxRotation);
     }
 
     Quaternion FromToRot(Vector3 a, Vector3 b)

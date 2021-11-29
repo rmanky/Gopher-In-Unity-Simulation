@@ -672,7 +672,7 @@ MonoBehaviour:
   wheelLeft: {fileID: 7489454703490229964}
   wheelRight: {fileID: 7489454702519263346}
   wheelRadius: 0.0605
-  targetVelocity: 10
+  targetVelocity: 15
 --- !u!114 &1018300579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -686,7 +686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endEffector: {fileID: 951654550}
-  positionStrength: 8
+  positionStrength: 24
   rotationStrength: 1
   arRoot: {fileID: 4764266988418642422}
   arChain:
@@ -712,7 +712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endEffector: {fileID: 6235259471469150167}
-  positionStrength: 8
+  positionStrength: 24
   rotationStrength: 1
   arRoot: {fileID: 4764266988418642422}
   arChain:
