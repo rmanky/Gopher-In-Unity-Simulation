@@ -384,6 +384,54 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Human"",
+            ""id"": ""9aad774a-95f7-41f6-8aae-7cb5c690e3b7"",
+            ""actions"": [
+                {
+                    ""name"": ""Left Hand"",
+                    ""type"": ""Value"",
+                    ""id"": ""83134dc4-e8c4-423b-9680-369b43acbece"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Right Hand"",
+                    ""type"": ""Value"",
+                    ""id"": ""3fb10ad7-e3db-42ed-9aa9-d95de7265023"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""ca08d547-b89e-4ffc-ab8f-5786c643f452"",
+                    ""path"": ""<XRController>{LeftHand}/trigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Left Hand"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7ee9369a-90fb-48e5-af47-f5fe2b166fe6"",
+                    ""path"": ""<XRController>{RightHand}/trigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right Hand"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -417,6 +465,10 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
         m_Gopher_CameraHead = m_Gopher.FindAction("Camera Head", throwIfNotFound: true);
         m_Gopher_CameraLeft = m_Gopher.FindAction("Camera Left", throwIfNotFound: true);
         m_Gopher_CameraRight = m_Gopher.FindAction("Camera Right", throwIfNotFound: true);
+        // Human
+        m_Human = asset.FindActionMap("Human", throwIfNotFound: true);
+        m_Human_LeftHand = m_Human.FindAction("Left Hand", throwIfNotFound: true);
+        m_Human_RightHand = m_Human.FindAction("Right Hand", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -577,6 +629,47 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
         }
     }
     public GopherActions @Gopher => new GopherActions(this);
+
+    // Human
+    private readonly InputActionMap m_Human;
+    private IHumanActions m_HumanActionsCallbackInterface;
+    private readonly InputAction m_Human_LeftHand;
+    private readonly InputAction m_Human_RightHand;
+    public struct HumanActions
+    {
+        private @GopherInputActions m_Wrapper;
+        public HumanActions(@GopherInputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @LeftHand => m_Wrapper.m_Human_LeftHand;
+        public InputAction @RightHand => m_Wrapper.m_Human_RightHand;
+        public InputActionMap Get() { return m_Wrapper.m_Human; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(HumanActions set) { return set.Get(); }
+        public void SetCallbacks(IHumanActions instance)
+        {
+            if (m_Wrapper.m_HumanActionsCallbackInterface != null)
+            {
+                @LeftHand.started -= m_Wrapper.m_HumanActionsCallbackInterface.OnLeftHand;
+                @LeftHand.performed -= m_Wrapper.m_HumanActionsCallbackInterface.OnLeftHand;
+                @LeftHand.canceled -= m_Wrapper.m_HumanActionsCallbackInterface.OnLeftHand;
+                @RightHand.started -= m_Wrapper.m_HumanActionsCallbackInterface.OnRightHand;
+                @RightHand.performed -= m_Wrapper.m_HumanActionsCallbackInterface.OnRightHand;
+                @RightHand.canceled -= m_Wrapper.m_HumanActionsCallbackInterface.OnRightHand;
+            }
+            m_Wrapper.m_HumanActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @LeftHand.started += instance.OnLeftHand;
+                @LeftHand.performed += instance.OnLeftHand;
+                @LeftHand.canceled += instance.OnLeftHand;
+                @RightHand.started += instance.OnRightHand;
+                @RightHand.performed += instance.OnRightHand;
+                @RightHand.canceled += instance.OnRightHand;
+            }
+        }
+    }
+    public HumanActions @Human => new HumanActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -598,5 +691,10 @@ public partial class @GopherInputActions : IInputActionCollection2, IDisposable
         void OnCameraHead(InputAction.CallbackContext context);
         void OnCameraLeft(InputAction.CallbackContext context);
         void OnCameraRight(InputAction.CallbackContext context);
+    }
+    public interface IHumanActions
+    {
+        void OnLeftHand(InputAction.CallbackContext context);
+        void OnRightHand(InputAction.CallbackContext context);
     }
 }

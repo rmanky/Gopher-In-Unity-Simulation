@@ -362,6 +362,54 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Human",
+            "id": "9aad774a-95f7-41f6-8aae-7cb5c690e3b7",
+            "actions": [
+                {
+                    "name": "Left Hand",
+                    "type": "Value",
+                    "id": "83134dc4-e8c4-423b-9680-369b43acbece",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Right Hand",
+                    "type": "Value",
+                    "id": "3fb10ad7-e3db-42ed-9aa9-d95de7265023",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ca08d547-b89e-4ffc-ab8f-5786c643f452",
+                    "path": "<XRController>{LeftHand}/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left Hand",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7ee9369a-90fb-48e5-af47-f5fe2b166fe6",
+                    "path": "<XRController>{RightHand}/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right Hand",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
