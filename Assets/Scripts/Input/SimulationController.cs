@@ -124,14 +124,14 @@ public class SimulationController : MonoBehaviour
     private void SetActions(InputAction action, Action<InputAction.CallbackContext> callback) {
         ActionCallback actionCallback = new ActionCallback(action, callback);
         actionCallbacks.Add(actionCallback);
-        action.started += callback;
+        // action.started += callback;
         action.performed += callback;
         action.canceled += callback;
     }
 
     private void RemoveAllActions() {
         foreach (ActionCallback actionCallback in actionCallbacks) {
-            actionCallback.action.started -= actionCallback.callback;
+            // actionCallback.action.started -= actionCallback.callback;
             actionCallback.action.performed -= actionCallback.callback;
             actionCallback.action.canceled -= actionCallback.callback;
         }
@@ -204,6 +204,9 @@ public class SimulationController : MonoBehaviour
 
             wheelController.Drive(wheelRotVec);
         } else {
+            // reset to avoid weirdness
+            wheelController.Drive(Vector2.zero);
+
             if (selectedControl == SelectedControl.Right || selectedControl == SelectedControl.Both) {
                 if (rightArmMoveVec != Vector3.zero || rightArmRotVec != Vector3.zero) {
                     rightArmIK.MoveDirection(rightArmMoveVec, rightArmRotVec);
