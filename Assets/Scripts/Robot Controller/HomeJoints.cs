@@ -5,9 +5,6 @@ using UnityEngine;
 public class HomeJoints : MonoBehaviour
 {
     [SerializeField]
-    private bool autoUpdate = false;
-
-    [SerializeField]
     private float smoothingDuration = 5f;
 
     [SerializeField]
@@ -40,14 +37,6 @@ public class HomeJoints : MonoBehaviour
     void Start()
     {
         StartCoroutine(InterpelateRoutine());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // if (autoUpdate) {
-        //     SetJointTargets();
-        // }
     }
 
     private IEnumerator InterpelateRoutine()

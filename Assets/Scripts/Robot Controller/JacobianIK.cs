@@ -15,6 +15,8 @@ public class JacobianIK : MonoBehaviour
     private ArticulationBody arRoot;
     [SerializeField]
     private ArticulationBody[] arChain;
+    [SerializeField]
+    private float dampedLeastSquaresLambda = 1f;
 
     private List<int> arIndices = new List<int>();
     private List<int> arDofStartIndices = new List<int>();
@@ -263,7 +265,7 @@ public class JacobianIK : MonoBehaviour
         // Pretend that jacobian transpose is like an inverse.
         // ArticulationJacobian jacobianT = JacobianTranspose(minJacobian);
 
-        ArticulationJacobian jacobianT = GetDampedLeastSquaresJacobianMatrix(minJacobian, 2.0f);
+        ArticulationJacobian jacobianT = GetDampedLeastSquaresJacobianMatrix(minJacobian, dampedLeastSquaresLambda);
 
         var deltaJointReducedSpace = JacobianMultiply(jacobianT, deltaTarget);
 

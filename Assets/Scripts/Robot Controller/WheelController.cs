@@ -18,9 +18,6 @@ public class WheelController : MonoBehaviour
     [SerializeField]
     private float forceLimit = 2500;
 
-    [SerializeField]
-    private ArticulationBody test;
-
     // Start is called before the first frame update
     private void Start()
     {
@@ -42,8 +39,6 @@ public class WheelController : MonoBehaviour
         float rotationalSpeed = driveVector.x * targetVelocity;
         wheelLeft.xDrive = DriveWheel(wheelDriveLeft, forwardSpeed + rotationalSpeed);
         wheelRight.xDrive = DriveWheel(wheelDriveRight, forwardSpeed - rotationalSpeed);
-
-        Debug.Log(test.velocity.magnitude);
     }
 
     ArticulationDrive DriveWheel(ArticulationDrive wheelDrive, float speed)
