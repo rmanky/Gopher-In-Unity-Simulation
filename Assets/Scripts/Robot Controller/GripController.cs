@@ -30,9 +30,6 @@ public class GripController : MonoBehaviour
     {
         ArticulationDrive drive = joint.xDrive;
         drive.target = target;
-        drive.stiffness = 5000;
-        drive.forceLimit = 200;
-        drive.damping = 500;
         joint.xDrive = drive;
     }
 }

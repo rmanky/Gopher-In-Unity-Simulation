@@ -16,19 +16,19 @@ public class WheelController : MonoBehaviour
     private float targetVelocity = 2f;
 
     [SerializeField]
-    private float forceLimit = 2500;
+    private float forceLimit = 3000f;
 
     // Start is called before the first frame update
     private void Start()
     {
         wheelDriveLeft = wheelLeft.xDrive;
-        wheelDriveLeft.stiffness = 0;
+        wheelDriveLeft.stiffness = 0.05f;
         wheelDriveLeft.damping = 100;
         wheelDriveLeft.forceLimit = forceLimit;
         wheelLeft.xDrive = wheelDriveLeft;
 
         wheelDriveRight = wheelRight.xDrive;
-        wheelDriveRight.stiffness = 0;
+        wheelDriveRight.stiffness = 0.05f;
         wheelDriveRight.damping = 100;
         wheelDriveRight.forceLimit = forceLimit;
         wheelRight.xDrive = wheelDriveRight;

@@ -35,7 +35,26 @@ MonoBehaviour:
   - Assets/Models/ceiling_light.dae
   - Assets/Models/VC_box.dae
   - Assets/Models/sink_set.dae
-  modifiedAssetPaddingHash: aaf8cc2e695031ee9d4dfff0367352953f09ecc01c7e93634adc894b4adc894be0209dea2665e0ef323b8033f8e9d478347352954a23996eecc12491ffbc3fe471c294586209ecc00dff6078f7bcf01becc12491b3dcf716
+  - Assets/Models/Classic/bed_curtain.dae
+  - Assets/Models/Classic/hospital_bed_room.dae
+  - Assets/Models/Classic/plant.dae
+  - Assets/Models/Classic/wall_1m.dae
+  - Assets/Models/Classic/sink_set.dae
+  - Assets/Models/Classic/ikea_desk.dae
+  - Assets/Models/Classic/ceiling.dae
+  - Assets/Models/Classic/room_number_sign.dae
+  - Assets/Models/Classic/floor.dae
+  - Assets/Models/Classic/bedside_table.dae
+  - Assets/Models/Classic/round_sofa.dae
+  - Assets/Models/Classic/wall_locker.dae
+  - Assets/Models/Classic/window.dae
+  - Assets/Models/Classic/wall_window.dae
+  - Assets/Models/Classic/painting1.dae
+  - Assets/Models/Classic/wall_door_1.22m.dae
+  - Assets/Models/Classic/wall_0.5m.dae
+  - Assets/Models/Classic/wooden_door_open.dae
+  - Assets/Models/Classic/wooden_door_open2.dae
+  modifiedAssetPaddingHash: aaf8cc2e695031ee9d4dfff0367352953f09ecc01c7e93634adc894b4adc894be0209dea2665e0ef323b8033f8e9d478347352954a23996eecc12491ffbc3fe471c294586209ecc00dff6078f7bcf01becc12491b3dcf716853c0aa683b285151b903aa2bb09ecc04f16ffe90536df9a323fd3d9f537ed04323fd3d96daa863029e5ba8e81830158d7c2a693e55031ee194efff080c5d890f1f23a06ac0a26a2ec74c699
   modifiedMeshList: []
   modifiedMeshPaddingList: 
   modifiedAssets:
@@ -544,6 +563,123 @@ MonoBehaviour:
     - Cube
     padding: 2000000081000000270000000d000000
     unwrapper: 00000000000000000000000000000000
+  - meshName:
+    - Rail
+    - L_Hook9
+    - L_Hook7
+    - L_Hook5
+    - L_Hook3
+    - L_Hook1
+    - L_Curtain
+    padding: 3400000000010000000100000001000000010000000100000b000000
+    unwrapper: 00000000000000000000000000000000000000000000000000000000
+  - meshName:
+    - BackGroud
+    - BedBack
+    - BedBackBoard
+    - BedBed
+    - BedBoard
+    - BedBottomBoard
+    - BedCovering
+    - BedCube
+    - BedJoint
+    - Cube
+    - HeadSupport
+    - Pillow
+    - Tire
+    padding: 33000000190000001d000000160000000d0000001000000010000000650000002c000000990000003c000000220000002a000000
+    unwrapper: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  - meshName:
+    - indoor_plant_02
+    - Plant
+    padding: 200000001c000000
+    unwrapper: 0000000000000000
+  - meshName:
+    - Cube
+    padding: 11000000
+    unwrapper: 00000000
+  - meshName:
+    - Cube
+    - Cube.003
+    - Cylinder
+    - Glass
+    padding: 0a0000001d0000006100000018000000
+    unwrapper: 00000000000000000000000000000000
+  - meshName:
+    - Feet
+    - Legs
+    - Support
+    - Table
+    padding: d70000005c000000460000001e000000
+    unwrapper: 00000000000000000000000000000000
+  - meshName:
+    - Cube
+    padding: 04000000
+    unwrapper: 00000000
+  - meshName:
+    - Cube
+    padding: 60000000
+    unwrapper: 00000000
+  - meshName:
+    - Cube
+    padding: 04000000
+    unwrapper: 00000000
+  - meshName:
+    - Cylinder.355
+    - Sphere.002
+    - Table
+    padding: 000100000001000017000000
+    unwrapper: 000000000000000000000000
+  - meshName:
+    - Cube.001
+    - Cube.002
+    - Cube.003
+    - Cube.004
+    - Cube.009
+    - Cylinder.004
+    - Cylinder.006
+    padding: 200000001f00000011000000150000000d0000008600000086000000
+    unwrapper: 00000000000000000000000000000000000000000000000000000000
+  - meshName:
+    - Glass
+    - TV Furniture
+    - TV Furniture.001
+    padding: 660000001900000000010000
+    unwrapper: 000000000000000000000000
+  - meshName:
+    - Glass
+    padding: 0e000000
+    unwrapper: 00000000
+  - meshName:
+    - Cube
+    padding: 0d000000
+    unwrapper: 00000000
+  - meshName:
+    - Cube
+    padding: 15000000
+    unwrapper: 00000000
+  - meshName:
+    - Cube
+    padding: 0a000000
+    unwrapper: 00000000
+  - meshName:
+    - Cube
+    padding: 0f000000
+    unwrapper: 00000000
+  - meshName:
+    - Door
+    - Frame
+    - Handle
+    - Handle2
+    padding: 0b0000000f0000005900000059000000
+    unwrapper: 00000000000000000000000000000000
+  - meshName:
+    - Door
+    - Frame
+    - Handle
+    - Handle2
+    padding: 0b0000000f0000005b0000005b000000
+    unwrapper: 00000000000000000000000000000000
   assetList:
   - Assets/Bakery/examples/content/sponza/bush.FBX
   - Assets/Bakery/examples/content/floor_lamp.FBX
@@ -635,5 +771,5 @@ MonoBehaviour:
   renderSettingsRTPVSceneView: 0
   renderSettingsRTPVWidth: 640
   renderSettingsRTPVHeight: 360
-  modifiedMeshPaddingArray: 2000000081000000270000000d000000
+  modifiedMeshPaddingArray: 0b0000000f0000005b0000005b000000
   modifiedMeshUnwrapperArray: 00000000000000000000000000000000

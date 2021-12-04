@@ -370,6 +370,14 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 854425953540816864, guid: b1dcf1b99bd3b752bb8c0b4815d31d75, type: 3}
+      propertyPath: stiffness
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 854425953540816864, guid: b1dcf1b99bd3b752bb8c0b4815d31d75, type: 3}
+      propertyPath: forceLimit
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 933441427824909114, guid: b1dcf1b99bd3b752bb8c0b4815d31d75, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -1046,6 +1054,14 @@ PrefabInstance:
     - target: {fileID: 671211033192179085, guid: b1dcf1b99bd3b752bb8c0b4815d31d75, type: 3}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 854425953540816864, guid: b1dcf1b99bd3b752bb8c0b4815d31d75, type: 3}
+      propertyPath: stiffness
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 854425953540816864, guid: b1dcf1b99bd3b752bb8c0b4815d31d75, type: 3}
+      propertyPath: forceLimit
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 933441427824909114, guid: b1dcf1b99bd3b752bb8c0b4815d31d75, type: 3}
       propertyPath: m_Layer
