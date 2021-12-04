@@ -4,17 +4,14 @@ using UnityEngine;
 
 public class GripController : MonoBehaviour
 {
-    [SerializeField]
-    private ArticulationBody leftFinger;
+    [System.Serializable]
+    private class FingerJoint {
+        public ArticulationBody body;
+        public float target;
+    }
 
     [SerializeField]
-    private ArticulationBody leftFingerTip;
-
-    [SerializeField]
-    private ArticulationBody rightFinger;
-
-    [SerializeField]
-    private ArticulationBody rightFingerTip;
+    private FingerJoint[] fingerJoints;
 
 
     // Start is called before the first frame update
@@ -24,10 +21,9 @@ public class GripController : MonoBehaviour
     }
 
     public void SetGrippers(float closeValue) {
-        SetTarget(leftFinger, closeValue * 50);
-        SetTarget(leftFingerTip, closeValue * -30);
-        SetTarget(rightFinger, closeValue * 50);
-        SetTarget(rightFingerTip, closeValue * -30);
+        foreach (FingerJoint fj in fingerJoints) {
+            SetTarget(fj.body, closeValue * fj.target);
+        }
     }
 
     void SetTarget(ArticulationBody joint, float target)
