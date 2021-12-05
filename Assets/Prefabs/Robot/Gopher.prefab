@@ -336,7 +336,7 @@ MonoBehaviour:
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
-  m_Antialiasing: 2
+  m_Antialiasing: 0
   m_AntialiasingQuality: 1
   m_StopNaN: 1
   m_Dithering: 1
@@ -500,9 +500,9 @@ ArticulationBody:
     forceLimit: 3.4028235e+38
     target: 0
     targetVelocity: 0
-  m_LinearDamping: 0.05
-  m_AngularDamping: 0.05
-  m_JointFriction: 2
+  m_LinearDamping: 1
+  m_AngularDamping: 1
+  m_JointFriction: 10
   m_Immovable: 0
   m_UseGravity: 1
   m_CollisionDetectionMode: 0
@@ -616,9 +616,9 @@ ArticulationBody:
     forceLimit: 3.4028235e+38
     target: 0
     targetVelocity: 0
-  m_LinearDamping: 0.05
-  m_AngularDamping: 0.05
-  m_JointFriction: 2
+  m_LinearDamping: 1
+  m_AngularDamping: 1
+  m_JointFriction: 10
   m_Immovable: 0
   m_UseGravity: 1
   m_CollisionDetectionMode: 0
@@ -732,9 +732,9 @@ ArticulationBody:
     forceLimit: 3.4028235e+38
     target: 0
     targetVelocity: 0
-  m_LinearDamping: 0.05
-  m_AngularDamping: 0.05
-  m_JointFriction: 2
+  m_LinearDamping: 1
+  m_AngularDamping: 1
+  m_JointFriction: 10
   m_Immovable: 0
   m_UseGravity: 1
   m_CollisionDetectionMode: 0
@@ -1019,7 +1019,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1902967349}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1307,9 +1307,9 @@ ArticulationBody:
     forceLimit: 3.4028235e+38
     target: 0
     targetVelocity: 0
-  m_LinearDamping: 0.05
-  m_AngularDamping: 0.05
-  m_JointFriction: 2
+  m_LinearDamping: 1
+  m_AngularDamping: 1
+  m_JointFriction: 10
   m_Immovable: 0
   m_UseGravity: 1
   m_CollisionDetectionMode: 0
@@ -1369,6 +1369,8 @@ MonoBehaviour:
   wheelRadius: 0.075
   targetVelocity: 0.75
   forceLimit: 2500
+  damping: 100
+  stiffness: 0
 --- !u!114 &1018300579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1382,7 +1384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endEffector: {fileID: 951654550}
-  positionStrength: 1
+  positionStrength: 8
   rotationStrength: 1
   arRoot: {fileID: 4764266988418642422}
   arChain:
@@ -1394,7 +1396,9 @@ MonoBehaviour:
   - {fileID: 7489454704572473924}
   - {fileID: 7489454703506390616}
   - {fileID: 7489454704390466196}
-  dampedLeastSquaresLambda: 0.4
+  dampedLeastSquaresLambda: 1
+  clamp: 1
+  smoothing: 4
   targetForward: {fileID: 8744020}
 --- !u!114 &5835283546382092983
 MonoBehaviour:
@@ -1409,7 +1413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endEffector: {fileID: 6235259471469150167}
-  positionStrength: 1
+  positionStrength: 8
   rotationStrength: 1
   arRoot: {fileID: 4764266988418642422}
   arChain:
@@ -1421,7 +1425,9 @@ MonoBehaviour:
   - {fileID: 7489454704640218980}
   - {fileID: 7489454703072727145}
   - {fileID: 7489454704439803184}
-  dampedLeastSquaresLambda: 0.4
+  dampedLeastSquaresLambda: 1
+  clamp: 1
+  smoothing: 4
   targetForward: {fileID: 1902967350}
 --- !u!114 &8361208281802034182
 MonoBehaviour:
@@ -2010,9 +2016,9 @@ ArticulationBody:
     forceLimit: 3.4028235e+38
     target: 0
     targetVelocity: 0
-  m_LinearDamping: 0.05
-  m_AngularDamping: 0.05
-  m_JointFriction: 2
+  m_LinearDamping: 1
+  m_AngularDamping: 1
+  m_JointFriction: 10
   m_Immovable: 0
   m_UseGravity: 1
   m_CollisionDetectionMode: 0
@@ -2124,8 +2130,8 @@ ArticulationBody:
   m_SwingZ: 2
   m_Twist: 1
   m_XDrive:
-    lowerLimit: -138.08282
-    upperLimit: 138.08282
+    lowerLimit: -120
+    upperLimit: 120
     stiffness: 0
     damping: 0
     forceLimit: 39
@@ -10431,9 +10437,9 @@ ArticulationBody:
     forceLimit: 3.4028235e+38
     target: 0
     targetVelocity: 0
-  m_LinearDamping: 0.05
-  m_AngularDamping: 0.05
-  m_JointFriction: 2
+  m_LinearDamping: 1
+  m_AngularDamping: 1
+  m_JointFriction: 10
   m_Immovable: 0
   m_UseGravity: 1
   m_CollisionDetectionMode: 0
@@ -12043,8 +12049,8 @@ ArticulationBody:
   m_SwingZ: 2
   m_Twist: 1
   m_XDrive:
-    lowerLimit: -138.08282
-    upperLimit: 138.08282
+    lowerLimit: -120
+    upperLimit: 120
     stiffness: 0
     damping: 0
     forceLimit: 39

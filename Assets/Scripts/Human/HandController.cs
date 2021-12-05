@@ -111,7 +111,7 @@ public class HandController : MonoBehaviour
 
         foreach (ArticulationBody arBody in fingers) {
             ArticulationDrive xDrive = arBody.xDrive;
-            xDrive.target = Mathf.Lerp(xDrive.lowerLimit, xDrive.upperLimit, grip);
+            xDrive.target = Mathf.Lerp(0f, 80f, grip);
             arBody.xDrive = xDrive;
         }
     }

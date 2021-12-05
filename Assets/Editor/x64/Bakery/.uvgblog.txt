@@ -3212,3 +3212,1840 @@ Done
 Done
 Done
 Done
+2021-12-4
+Rendering UV GBuffer for SmallHospital_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SmallHospital_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SmallHospital_LMA2 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SmallHospital_LMA3 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SmallHospital_LMA4 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for probes 256
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Done
+Done
+Running ftraceRTX lodselect "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "lodselect" 2 0 5
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LMA4.lz4" 34 0 4 0
+Running ftraceRTX lodselect "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "lodselect" 2 0 4
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LMA1.lz4" 34 0 1 0
+Running ftraceRTX lodselect "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "lodselect" 2 0 1
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LMA3.lz4" 34 0 3 0
+Running ftraceRTX lodselect "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "lodselect" 2 0 3
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LMA2.lz4" 34 0 2 0
+Running ftraceRTX lodselect "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "lodselect" 2 0 2
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LM0.lz4" 34 0 0 0
+Running ftraceRTX lodselect "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "lodselect" 2 0 0
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA4_ao" 8 16 4
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_ao" 8 16 1
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA3_ao" 8 16 3
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA2_ao" 8 16 2
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_ao" 8 16 0
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-228673075_5" 1924 0 5 lights0.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-408046231_5" 1924 0 5 lights1.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_384081133_5" 1924 0 5 lights2.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-33101832_5" 1924 0 5 lights3.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_194105091_5" 1924 0 5 lights4.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_73694481_5" 1924 0 5 lights5.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-431313641_5" 1924 0 5 lights6.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_295380129_5" 1924 0 5 lights7.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2091925109_5" 1924 0 5 lights8.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1645381517_5" 1924 0 5 lights9.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1270477270_5" 1924 0 5 lights10.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1614390074_5" 1924 0 5 lights11.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-286792413_5" 1924 0 5 lights12.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_429328894_5" 1924 0 5 lights13.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_815668748_5" 1924 0 5 lights14.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_896206458_5" 1924 0 5 lights15.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1972023401_5" 1924 0 5 lights16.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1475826740_5" 1924 0 5 lights17.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-358507412_5" 1924 0 5 lights18.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_966123572_5" 1924 0 5 lights19.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-775352650_5" 1924 0 5 lights20.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-210572164_5" 1924 0 5 lights21.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1634189432_5" 1924 0 5 lights22.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-980153156_5" 1924 0 5 lights23.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_456052870_5" 1924 0 5 lights24.bin
+Running ftraceRTX skycubemapprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_5" 1924 0 5 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_5" 4 0 5 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes" 4 0 5 comp_5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-228673075_4" 4 0 4 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-408046231_4" 4 0 4 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_384081133_4" 4 0 4 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-33101832_4" 4 0 4 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_194105091_4" 4 0 4 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_73694481_4" 4 0 4 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-431313641_4" 4 0 4 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_295380129_4" 4 0 4 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2091925109_4" 4 0 4 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1645381517_4" 4 0 4 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1270477270_4" 4 0 4 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1614390074_4" 4 0 4 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-286792413_4" 4 0 4 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_429328894_4" 4 0 4 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_815668748_4" 4 0 4 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_896206458_4" 4 0 4 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1972023401_4" 4 0 4 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1475826740_4" 4 0 4 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-358507412_4" 4 0 4 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_966123572_4" 4 0 4 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-775352650_4" 4 0 4 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-210572164_4" 4 0 4 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1634189432_4" 4 0 4 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-980153156_4" 4 0 4 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_456052870_4" 4 0 4 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_4" 4 0 4 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_4" 4 0 4 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA4" 4 0 4 comp_4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-228673075_1" 4 0 1 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-408046231_1" 4 0 1 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_384081133_1" 4 0 1 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-33101832_1" 4 0 1 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_194105091_1" 4 0 1 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_73694481_1" 4 0 1 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-431313641_1" 4 0 1 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_295380129_1" 4 0 1 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2091925109_1" 4 0 1 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1645381517_1" 4 0 1 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1270477270_1" 4 0 1 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1614390074_1" 4 0 1 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-286792413_1" 4 0 1 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_429328894_1" 4 0 1 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_815668748_1" 4 0 1 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_896206458_1" 4 0 1 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1972023401_1" 4 0 1 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1475826740_1" 4 0 1 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-358507412_1" 4 0 1 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_966123572_1" 4 0 1 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-775352650_1" 4 0 1 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-210572164_1" 4 0 1 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1634189432_1" 4 0 1 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-980153156_1" 4 0 1 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_456052870_1" 4 0 1 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_1" 4 0 1 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_1" 4 0 1 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-228673075_3" 4 0 3 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-408046231_3" 4 0 3 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_384081133_3" 4 0 3 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-33101832_3" 4 0 3 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_194105091_3" 4 0 3 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_73694481_3" 4 0 3 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-431313641_3" 4 0 3 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_295380129_3" 4 0 3 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2091925109_3" 4 0 3 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1645381517_3" 4 0 3 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1270477270_3" 4 0 3 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1614390074_3" 4 0 3 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-286792413_3" 4 0 3 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_429328894_3" 4 0 3 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_815668748_3" 4 0 3 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_896206458_3" 4 0 3 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1972023401_3" 4 0 3 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1475826740_3" 4 0 3 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-358507412_3" 4 0 3 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_966123572_3" 4 0 3 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-775352650_3" 4 0 3 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-210572164_3" 4 0 3 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1634189432_3" 4 0 3 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-980153156_3" 4 0 3 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_456052870_3" 4 0 3 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_3" 4 0 3 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_3" 4 0 3 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA3" 4 0 3 comp_3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-228673075_2" 4 0 2 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-408046231_2" 4 0 2 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_384081133_2" 4 0 2 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-33101832_2" 4 0 2 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_194105091_2" 4 0 2 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_73694481_2" 4 0 2 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-431313641_2" 4 0 2 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_295380129_2" 4 0 2 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2091925109_2" 4 0 2 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1645381517_2" 4 0 2 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1270477270_2" 4 0 2 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1614390074_2" 4 0 2 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-286792413_2" 4 0 2 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_429328894_2" 4 0 2 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_815668748_2" 4 0 2 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_896206458_2" 4 0 2 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1972023401_2" 4 0 2 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1475826740_2" 4 0 2 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-358507412_2" 4 0 2 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_966123572_2" 4 0 2 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-775352650_2" 4 0 2 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-210572164_2" 4 0 2 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1634189432_2" 4 0 2 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-980153156_2" 4 0 2 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_456052870_2" 4 0 2 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_2" 4 0 2 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_2" 4 0 2 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA2" 4 0 2 comp_2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-228673075_0" 4 0 0 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-408046231_0" 4 0 0 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_384081133_0" 4 0 0 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-33101832_0" 4 0 0 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_194105091_0" 4 0 0 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_73694481_0" 4 0 0 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-431313641_0" 4 0 0 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_295380129_0" 4 0 0 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2091925109_0" 4 0 0 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1645381517_0" 4 0 0 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1270477270_0" 4 0 0 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1614390074_0" 4 0 0 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-286792413_0" 4 0 0 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_429328894_0" 4 0 0 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_815668748_0" 4 0 0 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_896206458_0" 4 0 0 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1972023401_0" 4 0 0 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1475826740_0" 4 0 0 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-358507412_0" 4 0 0 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_966123572_0" 4 0 0 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-775352650_0" 4 0 0 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-210572164_0" 4 0 0 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1634189432_0" 4 0 0 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-980153156_0" 4 0 0 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_456052870_0" 4 0 0 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_0" 4 0 0 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_0" 4 0 0 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA4_diffuse" 4 16 4 "gi_SmallHospital_LMA40.bin" "SmallHospital_LMA4_diffuse0_HDR.lz4" vbTraceTex4.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_diffuse" 4 16 1 "gi_SmallHospital_LMA10.bin" "SmallHospital_LMA1_diffuse0_HDR.lz4" vbTraceTex1.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA3_diffuse" 4 16 3 "gi_SmallHospital_LMA30.bin" "SmallHospital_LMA3_diffuse0_HDR.lz4" vbTraceTex3.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA2_diffuse" 4 16 2 "gi_SmallHospital_LMA20.bin" "SmallHospital_LMA2_diffuse0_HDR.lz4" vbTraceTex2.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_diffuse" 4 16 0 "gi_SmallHospital_LM00.bin" "SmallHospital_LM0_diffuse0_HDR.lz4" vbTraceTex0.bin
+Running ftraceRTX texgiprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final" 1940 16 5 "gi_probes1.bin" "probes_lights_HDR.lz4" vbTraceTex5.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA4_final" 20 16 4 "gi_SmallHospital_LMA41.bin" "SmallHospital_LMA4_lights_HDR.lz4" vbTraceTex4.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final" 20 16 1 "gi_SmallHospital_LMA11.bin" "SmallHospital_LMA1_lights_HDR.lz4" vbTraceTex1.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA3_final" 20 16 3 "gi_SmallHospital_LMA31.bin" "SmallHospital_LMA3_lights_HDR.lz4" vbTraceTex3.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA2_final" 20 16 2 "gi_SmallHospital_LMA21.bin" "SmallHospital_LMA2_lights_HDR.lz4" vbTraceTex2.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final" 20 16 0 "gi_SmallHospital_LM01.bin" "SmallHospital_LM0_lights_HDR.lz4" vbTraceTex0.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final_HDR.lz4" 4 0 5 comp_indirect5.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA4_final_HDR.lz4" 4 0 4 comp_indirect4.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final_HDR.lz4" 4 0 1 comp_indirect1.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA3_final_HDR.lz4" 4 0 3 comp_indirect3.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA2_final_HDR.lz4" 4 0 2 comp_indirect2.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final_HDR.lz4" 4 0 0 comp_indirect0.bin
+Running ftraceRTX addsh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final_" 4 0 5 shcomp_5.bin
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA4_final_HDR.lz4" 4 0 4 addao_4.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA4_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA4_final_HDR.lz4" 1024 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "4" "SmallHospital_LMA4_final_HDR.lz4"
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final_HDR.lz4" 4 0 1 addao_1.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "1" "SmallHospital_LMA1_final_HDR.lz4"
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA3_final_HDR.lz4" 4 0 3 addao_3.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA3_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA3_final_HDR.lz4" 2048 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "3" "SmallHospital_LMA3_final_HDR.lz4"
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA2_final_HDR.lz4" 4 0 2 addao_2.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA2_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA2_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "2" "SmallHospital_LMA2_final_HDR.lz4"
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final_HDR.lz4" 4 0 0 addao_0.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "0" "SmallHospital_LM0_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA4_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LMA4_final.hdr" 1024
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LMA1_final.hdr" 1024
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA3_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LMA3_final.hdr" 1024
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA2_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LMA2_final.hdr" 1024
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LM0_final.hdr" 1024
+Done
+Done
+Done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Rendering UV GBuffer for SmallHospital_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SmallHospital_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for probes 256
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LM0.lz4" 2 0 0 0
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LMA1.lz4" 2 0 1 0
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_ao" 8 16 0
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_ao" 8 16 1
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1375726545_2" 1924 0 2 lights0.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_838603793_2" 1924 0 2 lights1.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1130327901_2" 1924 0 2 lights2.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-377855946_2" 1924 0 2 lights3.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_167914857_2" 1924 0 2 lights4.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-914691696_2" 1924 0 2 lights5.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_531611174_2" 1924 0 2 lights6.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_843840923_2" 1924 0 2 lights7.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1622910225_2" 1924 0 2 lights8.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_874369877_2" 1924 0 2 lights9.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1206983593_2" 1924 0 2 lights10.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1067123610_2" 1924 0 2 lights11.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2022087999_2" 1924 0 2 lights12.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1708188934_2" 1924 0 2 lights13.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_148304669_2" 1924 0 2 lights14.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1414973993_2" 1924 0 2 lights15.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2061614639_2" 1924 0 2 lights16.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2017157012_2" 1924 0 2 lights17.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_261023534_2" 1924 0 2 lights18.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-682529041_2" 1924 0 2 lights19.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2063811027_2" 1924 0 2 lights20.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-435493230_2" 1924 0 2 lights21.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_970408339_2" 1924 0 2 lights22.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_680531128_2" 1924 0 2 lights23.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-895472000_2" 1924 0 2 lights24.bin
+Running ftraceRTX skycubemapprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_2" 1924 0 2 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_2" 4 0 2 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes" 4 0 2 comp_2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1375726545_0" 4 0 0 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_838603793_0" 4 0 0 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1130327901_0" 4 0 0 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-377855946_0" 4 0 0 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_167914857_0" 4 0 0 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-914691696_0" 4 0 0 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_531611174_0" 4 0 0 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_843840923_0" 4 0 0 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1622910225_0" 4 0 0 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_874369877_0" 4 0 0 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1206983593_0" 4 0 0 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1067123610_0" 4 0 0 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2022087999_0" 4 0 0 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1708188934_0" 4 0 0 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_148304669_0" 4 0 0 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1414973993_0" 4 0 0 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2061614639_0" 4 0 0 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2017157012_0" 4 0 0 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_261023534_0" 4 0 0 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-682529041_0" 4 0 0 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2063811027_0" 4 0 0 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-435493230_0" 4 0 0 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_970408339_0" 4 0 0 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_680531128_0" 4 0 0 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-895472000_0" 4 0 0 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_0" 4 0 0 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_0" 4 0 0 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1375726545_1" 4 0 1 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_838603793_1" 4 0 1 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1130327901_1" 4 0 1 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-377855946_1" 4 0 1 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_167914857_1" 4 0 1 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-914691696_1" 4 0 1 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_531611174_1" 4 0 1 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_843840923_1" 4 0 1 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1622910225_1" 4 0 1 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_874369877_1" 4 0 1 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1206983593_1" 4 0 1 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1067123610_1" 4 0 1 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2022087999_1" 4 0 1 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1708188934_1" 4 0 1 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_148304669_1" 4 0 1 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1414973993_1" 4 0 1 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2061614639_1" 4 0 1 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2017157012_1" 4 0 1 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_261023534_1" 4 0 1 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-682529041_1" 4 0 1 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2063811027_1" 4 0 1 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-435493230_1" 4 0 1 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_970408339_1" 4 0 1 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_680531128_1" 4 0 1 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-895472000_1" 4 0 1 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_1" 4 0 1 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_1" 4 0 1 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_diffuse" 4 16 0 "gi_SmallHospital_LM00.bin" "SmallHospital_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_diffuse" 4 16 1 "gi_SmallHospital_LMA10.bin" "SmallHospital_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgiprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final" 1940 16 2 "gi_probes1.bin" "probes_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final" 20 16 0 "gi_SmallHospital_LM01.bin" "SmallHospital_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final" 20 16 1 "gi_SmallHospital_LMA11.bin" "SmallHospital_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final_HDR.lz4" 4 0 2 comp_indirect2.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final_HDR.lz4" 4 0 0 comp_indirect0.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final_HDR.lz4" 4 0 1 comp_indirect1.bin
+Running ftraceRTX addsh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final_" 4 0 2 shcomp_2.bin
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final_HDR.lz4" 4 0 0 addao_0.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "0" "SmallHospital_LM0_final_HDR.lz4"
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final_HDR.lz4" 4 0 1 addao_1.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "1" "SmallHospital_LMA1_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LM0_final.hdr" 1024
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LMA1_final.hdr" 1024
+
+=================================================================
+	Native Crash Reporting
+=================================================================
+Got a UNKNOWN while executing native code. This usually indicates
+a fatal error in the mono runtime or one of the native libraries 
+used by your application.
+=================================================================
+
+=================================================================
+	Managed Stacktrace:
+=================================================================
+	  at <unknown> <0xffffffff>
+	  at System.Reflection.FieldInfo:internal_from_handle_type <0x0006c>
+	  at System.Reflection.FieldInfo:GetFieldFromHandle <0x0003a>
+	  at System.Reflection.RuntimeModule:ResolveField <0x000ba>
+	  at System.Reflection.RuntimeModule:ResolveField <0x00042>
+	  at System.Reflection.Module:ResolveField <0x00021>
+	  at Unity.Burst.Editor.BurstReflection:CollectGenericTypeInstances <0x003c2>
+	  at Unity.Burst.Editor.BurstReflection:FindExecuteMethodsForGenericInstances <0x004ba>
+	  at Unity.Burst.Editor.BurstReflection:FindExecuteMethods <0x008e2>
+	  at <>c__DisplayClass41_0:<TriggerEagerCompilation>b__0 <0x0002a>
+	  at System.Threading.Tasks.Task:InnerInvoke <0x00053>
+	  at System.Threading.Tasks.Task:Execute <0x00023>
+	  at System.Threading.Tasks.Task:ExecutionContextCallback <0x00052>
+	  at System.Threading.ExecutionContext:RunInternal <0x001dd>
+	  at System.Threading.ExecutionContext:Run <0x0002a>
+	  at System.Threading.Tasks.Task:ExecuteWithThreadLocal <0x0012a>
+	  at System.Threading.Tasks.Task:ExecuteEntry <0x000da>
+	  at System.Threading.Tasks.Task:System.Threading.IThreadPoolWorkItem.ExecuteWorkItem <0x0001a>
+	  at System.Threading.ThreadPoolWorkQueue:Dispatch <0x002e9>
+	  at System.Threading._ThreadPoolWaitCallback:PerformWaitCallback <0x0006a>
+	  at <Module>:runtime_invoke_bool <0x00084>
+=================================================================
+Done
+Done
+Done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Rendering UV GBuffer for SmallHospital_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SmallHospital_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for probes 256
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LM0.lz4" 2 0 0 0
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LMA1.lz4" 2 0 1 0
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_ao" 8 16 0
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_ao" 8 16 1
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1942252612_2" 1924 0 2 lights0.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1424796714_2" 1924 0 2 lights1.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1043862070_2" 1924 0 2 lights2.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-629930663_2" 1924 0 2 lights3.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1396848662_2" 1924 0 2 lights4.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_165008555_2" 1924 0 2 lights5.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2144956107_2" 1924 0 2 lights6.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1291406640_2" 1924 0 2 lights7.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_220874093_2" 1924 0 2 lights8.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1394447305_2" 1924 0 2 lights9.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1495181443_2" 1924 0 2 lights10.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_395449123_2" 1924 0 2 lights11.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1267613395_2" 1924 0 2 lights12.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1044670130_2" 1924 0 2 lights13.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1533548979_2" 1924 0 2 lights14.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-336281725_2" 1924 0 2 lights15.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1320722099_2" 1924 0 2 lights16.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-987992560_2" 1924 0 2 lights17.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_359792537_2" 1924 0 2 lights18.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_177731980_2" 1924 0 2 lights19.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2122386226_2" 1924 0 2 lights20.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-251214755_2" 1924 0 2 lights21.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1296070672_2" 1924 0 2 lights22.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1486909184_2" 1924 0 2 lights23.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1546187017_2" 1924 0 2 lights24.bin
+Running ftraceRTX skycubemapprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_2" 1924 0 2 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_2" 4 0 2 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes" 4 0 2 comp_2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1942252612_0" 4 0 0 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1424796714_0" 4 0 0 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1043862070_0" 4 0 0 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-629930663_0" 4 0 0 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1396848662_0" 4 0 0 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_165008555_0" 4 0 0 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2144956107_0" 4 0 0 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1291406640_0" 4 0 0 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_220874093_0" 4 0 0 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1394447305_0" 4 0 0 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1495181443_0" 4 0 0 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_395449123_0" 4 0 0 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1267613395_0" 4 0 0 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1044670130_0" 4 0 0 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1533548979_0" 4 0 0 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-336281725_0" 4 0 0 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1320722099_0" 4 0 0 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-987992560_0" 4 0 0 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_359792537_0" 4 0 0 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_177731980_0" 4 0 0 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2122386226_0" 4 0 0 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-251214755_0" 4 0 0 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1296070672_0" 4 0 0 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1486909184_0" 4 0 0 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1546187017_0" 4 0 0 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_0" 4 0 0 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_0" 4 0 0 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1942252612_1" 4 0 1 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1424796714_1" 4 0 1 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1043862070_1" 4 0 1 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-629930663_1" 4 0 1 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1396848662_1" 4 0 1 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_165008555_1" 4 0 1 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2144956107_1" 4 0 1 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1291406640_1" 4 0 1 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_220874093_1" 4 0 1 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1394447305_1" 4 0 1 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1495181443_1" 4 0 1 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_395449123_1" 4 0 1 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1267613395_1" 4 0 1 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1044670130_1" 4 0 1 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1533548979_1" 4 0 1 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-336281725_1" 4 0 1 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1320722099_1" 4 0 1 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-987992560_1" 4 0 1 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_359792537_1" 4 0 1 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_177731980_1" 4 0 1 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2122386226_1" 4 0 1 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-251214755_1" 4 0 1 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1296070672_1" 4 0 1 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1486909184_1" 4 0 1 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1546187017_1" 4 0 1 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_1" 4 0 1 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_1" 4 0 1 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_diffuse" 4 16 0 "gi_SmallHospital_LM00.bin" "SmallHospital_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_diffuse" 4 16 1 "gi_SmallHospital_LMA10.bin" "SmallHospital_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgiprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final" 1940 16 2 "gi_probes1.bin" "probes_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final" 20 16 0 "gi_SmallHospital_LM01.bin" "SmallHospital_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final" 20 16 1 "gi_SmallHospital_LMA11.bin" "SmallHospital_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final_HDR.lz4" 4 0 2 comp_indirect2.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final_HDR.lz4" 4 0 0 comp_indirect0.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final_HDR.lz4" 4 0 1 comp_indirect1.bin
+Running ftraceRTX addsh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final_" 4 0 2 shcomp_2.bin
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final_HDR.lz4" 4 0 0 addao_0.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "0" "SmallHospital_LM0_final_HDR.lz4"
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final_HDR.lz4" 4 0 1 addao_1.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "1" "SmallHospital_LMA1_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LM0_final.hdr" 1024
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LMA1_final.hdr" 1024
+Done
+Done
+Done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Rendering UV GBuffer for SmallHospital_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SmallHospital_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for probes 256
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LM0.lz4" 2 0 0 0
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LMA1.lz4" 2 0 1 0
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_ao" 8 16 0
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_ao" 8 16 1
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1308537321_2" 1924 0 2 lights0.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-445238003_2" 1924 0 2 lights1.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_508905152_2" 1924 0 2 lights2.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1863842674_2" 1924 0 2 lights3.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1939096540_2" 1924 0 2 lights4.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1336936740_2" 1924 0 2 lights5.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1946608604_2" 1924 0 2 lights6.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-576762601_2" 1924 0 2 lights7.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1498909184_2" 1924 0 2 lights8.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1751960382_2" 1924 0 2 lights9.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_42748723_2" 1924 0 2 lights10.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-563833724_2" 1924 0 2 lights11.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1471430838_2" 1924 0 2 lights12.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2071249726_2" 1924 0 2 lights13.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-722662193_2" 1924 0 2 lights14.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_975683698_2" 1924 0 2 lights15.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_192672853_2" 1924 0 2 lights16.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_342120046_2" 1924 0 2 lights17.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1923685670_2" 1924 0 2 lights18.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_898028473_2" 1924 0 2 lights19.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1132842007_2" 1924 0 2 lights20.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-657025056_2" 1924 0 2 lights21.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-440193104_2" 1924 0 2 lights22.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1054172350_2" 1924 0 2 lights23.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1523878158_2" 1924 0 2 lights24.bin
+Running ftraceRTX skycubemapprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_2" 1924 0 2 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_2" 4 0 2 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes" 4 0 2 comp_2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1308537321_0" 4 0 0 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-445238003_0" 4 0 0 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_508905152_0" 4 0 0 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1863842674_0" 4 0 0 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1939096540_0" 4 0 0 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1336936740_0" 4 0 0 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1946608604_0" 4 0 0 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-576762601_0" 4 0 0 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1498909184_0" 4 0 0 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1751960382_0" 4 0 0 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_42748723_0" 4 0 0 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-563833724_0" 4 0 0 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1471430838_0" 4 0 0 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2071249726_0" 4 0 0 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-722662193_0" 4 0 0 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_975683698_0" 4 0 0 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_192672853_0" 4 0 0 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_342120046_0" 4 0 0 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1923685670_0" 4 0 0 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_898028473_0" 4 0 0 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1132842007_0" 4 0 0 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-657025056_0" 4 0 0 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-440193104_0" 4 0 0 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1054172350_0" 4 0 0 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1523878158_0" 4 0 0 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_0" 4 0 0 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_0" 4 0 0 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1308537321_1" 4 0 1 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-445238003_1" 4 0 1 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_508905152_1" 4 0 1 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1863842674_1" 4 0 1 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1939096540_1" 4 0 1 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1336936740_1" 4 0 1 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1946608604_1" 4 0 1 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-576762601_1" 4 0 1 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1498909184_1" 4 0 1 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1751960382_1" 4 0 1 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_42748723_1" 4 0 1 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-563833724_1" 4 0 1 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1471430838_1" 4 0 1 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2071249726_1" 4 0 1 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-722662193_1" 4 0 1 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_975683698_1" 4 0 1 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_192672853_1" 4 0 1 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_342120046_1" 4 0 1 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1923685670_1" 4 0 1 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_898028473_1" 4 0 1 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1132842007_1" 4 0 1 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-657025056_1" 4 0 1 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-440193104_1" 4 0 1 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1054172350_1" 4 0 1 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1523878158_1" 4 0 1 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_1" 4 0 1 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_1" 4 0 1 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_diffuse" 4 16 0 "gi_SmallHospital_LM00.bin" "SmallHospital_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_diffuse" 4 16 1 "gi_SmallHospital_LMA10.bin" "SmallHospital_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgiprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final" 1940 16 2 "gi_probes1.bin" "probes_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final" 20 16 0 "gi_SmallHospital_LM01.bin" "SmallHospital_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final" 20 16 1 "gi_SmallHospital_LMA11.bin" "SmallHospital_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final_HDR.lz4" 4 0 2 comp_indirect2.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final_HDR.lz4" 4 0 0 comp_indirect0.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final_HDR.lz4" 4 0 1 comp_indirect1.bin
+Running ftraceRTX addsh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final_" 4 0 2 shcomp_2.bin
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final_HDR.lz4" 4 0 0 addao_0.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "0" "SmallHospital_LM0_final_HDR.lz4"
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final_HDR.lz4" 4 0 1 addao_1.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "1" "SmallHospital_LMA1_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LM0_final.hdr" 1024
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LMA1_final.hdr" 1024
+Done
+Done
+Done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Rendering UV GBuffer for SmallHospital_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SmallHospital_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for probes 256
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LMA1.lz4" 2 0 1 0
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LM0.lz4" 2 0 0 0
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_ao" 8 16 1
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_ao" 8 16 0
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1985739706_2" 1924 0 2 lights0.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1901587738_2" 1924 0 2 lights1.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-825497860_2" 1924 0 2 lights2.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2065519414_2" 1924 0 2 lights3.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1766459588_2" 1924 0 2 lights4.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-473599322_2" 1924 0 2 lights5.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-817572493_2" 1924 0 2 lights6.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_553111082_2" 1924 0 2 lights7.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-562457544_2" 1924 0 2 lights8.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-100771005_2" 1924 0 2 lights9.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-360371867_2" 1924 0 2 lights10.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_211690237_2" 1924 0 2 lights11.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1664449169_2" 1924 0 2 lights12.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2062922008_2" 1924 0 2 lights13.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-500153656_2" 1924 0 2 lights14.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-563413882_2" 1924 0 2 lights15.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1673256673_2" 1924 0 2 lights16.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_878334024_2" 1924 0 2 lights17.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1547352806_2" 1924 0 2 lights18.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1198602648_2" 1924 0 2 lights19.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1371671258_2" 1924 0 2 lights20.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1652586509_2" 1924 0 2 lights21.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1507373478_2" 1924 0 2 lights22.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1279951449_2" 1924 0 2 lights23.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_722775082_2" 1924 0 2 lights24.bin
+Running ftraceRTX skycubemapprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_2" 1924 0 2 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_2" 4 0 2 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes" 4 0 2 comp_2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1985739706_1" 4 0 1 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1901587738_1" 4 0 1 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-825497860_1" 4 0 1 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2065519414_1" 4 0 1 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1766459588_1" 4 0 1 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-473599322_1" 4 0 1 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-817572493_1" 4 0 1 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_553111082_1" 4 0 1 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-562457544_1" 4 0 1 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-100771005_1" 4 0 1 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-360371867_1" 4 0 1 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_211690237_1" 4 0 1 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1664449169_1" 4 0 1 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2062922008_1" 4 0 1 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-500153656_1" 4 0 1 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-563413882_1" 4 0 1 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1673256673_1" 4 0 1 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_878334024_1" 4 0 1 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1547352806_1" 4 0 1 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1198602648_1" 4 0 1 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1371671258_1" 4 0 1 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1652586509_1" 4 0 1 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1507373478_1" 4 0 1 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1279951449_1" 4 0 1 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_722775082_1" 4 0 1 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_1" 4 0 1 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_1" 4 0 1 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1985739706_0" 4 0 0 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1901587738_0" 4 0 0 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-825497860_0" 4 0 0 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2065519414_0" 4 0 0 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1766459588_0" 4 0 0 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-473599322_0" 4 0 0 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-817572493_0" 4 0 0 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_553111082_0" 4 0 0 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-562457544_0" 4 0 0 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-100771005_0" 4 0 0 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-360371867_0" 4 0 0 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_211690237_0" 4 0 0 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1664449169_0" 4 0 0 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2062922008_0" 4 0 0 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-500153656_0" 4 0 0 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-563413882_0" 4 0 0 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1673256673_0" 4 0 0 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_878334024_0" 4 0 0 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1547352806_0" 4 0 0 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1198602648_0" 4 0 0 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1371671258_0" 4 0 0 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1652586509_0" 4 0 0 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1507373478_0" 4 0 0 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1279951449_0" 4 0 0 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_722775082_0" 4 0 0 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_0" 4 0 0 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_0" 4 0 0 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_diffuse" 4 16 1 "gi_SmallHospital_LMA10.bin" "SmallHospital_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_diffuse" 4 16 0 "gi_SmallHospital_LM00.bin" "SmallHospital_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgiprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final" 1940 16 2 "gi_probes1.bin" "probes_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final" 20 16 1 "gi_SmallHospital_LMA11.bin" "SmallHospital_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final" 20 16 0 "gi_SmallHospital_LM01.bin" "SmallHospital_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final_HDR.lz4" 4 0 2 comp_indirect2.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final_HDR.lz4" 4 0 1 comp_indirect1.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final_HDR.lz4" 4 0 0 comp_indirect0.bin
+Running ftraceRTX addsh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final_" 4 0 2 shcomp_2.bin
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final_HDR.lz4" 4 0 1 addao_1.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "1" "SmallHospital_LMA1_final_HDR.lz4"
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final_HDR.lz4" 4 0 0 addao_0.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "0" "SmallHospital_LM0_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LMA1_final.hdr" 1024
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LM0_final.hdr" 1024
+Done
+Done
+Done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Rendering UV GBuffer for SmallHospital_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SmallHospital_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for probes 256
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LMA1.lz4" 2 0 1 0
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LM0.lz4" 2 0 0 0
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_ao" 8 16 1
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_ao" 8 16 0
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1421012693_2" 1924 0 2 lights0.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1728006210_2" 1924 0 2 lights1.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-298189974_2" 1924 0 2 lights2.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2021152220_2" 1924 0 2 lights3.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_438425199_2" 1924 0 2 lights4.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1118933514_2" 1924 0 2 lights5.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-742301031_2" 1924 0 2 lights6.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1632605974_2" 1924 0 2 lights7.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1584124507_2" 1924 0 2 lights8.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1295626459_2" 1924 0 2 lights9.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1517769741_2" 1924 0 2 lights10.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1042422761_2" 1924 0 2 lights11.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1541494290_2" 1924 0 2 lights12.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_931177554_2" 1924 0 2 lights13.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1349803963_2" 1924 0 2 lights14.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1906116196_2" 1924 0 2 lights15.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_903982264_2" 1924 0 2 lights16.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1392052258_2" 1924 0 2 lights17.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1798044883_2" 1924 0 2 lights18.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2001362248_2" 1924 0 2 lights19.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_162702878_2" 1924 0 2 lights20.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-143602292_2" 1924 0 2 lights21.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_645612088_2" 1924 0 2 lights22.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_831807727_2" 1924 0 2 lights23.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1318580758_2" 1924 0 2 lights24.bin
+Running ftraceRTX skycubemapprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_2" 1924 0 2 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_2" 4 0 2 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes" 4 0 2 comp_2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1421012693_1" 4 0 1 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1728006210_1" 4 0 1 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-298189974_1" 4 0 1 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2021152220_1" 4 0 1 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_438425199_1" 4 0 1 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1118933514_1" 4 0 1 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-742301031_1" 4 0 1 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1632605974_1" 4 0 1 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1584124507_1" 4 0 1 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1295626459_1" 4 0 1 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1517769741_1" 4 0 1 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1042422761_1" 4 0 1 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1541494290_1" 4 0 1 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_931177554_1" 4 0 1 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1349803963_1" 4 0 1 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1906116196_1" 4 0 1 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_903982264_1" 4 0 1 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1392052258_1" 4 0 1 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1798044883_1" 4 0 1 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2001362248_1" 4 0 1 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_162702878_1" 4 0 1 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-143602292_1" 4 0 1 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_645612088_1" 4 0 1 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_831807727_1" 4 0 1 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1318580758_1" 4 0 1 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_1" 4 0 1 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_1" 4 0 1 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1421012693_0" 4 0 0 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1728006210_0" 4 0 0 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-298189974_0" 4 0 0 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2021152220_0" 4 0 0 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_438425199_0" 4 0 0 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1118933514_0" 4 0 0 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-742301031_0" 4 0 0 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1632605974_0" 4 0 0 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1584124507_0" 4 0 0 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1295626459_0" 4 0 0 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1517769741_0" 4 0 0 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1042422761_0" 4 0 0 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1541494290_0" 4 0 0 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_931177554_0" 4 0 0 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1349803963_0" 4 0 0 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1906116196_0" 4 0 0 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_903982264_0" 4 0 0 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1392052258_0" 4 0 0 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1798044883_0" 4 0 0 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2001362248_0" 4 0 0 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_162702878_0" 4 0 0 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-143602292_0" 4 0 0 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_645612088_0" 4 0 0 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_831807727_0" 4 0 0 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1318580758_0" 4 0 0 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_0" 4 0 0 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_0" 4 0 0 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_diffuse" 4 16 1 "gi_SmallHospital_LMA10.bin" "SmallHospital_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_diffuse" 4 16 0 "gi_SmallHospital_LM00.bin" "SmallHospital_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgiprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final" 1940 16 2 "gi_probes1.bin" "probes_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final" 20 16 1 "gi_SmallHospital_LMA11.bin" "SmallHospital_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final" 20 16 0 "gi_SmallHospital_LM01.bin" "SmallHospital_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final_HDR.lz4" 4 0 2 comp_indirect2.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final_HDR.lz4" 4 0 1 comp_indirect1.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final_HDR.lz4" 4 0 0 comp_indirect0.bin
+Running ftraceRTX addsh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final_" 4 0 2 shcomp_2.bin
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final_HDR.lz4" 4 0 1 addao_1.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "1" "SmallHospital_LMA1_final_HDR.lz4"
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final_HDR.lz4" 4 0 0 addao_0.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "0" "SmallHospital_LM0_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LMA1_final.hdr" 1024
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LM0_final.hdr" 1024
+Done
+Done
+Done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Rendering UV GBuffer for SmallHospital_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SmallHospital_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for probes 256
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LMA1.lz4" 2 0 1 0
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LM0.lz4" 2 0 0 0
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_ao" 8 16 1
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_ao" 8 16 0
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1137906623_2" 1924 0 2 lights0.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_990600526_2" 1924 0 2 lights1.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_446091563_2" 1924 0 2 lights2.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-678610502_2" 1924 0 2 lights3.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_184901170_2" 1924 0 2 lights4.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1406179871_2" 1924 0 2 lights5.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1636982691_2" 1924 0 2 lights6.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1601391386_2" 1924 0 2 lights7.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1332945668_2" 1924 0 2 lights8.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1882695865_2" 1924 0 2 lights9.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1121868545_2" 1924 0 2 lights10.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_494455945_2" 1924 0 2 lights11.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_546403816_2" 1924 0 2 lights12.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-256449838_2" 1924 0 2 lights13.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_725973071_2" 1924 0 2 lights14.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1928136479_2" 1924 0 2 lights15.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1162795259_2" 1924 0 2 lights16.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_5783123_2" 1924 0 2 lights17.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_379063884_2" 1924 0 2 lights18.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-436681333_2" 1924 0 2 lights19.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2112757613_2" 1924 0 2 lights20.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1747927499_2" 1924 0 2 lights21.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_811830752_2" 1924 0 2 lights22.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1683300697_2" 1924 0 2 lights23.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1716319823_2" 1924 0 2 lights24.bin
+Running ftraceRTX skycubemapprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_2" 1924 0 2 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_2" 4 0 2 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes" 4 0 2 comp_2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1137906623_1" 4 0 1 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_990600526_1" 4 0 1 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_446091563_1" 4 0 1 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-678610502_1" 4 0 1 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_184901170_1" 4 0 1 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1406179871_1" 4 0 1 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1636982691_1" 4 0 1 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1601391386_1" 4 0 1 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1332945668_1" 4 0 1 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1882695865_1" 4 0 1 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1121868545_1" 4 0 1 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_494455945_1" 4 0 1 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_546403816_1" 4 0 1 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-256449838_1" 4 0 1 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_725973071_1" 4 0 1 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1928136479_1" 4 0 1 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1162795259_1" 4 0 1 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_5783123_1" 4 0 1 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_379063884_1" 4 0 1 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-436681333_1" 4 0 1 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2112757613_1" 4 0 1 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1747927499_1" 4 0 1 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_811830752_1" 4 0 1 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1683300697_1" 4 0 1 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1716319823_1" 4 0 1 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_1" 4 0 1 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_1" 4 0 1 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1137906623_0" 4 0 0 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_990600526_0" 4 0 0 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_446091563_0" 4 0 0 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-678610502_0" 4 0 0 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_184901170_0" 4 0 0 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1406179871_0" 4 0 0 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1636982691_0" 4 0 0 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1601391386_0" 4 0 0 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1332945668_0" 4 0 0 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1882695865_0" 4 0 0 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1121868545_0" 4 0 0 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_494455945_0" 4 0 0 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_546403816_0" 4 0 0 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-256449838_0" 4 0 0 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_725973071_0" 4 0 0 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1928136479_0" 4 0 0 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1162795259_0" 4 0 0 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_5783123_0" 4 0 0 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_379063884_0" 4 0 0 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-436681333_0" 4 0 0 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2112757613_0" 4 0 0 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1747927499_0" 4 0 0 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_811830752_0" 4 0 0 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1683300697_0" 4 0 0 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1716319823_0" 4 0 0 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_0" 4 0 0 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_0" 4 0 0 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_diffuse" 4 16 1 "gi_SmallHospital_LMA10.bin" "SmallHospital_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_diffuse" 4 16 0 "gi_SmallHospital_LM00.bin" "SmallHospital_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgiprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final" 1940 16 2 "gi_probes1.bin" "probes_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final" 20 16 1 "gi_SmallHospital_LMA11.bin" "SmallHospital_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final" 20 16 0 "gi_SmallHospital_LM01.bin" "SmallHospital_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final_HDR.lz4" 4 0 2 comp_indirect2.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final_HDR.lz4" 4 0 1 comp_indirect1.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final_HDR.lz4" 4 0 0 comp_indirect0.bin
+Running ftraceRTX addsh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final_" 4 0 2 shcomp_2.bin
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final_HDR.lz4" 4 0 1 addao_1.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "1" "SmallHospital_LMA1_final_HDR.lz4"
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final_HDR.lz4" 4 0 0 addao_0.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "0" "SmallHospital_LM0_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LMA1_final.hdr" 1024
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LM0_final.hdr" 1024
+[12:29:23] INFO: Umbra 3 Optimizer version 3.3.22  (build: 58bc48d2405823a0d92fca7d7a5dac9d02e0a94b)
+[12:29:23] INFO: T: 20 O: 5 H: 0.25 B: 100
+[12:29:23] INFO: Tile grid 8x8x12 (at -4,-4,-8) created for scene: 10 tiles (0 empties not included) in 0.036 seconds
+[12:29:23] INFO: Using 14 threads to compute 10 tiles, cache 4096 MB
+[12:29:25] INFO: Tile processing complete, computed 10 tiles
+[12:29:25] INFO: Strict view volumes: no
+[12:29:25] INFO: Filtered 0/1 inside clusters
+[12:29:25] INFO: Filtered 0/1 global clusters
+[12:29:25] INFO: 37/37 cells reachable after global analysis
+[12:29:25] INFO: collapsed leaf tiles 10 => 1
+[12:29:25] INFO: Generating LOD tiles using 14 threads
+[12:29:25] INFO: Connecting LOD tiles
+[12:29:25] INFO: Compressing lists
+[12:29:25] INFO: Average index range size: 136.10
+[12:29:25] INFO: object list: 400 B, cluster list: 0 B
+[12:29:25] INFO: created tome with 1 tiles, 388 targets and 5 gates
+[12:29:25] INFO: Checking cache...
+[12:29:25] INFO: Cache check finished
+[12:43:53] INFO: Umbra 3 Optimizer version 3.3.22  (build: 58bc48d2405823a0d92fca7d7a5dac9d02e0a94b)
+[12:43:53] INFO: T: 20 O: 5 H: 0.25 B: 100
+[12:43:53] INFO: Tile grid 8x8x12 (at -4,-4,-8) created for scene: 10 tiles (0 empties not included) in 0.033 seconds
+[12:43:53] INFO: Using 14 threads to compute 10 tiles, cache 4096 MB
+[12:43:54] INFO: Tile processing complete, computed 6 tiles
+[12:43:54] INFO: Strict view volumes: no
+[12:43:54] INFO: Filtered 0/1 inside clusters
+[12:43:54] INFO: Filtered 0/1 global clusters
+[12:43:54] INFO: 37/37 cells reachable after global analysis
+[12:43:54] INFO: collapsed leaf tiles 10 => 1
+[12:43:54] INFO: Generating LOD tiles using 14 threads
+[12:43:54] INFO: Connecting LOD tiles
+[12:43:54] INFO: Compressing lists
+[12:43:54] INFO: Average index range size: 136.10
+[12:43:54] INFO: object list: 400 B, cluster list: 0 B
+[12:43:54] INFO: created tome with 1 tiles, 388 targets and 5 gates
+[12:43:54] INFO: Checking cache...
+[12:43:54] INFO: Cache check finished
+Done
+Done
+Done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Rendering UV GBuffer for SmallHospital_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SmallHospital_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for probes 256
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LM0.lz4" 2 0 0 0
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LMA1.lz4" 2 0 1 0
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_ao" 8 16 0
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_ao" 8 16 1
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2047206280_2" 1924 0 2 lights0.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_960666190_2" 1924 0 2 lights1.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_651638165_2" 1924 0 2 lights2.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-740433932_2" 1924 0 2 lights3.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1882377797_2" 1924 0 2 lights4.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_377377090_2" 1924 0 2 lights5.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-870622617_2" 1924 0 2 lights6.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_290425274_2" 1924 0 2 lights7.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-213822246_2" 1924 0 2 lights8.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1906690548_2" 1924 0 2 lights9.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_273382593_2" 1924 0 2 lights10.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_427645300_2" 1924 0 2 lights11.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-686039651_2" 1924 0 2 lights12.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1651085036_2" 1924 0 2 lights13.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1807276912_2" 1924 0 2 lights14.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-828502015_2" 1924 0 2 lights15.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-659597237_2" 1924 0 2 lights16.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1532486618_2" 1924 0 2 lights17.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1495779227_2" 1924 0 2 lights18.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1078076846_2" 1924 0 2 lights19.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_415060077_2" 1924 0 2 lights20.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1157063952_2" 1924 0 2 lights21.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1696492921_2" 1924 0 2 lights22.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-607656171_2" 1924 0 2 lights23.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1865091506_2" 1924 0 2 lights24.bin
+Running ftraceRTX skycubemapprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_2" 1924 0 2 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_2" 4 0 2 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes" 4 0 2 comp_2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2047206280_0" 4 0 0 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_960666190_0" 4 0 0 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_651638165_0" 4 0 0 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-740433932_0" 4 0 0 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1882377797_0" 4 0 0 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_377377090_0" 4 0 0 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-870622617_0" 4 0 0 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_290425274_0" 4 0 0 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-213822246_0" 4 0 0 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1906690548_0" 4 0 0 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_273382593_0" 4 0 0 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_427645300_0" 4 0 0 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-686039651_0" 4 0 0 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1651085036_0" 4 0 0 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1807276912_0" 4 0 0 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-828502015_0" 4 0 0 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-659597237_0" 4 0 0 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1532486618_0" 4 0 0 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1495779227_0" 4 0 0 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1078076846_0" 4 0 0 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_415060077_0" 4 0 0 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1157063952_0" 4 0 0 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1696492921_0" 4 0 0 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-607656171_0" 4 0 0 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1865091506_0" 4 0 0 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_0" 4 0 0 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_0" 4 0 0 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2047206280_1" 4 0 1 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_960666190_1" 4 0 1 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_651638165_1" 4 0 1 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-740433932_1" 4 0 1 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1882377797_1" 4 0 1 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_377377090_1" 4 0 1 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-870622617_1" 4 0 1 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_290425274_1" 4 0 1 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-213822246_1" 4 0 1 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1906690548_1" 4 0 1 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_273382593_1" 4 0 1 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_427645300_1" 4 0 1 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-686039651_1" 4 0 1 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1651085036_1" 4 0 1 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1807276912_1" 4 0 1 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-828502015_1" 4 0 1 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-659597237_1" 4 0 1 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1532486618_1" 4 0 1 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1495779227_1" 4 0 1 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1078076846_1" 4 0 1 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_415060077_1" 4 0 1 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1157063952_1" 4 0 1 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1696492921_1" 4 0 1 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-607656171_1" 4 0 1 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1865091506_1" 4 0 1 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_1" 4 0 1 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_1" 4 0 1 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_diffuse" 4 16 0 "gi_SmallHospital_LM00.bin" "SmallHospital_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_diffuse" 4 16 1 "gi_SmallHospital_LMA10.bin" "SmallHospital_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgiprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final" 1940 16 2 "gi_probes1.bin" "probes_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final" 20 16 0 "gi_SmallHospital_LM01.bin" "SmallHospital_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final" 20 16 1 "gi_SmallHospital_LMA11.bin" "SmallHospital_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final_HDR.lz4" 4 0 2 comp_indirect2.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final_HDR.lz4" 4 0 0 comp_indirect0.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final_HDR.lz4" 4 0 1 comp_indirect1.bin
+Running ftraceRTX addsh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final_" 4 0 2 shcomp_2.bin
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final_HDR.lz4" 4 0 0 addao_0.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "0" "SmallHospital_LM0_final_HDR.lz4"
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final_HDR.lz4" 4 0 1 addao_1.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "1" "SmallHospital_LMA1_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LM0_final.hdr" 1024
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LMA1_final.hdr" 1024
+Done
+Done
+Done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Rendering UV GBuffer for SmallHospital_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SmallHospital_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for probes 256
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LM0.lz4" 2 0 0 0
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LMA1.lz4" 2 0 1 0
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_ao" 8 16 0
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_ao" 8 16 1
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1063589638_2" 1924 0 2 lights0.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1612993716_2" 1924 0 2 lights1.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_141705054_2" 1924 0 2 lights2.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2076267836_2" 1924 0 2 lights3.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-865932866_2" 1924 0 2 lights4.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-620255929_2" 1924 0 2 lights5.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-729234991_2" 1924 0 2 lights6.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1685730546_2" 1924 0 2 lights7.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-974880892_2" 1924 0 2 lights8.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-570002928_2" 1924 0 2 lights9.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_285994189_2" 1924 0 2 lights10.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-223204468_2" 1924 0 2 lights11.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-687619590_2" 1924 0 2 lights12.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1439598683_2" 1924 0 2 lights13.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1682342723_2" 1924 0 2 lights14.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1573180751_2" 1924 0 2 lights15.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_237081688_2" 1924 0 2 lights16.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1728241582_2" 1924 0 2 lights17.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1568093911_2" 1924 0 2 lights18.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-754915507_2" 1924 0 2 lights19.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-295197860_2" 1924 0 2 lights20.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-890807632_2" 1924 0 2 lights21.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1990754578_2" 1924 0 2 lights22.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1743100852_2" 1924 0 2 lights23.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1623689588_2" 1924 0 2 lights24.bin
+Running ftraceRTX skycubemapprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_2" 1924 0 2 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_2" 4 0 2 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes" 4 0 2 comp_2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1063589638_0" 4 0 0 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1612993716_0" 4 0 0 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_141705054_0" 4 0 0 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2076267836_0" 4 0 0 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-865932866_0" 4 0 0 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-620255929_0" 4 0 0 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-729234991_0" 4 0 0 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1685730546_0" 4 0 0 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-974880892_0" 4 0 0 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-570002928_0" 4 0 0 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_285994189_0" 4 0 0 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-223204468_0" 4 0 0 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-687619590_0" 4 0 0 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1439598683_0" 4 0 0 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1682342723_0" 4 0 0 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1573180751_0" 4 0 0 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_237081688_0" 4 0 0 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1728241582_0" 4 0 0 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1568093911_0" 4 0 0 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-754915507_0" 4 0 0 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-295197860_0" 4 0 0 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-890807632_0" 4 0 0 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1990754578_0" 4 0 0 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1743100852_0" 4 0 0 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1623689588_0" 4 0 0 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_0" 4 0 0 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_0" 4 0 0 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1063589638_1" 4 0 1 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1612993716_1" 4 0 1 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_141705054_1" 4 0 1 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2076267836_1" 4 0 1 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-865932866_1" 4 0 1 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-620255929_1" 4 0 1 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-729234991_1" 4 0 1 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1685730546_1" 4 0 1 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-974880892_1" 4 0 1 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-570002928_1" 4 0 1 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_285994189_1" 4 0 1 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-223204468_1" 4 0 1 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-687619590_1" 4 0 1 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1439598683_1" 4 0 1 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1682342723_1" 4 0 1 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1573180751_1" 4 0 1 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_237081688_1" 4 0 1 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1728241582_1" 4 0 1 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1568093911_1" 4 0 1 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-754915507_1" 4 0 1 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-295197860_1" 4 0 1 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-890807632_1" 4 0 1 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1990754578_1" 4 0 1 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1743100852_1" 4 0 1 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1623689588_1" 4 0 1 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_1" 4 0 1 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_1" 4 0 1 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_diffuse" 4 16 0 "gi_SmallHospital_LM00.bin" "SmallHospital_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_diffuse" 4 16 1 "gi_SmallHospital_LMA10.bin" "SmallHospital_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgiprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final" 1940 16 2 "gi_probes1.bin" "probes_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final" 20 16 0 "gi_SmallHospital_LM01.bin" "SmallHospital_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final" 20 16 1 "gi_SmallHospital_LMA11.bin" "SmallHospital_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final_HDR.lz4" 4 0 2 comp_indirect2.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final_HDR.lz4" 4 0 0 comp_indirect0.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final_HDR.lz4" 4 0 1 comp_indirect1.bin
+Running ftraceRTX addsh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final_" 4 0 2 shcomp_2.bin
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final_HDR.lz4" 4 0 0 addao_0.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "0" "SmallHospital_LM0_final_HDR.lz4"
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final_HDR.lz4" 4 0 1 addao_1.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "1" "SmallHospital_LMA1_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LM0_final.hdr" 1024
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LMA1_final.hdr" 1024
+2021-12-4
+Rendering UV GBuffer for SmallHospital_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SmallHospital_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for probes 256
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LM0.lz4" 2 0 0 0
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LMA1.lz4" 2 0 1 0
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_ao" 8 16 0
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_ao" 8 16 1
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2049286881_2" 1924 0 2 lights0.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_2" 1924 0 2 lights1.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_2" 1924 0 2 lights2.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_2" 1924 0 2 lights3.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_2" 1924 0 2 lights4.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_2" 1924 0 2 lights5.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_2" 1924 0 2 lights6.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_2" 1924 0 2 lights7.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_2" 1924 0 2 lights8.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_2" 1924 0 2 lights9.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_2" 1924 0 2 lights10.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_2" 1924 0 2 lights11.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_2" 1924 0 2 lights12.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_2" 1924 0 2 lights13.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_2" 1924 0 2 lights14.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_2" 1924 0 2 lights15.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_2" 1924 0 2 lights16.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_2" 1924 0 2 lights17.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_2" 1924 0 2 lights18.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_2" 1924 0 2 lights19.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_2" 1924 0 2 lights20.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_2" 1924 0 2 lights21.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_2" 1924 0 2 lights22.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_2" 1924 0 2 lights23.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_2" 1924 0 2 lights24.bin
+Running ftraceRTX skycubemapprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_2" 1924 0 2 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_2" 4 0 2 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes" 4 0 2 comp_2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2049286881_0" 4 0 0 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_0" 4 0 0 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_0" 4 0 0 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_0" 4 0 0 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_0" 4 0 0 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_0" 4 0 0 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_0" 4 0 0 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_0" 4 0 0 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_0" 4 0 0 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_0" 4 0 0 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_0" 4 0 0 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_0" 4 0 0 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_0" 4 0 0 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_0" 4 0 0 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_0" 4 0 0 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_0" 4 0 0 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_0" 4 0 0 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_0" 4 0 0 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_0" 4 0 0 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_0" 4 0 0 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_0" 4 0 0 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_0" 4 0 0 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_0" 4 0 0 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_0" 4 0 0 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_0" 4 0 0 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_0" 4 0 0 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_0" 4 0 0 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2049286881_1" 4 0 1 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_1" 4 0 1 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_1" 4 0 1 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_1" 4 0 1 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_1" 4 0 1 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_1" 4 0 1 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_1" 4 0 1 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_1" 4 0 1 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_1" 4 0 1 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_1" 4 0 1 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_1" 4 0 1 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_1" 4 0 1 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_1" 4 0 1 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_1" 4 0 1 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_1" 4 0 1 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_1" 4 0 1 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_1" 4 0 1 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_1" 4 0 1 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_1" 4 0 1 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_1" 4 0 1 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_1" 4 0 1 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_1" 4 0 1 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_1" 4 0 1 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_1" 4 0 1 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1_1" 4 0 1 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_1" 4 0 1 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_1" 4 0 1 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_diffuse" 4 16 0 "gi_SmallHospital_LM00.bin" "SmallHospital_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_diffuse" 4 16 1 "gi_SmallHospital_LMA10.bin" "SmallHospital_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgiprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final" 1940 16 2 "gi_probes1.bin" "probes_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final" 20 16 0 "gi_SmallHospital_LM01.bin" "SmallHospital_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final" 20 16 1 "gi_SmallHospital_LMA11.bin" "SmallHospital_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final_HDR.lz4" 4 0 2 comp_indirect2.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final_HDR.lz4" 4 0 0 comp_indirect0.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final_HDR.lz4" 4 0 1 comp_indirect1.bin
+Running ftraceRTX addsh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final_" 4 0 2 shcomp_2.bin
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final_HDR.lz4" 4 0 0 addao_0.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "0" "SmallHospital_LM0_final_HDR.lz4"
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final_HDR.lz4" 4 0 1 addao_1.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "1" "SmallHospital_LMA1_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LM0_final.hdr" 1024
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LMA1_final.hdr" 1024
+Done
+Done
+Done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Rendering UV GBuffer for SmallHospital_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SmallHospital_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for probes 256
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LM0.lz4" 2 0 0 0
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LMA1.lz4" 2 0 1 0
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_ao" 8 16 0
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_ao" 8 16 1
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1661401245_2" 1924 0 2 lights0.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_402662054_2" 1924 0 2 lights1.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-961335240_2" 1924 0 2 lights2.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1548533136_2" 1924 0 2 lights3.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-337143098_2" 1924 0 2 lights4.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-60688059_2" 1924 0 2 lights5.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_505897462_2" 1924 0 2 lights6.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2049277039_2" 1924 0 2 lights7.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_997546182_2" 1924 0 2 lights8.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1609547024_2" 1924 0 2 lights9.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1980603549_2" 1924 0 2 lights10.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-368832893_2" 1924 0 2 lights11.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1120708191_2" 1924 0 2 lights12.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1163172953_2" 1924 0 2 lights13.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2102262316_2" 1924 0 2 lights14.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1434449057_2" 1924 0 2 lights15.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_177433267_2" 1924 0 2 lights16.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1564788713_2" 1924 0 2 lights17.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2080349566_2" 1924 0 2 lights18.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1731897897_2" 1924 0 2 lights19.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_74263369_2" 1924 0 2 lights20.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-140294744_2" 1924 0 2 lights21.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1455266998_2" 1924 0 2 lights22.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1467411264_2" 1924 0 2 lights23.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1275859211_2" 1924 0 2 lights24.bin
+Running ftraceRTX skycubemapprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_2" 1924 0 2 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_2" 4 0 2 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes" 4 0 2 comp_2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1661401245_0" 4 0 0 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_402662054_0" 4 0 0 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-961335240_0" 4 0 0 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1548533136_0" 4 0 0 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-337143098_0" 4 0 0 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-60688059_0" 4 0 0 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_505897462_0" 4 0 0 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2049277039_0" 4 0 0 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_997546182_0" 4 0 0 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1609547024_0" 4 0 0 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1980603549_0" 4 0 0 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-368832893_0" 4 0 0 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1120708191_0" 4 0 0 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1163172953_0" 4 0 0 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2102262316_0" 4 0 0 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1434449057_0" 4 0 0 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_177433267_0" 4 0 0 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1564788713_0" 4 0 0 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2080349566_0" 4 0 0 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1731897897_0" 4 0 0 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_74263369_0" 4 0 0 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-140294744_0" 4 0 0 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1455266998_0" 4 0 0 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1467411264_0" 4 0 0 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1275859211_0" 4 0 0 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_0" 4 0 0 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_0" 4 0 0 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1661401245_1" 4 0 1 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_402662054_1" 4 0 1 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-961335240_1" 4 0 1 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1548533136_1" 4 0 1 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-337143098_1" 4 0 1 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-60688059_1" 4 0 1 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_505897462_1" 4 0 1 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2049277039_1" 4 0 1 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_997546182_1" 4 0 1 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1609547024_1" 4 0 1 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1980603549_1" 4 0 1 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-368832893_1" 4 0 1 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1120708191_1" 4 0 1 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1163172953_1" 4 0 1 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2102262316_1" 4 0 1 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1434449057_1" 4 0 1 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_177433267_1" 4 0 1 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1564788713_1" 4 0 1 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_2080349566_1" 4 0 1 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1731897897_1" 4 0 1 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_74263369_1" 4 0 1 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-140294744_1" 4 0 1 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1455266998_1" 4 0 1 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1467411264_1" 4 0 1 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1275859211_1" 4 0 1 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_1" 4 0 1 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_1" 4 0 1 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_diffuse" 4 16 0 "gi_SmallHospital_LM00.bin" "SmallHospital_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_diffuse" 4 16 1 "gi_SmallHospital_LMA10.bin" "SmallHospital_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgiprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final" 1940 16 2 "gi_probes1.bin" "probes_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final" 20 16 0 "gi_SmallHospital_LM01.bin" "SmallHospital_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final" 20 16 1 "gi_SmallHospital_LMA11.bin" "SmallHospital_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final_HDR.lz4" 4 0 2 comp_indirect2.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final_HDR.lz4" 4 0 0 comp_indirect0.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final_HDR.lz4" 4 0 1 comp_indirect1.bin
+Running ftraceRTX addsh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final_" 4 0 2 shcomp_2.bin
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final_HDR.lz4" 4 0 0 addao_0.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "0" "SmallHospital_LM0_final_HDR.lz4"
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final_HDR.lz4" 4 0 1 addao_1.bin
+Running denoiser72 c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "1" "SmallHospital_LMA1_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LM0_final.hdr" 1024
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LMA1_final.hdr" 1024
+Done
+Done
+Done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Rendering UV GBuffer for SmallHospital_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SmallHospital_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for probes 256
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LM0.lz4" 2 0 0 0
+Running ftraceRTX fixpos12 "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "uvpos_SmallHospital_LMA1.lz4" 2 0 1 0
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_ao" 8 16 0
+Running ftraceRTX ao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_ao" 8 16 1
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1889506380_2" 1924 0 2 lights0.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1321280155_2" 1924 0 2 lights1.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1737637390_2" 1924 0 2 lights2.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1468604001_2" 1924 0 2 lights3.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1901110966_2" 1924 0 2 lights4.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-393129567_2" 1924 0 2 lights5.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1039498442_2" 1924 0 2 lights6.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1786146466_2" 1924 0 2 lights7.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1578558964_2" 1924 0 2 lights8.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1149477543_2" 1924 0 2 lights9.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_961553877_2" 1924 0 2 lights10.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1338686553_2" 1924 0 2 lights11.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1031297093_2" 1924 0 2 lights12.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-220104044_2" 1924 0 2 lights13.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-94473220_2" 1924 0 2 lights14.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1680256794_2" 1924 0 2 lights15.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_785899318_2" 1924 0 2 lights16.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1706222941_2" 1924 0 2 lights17.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1819024688_2" 1924 0 2 lights18.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2048363842_2" 1924 0 2 lights19.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_223080648_2" 1924 0 2 lights20.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1795176486_2" 1924 0 2 lights21.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_140183027_2" 1924 0 2 lights22.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1032291199_2" 1924 0 2 lights23.bin
+Running ftraceRTX arealightprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-947524303_2" 1924 0 2 lights24.bin
+Running ftraceRTX skycubemapprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_2" 1924 0 2 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_2" 4 0 2 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes" 4 0 2 comp_2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1889506380_0" 4 0 0 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1321280155_0" 4 0 0 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1737637390_0" 4 0 0 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1468604001_0" 4 0 0 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1901110966_0" 4 0 0 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-393129567_0" 4 0 0 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1039498442_0" 4 0 0 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1786146466_0" 4 0 0 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1578558964_0" 4 0 0 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1149477543_0" 4 0 0 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_961553877_0" 4 0 0 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1338686553_0" 4 0 0 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1031297093_0" 4 0 0 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-220104044_0" 4 0 0 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-94473220_0" 4 0 0 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1680256794_0" 4 0 0 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_785899318_0" 4 0 0 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1706222941_0" 4 0 0 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1819024688_0" 4 0 0 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2048363842_0" 4 0 0 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_223080648_0" 4 0 0 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1795176486_0" 4 0 0 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_140183027_0" 4 0 0 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1032291199_0" 4 0 0 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-947524303_0" 4 0 0 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_0" 4 0 0 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_0" 4 0 0 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1889506380_1" 4 0 1 lights0.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1321280155_1" 4 0 1 lights1.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1737637390_1" 4 0 1 lights2.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1468604001_1" 4 0 1 lights3.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1901110966_1" 4 0 1 lights4.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-393129567_1" 4 0 1 lights5.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1039498442_1" 4 0 1 lights6.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1786146466_1" 4 0 1 lights7.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1578558964_1" 4 0 1 lights8.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1149477543_1" 4 0 1 lights9.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_961553877_1" 4 0 1 lights10.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1338686553_1" 4 0 1 lights11.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1031297093_1" 4 0 1 lights12.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-220104044_1" 4 0 1 lights13.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-94473220_1" 4 0 1 lights14.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1680256794_1" 4 0 1 lights15.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_785899318_1" 4 0 1 lights16.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1706222941_1" 4 0 1 lights17.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1819024688_1" 4 0 1 lights18.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-2048363842_1" 4 0 1 lights19.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_223080648_1" 4 0 1 lights20.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1795176486_1" 4 0 1 lights21.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_140183027_1" 4 0 1 lights22.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1032291199_1" 4 0 1 lights23.bin
+Running ftraceRTX arealight "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-947524303_1" 4 0 1 lights24.bin
+Running ftraceRTX skycubemap "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_1144455978_1" 4 0 1 sky0.bin
+Running ftraceRTX sun "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "light_-1377846405_1" 4 0 1 direct0.bin
+Running ftraceRTX addmul "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_diffuse" 4 16 0 "gi_SmallHospital_LM00.bin" "SmallHospital_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_diffuse" 4 16 1 "gi_SmallHospital_LMA10.bin" "SmallHospital_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgiprobesh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final" 1940 16 2 "gi_probes1.bin" "probes_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final" 20 16 0 "gi_SmallHospital_LM01.bin" "SmallHospital_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final" 20 16 1 "gi_SmallHospital_LMA11.bin" "SmallHospital_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final_HDR.lz4" 4 0 2 comp_indirect2.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final_HDR.lz4" 4 0 0 comp_indirect0.bin
+Running ftraceRTX add "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final_HDR.lz4" 4 0 1 comp_indirect1.bin
+Running ftraceRTX addsh "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "probes_final_" 4 0 2 shcomp_2.bin
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LM0_final_HDR.lz4" 4 0 0 addao_0.bin
+Running denoiser c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "0" "SmallHospital_LM0_final_HDR.lz4"
+Running ftraceRTX addao "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "SmallHospital_LMA1_final_HDR.lz4" 4 0 1 addao_1.bin
+Running denoiser c "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" 4096 1
+Running seamfixer "C:\Users\ROBEAR~1\AppData\Local\Temp\frender" "1" "SmallHospital_LMA1_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LM0_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LM0_final.hdr" 1024
+Running halffloat2hdr "C:\Users\ROBEAR~1\AppData\Local\Temp\frender/SmallHospital_LMA1_final_HDR.lz4" "C:/Users/Robear Mankaryous/Documents/Projects/Gopher-In-Unity-Simulation/Assets/BakeryLightmaps/SmallHospital_LMA1_final.hdr" 1024
+
+=================================================================
+	Native Crash Reporting
+=================================================================
+Got a UNKNOWN while executing native code. This usually indicates
+a fatal error in the mono runtime or one of the native libraries 
+used by your application.
+=================================================================
+
+=================================================================
+	Managed Stacktrace:
+=================================================================
+	  at <unknown> <0xffffffff>
+	  at UnityEditor.SerializedObject:Update <0x00090>
+	  at UnityEditor.TransformInspector:OnInspectorGUI <0x00182>
+	  at <>c__DisplayClass59_0:<CreateIMGUIInspectorFromEditor>b__0 <0x00a43>
+	  at UnityEngine.UIElements.IMGUIContainer:DoOnGUI <0x008ee>
+	  at UnityEngine.UIElements.IMGUIContainer:DoMeasure <0x003ba>
+	  at UnityEngine.UIElements.VisualElement:Measure <0x00095>
+	  at UnityEngine.UIElements.VisualElement:<AssignMeasureFunction>b__246_0 <0x00062>
+	  at <Module>:invoke_YogaSize_YogaNode_single_YogaMeasureMode_single_YogaMeasureMode <0x000ba>
+	  at UnityEngine.Yoga.YogaNode:MeasureInternal <0x0009f>
+	  at UnityEngine.Yoga.Native:YGNodeMeasureInvoke <0x0006a>
+	  at <Module>:runtime_invoke_void_object_single_int_single_int_intptr <0x000ce>
+	  at <unknown> <0xffffffff>
+	  at UnityEngine.Yoga.Native:YGNodeCalculateLayout <0x000d9>
+	  at UnityEngine.Yoga.YogaNode:CalculateLayout <0x00082>
+	  at UnityEngine.UIElements.UIRLayoutUpdater:Update <0x000c2>
+	  at UnityEngine.UIElements.VisualTreeUpdater:UpdateVisualTreePhase <0x0009d>
+	  at UnityEngine.UIElements.Panel:UpdateForRepaint <0x0006a>
+	  at UnityEngine.UIElements.Panel:Repaint <0x001ca>
+	  at UnityEngine.UIElements.UIElementsUtility:DoDispatch <0x000de>
+	  at UnityEngine.UIElements.UIElementsUtility:UnityEngine.UIElements.IUIElementsUtility.ProcessEvent <0x000f2>
+	  at UnityEngine.UIElements.UIEventRegistration:ProcessEvent <0x0008e>
+	  at <>c:<.cctor>b__1_2 <0x0002a>
+	  at UnityEngine.GUIUtility:ProcessEvent <0x0005c>
+	  at <Module>:runtime_invoke_void_int_intptr_intptr& <0x00095>
+=================================================================

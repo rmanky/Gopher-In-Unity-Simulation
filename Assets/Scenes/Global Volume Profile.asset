@@ -15,10 +15,10 @@ MonoBehaviour:
   active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 2
   contrast:
     m_OverrideState: 1
-    m_Value: 15
+    m_Value: -10
   colorFilter:
     m_OverrideState: 0
     m_Value: {r: 0.8627451, g: 0.9411765, b: 1, a: 1}
@@ -26,25 +26,6 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   saturation:
-    m_OverrideState: 0
-    m_Value: 0
---- !u!114 &-3868271273939250492
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 221518ef91623a7438a71fef23660601, type: 3}
-  m_Name: WhiteBalance
-  m_EditorClassIdentifier: 
-  active: 1
-  temperature:
-    m_OverrideState: 1
-    m_Value: -15
-  tint:
     m_OverrideState: 1
     m_Value: 0
 --- !u!114 &-2105071575967354864
@@ -62,7 +43,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.1
+    m_Value: 0.05
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,10 +59,29 @@ MonoBehaviour:
   components:
   - {fileID: 3841246670388920164}
   - {fileID: -8273641514976589744}
-  - {fileID: -3868271273939250492}
   - {fileID: 8685721441297232894}
   - {fileID: 7614736091964666406}
   - {fileID: -2105071575967354864}
+  - {fileID: 916195639587972167}
+--- !u!114 &916195639587972167
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 221518ef91623a7438a71fef23660601, type: 3}
+  m_Name: WhiteBalance
+  m_EditorClassIdentifier: 
+  active: 1
+  temperature:
+    m_OverrideState: 1
+    m_Value: -15
+  tint:
+    m_OverrideState: 0
+    m_Value: 0
 --- !u!114 &3841246670388920164
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -97,7 +97,7 @@ MonoBehaviour:
   active: 1
   mode:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 2
 --- !u!114 &7614736091964666406
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -119,7 +119,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.25
+    m_Value: 0.2
   smoothness:
     m_OverrideState: 1
     m_Value: 0.5

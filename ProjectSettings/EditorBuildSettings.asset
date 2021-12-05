@@ -5,15 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Menus.unity
-    guid: ecca9d7857d53b7438487d5046439469
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Hospital.unity
     guid: 4e53d84f6d3ef21ab9ab5ed3c8c041a1
   - enabled: 1
-    path: Assets/Scenes/MenusWide.unity
-    guid: 143918e17dfd5f369b83f7fd0f87f14f
+    path: Assets/Scenes/SmallHospital.unity
+    guid: d85e97d2314c438a99f31cc55aab254f
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 1d566f824cba253f9a1ce39cdc4bc73e, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: c2daf9542d9645692b60064b4fd5c230, type: 2}

@@ -17,6 +17,10 @@ public class JacobianIK : MonoBehaviour
     private ArticulationBody[] arChain;
     [SerializeField]
     private float dampedLeastSquaresLambda = 1f;
+    [SerializeField]
+    private float clamp = 0.2f;
+    [SerializeField]
+    private float smoothing = 5f;
 
     private List<int> arIndices = new List<int>();
     private List<int> arDofStartIndices = new List<int>();
@@ -259,6 +263,7 @@ public class JacobianIK : MonoBehaviour
         for (int i = deltaTarget.Count; i < minJacobian.rows - 6; i++) {
             deltaTarget.Add(0.0f);
         }
+
         deltaTarget.AddRange(new float[] {deltaPos.x, deltaPos.y, deltaPos.z, deltaRot.x, deltaRot.y, deltaRot.z});
 
 
@@ -273,9 +278,9 @@ public class JacobianIK : MonoBehaviour
         foreach (ArticulationBody arSubBody in arChain) {
             ArticulationDrive drive = arSubBody.xDrive;
             // stop explosions
-            float target = drive.target + deltaJointReducedSpace[m];
+            float target = drive.target + Mathf.Clamp(deltaJointReducedSpace[m], -clamp, clamp);
             // control yourself :(
-            drive.target = (target + 3.0f * drive.target) / 4.0f;
+            drive.target = (target + smoothing * drive.target) / (smoothing + 1.0f);
             arSubBody.xDrive = drive;
             m++;
         }

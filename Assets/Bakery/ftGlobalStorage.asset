@@ -54,7 +54,8 @@ MonoBehaviour:
   - Assets/Models/Classic/wall_0.5m.dae
   - Assets/Models/Classic/wooden_door_open.dae
   - Assets/Models/Classic/wooden_door_open2.dae
-  modifiedAssetPaddingHash: aaf8cc2e695031ee9d4dfff0367352953f09ecc01c7e93634adc894b4adc894be0209dea2665e0ef323b8033f8e9d478347352954a23996eecc12491ffbc3fe471c294586209ecc00dff6078f7bcf01becc12491b3dcf716853c0aa683b285151b903aa2bb09ecc04f16ffe90536df9a323fd3d9f537ed04323fd3d96daa863029e5ba8e81830158d7c2a693e55031ee194efff080c5d890f1f23a06ac0a26a2ec74c699
+  - Assets/Models/Classic/ceiling_light.dae
+  modifiedAssetPaddingHash: aaf8cc2e695031ee9d4dfff0367352953f09ecc01c7e93634adc894b4adc894be0209dea2665e0ef323b8033f8e9d478347352954a23996eecc12491ffbc3fe471c294586209ecc00dff6078f7bcf01becc12491b3dcf716853c0aa683b285151b903aa2bb09ecc04f16ffe90536df9a323fd3d9f537ed04323fd3d96daa863029e5ba8e81830158d7c2a693e55031ee194efff080c5d890f1f23a06ac0a26a2ec74c699f7bcf01b
   modifiedMeshList: []
   modifiedMeshPaddingList: 
   modifiedAssets:
@@ -587,49 +588,49 @@ MonoBehaviour:
     - HeadSupport
     - Pillow
     - Tire
-    padding: 33000000190000001d000000160000000d0000001000000010000000650000002c000000990000003c000000220000002a000000
-    unwrapper: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    padding: 4500000022000000270000001e000000120000001600000016000000870000003b000000cc000000500000002e00000038000000
+    unwrapper: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
   - meshName:
     - indoor_plant_02
     - Plant
-    padding: 200000001c000000
-    unwrapper: 0000000000000000
+    padding: 2b00000025000000
+    unwrapper: 0100000001000000
   - meshName:
     - Cube
-    padding: 11000000
-    unwrapper: 00000000
+    padding: 16000000
+    unwrapper: 01000000
   - meshName:
     - Cube
     - Cube.003
     - Cylinder
     - Glass
-    padding: 0a0000001d0000006100000018000000
-    unwrapper: 00000000000000000000000000000000
+    padding: 0d000000270000008100000020000000
+    unwrapper: 01000000010000000100000001000000
   - meshName:
     - Feet
     - Legs
     - Support
     - Table
-    padding: d70000005c000000460000001e000000
-    unwrapper: 00000000000000000000000000000000
+    padding: 000100007b0000005e00000029000000
+    unwrapper: 01000000010000000100000001000000
   - meshName:
     - Cube
-    padding: 04000000
-    unwrapper: 00000000
+    padding: 05000000
+    unwrapper: 01000000
   - meshName:
     - Cube
-    padding: 60000000
-    unwrapper: 00000000
+    padding: 81000000
+    unwrapper: 01000000
   - meshName:
     - Cube
-    padding: 04000000
-    unwrapper: 00000000
+    padding: 05000000
+    unwrapper: 01000000
   - meshName:
     - Cylinder.355
     - Sphere.002
     - Table
-    padding: 000100000001000017000000
-    unwrapper: 000000000000000000000000
+    padding: 00010000000100001f000000
+    unwrapper: 010000000100000001000000
   - meshName:
     - Cube.001
     - Cube.002
@@ -638,55 +639,86 @@ MonoBehaviour:
     - Cube.009
     - Cylinder.004
     - Cylinder.006
-    padding: 200000001f00000011000000150000000d0000008600000086000000
-    unwrapper: 00000000000000000000000000000000000000000000000000000000
+    padding: 2a0000002a000000170000001c00000012000000b2000000b2000000
+    unwrapper: 01000000010000000100000001000000010000000100000001000000
   - meshName:
     - Glass
     - TV Furniture
     - TV Furniture.001
-    padding: 660000001900000000010000
-    unwrapper: 000000000000000000000000
+    padding: 880000002200000000010000
+    unwrapper: 010000000100000001000000
   - meshName:
     - Glass
+    padding: 13000000
+    unwrapper: 01000000
+  - meshName:
+    - Cube
+    padding: 11000000
+    unwrapper: 01000000
+  - meshName:
+    - Cube
+    padding: 1c000000
+    unwrapper: 01000000
+  - meshName:
+    - Cube
     padding: 0e000000
-    unwrapper: 00000000
+    unwrapper: 01000000
   - meshName:
     - Cube
-    padding: 0d000000
-    unwrapper: 00000000
-  - meshName:
-    - Cube
-    padding: 15000000
-    unwrapper: 00000000
-  - meshName:
-    - Cube
-    padding: 0a000000
-    unwrapper: 00000000
-  - meshName:
-    - Cube
-    padding: 0f000000
-    unwrapper: 00000000
+    padding: 14000000
+    unwrapper: 01000000
   - meshName:
     - Door
     - Frame
     - Handle
     - Handle2
-    padding: 0b0000000f0000005900000059000000
-    unwrapper: 00000000000000000000000000000000
+    padding: 0f000000140000007600000076000000
+    unwrapper: 01000000010000000100000001000000
   - meshName:
     - Door
     - Frame
     - Handle
     - Handle2
-    padding: 0b0000000f0000005b0000005b000000
-    unwrapper: 00000000000000000000000000000000
+    padding: 0f000000140000007900000079000000
+    unwrapper: 01000000010000000100000001000000
+  - meshName:
+    - Light
+    - Frame
+    padding: 2800000022000000
+    unwrapper: 0100000001000000
   assetList:
   - Assets/Bakery/examples/content/sponza/bush.FBX
   - Assets/Bakery/examples/content/floor_lamp.FBX
   - Assets/Models/Proto/wheelchair.fbx
   - Assets/Models/Proto/wheelchair 1.fbx
-  uvOverlapAssetList: 00000000ffffffff0101000001010000
-  xatlasWarningShown: 0
+  - Assets/MeshBaker/Examples/MultipleMaterials/house.fbx
+  - Assets/MeshBaker/Examples/Assets/ModelPrefabs/fence.fbx
+  - Assets/MeshBaker/Examples/Assets/ModelPrefabs/bigBridge.fbx
+  - Assets/MeshBaker/Examples/Assets/ModelPrefabs/mediumPlatform.fbx
+  - Assets/MeshBaker/Examples/Assets/ModelPrefabs/floatingPlatform.fbx
+  - Assets/MeshBaker/Examples/CharacterCustomization/paintwars_gameassets.fbx
+  - Assets/MeshBaker/Examples/Assets/ModelPrefabs/hat.fbx
+  - Assets/MeshBaker/Examples/Assets/ModelPrefabs/littleBridge.fbx
+  - Assets/MeshBaker/Examples/Assets/ModelPrefabs/ConstructionDude/Worker.FBX
+  - Assets/MeshBaker/Examples/Assets/ModelPrefabs/glasses.fbx
+  - Assets/MeshBaker/Examples/Assets/ModelPrefabs/bigPlatform.fbx
+  - Assets/MeshBaker/Examples/Assets/ModelPrefabs/wallJumpShort.fbx
+  - Assets/MeshBaker/Examples/Assets/ModelPrefabs/wallJumpTall.fbx
+  - Assets/MeshBaker/Examples/Assets/ModelPrefabs/crate.fbx
+  - Assets/MeshBaker/Examples/Assets/ModelPrefabs/palm.fbx
+  - Assets/MeshBaker/Examples/Assets/ModelPrefabs/sword.fbx
+  - Assets/MeshBaker/Examples/Assets/ModelPrefabs/wallJumpSided.fbx
+  - Assets/MeshBaker/Examples/Assets/ModelPrefabs/platformWallJump.fbx
+  - Assets/MeshBaker/Examples/Assets/ModelPrefabs/lightPost.fbx
+  - Assets/MeshBaker/Examples/Assets/ModelPrefabs/launchPad.fbx
+  - Assets/MeshBaker/Examples/Assets/ModelPrefabs/tree.fbx
+  - Assets/MeshBaker/Examples/Assets/ModelPrefabs/stepPlatform.fbx
+  - Assets/Plugins/RootMotion/Shared Demo Assets/Characters/Angry Bots Generic/Mech
+    Bot Idle.FBX
+  - Assets/Models/Proto/pills.fbx
+  - Assets/Models/Proto/cabinet.fbx
+  uvOverlapAssetList: 00000000ffffffff010100000101000001010000010100000101000001010000010100000101000000000000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000
+  xatlasWarningShown: 1
   foundCompatibleSetup: 1
   gpuName: NVIDIA GeForce RTX 2080
   runsNonRTX: 1
@@ -771,5 +803,5 @@ MonoBehaviour:
   renderSettingsRTPVSceneView: 0
   renderSettingsRTPVWidth: 640
   renderSettingsRTPVHeight: 360
-  modifiedMeshPaddingArray: 0b0000000f0000005b0000005b000000
-  modifiedMeshUnwrapperArray: 00000000000000000000000000000000
+  modifiedMeshPaddingArray: 0f000000140000007900000079000000
+  modifiedMeshUnwrapperArray: 01000000010000000100000001000000
