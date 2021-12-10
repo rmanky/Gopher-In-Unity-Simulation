@@ -31,6 +31,12 @@ public class HandController : MonoBehaviour
     [Range(0f, 1f)]
     private float grip = 0.0f;
 
+    [SerializeField]
+    private float rangeMin = 0.0f;
+
+    [SerializeField]
+    private float rangeMax = 60.0f;
+
     private GopherInputActions inputActions;
 
     private void Awake() {
@@ -111,7 +117,7 @@ public class HandController : MonoBehaviour
 
         foreach (ArticulationBody arBody in fingers) {
             ArticulationDrive xDrive = arBody.xDrive;
-            xDrive.target = Mathf.Lerp(0f, 80f, grip);
+            xDrive.target = Mathf.Lerp(rangeMin, rangeMax, grip);
             arBody.xDrive = xDrive;
         }
     }
