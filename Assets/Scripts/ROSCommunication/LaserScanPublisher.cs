@@ -16,19 +16,20 @@ public class LaserScanPublisher : MonoBehaviour
     private ROSConnection ros;
     // Variables required for ROS communication
     public string laserTopicName = "base_scan";
+    public string frameId = "gopher/laser_link";
 
     // Sensor
     public Laser laser;
 
     // Message
     private LaserScanMsg laserScan;
-    private string FrameId = "laser_scan";
     public float publishRate;
 
     void Start()
     {
         // Get ROS connection static instance
-        ros = ROSConnection.instance;
+        ros = ROSConnection.GetOrCreateInstance();
+        ros.RegisterPublisher<LaserScanMsg>(laserTopicName);
 
         // Initialize messages
         float angle_increment = (laser.angleMax - laser.rangeMin)/(laser.samples-1);
@@ -37,7 +38,7 @@ public class LaserScanPublisher : MonoBehaviour
         float[] intensities = new float[laser.ranges.Length];
         laserScan = new LaserScanMsg
         {
-            header = new HeaderMsg { frame_id = FrameId },
+            header = new HeaderMsg { frame_id = frameId },
             angle_min       = laser.angleMin,
             angle_max       = laser.angleMax,
             angle_increment = angle_increment,

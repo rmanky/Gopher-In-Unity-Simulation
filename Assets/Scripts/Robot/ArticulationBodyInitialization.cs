@@ -18,6 +18,7 @@ public class ArticulationBodyInitialization : MonoBehaviour
     public float stiffness = 10000f;
     public float damping = 100f;
     public float forceLimit = 1000f;
+    public float mass = 1f;
 
     void Start()
     {
@@ -40,6 +41,7 @@ public class ArticulationBodyInitialization : MonoBehaviour
 
             joint.jointFriction = defDyanmicVal;
             joint.angularDamping = defDyanmicVal;
+            joint.mass = mass;
 
             drive.stiffness = stiffness;
             drive.damping = damping;
@@ -47,7 +49,7 @@ public class ArticulationBodyInitialization : MonoBehaviour
             joint.xDrive = drive;
         }
     }
-    
+
     void Update()
     {
     }
